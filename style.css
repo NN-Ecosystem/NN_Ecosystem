@@ -609,11 +609,11 @@ body {
 
 /* MOBILE FIX - DÀNH RIÊNG CHO CẤU TRÚC HTML MEDIA */
 @media(max-width:900px){
-    /* 1. Ép lưới Card phải tràn lề và cho phép vuốt */
+    /* 1. Ép lưới Card phải tràn lề và cho phép vuốt ngang */
     .card-grid {
         display: flex !important;
         flex-direction: row !important;
-        flex-wrap: nowrap !important; /* Tuyệt đối không cho xuống dòng ở đây */
+        flex-wrap: nowrap !important; /* Không cho xuống dòng ở cấp độ lưới */
         
         overflow-x: auto !important; 
         scroll-snap-type: x mandatory;
@@ -622,38 +622,44 @@ body {
         gap: 20px;
         padding: 20px !important;
         width: 100vw !important;
-        margin-left: -20px; /* Căn chỉnh lại với padding của section */
+        margin-left: -20px; 
         box-sizing: border-box;
+        scrollbar-width: none;
     }
 
     .card-grid::-webkit-scrollbar {
-        display: none; /* Ẩn thanh cuộn cho đẹp */
+        display: none;
     }
 
-    /* 2. Fix thẻ Card - Đây là phần quan trọng nhất */
+    /* 2. Ép mỗi Card chiếm 85% chiều ngang màn hình */
     .card {
-        flex: 0 0 85% !important; /* Ép mỗi Card chiếm 85% chiều ngang màn hình */
+        flex: 0 0 85% !important; 
         min-width: 280px !important;
         scroll-snap-align: center;
         display: flex !important;
         flex-direction: column !important;
         height: auto !important;
+        margin: 0 !important;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(0, 212, 255, 0.1);
+        padding: 25px !important;
+        border-radius: 20px;
     }
 
-    /* 3. Fix Tag Group - Cho phép icon xuống hàng bên trong Card */
+    /* 3. Cho phép các icon (Tag) xuống hàng bên trong mỗi Card */
     .tag-group {
         display: flex !important;
-        flex-wrap: wrap !important; /* Icon quá nhiều sẽ tự nhảy xuống hàng 2 */
+        flex-wrap: wrap !important; /* QUAN TRỌNG: Để icon tự nhảy xuống hàng nếu Card hẹp */
         justify-content: center !important;
         gap: 15px !important;
         width: 100% !important;
         margin: 20px 0 !important;
-        white-space: normal !important; /* Chống bị ép dòng */
+        white-space: normal !important;
     }
 
-    /* 4. Fix kích thước Icon */
+    /* 4. Khóa kích thước icon không cho co lại */
     .tag-icon-link {
-        flex: 0 0 48px !important; /* Giữ kích thước cố định, không bị bóp */
+        flex: 0 0 48px !important; 
         height: 48px !important;
         display: flex !important;
         align-items: center !important;
@@ -666,6 +672,22 @@ body {
         width: 30px !important;
         height: 30px !important;
         object-fit: contain !important;
+    }
+
+    /* 5. Tối ưu Header và Feedback */
+    .section {
+        padding: 60px 20px !important;
+    }
+
+    .section h1 {
+        font-size: 32px !important;
+        margin-bottom: 25px !important;
+    }
+
+    .feedback-wrapper {
+        grid-template-columns: 1fr;
+        padding: 25px;
+        gap: 30px;
     }
 }
     /* BACKGROUND CANVAS */
