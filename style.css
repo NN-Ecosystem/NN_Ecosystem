@@ -741,6 +741,27 @@ body {
         object-fit: cover;
         border-radius: 12px;
     }
+    /* Fix lỗi icon bị co lại trong card */
+    .tag-group {
+        display: flex !important;
+        flex-wrap: wrap !important; /* Cho phép các icon tự xuống hàng nếu quá chật */
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .tag-icon-link {
+        /* Lệnh "đặc trị": flex-shrink: 0 để không bao giờ bị bóp nhỏ */
+        flex: 0 0 auto !important; 
+        width: 45px !important; 
+        height: 45px !important;
+    }
+
+    .tag-icon-link img {
+        width: 60% !important;
+        height: auto !important;
+    }
 }
     /* BACKGROUND CANVAS */
 
