@@ -632,6 +632,34 @@ body {
 
 /* MOBILE */
 @media(max-width:900px){
+    .card-grid {
+        /* Chuyển từ Grid sang Flex để ép nằm một hàng */
+        display: flex !important; 
+        flex-wrap: nowrap !important; 
+        
+        /* Kích hoạt cuộn */
+        overflow-x: auto !important; 
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+
+        /* Căn chỉnh khoảng cách */
+        gap: 20px;
+        padding: 10px 20px 40px 20px;
+        margin-top: 20px;
+        
+        /* Ẩn thanh cuộn */
+        scrollbar-width: none;
+    }
+
+    .card-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Đảm bảo thẻ <a> không bị co lại */
+    .card-link {
+        flex: 0 0 80% !important; /* Quan trọng nhất: Giữ độ rộng 80% màn hình */
+        scroll-snap-align: center;
+    }
     /* 1. Sửa lỗi section chồng chéo */
     .section {
         height: auto !important; /* Quan trọng: Cho phép section giãn theo nội dung */
