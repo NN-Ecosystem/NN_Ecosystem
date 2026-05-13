@@ -244,54 +244,7 @@ body {
 }
 
 
-/* MOBILE */
 
-@media(max-width:768px){
-
-    .hero h1{
-
-        font-size:52px;
-    }
-
-    .hero p{
-
-        font-size:22px;
-    }
-
-    .hero-buttons{
-
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .btn{
-
-        width:220px;
-        text-align:center;
-    }
-    /* Fix lỗi icon bị co lại trong card */
-    .tag-group {
-        display: flex !important;
-        flex-wrap: wrap !important; /* Cho phép các icon tự xuống hàng nếu quá chật */
-        justify-content: center;
-        gap: 12px;
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .tag-icon-link {
-        /* Lệnh "đặc trị": flex-shrink: 0 để không bao giờ bị bóp nhỏ */
-        flex: 0 0 auto !important; 
-        width: 45px !important; 
-        height: 45px !important;
-    }
-
-    .tag-icon-link img {
-        width: 60% !important;
-        height: auto !important;
-    }
-
-}
 /* CARD GRID - Giữ nguyên vì anh đã chia cột rất chuẩn rồi */
 .card-grid {
     display: grid;
@@ -654,134 +607,94 @@ body {
 }
 
 
-/* MOBILE */
+/* MOBILE TỐI ƯU */
 @media(max-width:900px){
-    .card-grid {
-        /* Chuyển từ Grid sang Flex để ép nằm một hàng */
-        display: flex !important; 
-        flex-wrap: nowrap !important; 
-        
-        /* Kích hoạt cuộn */
-        overflow-x: auto !important; 
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-
-        /* Căn chỉnh khoảng cách */
-        gap: 20px;
-        padding: 10px 20px 40px 20px;
-        margin-top: 20px;
-        
-        /* Ẩn thanh cuộn */
-        scrollbar-width: none;
-    }
-
-    .card-grid::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* Đảm bảo thẻ <a> không bị co lại */
-    .card-link {
-        flex: 0 0 80% !important; /* Quan trọng nhất: Giữ độ rộng 80% màn hình */
-        scroll-snap-align: center;
-    }
-    /* 1. Sửa lỗi section chồng chéo */
+    /* 1. SECTION & TYPOGRAPHY */
     .section {
-        height: auto !important; /* Quan trọng: Cho phép section giãn theo nội dung */
+        height: auto !important;
         min-height: 100vh;
-        padding: 80px 20px; /* Tạo khoảng trống để không bị dính chữ */
+        padding: 60px 20px;
+        overflow-x: hidden; /* Ngăn section làm tràn trang */
     }
 
     .section h1 {
-        font-size: 36px; /* Giảm cỡ chữ tiêu đề để không chiếm hết màn hình */
+        font-size: 32px;
         line-height: 1.1;
+        margin-bottom: 30px;
     }
 
-    /* 2. Giữ nguyên phần feedback của anh và thêm một chút tối ưu */
-    .feedback-wrapper {
-        grid-template-columns: 1fr;
-        padding: 32px;
-        gap: 40px; /* Thêm khoảng cách giữa phần chữ và phần form */
-    }
-
-    .input-row {
-        grid-template-columns: 1fr;
-        gap: 15px; /* Khoảng cách giữa các ô input */
-    }
-
-    .feedback-left {
-        align-items: center;
-        text-align: center;
-    }
-
-    .feedback-left p {
-        max-width: 100%;
-        font-size: 18px; /* Giảm font chữ mô tả một chút cho dễ nhìn */
-    }
-
-    .feedback-tags {
-        justify-content: center;
-        flex-wrap: wrap; /* Cho phép các tag xuống dòng nếu quá dài */
-        gap: 8px;
-    }
-    /* 3. SỬA ĐÚNG CLASS CARD-GRID ĐỂ CUỘN NGANG */
+    /* 2. CARD GRID - QUAN TRỌNG: KÍCH HOẠT CUỘN NGANG */
     .card-grid {
-        display: flex !important; /* Xếp các thẻ <a> nằm ngang */
-        flex-wrap: nowrap !important; /* Ép không cho xuống dòng */
-        overflow-x: auto !important; /* Kích hoạt vuốt ngang */
-        gap: 16px;
-        padding: 10px 20px 30px 20px; /* Padding để không bị dính lề */
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
         
+        width: 100vw; /* Chiếm trọn chiều ngang */
+        margin-left: -20px; /* Bù trừ padding của section để card tràn lề */
+        padding: 10px 20px 40px 20px !important;
+        
+        overflow-x: auto !important; 
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         
-        /* Ẩn thanh cuộn */
-        scrollbar-width: none;
+        gap: 20px;
+        scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
     }
 
     .card-grid::-webkit-scrollbar {
-        display: none;
+        display: none; /* Ẩn thanh cuộn trên Chrome/Safari */
     }
 
-    /* Chỉnh lại thẻ <a> bọc ngoài card */
+    /* 3. CARD LINK & CARD ITEM - GIỮ KHUNG NGANG RỘNG */
     .card-link {
-        flex: 0 0 80% !important; /* Mỗi card chiếm 80% chiều ngang di động */
+        flex: 0 0 82% !important; /* Mỗi card chiếm 82% màn hình để lộ card tiếp theo */
         scroll-snap-align: center;
-        text-decoration: none; /* Bỏ gạch chân link */
+        text-decoration: none;
         display: block;
     }
 
     .card {
-        width: 100%; /* Card con chiếm hết 100% của card-link */
-        margin: 0; /* Bỏ margin để không lệch vị trí */
+        width: 100% !important;
+        margin: 0 !important;
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(0, 212, 255, 0.1);
+        padding: 20px;
+        border-radius: 20px;
     }
 
-    .card-image img {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1/1; /* Nếu là logo Shopee/Lazada thì 1:1 sẽ đẹp, hoặc 16/9 tùy anh */
-        object-fit: cover;
-        border-radius: 12px;
-    }
-    /* Fix lỗi icon bị co lại trong card */
+    /* 4. TAG GROUP & ICONS - FIX LỖI CO BÓP */
     .tag-group {
         display: flex !important;
-        flex-wrap: wrap !important; /* Cho phép các icon tự xuống hàng nếu quá chật */
-        justify-content: center;
-        gap: 12px;
-        width: 100%;
-        padding: 10px 0;
+        flex-wrap: wrap !important; 
+        justify-content: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+        margin-top: 15px;
     }
 
     .tag-icon-link {
-        /* Lệnh "đặc trị": flex-shrink: 0 để không bao giờ bị bóp nhỏ */
-        flex: 0 0 auto !important; 
-        width: 45px !important; 
+        flex: 0 0 45px !important; /* Ép kích thước cố định */
         height: 45px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
     }
 
     .tag-icon-link img {
-        width: 60% !important;
-        height: auto !important;
+        width: 28px !important;
+        height: 28px !important;
+        object-fit: contain;
+    }
+
+    /* 5. FEEDBACK SECTION */
+    .feedback-wrapper {
+        grid-template-columns: 1fr;
+        padding: 25px;
+        gap: 30px;
     }
 }
     /* BACKGROUND CANVAS */
