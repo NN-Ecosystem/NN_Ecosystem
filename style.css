@@ -106,9 +106,9 @@ body{
 
 /* SECTION - TỐI ƯU CHO MỌI ĐỘ PHÂN GIẢI */
 .section {
-    /* Quan trọng: Dùng min-height thay vì height */
-    min-height: 100vh; 
-    height: auto !important; /* Ép buộc tự giãn nếu nội dung dài */
+    /* Thay height: 100vh bằng 2 dòng này */
+    min-height: 100vh;
+    height: auto !important; 
     
     display: flex;
     flex-direction: column;
@@ -116,10 +116,9 @@ body{
     align-items: center;
     text-align: center;
     
-    /* Tạo khoảng cách an toàn để không bao giờ bị đè chữ */
-    padding: 10vh 10%; 
+    /* Thêm padding để nội dung không dính sát mép trên/dưới */
+    padding: 100px 20px; 
     box-sizing: border-box;
-    position: relative;
     border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
@@ -284,22 +283,14 @@ body{
 }
 /* CARD GRID */
 
-.card-grid{
-
-    width:100%;
-
-    max-width:1200px;
-
-    margin-top:50px;
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(280px,1fr));
-
-    gap:30px;
-
-    padding:0 40px;
+.card-grid {
+    display: grid;
+    /* Tự động tính toán số cột dựa trên độ rộng màn hình */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 40px;
 }
 
 
