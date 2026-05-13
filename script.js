@@ -5,24 +5,28 @@ console.log("Landing page started");
    CANVAS BACKGROUND
 ========================= */
 
-const canvas =
-document.getElementById("bg-canvas");
+const canvas = document.getElementById("bg-canvas");
+const ctx = canvas.getContext("2d");
 
-const ctx =
-canvas.getContext("2d");
+/* SIZE - Cập nhật thông minh */
+let W, H;
 
+function setCanvasSize() {
+    W = window.innerWidth;
+    H = window.innerHeight;
+    canvas.width = W;
+    canvas.height = H;
+}
 
-/* SIZE */
+// Gọi lần đầu khi load trang
+setCanvasSize();
 
-let W =
-window.innerWidth;
-
-let H =
-window.innerHeight;
-
-
-canvas.width = W;
-canvas.height = H;
+// Tự động chỉnh lại khi anh xoay điện thoại hoặc resize trình duyệt
+window.addEventListener("resize", () => {
+    setCanvasSize();
+    // Nếu anh có hàm init() để tạo lại các hạt, hãy gọi ở đây để các hạt rải đều lại từ đầu
+    // init(); 
+});
 
 
 /* PARTICLES */

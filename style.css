@@ -7,39 +7,29 @@
 
     box-sizing:border-box;
 }
-
-
-/* HTML */
-
-html{
-
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
+    max-width: 100vw; /* Thêm dòng này */
+    overflow-x: hidden; /* Thêm dòng này */
 }
 
-
-/* BODY */
-
-body{
-
-    width:100%;
-    min-height:100vh;
-
-    overflow-x:hidden;
-
+body {
+    width: 100%;
+    max-width: 100vw; /* Thêm dòng này */
+    min-height: 100vh;
+    overflow-x: hidden; /* Giữ nguyên dòng này của anh */
+    
+    /* Bảng màu Deep Midnight anh đã cập nhật rất đẹp */
     background: linear-gradient(
         to bottom,
-        #040a15, /* Xanh đen gần như đen */
+        #040a15, 
         #081225, 
-        #0d1b33  /* Xanh navy rất đậm */
+        #0d1b33  
     );
-
-    color:#eaf4ff;
-
-    font-family:
-    Arial,
-    sans-serif;
-
-    position:relative;
+    color: #eaf4ff;
+    font-family: Arial, sans-serif;
+    position: relative;
+    margin: 0; /* Đảm bảo không có khoảng trắng thừa */
 }
 
 
@@ -281,11 +271,9 @@ body{
     }
 
 }
-/* CARD GRID */
-
+/* CARD GRID - Giữ nguyên vì anh đã chia cột rất chuẩn rồi */
 .card-grid {
     display: grid;
-    /* Tự động tính toán số cột dựa trên độ rộng màn hình */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px;
     width: 100%;
@@ -293,120 +281,108 @@ body{
     margin-top: 40px;
 }
 
-
-/* CARD */
-
-.card{
-
-    background:
-    rgba(255,255,255,0.05);
-
-    border:
-    1px solid rgba(255,255,255,0.08);
-
-    border-radius:24px;
-
-    padding:32px;
-
-    backdrop-filter:blur(12px);
-
-    transition:0.35s;
+/* CARD - Điều chỉnh để hình ảnh có thể tràn viền */
+.card {
+    background: rgba(11, 29, 58, 0.6); /* Đổi sang Dark Blue đồng bộ canvas */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 0; /* Quan trọng: Bỏ padding ở đây để ảnh sát viền */
+    backdrop-filter: blur(12px);
+    transition: 0.35s;
+    overflow: hidden; /* Cắt góc ảnh theo bo góc của card */
+    display: flex;
+    flex-direction: column;
 }
 
-
-.card:hover{
-
-    transform:
-    translateY(-8px);
-
-    border:
-    1px solid rgba(10,132,255,0.5);
-
-    box-shadow:
-    0 0 30px rgba(10,132,255,0.15);
+/* Cấu trúc mới cho Hình ảnh */
+.card-image {
+    width: 100%;
+    aspect-ratio: 3 / 3; /* Giữ tỷ lệ chuẩn như YouTube/Shopee */
+    overflow: hidden;
 }
 
-
-/* CARD TITLE */
-
-.card h2{
-
-    font-size:28px;
-
-    margin-bottom:16px;
-
-    color:white;
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ảnh fill đầy không bị méo */
+    transition: transform 0.5s ease;
 }
 
+/* Nội dung chữ - Đưa padding vào đây thay vì ở .card */
+.card-content {
+    padding: 24px 32px 32px 32px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border: 1px solid rgba(0, 212, 255, 0.5); /* Xanh Cyan công nghệ */
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.15);
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05); /* Hiệu ứng zoom nhẹ hình ảnh khi hover */
+}
+
+/* CARD TITLE - Chỉnh lại font cho thanh thoát */
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: white;
+}
 
 /* CARD TEXT */
-
-.card p{
-
-    font-size:17px;
-
-    line-height:1.6;
-
-    color:#b7c9e6;
-
-    margin-bottom:28px;
+.card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #b7c9e6;
+    margin-bottom: 0; /* Bỏ margin dưới vì mình nhấn cả card rồi */
 }
 
-
-/* CARD BUTTON */
-
-.card-btn{
-
-    display:inline-block;
-
-    padding:12px 24px;
-
-    border-radius:14px;
-
-    background:#0a84ff;
-
-    color:white;
-
-    text-decoration:none;
-
-    transition:0.3s;
-}
-
-
-.card-btn:hover{
-
-    background:#339cff;
+/* Thẻ A bọc ngoài để click toàn bộ Card */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 /* TAG GROUP */
 .tag-group {
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;           /* Tăng nhẹ lên 12px để các nút không bị quá khít */
-    margin-top: 16px;    /* Thêm khoảng cách với phần text bên trên */
-    margin-bottom: 28px; /* Tăng khoảng cách với nút Open Hub bên dưới */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
 }
 
-/* TAG */
-.tag-group span {
-    padding: 8px 16px;   /* Tăng nhẹ padding ngang để nút trông cân đối hơn */
-    border-radius: 999px;
-    background: rgba(10, 132, 255, 0.12);
-    border: 1px solid rgba(10, 132, 255, 0.2);
-    color: #b9d8ff;
-    font-size: 14px;
-    font-weight: 500;    /* Làm chữ nét hơn một chút */
-    cursor: pointer;     /* Hiển thị bàn tay khi di chuột vào */
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Hiệu ứng mượt mà */
-    display: inline-block;
+.tag-icon-link {
+    width: 50px;  /* Anh chỉnh độ lớn nhỏ ở đây */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 12px; /* Bo góc nhẹ, nếu muốn tròn xoe thì để 50% */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
 }
 
-/* HIỆU ỨNG KHI RE CHUỘT (HOVER) */
-.tag-group span:hover {
-    background: rgba(10, 132, 255, 0.25); /* Sáng hơn khi hover */
-    border-color: rgba(10, 132, 255, 0.5);
-    color: #fff;                          /* Chữ trắng hẳn để nổi bật */
-    transform: translateY(-2px);          /* Nhích nhẹ lên tạo cảm giác nổi */
-    box-shadow: 0 4px 12px rgba(10, 132, 255, 0.2); /* Đổ bóng nhẹ */
+.tag-icon-link img {
+    width: 60%; /* Để icon nhỏ gọn trong khung, không dính sát viền */
+    height: auto;
+    filter: grayscale(30%); /* Hơi xám nhẹ để đồng bộ màu nền */
+    transition: 0.3s;
+}
+
+/* Hiệu ứng khi rà chuột */
+.tag-icon-link:hover {
+    background: rgba(0, 212, 255, 0.1);
+    border-color: #00d4ff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+}
+
+.tag-icon-link:hover img {
+    filter: grayscale(0%); /* Hiện màu gốc của logo khi hover */
+    transform: scale(1.1);
 }
 /* =========================
    FEEDBACK SECTION
@@ -695,21 +671,61 @@ body{
         flex-wrap: wrap; /* Cho phép các tag xuống dòng nếu quá dài */
         gap: 8px;
     }
+    /* 3. Kích hoạt cuộn ngang cho các Grid (YouTube, Reels, v.v.) */
+    .section-grid {
+        display: flex; /* Xếp các ô nằm ngang hàng */
+        flex-wrap: nowrap; /* Ép không được xuống dòng */
+        overflow-x: auto; /* Cho phép vuốt ngang */
+        gap: 16px; /* Khoảng cách giữa các ô hình */
+        padding: 10px 0 20px 0;
+        
+        /* Giúp vuốt mượt và tự "hít" vào giữa như App */
+        scroll-snap-type: x mandatory; 
+        -webkit-overflow-scrolling: touch; /* Cho iPhone vuốt mượt hơn */
+        
+        /* Ẩn thanh cuộn xấu xí đi */
+        scrollbar-width: none; 
+    }
+
+    .section-grid::-webkit-scrollbar {
+        display: none; /* Ẩn thanh cuộn trên Chrome/Safari */
+    }
+
+    .grid-item {
+        flex: 0 0 85%; /* Mỗi ô chiếm 85% chiều rộng để lộ một chút ô tiếp theo (mồi người dùng vuốt) */
+        scroll-snap-align: center; /* Khi dừng vuốt, ô sẽ nằm ngay giữa */
+        max-width: 320px;
+    }
+
+    .grid-item img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9; /* Giữ chuẩn khung hình video */
+        object-fit: cover;
+        border-radius: 12px; /* Bo góc cho chuyên nghiệp */
+    }
 }
     /* BACKGROUND CANVAS */
 
 #bg-canvas {
     position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    z-index: 0;
+    top: 0; 
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    z-index: -1;
     pointer-events: none;
     display: block;
+    
+    /* Thêm dòng này để chắc chắn canvas không đẩy khung hình ra */
+    overflow: hidden; 
+
+    /* Màu sắc anh đã chỉnh rất đẹp, rất sâu */
     background: linear-gradient(
         to bottom,
-        #010815, /* Xanh đen gần như đen */
+        #010815, 
         #030d21, 
-        #020c1b  /* Xanh navy rất đậm */
+        #020c1b  
     );
 }
 
