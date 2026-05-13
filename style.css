@@ -105,33 +105,29 @@ body{
 
 
 /* SECTION */
-
-.section{
-
-    height:100vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    border-bottom:1px solid rgba(255,255,255,0.08);
+.section {
+    /* height: 100vh; <-- Xóa hoặc comment dòng này */
+    min-height: 100vh; /* Chỉ định chiều cao tối thiểu, nội dung dài sẽ tự giãn */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px; /* Thêm khoảng trống trên dưới để chữ không dính sát mép */
+    box-sizing: border-box; 
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-
-.section h1{
-    font-size:64px;
-    margin-bottom:20px;
+.section h1 {
+    font-size: clamp(32px, 8vw, 64px); /* Chữ tự nhỏ lại trên điện thoại, to ra trên máy tính */
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
-
-.section p{
-    font-size:24px;
-    opacity:0.7;
+.section p {
+    font-size: clamp(18px, 4vw, 24px); /* Tương tự cho đoạn văn */
+    opacity: 0.7;
+    max-width: 800px; /* Giới hạn độ rộng để dễ đọc trên màn hình lớn */
 }
 
 
@@ -661,36 +657,45 @@ body{
 
 
 /* MOBILE */
-
 @media(max-width:900px){
-
-    .feedback-wrapper{
-
-        grid-template-columns:1fr;
-
-        padding:32px;
+    /* 1. Sửa lỗi section chồng chéo */
+    .section {
+        height: auto !important; /* Quan trọng: Cho phép section giãn theo nội dung */
+        min-height: 100vh;
+        padding: 80px 20px; /* Tạo khoảng trống để không bị dính chữ */
     }
 
-    .input-row{
-
-        grid-template-columns:1fr;
+    .section h1 {
+        font-size: 36px; /* Giảm cỡ chữ tiêu đề để không chiếm hết màn hình */
+        line-height: 1.1;
     }
 
-    .feedback-left{
-
-        align-items:center;
-
-        text-align:center;
+    /* 2. Giữ nguyên phần feedback của anh và thêm một chút tối ưu */
+    .feedback-wrapper {
+        grid-template-columns: 1fr;
+        padding: 32px;
+        gap: 40px; /* Thêm khoảng cách giữa phần chữ và phần form */
     }
 
-    .feedback-left p{
-
-        max-width:100%;
+    .input-row {
+        grid-template-columns: 1fr;
+        gap: 15px; /* Khoảng cách giữa các ô input */
     }
 
-    .feedback-tags{
+    .feedback-left {
+        align-items: center;
+        text-align: center;
+    }
 
-        justify-content:center;
+    .feedback-left p {
+        max-width: 100%;
+        font-size: 18px; /* Giảm font chữ mô tả một chút cho dễ nhìn */
+    }
+
+    .feedback-tags {
+        justify-content: center;
+        flex-wrap: wrap; /* Cho phép các tag xuống dòng nếu quá dài */
+        gap: 8px;
     }
 }
     /* BACKGROUND CANVAS */
