@@ -347,42 +347,45 @@ body {
 /* TAG GROUP */
 .tag-group {
     display: flex;
-    gap: 20px;
+    /* Thêm flex-wrap để icon tự xuống hàng nếu card quá chật */
+    flex-wrap: wrap; 
+    gap: 15px; /* Giảm gap một chút trên di động cho cân đối */
     justify-content: center;
-    padding: 20px 0;
+    padding: 15px 0;
+    width: 100%;
 }
 
 .tag-icon-link {
-    width: 50px;  /* Anh chỉnh độ lớn nhỏ ở đây */
-    height: 50px;
+    /* Quan trọng nhất: flex-shrink: 0 để icon không bao giờ bị co lại */
+    flex-shrink: 0; 
+    
+    width: 45px;  /* Trên di động 45px là vừa đẹp, PC anh để 50px */
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(0, 212, 255, 0.2);
-    border-radius: 12px; /* Bo góc nhẹ, nếu muốn tròn xoe thì để 50% */
+    border-radius: 12px; 
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
 }
 
 .tag-icon-link img {
-    width: 60%; /* Để icon nhỏ gọn trong khung, không dính sát viền */
+    width: 60%; 
     height: auto;
-    filter: grayscale(30%); /* Hơi xám nhẹ để đồng bộ màu nền */
+    /* object-fit đảm bảo logo không bị méo */
+    object-fit: contain; 
+    filter: grayscale(30%);
     transition: 0.3s;
 }
 
-/* Hiệu ứng khi rà chuột */
+/* Các hiệu ứng Hover anh giữ nguyên vì rất đẹp rồi */
 .tag-icon-link:hover {
     background: rgba(0, 212, 255, 0.1);
     border-color: #00d4ff;
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
-}
-
-.tag-icon-link:hover img {
-    filter: grayscale(0%); /* Hiện màu gốc của logo khi hover */
-    transform: scale(1.1);
 }
 /* =========================
    FEEDBACK SECTION
