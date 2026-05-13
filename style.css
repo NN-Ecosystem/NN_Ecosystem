@@ -603,6 +603,57 @@ body {
 /* MOBILE FIX - DÀNH RIÊNG CHO CẤU TRÚC HTML MEDIA */
 /* MOBILE - GIỮ CUỘN CARD NHƯNG CHO TAG XUỐNG HÀNG */
 @media(max-width:900px){
+    .feedback-wrapper {
+        display: flex !important;
+        flex-direction: column !important; /* Chuyển thành hàng dọc */
+        padding: 20px !important;
+        gap: 30px !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    .feedback-left {
+        text-align: center; /* Căn giữa nội dung bên trái cho cân đối */
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .feedback-left h2 {
+        font-size: 28px !important; /* Thu nhỏ tiêu đề feedback */
+    }
+
+    .feedback-left p {
+        font-size: 16px !important;
+        max-width: 100%;
+    }
+
+    /* Làm cho các ô Input và Textarea vừa khít màn hình */
+    .feedback-form {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .input-row {
+        display: flex !important;
+        flex-direction: column !important; /* Ép ô Name và Email xếp chồng lên nhau */
+        gap: 15px !important;
+    }
+
+    .feedback-form input, 
+    .feedback-form textarea {
+        width: 100% !important; /* Đảm bảo không bị tràn */
+        box-sizing: border-box;
+        padding: 12px;
+        font-size: 16px; /* Tránh iOS tự động zoom khi focus vào input */
+    }
+
+    .feedback-form button {
+        width: 100% !important;
+        padding: 15px;
+    }
     .hero-buttons {
         flex-direction: column; /* Nút trên nút dưới cho dễ bấm */
         gap: 15px;
