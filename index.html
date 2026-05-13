@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Ecosystem Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+     
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+        
+
+        <div class="logo">
+
+            <img src="assets/logo/logo.png" alt="logo">
+            <!-- Nơi hiện số view -->
+            <p>Viewers: <span id="view-count">0</span></p>
+
+        </div>
+
+
+        <!-- Thư viện Firebase (phải đặt trước script.js) -->
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+
+        <ul class="nav-links">
+
+            <li><a href="#home">Home</a></li>
+            <li><a href="#dealvn">Deal VN</a></li>
+            <li><a href="#global">Global</a></li>
+            <li><a href="#book">Book</a></li>
+            <li><a href="#tool">Tool</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#favourite">Favourite</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+
+        </ul>
+
+    </nav>
+    <canvas id="bg-canvas"></canvas>  
+
+    <!-- HOME -->
+
+    <section id="home" class="section hero">
+
+        <div class="hero-content">
+
+            <h1>AI Ecosystem Hub</h1>
+
+            <p>
+                Build • Scale • Automate
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#tool" class="btn primary">
+                    Open Tools
+                </a>
+
+                <a href="#media" class="btn secondary">
+                    Explore Media
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DEAL VN -->
+
+    <section id="dealvn" class="section">
+
+        <h1>Deal Việt Nam</h1>
+
+        <div class="card-grid">
+
+            <!-- CARD 1 -->
+
+            <div class="card reveal">
+
+                <h2>Shopee</h2>
+
+                <p>
+                    Cập nhật deal hot mỗi ngày.
+                </p>
+
+                <a href="https://shorten.asia/G6GrksWr" target="_blank" class="card-btn">
+                    Open
+                </a>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="card reveal">
+
+                <h2>Lazada</h2>
+
+                <p>
+                    Cập nhật deal hot mỗi ngày.
+                </p>
+
+                <a href="https://shorten.asia/keu74QK7" target="_blank" class="card-btn">
+                    Open
+                </a>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="card reveal">
+
+                <h2>Tiki</h2>
+
+                <p>
+                    Cập nhật deal hot mỗi ngày.
+                </p>
+
+                <a href="https://shorten.asia/G6GrksWr" target="_blank" class="card-btn">
+                    Open
+                </a>
+
+            </div>
+
+            <!-- CARD 4 -->
+
+            <div class="card reveal">
+
+                <h2>AEON</h2>
+
+                <p>
+                    Chương trình khuyến mãi mới nhất.
+                </p>
+
+                <a href="https://shorten.asia/tKvxWvfP" target="_blank" class="card-btn">
+                    Open
+                </a>
+
+            </div>
+
+            <!-- CARD 5 -->
+
+            <div class="card reveal">
+
+                <h2>HIGHLAND COFFEE</h2>
+
+                <p>
+                    Chương trình khuyến mãi mới nhất.
+                </p>
+
+                <a href="https://shorten.asia/MdM1BtY1" target="_blank" class="card-btn">
+                    Open
+                </a>
+
+            </div>
+
+            <!-- CARD 6 -->
+
+            <div class="card reveal">
+
+                <h2>COFFEE HOUSE</h2>
+
+                <p>
+                    Chương trình khuyến mãi mới nhất.
+                </p>
+
+                <a href="https://shorten.asia/Jd2qxMGw" target="_blank" class="card-btn">
+                    Open
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GLOBAL -->
+
+    <section id="global" class="section">
+
+        <h1>Deal International</h1>
+
+        <div class="card-grid">
+
+            <!-- CARD 1 -->
+
+            <div class="card reveal">
+
+                <h2>Amazon</h2>
+
+                <p>
+                    Hot deal everyday.
+                </p>
+
+                <a href="https://amzn.to/4cKUrBh" target="_blank"class="card-btn">
+                    Open
+                </a>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="card reveal">
+
+                <h2>Alibaba</h2>
+
+                <p>
+                    Hot deal everyday.
+                </p>
+
+                <a href="https://amzn.to/4cKUrBh" target="_blank" class="card-btn">
+                    Open
+                </a>
+
+            </div>
+    
+        </div>
+
+    </section>
+
+
+    <!-- BOOK -->
+
+    <section id="book" class="section">
+
+        <h1>Book</h1>
+
+        <div class="card-grid">
+
+            <!-- CARD 1 -->
+
+            <div class="card reveal">
+
+                <h2>Kindle</h2>
+
+                <p>
+                    New book everyday.
+                </p>
+
+                <a href="https://amzn.to/4w99BaS" target="_blank" class="card-btn">
+                    Open
+                </a>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="card reveal">
+
+                <h2>Audio book</h2>
+
+                <p>
+                    Listening to audiobooks.
+                </p>
+
+                <a href="https://amzn.to/49shiiK" target="_blank" class="card-btn">
+                    Open
+                </a>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- TOOL -->
+
+    <section id="tool" class="section">
+
+        <h1>Tool</h1>
+        <div class="card-grid">
+            <!-- CARD 1 -->
+            <div class="card reveal">
+                <h2>Trading Alert tool</h2>
+                <p>
+                    ver. 2.1 Download.
+                </p>
+                <a href="https://www.mediafire.com/file/5qh31kq77iuzxkd/Trading_Alert.7z/file" target="_blank" class="card-btn">
+                    Open
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEDIA -->
+
+    <section id="media" class="section">
+
+        <h1>Media Ecosystem</h1>
+
+        <div class="card-grid">
+
+            <!-- BOOK -->
+
+            <div class="card reveal">
+                <h2>Book</h2>
+                <p>Book channels, reviews, learning and reading ecosystem.</p>
+
+                <div class="tag-group">
+                    <!-- Mỗi tag là một link trực tiếp đến nền tảng -->
+                    <a href="https://www.youtube.com/@Book_inter" target="_blank" class="tag-link">
+                        <span>YouTube Global</span>
+                    </a>
+                    <a href="https://pin.it/75iYE0xZy" target="_blank" class="tag-link">
+                        <span>Pinterest</span>
+                    </a>
+                    <a href="https://www.youtube.com/@BookNNBook" target="_blank" class="tag-link">
+                        <span>YouTube VN</span>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61573364340773" target="_blank" class="tag-link">
+                        <span>Facebook Page</span>
+                    </a>
+                    
+                </div>
+                <!-- Nút Open Hub: Thay vì dẫn đi đâu đó, hãy dùng nó làm nút "Lưu trang" 
+                    hoặc dẫn về danh mục tổng trên Linktree/Passio của anh -->
+                <a href="#" class="card-btn">
+                    Home
+                </a>
+            </div>
+
+
+            <!-- TOOL -->
+
+            <div class="card reveal">
+
+                <h2>Tool</h2>
+
+                <p>
+                    AI tools, automation systems and media ecosystem.
+                </p>
+
+                <div class="tag-group">
+
+                    <!-- Mỗi tag là một link trực tiếp đến nền tảng -->
+                    <a href="https://pin.it/4Sdj19mEL" target="_blank" class="tag-link">
+                        <span>Pinterest</span>
+                    </a>
+                    <a href="https://www.youtube.com/@TOOLNNTOOL" target="_blank" class="tag-link">
+                        <span>YouTube VN</span>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61588721090673" target="_blank" class="tag-link">
+                        <span>Facebook Page</span>
+                    </a>
+                    <a href="https://www.threads.com/@nhonguyen1033" target="_blank" class="tag-link">
+                        <span>Threads</span>
+                    </a>
+
+                </div>
+
+                <a href="#" class="card-btn">
+                    Home
+                </a>
+
+            </div>
+
+
+            <!-- TOURIST -->
+
+            <div class="card reveal">
+
+                <h2>Tourist</h2>
+
+                <p>
+                    Travel videos, lifestyle and social media ecosystem.
+                </p>
+
+                <div class="tag-group">
+
+                    <a href="https://www.youtube.com/@Tourist_Chill" target="_blank" class="tag-link">
+                        <span>YouTube</span>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61580730796747" target="_blank" class="tag-link">
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/nhonguyen1033/" target="_blank" class="tag-link">
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@chill_dauchantron" target="_blank" class="tag-link">
+                        <span>TikTok</span>
+                    </a>
+
+                </div>
+
+                <a href="#" class="card-btn">
+                    Home
+                </a>
+
+            </div>
+
+
+            <!-- MOTIVATE -->
+
+            <div class="card reveal">
+
+                <h2>Motivate</h2>
+
+                <p>
+                    Motivation, self-growth and inspiration media channels.
+                </p>
+
+                <div class="tag-group">
+
+                   <!-- Mỗi tag là một link trực tiếp đến nền tảng -->
+                    <a href="https://www.youtube.com/@Motivate_NN_Daily" target="_blank" class="tag-link">
+                        <span>YouTube Global</span>
+                    </a>
+                    <a href="https://pin.it/3qv4F5jUu" target="_blank" class="tag-link">
+                        <span>Pinterest</span>
+                    </a>
+                    <a href="https://www.youtube.com/@NNMotivate" target="_blank" class="tag-link">
+                        <span>YouTube VN</span>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61573371688807" target="_blank" class="tag-link">
+                        <span>Facebook Page</span>
+                    </a>
+                </div>
+
+                <a href="#" class="card-btn">
+                    Home
+                </a>
+
+            </div>
+
+
+            <!-- HEALING -->
+
+            <div class="card reveal">
+
+                <h2>Healing</h2>
+
+                <p>
+                    Emotional healing, calm music and supportive content.
+                </p>
+
+                <div class="tag-group">
+
+                    <!-- Mỗi tag là một link trực tiếp đến nền tảng -->
+                    <a href="https://www.youtube.com/@Healing_Inter" target="_blank" class="tag-link">
+                        <span>YouTube Global</span>
+                    </a>
+                    <a href="https://pin.it/37dTeUsY7" target="_blank" class="tag-link">
+                        <span>Pinterest</span>
+                    </a>
+                    <a href="https://www.youtube.com/@NgộNNNgộ" target="_blank" class="tag-link">
+                        <span>YouTube VN</span>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61577439152340" target="_blank" class="tag-link">
+                        <span>Facebook Page</span>
+                    </a>
+                </div>
+
+                <a href="#" class="card-btn">
+                    Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MUSIC -->
+
+    <section id="music" class="section">
+
+        <h1>Music Atmosphere</h1>
+
+        <div class="card-grid">
+
+            <!-- FOCUS -->
+
+            <div class="card reveal">
+
+                <h2>Focus</h2>
+
+                <p>
+                    Deep work, coding and productivity atmosphere.
+                </p>
+
+                <div class="tag-group">
+
+                    <span>Lo-fi</span>
+                    <span>Deep Work</span>
+                    <span>Coding</span>
+
+                </div>
+
+                <a href="#" class="card-btn">
+                    Open Playlist
+                </a>
+
+            </div>
+
+
+            <!-- HEALING -->
+
+            <div class="card reveal">
+
+                <h2>Healing</h2>
+
+                <p>
+                    Calm emotion, meditation and peaceful energy.
+                </p>
+
+                <div class="tag-group">
+
+                    <span>Relax</span>
+                    <span>Meditation</span>
+                    <span>Calm</span>
+
+                </div>
+
+                <a href="#" class="card-btn">
+                    Open Playlist
+                </a>
+
+            </div>
+
+
+            <!-- MOTIVATION -->
+
+            <div class="card reveal">
+
+                <h2>Motivation</h2>
+
+                <p>
+                    Warrior mindset, discipline and cinematic energy.
+                </p>
+
+                <div class="tag-group">
+
+                    <span>Epic</span>
+                    <span>Gym</span>
+                    <span>Rise</span>
+
+                </div>
+
+                <a href="#" class="card-btn">
+                    Open Playlist
+                </a>
+
+            </div>
+
+
+            <!-- NATURE -->
+
+            <div class="card reveal">
+
+                <h2>Nature</h2>
+
+                <p>
+                    Rain, ocean and forest atmosphere for relaxation.
+                </p>
+
+                <div class="tag-group">
+
+                    <span>Rain</span>
+                    <span>Ocean</span>
+                    <span>Forest</span>
+
+                </div>
+
+                <a href="#" class="card-btn">
+                    Open Playlist
+                </a>
+
+            </div>
+
+
+            <!-- NIGHT -->
+
+            <div class="card reveal">
+
+                <h2>Night Mood</h2>
+
+                <p>
+                    Dark ambient and soft piano for late night focus.
+                </p>
+
+                <div class="tag-group">
+
+                    <span>Night</span>
+                    <span>Piano</span>
+                    <span>Ambient</span>
+
+                </div>
+
+                <a href="#" class="card-btn">
+                    Open Playlist
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAVOURITE -->
+
+    <section id="favourite" class="section">
+
+        <h1>Favourite</h1>
+
+        <div class="card-grid">
+
+            <!-- BOOKS -->
+
+            <div class="card reveal">
+
+                <h2>Favourite Books</h2>
+
+                <p>
+                    Books that changed my thinking and mindset.
+                </p>
+
+                <div class="tag-group">
+
+                    <span>Mindset</span>
+                    <span>Growth</span>
+                    <span>Psychology</span>
+
+                </div>
+
+                <a href="#" class="card-btn">
+                    Open Collection
+                </a>
+
+            </div>
+
+
+            <!-- TOOLS -->
+
+            <div class="card reveal">
+
+                <h2>Favourite Tools</h2>
+
+                <p>
+                    Daily tools for automation, coding and productivity.
+                </p>
+
+                <div class="tag-group">
+
+                    <span>AI</span>
+                    <span>Automation</span>
+                    <span>Productivity</span>
+
+                </div>
+
+                <a href="#" class="card-btn">
+                    Open Collection
+                </a>
+
+            </div>
+
+
+            <!-- MUSIC -->
+
+            <div class="card reveal">
+
+                <h2>Favourite Music</h2>
+
+                <p>
+                    Focus music, healing sound and creative atmosphere.
+                </p>
+
+                <div class="tag-group">
+
+                    <span>Lo-fi</span>
+                    <span>Piano</span>
+                    <span>Ambient</span>
+
+                </div>
+
+                <a href="#" class="card-btn">
+                    Open Playlist
+                </a>
+
+            </div>
+
+
+            <!-- CHANNELS -->
+
+            <div class="card reveal">
+
+                <h2>Favourite Channels</h2>
+
+                <p>
+                    Inspiring creators and educational media channels.
+                </p>
+
+                <div class="tag-group">
+
+                    <span>AI</span>
+                    <span>Trading</span>
+                    <span>Business</span>
+
+                </div>
+
+                <a href="#" class="card-btn">
+                    Open Channels
+                </a>
+
+            </div>
+
+
+            <!-- QUOTES -->
+
+            <div class="card reveal">
+
+                <h2>Favourite Quotes</h2>
+
+                <p>
+                    “Build systems, not motivation.”
+                </p>
+
+                <div class="tag-group">
+
+                    <span>Mindset</span>
+                    <span>Discipline</span>
+                    <span>Growth</span>
+
+                </div>
+
+                <a href="#" class="card-btn">
+                    Read More
+                </a>
+
+            </div>
+
+
+            <!-- SETUP -->
+
+            <div class="card reveal">
+
+                <h2>Favourite Setup</h2>
+
+                <p>
+                    Workstation, creator desk and automation setup.
+                </p>
+
+                <div class="tag-group">
+
+                    <span>Workspace</span>
+                    <span>Creator</span>
+                    <span>Tech</span>
+
+                </div>
+
+                <a href="#" class="card-btn">
+                    Open Setup
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FEEDBACK -->
+
+    <section id="feedback" class="section">
+
+        <h1>Comment & Feedback</h1>
+
+        <div class="feedback-wrapper">
+
+            <!-- LEFT -->
+
+            <div class="feedback-left reveal">
+
+                <div class="feedback-icon">
+
+                    💬
+
+                </div>
+
+                <h2>Let’s Build Together</h2>
+
+                <div class="line"></div>
+
+                <p>
+                    Your feedback helps improve tools, content
+                    and the ecosystem experience.
+                </p>
+
+                <div class="feedback-tags">
+
+                    <span>Ideas</span>
+                    <span>Feedback</span>
+                    <span>Collab</span>
+
+                </div>
+            </div>
+
+
+            <!-- RIGHT -->
+            <div class="feedback-right reveal">
+                <!-- Thêm ID feedback-form -->
+                <form class="feedback-form" id="feedback-form">
+                    <div class="input-row">
+                        <input
+                            type="text"
+                            id="fb-name" 
+                            placeholder="Your name"
+                            required
+                        >
+                        <input
+                            type="email"
+                            id="fb-email"
+                            placeholder="Your email"
+                            required
+                        >
+                    </div>
+                    <textarea
+                        id="fb-message"
+                        placeholder="Your message"
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        Send Feedback
+                    </button>
+                </form>
+            </div>
+
+        </div>
+        
+    </section>
+    <!-- SECTION HIỂN THỊ COMMENT -->
+    <section id="comment-section" class="section">
+        <div class="container" style="text-align: left;"> <!-- Ép container về trái -->
+            
+            <div class="section-header reveal" style="margin-left: 0;">
+                <h1 style="text-align: left; margin-left: 0;">Recent Feedbacks</h1>
+                <div class="line" style="margin: 10px 0 30px 0;"></div> <!-- Line không căn giữa nữa -->
+            </div>
+
+            <div id="comment-list" class="reveal">
+                <!-- Dữ liệu từ Firebase sẽ đổ vào đây -->
+            </div>
+            
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

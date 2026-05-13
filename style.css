@@ -1,0 +1,752 @@
+/* RESET */
+
+*{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+}
+
+
+/* HTML */
+
+html{
+
+    scroll-behavior:smooth;
+}
+
+
+/* BODY */
+
+body{
+
+    width:100%;
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    background: linear-gradient(
+        to bottom,
+        #040a15, /* Xanh đen gần như đen */
+        #081225, 
+        #0d1b33  /* Xanh navy rất đậm */
+    );
+
+    color:#eaf4ff;
+
+    font-family:
+    Arial,
+    sans-serif;
+
+    position:relative;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:20px 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:
+    rgba(0,0,0,0.25);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.08);
+
+    z-index:1000;
+}
+
+
+.logo img{
+
+    height:80px;
+
+    object-fit:contain;
+}
+
+
+.nav-links{
+    display:flex;
+    gap:24px;
+
+    list-style:none;
+}
+
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+
+    opacity:0.7;
+    transition:0.3s;
+}
+
+
+.nav-links a:hover{
+    opacity:1;
+}
+
+
+/* SECTION */
+
+.section{
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+
+.section h1{
+    font-size:64px;
+    margin-bottom:20px;
+}
+
+
+.section p{
+    font-size:24px;
+    opacity:0.7;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content{
+
+    max-width:900px;
+    padding:20px;
+}
+
+
+.hero h1{
+
+    font-size:82px;
+    margin-bottom:24px;
+
+    line-height:1.1;
+
+    color:white;
+}
+
+
+.hero p{
+
+    font-size:32px;
+
+    color:#dfefff;
+
+    font-weight:300;
+
+    letter-spacing:1px;
+
+    margin-bottom:40px;
+
+    text-shadow:0 0 12px rgba(255,255,255,0.15);
+}
+
+
+/* BUTTONS */
+
+.hero-buttons{
+
+    display:flex;
+    gap:20px;
+
+    justify-content:center;
+}
+
+
+/* BASE BUTTON */
+
+.btn{
+
+    padding:16px 32px;
+
+    border-radius:16px;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    transition:0.3s;
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    color:#ffffff;
+
+    letter-spacing:0.5px;
+}
+
+
+/* PRIMARY BUTTON */
+
+.primary{
+
+    background:#0a84ff;
+
+    color:#ffffff;
+
+    font-weight:600;
+}
+
+
+.primary:hover{
+
+    transform:translateY(-4px);
+
+    background:#339cff;
+
+    box-shadow:0 0 30px rgba(10,132,255,0.45);
+}
+
+
+/* SECONDARY BUTTON */
+
+.secondary{
+
+    background:rgba(255,255,255,0.08);
+
+    color:#ffffff;
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(12px);
+
+    font-weight:500;
+}
+
+
+.secondary:hover{
+
+    background:rgba(255,255,255,0.16);
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 24px rgba(255,255,255,0.12);
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero h1{
+
+        font-size:52px;
+    }
+
+    .hero p{
+
+        font-size:22px;
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn{
+
+        width:220px;
+        text-align:center;
+    }
+
+}
+/* CARD GRID */
+
+.card-grid{
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin-top:50px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(280px,1fr));
+
+    gap:30px;
+
+    padding:0 40px;
+}
+
+
+/* CARD */
+
+.card{
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    border-radius:24px;
+
+    padding:32px;
+
+    backdrop-filter:blur(12px);
+
+    transition:0.35s;
+}
+
+
+.card:hover{
+
+    transform:
+    translateY(-8px);
+
+    border:
+    1px solid rgba(10,132,255,0.5);
+
+    box-shadow:
+    0 0 30px rgba(10,132,255,0.15);
+}
+
+
+/* CARD TITLE */
+
+.card h2{
+
+    font-size:28px;
+
+    margin-bottom:16px;
+
+    color:white;
+}
+
+
+/* CARD TEXT */
+
+.card p{
+
+    font-size:17px;
+
+    line-height:1.6;
+
+    color:#b7c9e6;
+
+    margin-bottom:28px;
+}
+
+
+/* CARD BUTTON */
+
+.card-btn{
+
+    display:inline-block;
+
+    padding:12px 24px;
+
+    border-radius:14px;
+
+    background:#0a84ff;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:0.3s;
+}
+
+
+.card-btn:hover{
+
+    background:#339cff;
+}
+/* TAG GROUP */
+.tag-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;           /* Tăng nhẹ lên 12px để các nút không bị quá khít */
+    margin-top: 16px;    /* Thêm khoảng cách với phần text bên trên */
+    margin-bottom: 28px; /* Tăng khoảng cách với nút Open Hub bên dưới */
+}
+
+/* TAG */
+.tag-group span {
+    padding: 8px 16px;   /* Tăng nhẹ padding ngang để nút trông cân đối hơn */
+    border-radius: 999px;
+    background: rgba(10, 132, 255, 0.12);
+    border: 1px solid rgba(10, 132, 255, 0.2);
+    color: #b9d8ff;
+    font-size: 14px;
+    font-weight: 500;    /* Làm chữ nét hơn một chút */
+    cursor: pointer;     /* Hiển thị bàn tay khi di chuột vào */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Hiệu ứng mượt mà */
+    display: inline-block;
+}
+
+/* HIỆU ỨNG KHI RE CHUỘT (HOVER) */
+.tag-group span:hover {
+    background: rgba(10, 132, 255, 0.25); /* Sáng hơn khi hover */
+    border-color: rgba(10, 132, 255, 0.5);
+    color: #fff;                          /* Chữ trắng hẳn để nổi bật */
+    transform: translateY(-2px);          /* Nhích nhẹ lên tạo cảm giác nổi */
+    box-shadow: 0 4px 12px rgba(10, 132, 255, 0.2); /* Đổ bóng nhẹ */
+}
+/* =========================
+   FEEDBACK SECTION
+========================= */
+
+.feedback-wrapper{
+
+    width:100%;
+
+    max-width:1300px;
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1.2fr;
+
+    gap:50px;
+
+    padding:50px;
+
+    border-radius:32px;
+
+    background:
+    rgba(255,255,255,0.03);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(16px);
+}
+
+
+/* LEFT */
+
+.feedback-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:flex-start;
+}
+
+
+.feedback-icon{
+
+    font-size:72px;
+
+    margin-bottom:24px;
+}
+
+
+.feedback-left h2{
+
+    font-size:42px;
+
+    margin-bottom:18px;
+}
+
+
+.line{
+
+    width:80px;
+    height:4px;
+
+    border-radius:999px;
+
+    background:#0a84ff;
+
+    margin-bottom:24px;
+}
+
+
+.feedback-left p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#b7c9e6;
+
+    margin-bottom:32px;
+
+    max-width:420px;
+}
+
+
+/* TAGS */
+
+.feedback-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+}
+
+
+.feedback-tags span{
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:
+    rgba(10,132,255,0.12);
+
+    border:
+    1px solid rgba(10,132,255,0.22);
+
+    color:#b9d8ff;
+
+    font-size:14px;
+}
+
+
+/* RIGHT */
+
+.feedback-right{
+
+    display:flex;
+
+    align-items:center;
+}
+
+
+/* FORM */
+
+.feedback-form{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+}
+
+
+/* INPUT ROW */
+
+.input-row{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:20px;
+}
+
+
+/* INPUT */
+
+.feedback-form input,
+.feedback-form textarea{
+
+    width:100%;
+
+    padding:20px 22px;
+
+    border-radius:20px;
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    background:
+    rgba(255,255,255,0.04);
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+
+    backdrop-filter:blur(10px);
+
+    transition:0.3s;
+}
+
+
+/* FOCUS */
+
+.feedback-form input:focus,
+.feedback-form textarea:focus{
+
+    border:
+    1px solid rgba(10,132,255,0.45);
+
+    box-shadow:
+    0 0 20px rgba(10,132,255,0.12);
+}
+
+
+/* TEXTAREA */
+
+.feedback-form textarea{
+
+    min-height:220px;
+
+    resize:none;
+}
+
+
+/* BUTTON */
+
+.feedback-form button{
+
+    padding:20px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#0a84ff;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+
+/* HOVER */
+
+.feedback-form button:hover{
+
+    background:#339cff;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 30px rgba(10,132,255,0.35);
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .feedback-wrapper{
+
+        grid-template-columns:1fr;
+
+        padding:32px;
+    }
+
+    .input-row{
+
+        grid-template-columns:1fr;
+    }
+
+    .feedback-left{
+
+        align-items:center;
+
+        text-align:center;
+    }
+
+    .feedback-left p{
+
+        max-width:100%;
+    }
+
+    .feedback-tags{
+
+        justify-content:center;
+    }
+}
+    /* BACKGROUND CANVAS */
+
+#bg-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    display: block;
+    background: linear-gradient(
+        to bottom,
+        #010815, /* Xanh đen gần như đen */
+        #030d21, 
+        #020c1b  /* Xanh navy rất đậm */
+    );
+}
+
+/* CONTENT LAYER */
+
+.navbar,
+.section{
+
+    position:relative;
+
+    z-index:2;
+
+    background:transparent;
+}
+/* Container chứa toàn bộ comment */
+.comment-container {
+    width: 100%;
+    /* Quan trọng: bỏ padding trái của container nếu có */
+    padding: 20px 0; 
+    margin-left: 0;
+    text-align: left;
+}
+
+/* Từng item comment */
+.comment-item {
+    background: rgba(255, 255, 255, 0.03); 
+    /* Nếu muốn sát lề 100%, anh có thể cân nhắc bỏ border-left hoặc giữ lại tùy gu */
+    border-left: 3px solid #0a84ff;       
+    
+    /* Chỉnh lại padding: Trên 15px, Phải 15px, Dưới 15px, Trái 15px */
+    padding: 15px; 
+    
+    margin-left: 0; /* Đảm bảo không có margin bên trái */
+    border-radius: 0 4px 4px 0; /* Bo góc bên phải thôi nhìn sẽ pro hơn */
+    transition: 0.3s;
+    width: 100%;
+    box-sizing: border-box; /* Đảm bảo padding không làm tràn chiều rộng */
+}
+
+/* Đảm bảo class .section không chặn nó lại */
+#comment-section.section {
+    padding-left: 0 !important; /* Ép section bỏ padding bên trái */
+}
