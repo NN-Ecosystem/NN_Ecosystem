@@ -129,39 +129,32 @@ body {
 
 /* HERO CONTENT */
 
-.hero-content{
-
-    max-width:900px;
-    padding:20px;
+/* HERO CONTENT */
+.hero-content {
+    max-width: 900px;
+    padding: 20px;
+    width: 100%; /* Đảm bảo luôn vừa màn hình */
+    box-sizing: border-box;
 }
 
-
-.hero h1{
-
-    font-size:82px;
-    margin-bottom:24px;
-
-    line-height:1.1;
-
-    color:white;
+.hero h1 {
+    /* Tối thiểu 32px, linh hoạt theo màn hình 8vw, tối đa 82px */
+    font-size: clamp(32px, 8vw, 82px); 
+    margin-bottom: 24px;
+    line-height: 1.1;
+    color: white;
+    word-wrap: break-word; /* Ép xuống dòng nếu từ quá dài */
 }
 
-
-.hero p{
-
-    font-size:32px;
-
-    color:#dfefff;
-
-    font-weight:300;
-
-    letter-spacing:1px;
-
-    margin-bottom:40px;
-
-    text-shadow:0 0 12px rgba(255,255,255,0.15);
+.hero p {
+    /* Tối thiểu 18px, linh hoạt 3vw, tối đa 32px */
+    font-size: clamp(18px, 3vw, 32px);
+    color: #dfefff;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
 }
-
 
 /* BUTTONS */
 
@@ -610,6 +603,29 @@ body {
 /* MOBILE FIX - DÀNH RIÊNG CHO CẤU TRÚC HTML MEDIA */
 /* MOBILE - GIỮ CUỘN CARD NHƯNG CHO TAG XUỐNG HÀNG */
 @media(max-width:900px){
+    .hero-buttons {
+        flex-direction: column; /* Nút trên nút dưới cho dễ bấm */
+        gap: 15px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .hero-buttons a {
+        width: 80%; /* Nút to ra cho dễ chạm tay */
+        text-align: center;
+    }
+    nav {
+        display: flex;
+        overflow-x: auto; /* Cho phép vuốt ngang các menu nếu quá dài */
+        white-space: nowrap;
+        gap: 15px;
+        padding: 10px;
+        justify-content: flex-start; /* Để các menu xếp từ trái sang */
+    }
+    
+    .logo-container {
+        scale: 0.8; /* Thu nhỏ logo lại một chút trên di động */
+    }
     /* --- GIẢI THUẬT CUỘN NGANG CHO CARD --- */
     .card-grid {
         display: flex !important;
