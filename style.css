@@ -608,7 +608,30 @@ body {
 
 
 /* MOBILE FIX - DÀNH RIÊNG CHO CẤU TRÚC HTML MEDIA */
-@media(max-width:900px){
+@media(max-width:768px){
+
+    .hero h1{
+
+        font-size:52px;
+    }
+
+    .hero p{
+
+        font-size:22px;
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn{
+
+        width:220px;
+        text-align:center;
+    }
+
     body {
         background-color: red !important; /* Khi màn hình nhỏ hơn 900px, cả nền sẽ biến thành màu đỏ */
     }
