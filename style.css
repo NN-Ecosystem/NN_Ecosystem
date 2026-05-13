@@ -104,30 +104,37 @@ body{
 }
 
 
-/* SECTION */
+/* SECTION - TỐI ƯU CHO MỌI ĐỘ PHÂN GIẢI */
 .section {
-    /* height: 100vh; <-- Xóa hoặc comment dòng này */
-    min-height: 100vh; /* Chỉ định chiều cao tối thiểu, nội dung dài sẽ tự giãn */
+    /* Quan trọng: Dùng min-height thay vì height */
+    min-height: 100vh; 
+    height: auto !important; /* Ép buộc tự giãn nếu nội dung dài */
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 60px 20px; /* Thêm khoảng trống trên dưới để chữ không dính sát mép */
-    box-sizing: border-box; 
+    
+    /* Tạo khoảng cách an toàn để không bao giờ bị đè chữ */
+    padding: 10vh 10%; 
+    box-sizing: border-box;
+    position: relative;
     border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .section h1 {
-    font-size: clamp(32px, 8vw, 64px); /* Chữ tự nhỏ lại trên điện thoại, to ra trên máy tính */
-    margin-bottom: 20px;
+    /* Chữ sẽ tự nhỏ lại nếu màn hình bé */
+    font-size: clamp(2rem, 5vw, 4rem); 
+    margin-bottom: 1rem;
     line-height: 1.2;
 }
 
 .section p {
-    font-size: clamp(18px, 4vw, 24px); /* Tương tự cho đoạn văn */
-    opacity: 0.7;
-    max-width: 800px; /* Giới hạn độ rộng để dễ đọc trên màn hình lớn */
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 
