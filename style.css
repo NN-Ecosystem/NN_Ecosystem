@@ -609,6 +609,9 @@ body {
 
 /* MOBILE FIX - DÀNH RIÊNG CHO CẤU TRÚC HTML MEDIA */
 @media(max-width:900px){
+    body {
+        background-color: red !important; /* Khi màn hình nhỏ hơn 900px, cả nền sẽ biến thành màu đỏ */
+    }
     /* 1. Ép lưới Card phải tràn lề và cho phép vuốt ngang */
     .card-grid {
         display: flex !important;
