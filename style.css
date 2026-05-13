@@ -607,94 +607,65 @@ body {
 }
 
 
-/* MOBILE TỐI ƯU */
+/* MOBILE FIX - DÀNH RIÊNG CHO CẤU TRÚC HTML MEDIA */
 @media(max-width:900px){
-    /* 1. SECTION & TYPOGRAPHY */
-    .section {
-        height: auto !important;
-        min-height: 100vh;
-        padding: 60px 20px;
-        overflow-x: hidden; /* Ngăn section làm tràn trang */
-    }
-
-    .section h1 {
-        font-size: 32px;
-        line-height: 1.1;
-        margin-bottom: 30px;
-    }
-
-    /* 2. CARD GRID - QUAN TRỌNG: KÍCH HOẠT CUỘN NGANG */
+    /* 1. Ép lưới Card phải tràn lề và cho phép vuốt */
     .card-grid {
         display: flex !important;
         flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        
-        width: 100vw; /* Chiếm trọn chiều ngang */
-        margin-left: -20px; /* Bù trừ padding của section để card tràn lề */
-        padding: 10px 20px 40px 20px !important;
+        flex-wrap: nowrap !important; /* Tuyệt đối không cho xuống dòng ở đây */
         
         overflow-x: auto !important; 
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         
         gap: 20px;
-        scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+        padding: 20px !important;
+        width: 100vw !important;
+        margin-left: -20px; /* Căn chỉnh lại với padding của section */
+        box-sizing: border-box;
     }
 
     .card-grid::-webkit-scrollbar {
-        display: none; /* Ẩn thanh cuộn trên Chrome/Safari */
+        display: none; /* Ẩn thanh cuộn cho đẹp */
     }
 
-    /* 3. CARD LINK & CARD ITEM - GIỮ KHUNG NGANG RỘNG */
-    .card-link {
-        flex: 0 0 82% !important; /* Mỗi card chiếm 82% màn hình để lộ card tiếp theo */
-        scroll-snap-align: center;
-        text-decoration: none;
-        display: block;
-    }
-
+    /* 2. Fix thẻ Card - Đây là phần quan trọng nhất */
     .card {
-        width: 100% !important;
-        margin: 0 !important;
-        display: flex;
-        flex-direction: column;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(0, 212, 255, 0.1);
-        padding: 20px;
-        border-radius: 20px;
+        flex: 0 0 85% !important; /* Ép mỗi Card chiếm 85% chiều ngang màn hình */
+        min-width: 280px !important;
+        scroll-snap-align: center;
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
     }
 
-    /* 4. TAG GROUP & ICONS - FIX LỖI CO BÓP */
+    /* 3. Fix Tag Group - Cho phép icon xuống hàng bên trong Card */
     .tag-group {
         display: flex !important;
-        flex-wrap: wrap !important; 
+        flex-wrap: wrap !important; /* Icon quá nhiều sẽ tự nhảy xuống hàng 2 */
         justify-content: center !important;
-        gap: 12px !important;
+        gap: 15px !important;
         width: 100% !important;
-        margin-top: 15px;
+        margin: 20px 0 !important;
+        white-space: normal !important; /* Chống bị ép dòng */
     }
 
+    /* 4. Fix kích thước Icon */
     .tag-icon-link {
-        flex: 0 0 45px !important; /* Ép kích thước cố định */
-        height: 45px !important;
+        flex: 0 0 48px !important; /* Giữ kích thước cố định, không bị bóp */
+        height: 48px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        background: rgba(255, 255, 255, 0.05);
+        background: rgba(255,255,255,0.08);
         border-radius: 12px;
     }
 
     .tag-icon-link img {
-        width: 28px !important;
-        height: 28px !important;
-        object-fit: contain;
-    }
-
-    /* 5. FEEDBACK SECTION */
-    .feedback-wrapper {
-        grid-template-columns: 1fr;
-        padding: 25px;
-        gap: 30px;
+        width: 30px !important;
+        height: 30px !important;
+        object-fit: contain !important;
     }
 }
     /* BACKGROUND CANVAS */
