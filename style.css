@@ -671,38 +671,44 @@ body {
         flex-wrap: wrap; /* Cho phép các tag xuống dòng nếu quá dài */
         gap: 8px;
     }
-    /* 3. Kích hoạt cuộn ngang cho các Grid (YouTube, Reels, v.v.) */
-    .section-grid {
-        display: flex; /* Xếp các ô nằm ngang hàng */
-        flex-wrap: nowrap; /* Ép không được xuống dòng */
-        overflow-x: auto; /* Cho phép vuốt ngang */
-        gap: 16px; /* Khoảng cách giữa các ô hình */
-        padding: 10px 0 20px 0;
+    /* 3. SỬA ĐÚNG CLASS CARD-GRID ĐỂ CUỘN NGANG */
+    .card-grid {
+        display: flex !important; /* Xếp các thẻ <a> nằm ngang */
+        flex-wrap: nowrap !important; /* Ép không cho xuống dòng */
+        overflow-x: auto !important; /* Kích hoạt vuốt ngang */
+        gap: 16px;
+        padding: 10px 20px 30px 20px; /* Padding để không bị dính lề */
         
-        /* Giúp vuốt mượt và tự "hít" vào giữa như App */
-        scroll-snap-type: x mandatory; 
-        -webkit-overflow-scrolling: touch; /* Cho iPhone vuốt mượt hơn */
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
         
-        /* Ẩn thanh cuộn xấu xí đi */
-        scrollbar-width: none; 
+        /* Ẩn thanh cuộn */
+        scrollbar-width: none;
     }
 
-    .section-grid::-webkit-scrollbar {
-        display: none; /* Ẩn thanh cuộn trên Chrome/Safari */
+    .card-grid::-webkit-scrollbar {
+        display: none;
     }
 
-    .grid-item {
-        flex: 0 0 85%; /* Mỗi ô chiếm 85% chiều rộng để lộ một chút ô tiếp theo (mồi người dùng vuốt) */
-        scroll-snap-align: center; /* Khi dừng vuốt, ô sẽ nằm ngay giữa */
-        max-width: 320px;
+    /* Chỉnh lại thẻ <a> bọc ngoài card */
+    .card-link {
+        flex: 0 0 80% !important; /* Mỗi card chiếm 80% chiều ngang di động */
+        scroll-snap-align: center;
+        text-decoration: none; /* Bỏ gạch chân link */
+        display: block;
     }
 
-    .grid-item img {
+    .card {
+        width: 100%; /* Card con chiếm hết 100% của card-link */
+        margin: 0; /* Bỏ margin để không lệch vị trí */
+    }
+
+    .card-image img {
         width: 100%;
         height: auto;
-        aspect-ratio: 16/9; /* Giữ chuẩn khung hình video */
+        aspect-ratio: 1/1; /* Nếu là logo Shopee/Lazada thì 1:1 sẽ đẹp, hoặc 16/9 tùy anh */
         object-fit: cover;
-        border-radius: 12px; /* Bo góc cho chuyên nghiệp */
+        border-radius: 12px;
     }
 }
     /* BACKGROUND CANVAS */
