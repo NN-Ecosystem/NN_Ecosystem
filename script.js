@@ -213,23 +213,173 @@ const firebaseConfig = {
   measurementId: "G-3KKN3HK4G1"
 };
 
-// 2. Khởi tạo theo kiểu "Compat" (tương thích với thẻ script ở index.html)
+// =====================================================
+// FIREBASE
+// =====================================================
+
 firebase.initializeApp(firebaseConfig);
+
 const db = firebase.database();
-// 1. Tăng số View khi User mở web
+
+// =====================================================
+// TOTAL VIEWS
+// =====================================================
+
 const viewRef = db.ref('stats/views');
+
 viewRef.transaction((currentValue) => {
+
     return (currentValue || 0) + 1;
+
 });
 
-// 2. Lắng nghe và cập nhật lên giao diện HTML
+// realtime update views
 viewRef.on('value', (snapshot) => {
-    const totalViews = snapshot.val();
-    const viewElement = document.getElementById('view-count');
+
+    const totalViews = snapshot.val() || 0;
+
+    const viewElement =
+        document.getElementById('view-count');
+
     if (viewElement) {
-        viewElement.innerText = totalViews.toLocaleString(); 
+
+        viewElement.innerText =
+            totalViews.toLocaleString();
+
     }
+
 });
+
+// =====================================================
+// ONLINE USERS
+// =====================================================
+
+// random user id
+const userId =
+    'user_' +
+    Math.random().toString(36).substring(2, 10);
+
+// current user ref
+const userRef = db.ref(
+    'stats/online_users/' + userId
+);
+
+// firebase connection detect
+const connectedRef = db.ref('.info/connected');
+
+connectedRef.on('value', (snapshot) => {
+
+    if (snapshot.val() === true) {
+
+        // set online
+        userRef.set(true);
+
+        // auto remove khi disconnect
+        userRef.onDisconnect().remove();
+
+    }
+
+});
+
+// =====================================================
+// COUNT ONLINE
+// =====================================================
+
+const onlineRef = db.ref(
+    'stats/online_users'
+);
+
+onlineRef.on('value', (snapshot) => {
+
+    const data = snapshot.val();
+
+    const onlineCount = data
+        ? Object.keys(data).length
+        : 0;
+
+    const onlineElement =
+        document.getElementById('online-count');
+
+    if (onlineElement) {
+
+        onlineElement.innerText =
+            onlineCount;
+
+    }
+
+});
+// ======================================================
+// FIREBASE
+// ======================================================
+
+firebase.initializeApp(firebaseConfig);
+
+const fs = firebase.database();
+
+// ======================================================
+// TRACK CLICK
+// ======================================================
+
+function trackClick(linkId, event) {
+
+    // chặn mặc định
+    event.preventDefault();
+
+    // lấy link
+    const linkElement = event.currentTarget;
+
+    const targetUrl = linkElement.href;
+
+    const isBlank = (
+        linkElement.target === "_blank"
+    );
+
+    // ==================================================
+    // UPDATE CLICK
+    // ==================================================
+
+    const clickRef = fs.ref(
+        "statistics/clicks/" + linkId
+    );
+
+    clickRef.transaction((currentValue) => {
+
+        return (currentValue || 0) + 1;
+
+    });
+
+    // ==================================================
+    // UPDATE TOTAL
+    // ==================================================
+
+    const totalRef = fs.ref(
+        "statistics/clicks/total"
+    );
+
+    totalRef.transaction((currentValue) => {
+
+        return (currentValue || 0) + 1;
+
+    });
+
+    // ==================================================
+    // REDIRECT
+    // ==================================================
+
+    setTimeout(() => {
+
+        if (isBlank) {
+
+            window.open(targetUrl, "_blank");
+
+        } else {
+
+            window.location.href = targetUrl;
+
+        }
+
+    }, 200);
+};
 
 /* --- PHẦN XỬ LÝ FEEDBACK & COMMENT --- */
 
@@ -323,3 +473,4 @@ function notifyPlatforms(name, message) {
         })
     });
 }
+
