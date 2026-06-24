@@ -794,3 +794,26 @@ body {
 #comment-section.section {
     padding-left: 0 !important; /* Ép section bỏ padding bên trái */
 }
+/* Legal Footer */
+
+.legal-footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #888;
+    font-size: 14px;
+}
+
+.legal-footer a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.legal-footer a:hover {
+    color: #fff;
+}
+
+.legal-footer span {
+    color: #555;
+}
