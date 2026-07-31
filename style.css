@@ -1,6 +1,796 @@
-@font-face{font-family:NNArial;src:url("assets/fonts/font.ttf") format("truetype");font-display:swap}
-:root{--bg:#07091c;--panel:rgba(15,24,54,.72);--panel-strong:#111a3b;--text:#f7f9ff;--muted:#aab6d4;--line:rgba(255,255,255,.1);--accent:#2d9cff;--accent-2:#62e6ff;--radius:24px;--nav-h:78px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}body{margin:0;background:var(--bg);color:var(--text);font-family:NNArial,Arial,sans-serif;overflow-x:hidden}a{color:inherit}button,input,textarea{font:inherit}#bg-canvas{position:fixed;inset:0;width:100%;height:100%;z-index:-2}.navbar{position:fixed;z-index:50;top:0;left:0;right:0;min-height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:10px clamp(18px,5vw,72px);background:rgba(5,8,25,.76);border-bottom:1px solid var(--line);backdrop-filter:blur(20px)}.brand{display:flex;align-items:center;gap:12px;text-decoration:none}.brand img{width:48px;height:48px;object-fit:contain}.brand-copy{display:flex;flex-direction:column;gap:3px}.brand-copy strong{font-size:17px}.brand-copy span{font-size:12px;color:var(--muted)}.nav-links{display:flex;align-items:center;gap:8px;list-style:none;margin:0;padding:0}.nav-links a{display:block;padding:11px 16px;border-radius:12px;text-decoration:none;color:#dce7ff;transition:.25s}.nav-links a:hover,.nav-links a.active{background:rgba(45,156,255,.16);color:#fff}.menu-toggle{display:none;border:1px solid var(--line);background:rgba(255,255,255,.06);color:#fff;border-radius:12px;width:44px;height:44px}.section{position:relative;width:min(1480px,100%);margin:0 auto;padding:clamp(96px,10vw,140px) clamp(18px,5vw,72px)}.tool-section{padding-top:calc(var(--nav-h) + 60px)}.section-heading{max-width:900px;margin-bottom:48px}.eyebrow{display:inline-block;color:var(--accent-2);font-size:12px;font-weight:700;letter-spacing:.16em;margin-bottom:14px}.section-heading h1{font-size:clamp(42px,7vw,82px);line-height:1;margin:0 0 22px}.section-heading p{color:var(--muted);font-size:clamp(17px,2vw,21px);line-height:1.7;margin:0}.tool-group{margin-top:56px}.group-heading{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:22px}.group-heading>div{display:flex;align-items:center;gap:14px}.group-index{font-size:12px;color:var(--accent-2);border:1px solid rgba(98,230,255,.32);border-radius:99px;padding:7px 9px}.group-heading h2{font-size:clamp(28px,4vw,44px);margin:0}.group-heading p{max-width:650px;margin:0;color:var(--muted);line-height:1.6;text-align:right}.horizontal-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(310px,390px);gap:22px;overflow-x:auto;padding:6px 4px 24px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:rgba(98,230,255,.45) rgba(255,255,255,.05)}.horizontal-track::-webkit-scrollbar{height:8px}.horizontal-track::-webkit-scrollbar-track{background:rgba(255,255,255,.04);border-radius:10px}.horizontal-track::-webkit-scrollbar-thumb{background:rgba(98,230,255,.4);border-radius:10px}.download-card{scroll-snap-align:start;min-height:330px;display:flex;flex-direction:column;padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,rgba(20,32,70,.88),rgba(8,15,39,.9));box-shadow:0 20px 60px rgba(0,0,0,.22);transition:.3s}.download-card:hover{transform:translateY(-7px);border-color:rgba(98,230,255,.48);box-shadow:0 25px 70px rgba(0,98,255,.16)}.card-top{display:flex;justify-content:space-between;gap:10px;margin-bottom:32px}.type-badge,.status-badge{font-size:11px;font-weight:700;letter-spacing:.1em;border-radius:99px;padding:7px 10px}.type-badge{background:rgba(45,156,255,.15);color:#8dccff}.status-badge{background:rgba(98,230,255,.11);color:#8ff0ff}.download-card h3{font-size:23px;line-height:1.25;margin:0 0 14px}.download-card p{color:var(--muted);line-height:1.65;margin:0 0 24px}.card-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;margin-bottom:18px}.card-meta span,.tag-list span{font-size:12px;color:#c9d7f3;border:1px solid var(--line);border-radius:99px;padding:7px 10px;background:rgba(255,255,255,.04)}.download-btn{display:flex;align-items:center;justify-content:center;min-height:48px;text-decoration:none;border-radius:14px;background:linear-gradient(135deg,var(--accent),#5e65ff);font-weight:700;transition:.25s}.download-btn:hover{filter:brightness(1.12);transform:translateY(-2px)}.media-grid,.favourite-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}.media-card,.favourite-card,.feedback-panel,.feedback-form,.recent-comments{border:1px solid var(--line);background:var(--panel);backdrop-filter:blur(14px);border-radius:var(--radius);padding:30px}.media-card{grid-column:span 4;min-height:245px}.media-card:nth-child(4),.media-card:nth-child(5){grid-column:span 6}.media-card h2,.favourite-card h2,.feedback-panel h2,.recent-comments h2{font-size:26px;margin:0 0 12px}.media-card p,.favourite-card p,.feedback-panel p{color:var(--muted);line-height:1.65;margin:0 0 28px}.social-links{display:flex;gap:12px;flex-wrap:wrap}.social-links a{width:52px;height:52px;border-radius:14px;overflow:hidden;border:1px solid var(--line);transition:.25s}.social-links a:hover{transform:translateY(-4px);border-color:rgba(98,230,255,.45)}.social-links img{width:100%;height:100%;object-fit:cover}.favourite-card{grid-column:span 6;min-height:260px}.book-links{display:flex;gap:12px}.book-links a{width:86px;aspect-ratio:2/3;overflow:hidden;border-radius:12px;border:1px solid var(--line)}.book-links img{width:100%;height:100%;object-fit:cover}.tag-list{display:flex;gap:8px;flex-wrap:wrap}.favourite-card blockquote{font-size:22px;line-height:1.5;margin:0 0 28px;color:#eaf2ff}.comments-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px}.feedback-icon{font-size:46px;margin-bottom:22px}.feedback-form{display:flex;flex-direction:column;gap:18px}.input-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}.feedback-form label{display:flex;flex-direction:column;gap:8px}.feedback-form label>span{font-size:13px;color:#c9d7f3}.feedback-form input,.feedback-form textarea{width:100%;border:1px solid var(--line);background:rgba(4,9,27,.72);color:#fff;border-radius:14px;padding:15px 16px;outline:none}.feedback-form input:focus,.feedback-form textarea:focus{border-color:var(--accent-2);box-shadow:0 0 0 3px rgba(98,230,255,.1)}.feedback-form textarea{min-height:150px;resize:vertical}.feedback-form button{min-height:50px;border:0;border-radius:14px;background:linear-gradient(135deg,var(--accent),#5e65ff);color:#fff;font-weight:700;cursor:pointer}.feedback-form button:disabled{opacity:.6;cursor:not-allowed}#form-status{min-height:20px;margin:0;color:var(--accent-2)}.recent-comments{margin-top:24px}.comment-item{padding:18px 0;border-top:1px solid var(--line)}.comment-item:first-child{border-top:0}.comment-item strong{display:block;margin-bottom:7px}.comment-item p{margin:0;color:var(--muted);line-height:1.6;white-space:pre-wrap}.comment-item time{display:block;margin-top:9px;font-size:12px;color:#7381a5}.empty-state{color:var(--muted)}footer{display:flex;align-items:center;justify-content:center;gap:12px;padding:35px;border-top:1px solid var(--line);color:var(--muted)}footer img{width:34px;height:34px}.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
-@media(max-width:900px){:root{--nav-h:68px}.navbar{padding:10px 18px}.menu-toggle{display:block}.nav-links{position:absolute;top:calc(100% + 1px);left:14px;right:14px;display:none;flex-direction:column;align-items:stretch;padding:10px;background:rgba(7,10,30,.96);border:1px solid var(--line);border-radius:16px}.nav-links.open{display:flex}.nav-links a{text-align:center}.brand img{width:42px;height:42px}.brand-copy strong{font-size:15px}.group-heading{align-items:flex-start;flex-direction:column}.group-heading p{text-align:left}.media-card,.media-card:nth-child(4),.media-card:nth-child(5),.favourite-card{grid-column:span 12}.comments-layout{grid-template-columns:1fr}}
-@media(max-width:600px){.section{padding-left:16px;padding-right:16px}.section-heading{margin-bottom:36px}.horizontal-track{grid-auto-columns:86vw;gap:14px}.download-card{min-height:315px;padding:23px}.input-row{grid-template-columns:1fr}.brand-copy span{display:none}.media-card,.favourite-card,.feedback-panel,.feedback-form,.recent-comments{padding:23px}.book-links a{width:72px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.download-card,.social-links a,.download-btn{transition:none}}
+/* RESET */
+
+*{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+}
+html {
+    scroll-behavior: smooth;
+    max-width: 100vw; /* Thêm dòng này */
+    overflow-x: hidden; /* Thêm dòng này */
+}
+
+body {
+    width: 100%;
+    max-width: 100vw; /* Thêm dòng này */
+    min-height: 100vh;
+    overflow-x: hidden; /* Giữ nguyên dòng này của anh */
+    
+    /* Bảng màu Deep Midnight anh đã cập nhật rất đẹp */
+    background: linear-gradient(
+        to bottom,
+        #040a15, 
+        #081225, 
+        #0d1b33  
+    );
+    color: #eaf4ff;
+    font-family: Arial, sans-serif;
+    position: relative;
+    margin: 0; /* Đảm bảo không có khoảng trắng thừa */
+}
+
+
+/* NAVBAR */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:20px 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:
+    rgba(0,0,0,0.25);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.08);
+
+    z-index:1000;
+}
+
+
+.logo img{
+
+    height:80px;
+
+    object-fit:contain;
+}
+
+
+.nav-links{
+    display:flex;
+    gap:24px;
+
+    list-style:none;
+}
+
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+
+    opacity:0.7;
+    transition:0.3s;
+}
+
+
+.nav-links a:hover{
+    opacity:1;
+}
+
+
+/* SECTION - TỐI ƯU CHO MỌI ĐỘ PHÂN GIẢI */
+.section {
+    /* Thay height: 100vh bằng 2 dòng này */
+    min-height: 100vh;
+    height: auto !important; 
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    /* Thêm padding để nội dung không dính sát mép trên/dưới */
+    padding: 100px 20px; 
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.section h1 {
+    /* Chữ sẽ tự nhỏ lại nếu màn hình bé */
+    font-size: clamp(2rem, 5vw, 4rem); 
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.section p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+/* HERO CONTENT */
+
+/* HERO CONTENT */
+.hero-content {
+    max-width: 900px;
+    padding: 20px;
+    width: 100%; /* Đảm bảo luôn vừa màn hình */
+    box-sizing: border-box;
+}
+
+.hero h1 {
+    /* Tối thiểu 32px, linh hoạt theo màn hình 8vw, tối đa 82px */
+    font-size: clamp(32px, 8vw, 82px); 
+    margin-bottom: 24px;
+    line-height: 1.1;
+    color: white;
+    word-wrap: break-word; /* Ép xuống dòng nếu từ quá dài */
+}
+
+.hero p {
+    /* Tối thiểu 18px, linh hoạt 3vw, tối đa 32px */
+    font-size: clamp(18px, 3vw, 32px);
+    color: #dfefff;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+
+    display:flex;
+    gap:20px;
+
+    justify-content:center;
+}
+
+
+/* BASE BUTTON */
+
+.btn{
+
+    padding:16px 32px;
+
+    border-radius:16px;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    transition:0.3s;
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    color:#ffffff;
+
+    letter-spacing:0.5px;
+}
+
+
+/* PRIMARY BUTTON */
+
+.primary{
+
+    background:#0a84ff;
+
+    color:#ffffff;
+
+    font-weight:600;
+}
+
+
+.primary:hover{
+
+    transform:translateY(-4px);
+
+    background:#339cff;
+
+    box-shadow:0 0 30px rgba(10,132,255,0.45);
+}
+
+
+/* SECONDARY BUTTON */
+
+.secondary{
+
+    background:rgba(255,255,255,0.08);
+
+    color:#ffffff;
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(12px);
+
+    font-weight:500;
+}
+
+
+.secondary:hover{
+
+    background:rgba(255,255,255,0.16);
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 24px rgba(255,255,255,0.12);
+}
+
+
+
+/* CARD GRID - Giữ nguyên vì anh đã chia cột rất chuẩn rồi */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 40px;
+}
+
+/* CARD - Điều chỉnh để hình ảnh có thể tràn viền */
+.card {
+    background: rgba(11, 29, 58, 0.6); /* Đổi sang Dark Blue đồng bộ canvas */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 0; /* Quan trọng: Bỏ padding ở đây để ảnh sát viền */
+    backdrop-filter: blur(12px);
+    transition: 0.35s;
+    overflow: hidden; /* Cắt góc ảnh theo bo góc của card */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cấu trúc mới cho Hình ảnh */
+.card-image {
+    width: 100%;
+    aspect-ratio: 3 / 3; /* Giữ tỷ lệ chuẩn như YouTube/Shopee */
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ảnh fill đầy không bị méo */
+    transition: transform 0.5s ease;
+}
+
+/* Nội dung chữ - Đưa padding vào đây thay vì ở .card */
+.card-content {
+    padding: 24px 32px 32px 32px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border: 1px solid rgba(0, 212, 255, 0.5); /* Xanh Cyan công nghệ */
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.15);
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05); /* Hiệu ứng zoom nhẹ hình ảnh khi hover */
+}
+
+/* CARD TITLE - Chỉnh lại font cho thanh thoát */
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+/* CARD TEXT */
+.card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #b7c9e6;
+    margin-bottom: 0; /* Bỏ margin dưới vì mình nhấn cả card rồi */
+}
+
+/* Thẻ A bọc ngoài để click toàn bộ Card */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+/* TAG GROUP */
+.tag-group {
+    display: flex;
+    /* Thêm flex-wrap để icon tự xuống hàng nếu card quá chật */
+    flex-wrap: wrap; 
+    gap: 15px; /* Giảm gap một chút trên di động cho cân đối */
+    justify-content: center;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.tag-icon-link {
+    /* Quan trọng nhất: flex-shrink: 0 để icon không bao giờ bị co lại */
+    flex-shrink: 0; 
+    
+    width: 45px;  /* Trên di động 45px là vừa đẹp, PC anh để 50px */
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 12px; 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.tag-icon-link img {
+    width: 60%; 
+    height: auto;
+    /* object-fit đảm bảo logo không bị méo */
+    object-fit: contain; 
+    filter: grayscale(30%);
+    transition: 0.3s;
+}
+
+/* Các hiệu ứng Hover anh giữ nguyên vì rất đẹp rồi */
+.tag-icon-link:hover {
+    background: rgba(0, 212, 255, 0.1);
+    border-color: #00d4ff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+}
+/* =========================
+   FEEDBACK SECTION
+========================= */
+
+.feedback-wrapper{
+
+    width:100%;
+
+    max-width:1300px;
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1.2fr;
+
+    gap:50px;
+
+    padding:50px;
+
+    border-radius:32px;
+
+    background:
+    rgba(255,255,255,0.03);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(16px);
+}
+
+
+/* LEFT */
+
+.feedback-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:flex-start;
+}
+
+
+.feedback-icon{
+
+    font-size:72px;
+
+    margin-bottom:24px;
+}
+
+
+.feedback-left h2{
+
+    font-size:42px;
+
+    margin-bottom:18px;
+}
+
+
+.line{
+
+    width:80px;
+    height:4px;
+
+    border-radius:999px;
+
+    background:#0a84ff;
+
+    margin-bottom:24px;
+}
+
+
+.feedback-left p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#b7c9e6;
+
+    margin-bottom:32px;
+
+    max-width:420px;
+}
+
+
+/* TAGS */
+
+.feedback-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+}
+
+
+.feedback-tags span{
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:
+    rgba(10,132,255,0.12);
+
+    border:
+    1px solid rgba(10,132,255,0.22);
+
+    color:#b9d8ff;
+
+    font-size:14px;
+}
+
+
+/* RIGHT */
+
+.feedback-right{
+
+    display:flex;
+
+    align-items:center;
+}
+
+
+/* FORM */
+
+.feedback-form{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+}
+
+
+/* INPUT ROW */
+
+.input-row{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:20px;
+}
+
+
+/* INPUT */
+
+.feedback-form input,
+.feedback-form textarea{
+
+    width:100%;
+
+    padding:20px 22px;
+
+    border-radius:20px;
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    background:
+    rgba(255,255,255,0.04);
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+
+    backdrop-filter:blur(10px);
+
+    transition:0.3s;
+}
+
+
+/* FOCUS */
+
+.feedback-form input:focus,
+.feedback-form textarea:focus{
+
+    border:
+    1px solid rgba(10,132,255,0.45);
+
+    box-shadow:
+    0 0 20px rgba(10,132,255,0.12);
+}
+
+
+/* TEXTAREA */
+
+.feedback-form textarea{
+
+    min-height:220px;
+
+    resize:none;
+}
+
+
+/* BUTTON */
+
+.feedback-form button{
+
+    padding:20px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#0a84ff;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+
+/* HOVER */
+
+.feedback-form button:hover{
+
+    background:#339cff;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 30px rgba(10,132,255,0.35);
+}
+
+
+/* MOBILE FIX - DÀNH RIÊNG CHO CẤU TRÚC HTML MEDIA */
+/* MOBILE - GIỮ CUỘN CARD NHƯNG CHO TAG XUỐNG HÀNG */
+@media(max-width:900px){
+    .feedback-wrapper {
+        display: flex !important;
+        flex-direction: column !important; /* Chuyển thành hàng dọc */
+        padding: 20px !important;
+        gap: 30px !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    .feedback-left {
+        text-align: center; /* Căn giữa nội dung bên trái cho cân đối */
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .feedback-left h2 {
+        font-size: 28px !important; /* Thu nhỏ tiêu đề feedback */
+    }
+
+    .feedback-left p {
+        font-size: 16px !important;
+        max-width: 100%;
+    }
+
+    /* Làm cho các ô Input và Textarea vừa khít màn hình */
+    .feedback-form {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .input-row {
+        display: flex !important;
+        flex-direction: column !important; /* Ép ô Name và Email xếp chồng lên nhau */
+        gap: 15px !important;
+    }
+
+    .feedback-form input, 
+    .feedback-form textarea {
+        width: 100% !important; /* Đảm bảo không bị tràn */
+        box-sizing: border-box;
+        padding: 12px;
+        font-size: 16px; /* Tránh iOS tự động zoom khi focus vào input */
+    }
+
+    .feedback-form button {
+        width: 100% !important;
+        padding: 15px;
+    }
+    .hero-buttons {
+        flex-direction: column; /* Nút trên nút dưới cho dễ bấm */
+        gap: 15px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .hero-buttons a {
+        width: 80%; /* Nút to ra cho dễ chạm tay */
+        text-align: center;
+    }
+    nav {
+        display: flex;
+        overflow-x: auto; /* Cho phép vuốt ngang các menu nếu quá dài */
+        white-space: nowrap;
+        gap: 15px;
+        padding: 10px;
+        justify-content: flex-start; /* Để các menu xếp từ trái sang */
+    }
+    
+    .logo-container {
+        scale: 0.8; /* Thu nhỏ logo lại một chút trên di động */
+    }
+    /* --- GIẢI THUẬT CUỘN NGANG CHO CARD --- */
+    .card-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important; /* GIỮ NGUYÊN: Không cho các Card xuống hàng */
+        
+        overflow-x: auto !important; 
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        
+        gap: 20px;
+        padding: 10px 20px 40px 20px !important;
+        width: 100vw !important;
+        margin-left: -20px; 
+        scrollbar-width: none;
+    }
+
+    .card-link, .card {
+        flex: 0 0 85% !important; /* Mỗi Card chiếm 85% để lộ Card sau */
+        scroll-snap-align: center;
+        min-width: 280px !important;
+    }
+
+    /* --- GIẢI THUẬT XUỐNG HÀNG CHO TAG (ICON) --- */
+    .tag-group {
+        display: flex !important;
+        flex-wrap: wrap !important; /* ÉP BUỘC: Icon phải xuống hàng bên trong Card */
+        justify-content: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+        /* Loại bỏ mọi thuộc tính gây cuộn ngang bên trong Card nếu có */
+        overflow: visible !important; 
+        white-space: normal !important; 
+        margin-top: 15px !important;
+    }
+
+    .tag-icon-link {
+        /* flex: 0 0 45px có nghĩa là: Không giãn, không co, luôn rộng 45px */
+        flex: 0 0 45px !important; 
+        height: 45px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+    }
+
+    .tag-icon-link img {
+        width: 28px !important;
+        height: 28px !important;
+        object-fit: contain !important;
+    }
+}
+    /* BACKGROUND CANVAS */
+
+#bg-canvas {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    display: block;
+    
+    /* Thêm dòng này để chắc chắn canvas không đẩy khung hình ra */
+    overflow: hidden; 
+
+    /* Màu sắc anh đã chỉnh rất đẹp, rất sâu */
+    background: linear-gradient(
+        to bottom,
+        #010815, 
+        #030d21, 
+        #020c1b  
+    );
+}
+
+/* CONTENT LAYER */
+
+.navbar,
+.section{
+
+    position:relative;
+
+    z-index:2;
+
+    background:transparent;
+}
+/* Container chứa toàn bộ comment */
+.comment-container {
+    width: 100%;
+    /* Quan trọng: bỏ padding trái của container nếu có */
+    padding: 20px 0; 
+    margin-left: 0;
+    text-align: left;
+}
+
+/* Từng item comment */
+.comment-item {
+    background: rgba(255, 255, 255, 0.03); 
+    /* Nếu muốn sát lề 100%, anh có thể cân nhắc bỏ border-left hoặc giữ lại tùy gu */
+    border-left: 3px solid #0a84ff;       
+    
+    /* Chỉnh lại padding: Trên 15px, Phải 15px, Dưới 15px, Trái 15px */
+    padding: 15px; 
+    
+    margin-left: 0; /* Đảm bảo không có margin bên trái */
+    border-radius: 0 4px 4px 0; /* Bo góc bên phải thôi nhìn sẽ pro hơn */
+    transition: 0.3s;
+    width: 100%;
+    box-sizing: border-box; /* Đảm bảo padding không làm tràn chiều rộng */
+}
+
+/* Đảm bảo class .section không chặn nó lại */
+#comment-section.section {
+    padding-left: 0 !important; /* Ép section bỏ padding bên trái */
+}
