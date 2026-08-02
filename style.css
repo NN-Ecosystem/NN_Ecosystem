@@ -264,15 +264,23 @@ body {
 /* Cấu trúc mới cho Hình ảnh */
 .card-image {
     width: 100%;
-    aspect-ratio: 3 / 3; /* Giữ tỷ lệ chuẩn như YouTube/Shopee */
+    aspect-ratio: 1 / 1;
     overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0f1724;
 }
 
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ảnh fill đầy không bị méo */
-    transition: transform 0.5s ease;
+
+    object-fit: contain;
+
+    transition: transform .35s ease;
 }
 
 /* Nội dung chữ - Đưa padding vào đây thay vì ở .card */
