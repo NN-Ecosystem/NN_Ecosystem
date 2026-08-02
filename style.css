@@ -262,13 +262,14 @@ body {
 }
 
 /* Cấu trúc mới cho Hình ảnh */
+/* CARD IMAGE — giữ đúng tỷ lệ ảnh gốc, không crop, không phóng */
 .card-image {
     width: 100%;
-    padding: 16px;
+    height: auto;
+    max-height: none;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    overflow: visible;
 
     background: #0f1724;
 }
@@ -276,16 +277,16 @@ body {
 .card-image img {
     display: block;
 
-    width: auto;
+    width: 100%;
     height: auto;
-
     max-width: 100%;
-    max-height: 340px;
 
     object-fit: contain;
 
     transform: none;
+    transition: none;
 }
+
 
 /* Nội dung chữ - Đưa padding vào đây thay vì ở .card */
 .card-content {
