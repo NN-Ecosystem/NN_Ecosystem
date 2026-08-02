@@ -264,7 +264,7 @@ body {
 /* Cấu trúc mới cho Hình ảnh */
 .card-image {
     width: 100%;
-    max-height: 340px;
+    padding: 16px;
 
     display: flex;
     align-items: center;
@@ -276,11 +276,18 @@ body {
 .card-image img {
     display: block;
 
-    width: 100%;
+    width: auto;
     height: auto;
 
+    max-width: 100%;
+    max-height: 340px;
+
     object-fit: contain;
+
+    transform: none;
 }
+
+
 
 /* Nội dung chữ - Đưa padding vào đây thay vì ở .card */
 .card-content {
@@ -294,7 +301,7 @@ body {
 }
 
 .card:hover .card-image img {
-    transform: scale(1.05); /* Hiệu ứng zoom nhẹ hình ảnh khi hover */
+    transform: none;
 }
 
 /* CARD TITLE - Chỉnh lại font cho thanh thoát */
