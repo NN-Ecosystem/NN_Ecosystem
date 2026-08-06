@@ -1,0 +1,91 @@
+{
+  "schema": "core_factory_catalog_v1",
+  "catalog_version": "1",
+  "generated_at": "2026-08-06T12:05:00+07:00",
+  "items": [
+    {
+      "item_id": "file_transfer_engine",
+      "slug": "file-transfer-engine-v2",
+      "type": "engine",
+      "name": "File Transfer Engine V2",
+      "title": "File Transfer Engine V2",
+      "summary": "Move files from one or more source folders into organized Video, Image, and Other destination categories.",
+      "version": "2.1.0",
+      "channel": "stable",
+      "minimum_core_version": "2.0.0",
+      "image": "assets/images/file_tranfer_1.webp",
+      "link_store": "https://nhonguyen.gumroad.com/l/pcqgin",
+      "status": "released"
+    },
+    {
+      "item_id": "file_organization_engine",
+      "slug": "file-organization-engine-v2",
+      "type": "engine",
+      "name": "File Organization Engine V2",
+      "title": "File Organization Engine V2",
+      "summary": "Rename thousands of files and organize entire folders into structured directories.",
+      "version": "2.0.0",
+      "channel": "stable",
+      "minimum_core_version": "2.0.0",
+      "image": "assets/images/file-organization-engine-v2.webp",
+      "link_store": "https://nhonguyen.gumroad.com/l/jsgzbt",
+      "status": "released"
+    },
+    {
+      "item_id": "audio_recorder_engine",
+      "slug": "audio-recorder-engine-v2",
+      "type": "engine",
+      "name": "Audio Recorder Engine V2",
+      "title": "Audio Recorder Engine V2",
+      "summary": "Capture high-quality microphone audio with flexible recording modes and automation-ready output.",
+      "version": "2.0.0",
+      "channel": "stable",
+      "minimum_core_version": "2.0.0",
+      "image": "assets/images/audio_recorder_engine_v2.webp",
+      "link_store": "https://nhonguyen.gumroad.com/l/sfuivc",
+      "status": "released"
+    },
+    {
+      "item_id": "screen_recorder_engine",
+      "slug": "screen-recorder-engine-v2",
+      "type": "engine",
+      "name": "Screen Recorder Engine V2",
+      "title": "Screen Recorder Engine V2",
+      "summary": "Capture your screen with high performance, automation, and pipeline-ready output.",
+      "version": "2.0.0",
+      "channel": "stable",
+      "minimum_core_version": "2.0.0",
+      "image": "assets/images/screen_recorder_engine_v2.webp",
+      "link_store": "https://nhonguyen.gumroad.com/l/jxppwj",
+      "status": "released"
+    },
+    {
+      "item_id": "workspace_plugin",
+      "slug": "workspace-plugin-v2",
+      "type": "plugin",
+      "name": "Workspace Plugin V2",
+      "title": "Workspace Plugin V2",
+      "summary": "Manage projects, tasks, reusable work items, construction data, and Excel-ready labour lists inside Core Factory V2.",
+      "version": "0.5.3",
+      "channel": "stable",
+      "minimum_core_version": "2.0.0",
+      "image": "assets/images/workspace_1.webp",
+      "link_store": "https://nhonguyen.gumroad.com/l/loqfav",
+      "status": "released"
+    },
+    {
+      "item_id": "core_factory_v2",
+      "slug": "core-factory-v2",
+      "type": "core",
+      "name": "Core Factory V2.1",
+      "title": "Core Factory V2.1",
+      "summary": "A modular desktop automation platform designed as the foundation of a personal or business automation ecosystem.",
+      "version": "2.1.0",
+      "channel": "stable",
+      "minimum_core_version": "2.0.0",
+      "image": "assets/images/core_v2.1.webp",
+      "link_store": "https://nhonguyen.gumroad.com/l/zzrfzk",
+      "status": "released"
+    }
+  ]
+}
