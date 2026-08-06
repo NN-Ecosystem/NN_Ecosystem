@@ -262,31 +262,18 @@ body {
 }
 
 /* Cấu trúc mới cho Hình ảnh */
-/* CARD IMAGE — giữ đúng tỷ lệ ảnh gốc, không crop, không phóng */
 .card-image {
     width: 100%;
-    height: auto;
-    max-height: none;
-
-    display: block;
-    overflow: visible;
-
-    background: #0f1724;
+    aspect-ratio: 3 / 3; /* Giữ tỷ lệ chuẩn như YouTube/Shopee */
+    overflow: hidden;
 }
 
 .card-image img {
-    display: block;
-
     width: 100%;
-    height: auto;
-    max-width: 100%;
-
-    object-fit: contain;
-
-    transform: none;
-    transition: none;
+    height: 100%;
+    object-fit: cover; /* Ảnh fill đầy không bị méo */
+    transition: transform 0.5s ease;
 }
-
 
 /* Nội dung chữ - Đưa padding vào đây thay vì ở .card */
 .card-content {
@@ -807,36 +794,84 @@ body {
 #comment-section.section {
     padding-left: 0 !important; /* Ép section bỏ padding bên trái */
 }
-/* FORCE FULL IMAGE — đặt cuối file CSS */
-.card .card-image {
-    width: 100% !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
 
-    padding: 0 !important;
 
-    display: block !important;
-    overflow: visible !important;
-
-    background: #0f1724;
+/* =========================
+   CATALOG UI
+========================= */
+.catalog-toolbar {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 18px;
 }
 
-.card .card-image > img {
-    display: block !important;
+.catalog-search {
+    width: min(520px, 100%);
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(7, 19, 38, 0.8);
+    color: #eaf4ff;
+    outline: none;
+}
 
-    width: 100% !important;
-    height: auto !important;
+.catalog-search:focus {
+    border-color: rgba(0, 212, 255, 0.65);
+    box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+}
 
-    min-width: 0 !important;
-    min-height: 0 !important;
-    max-width: 100% !important;
-    max-height: none !important;
+.catalog-count,
+.catalog-empty,
+.catalog-error {
+    color: #9fb7d7;
+    font-size: 0.95rem;
+}
 
-    aspect-ratio: auto !important;
-    object-fit: contain !important;
-    object-position: center !important;
+.catalog-error {
+    grid-column: 1 / -1;
+    padding: 24px;
+    border: 1px solid rgba(255, 120, 120, 0.25);
+    border-radius: 14px;
+    background: rgba(120, 20, 20, 0.12);
+}
 
-    transform: none !important;
-    clip-path: none !important;
+.catalog-card .card-content {
+    text-align: left;
+}
+
+.catalog-card h2 {
+    margin-top: 10px;
+}
+
+.catalog-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.catalog-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 9px;
+    border-radius: 999px;
+    border: 1px solid rgba(130, 190, 255, 0.22);
+    background: rgba(10, 132, 255, 0.1);
+    color: #c9e5ff;
+    font-size: 0.74rem;
+    line-height: 1;
+}
+
+.catalog-badge-channel {
+    text-transform: capitalize;
+}
+
+@media (max-width: 640px) {
+    .catalog-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
 }

@@ -199,6 +199,114 @@ window.addEventListener(
         canvas.height = H;
     }
 );
+
+
+/* =========================
+   CATALOG CLIENT
+========================= */
+
+const CATALOG_URL = "catalog/index.json";
+const CATALOG_TYPES = {
+    engine: { gridId: "engine-grid", countId: "engine-count", emptyId: "engine-empty" },
+    plugin: { gridId: "plugin-grid", countId: "plugin-count", emptyId: "plugin-empty" },
+    core: { gridId: "core-grid", countId: "core-count", emptyId: "core-empty" }
+};
+
+let catalogItems = [];
+
+function escapeHtml(value) {
+    return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+}
+
+function buildCatalogCard(item) {
+    const itemId = escapeHtml(item.item_id || item.slug || "catalog_item");
+    const title = escapeHtml(item.title || item.name || itemId);
+    const summary = escapeHtml(item.summary || item.description_short || "");
+    const image = escapeHtml(item.image || "");
+    const version = escapeHtml(item.version || "");
+    const channel = escapeHtml(item.channel || "stable");
+    const minCore = escapeHtml(item.minimum_core_version || "");
+    const targetUrl = escapeHtml(item.link_store || item.release_url || item.download_url || "#");
+
+    return `
+        <a href="${targetUrl}" target="_blank" rel="noopener noreferrer"
+           class="card-link catalog-card-link" data-item-id="${itemId}"
+           onclick="trackClick('${itemId}', event)">
+            <article class="card catalog-card reveal">
+                ${image ? `<div class="card-image"><img src="${image}" alt="${title}" loading="lazy"></div>` : ""}
+                <div class="card-content">
+                    <div class="catalog-badges">
+                        ${version ? `<span class="catalog-badge">v${version}</span>` : ""}
+                        <span class="catalog-badge catalog-badge-channel">${channel}</span>
+                        ${minCore ? `<span class="catalog-badge">Core ${minCore}+</span>` : ""}
+                    </div>
+                    <h2>${title}</h2>
+                    <p>${summary}</p>
+                </div>
+            </article>
+        </a>`;
+}
+
+function renderCatalogType(type, query = "") {
+    const config = CATALOG_TYPES[type];
+    if (!config) return;
+
+    const grid = document.getElementById(config.gridId);
+    const count = document.getElementById(config.countId);
+    const empty = document.getElementById(config.emptyId);
+    if (!grid) return;
+
+    const normalizedQuery = query.trim().toLowerCase();
+    const items = catalogItems.filter((item) => {
+        if (item.type !== type || item.status !== "released") return false;
+        if (!normalizedQuery) return true;
+        return [item.name, item.title, item.summary, item.item_id]
+            .filter(Boolean)
+            .some((value) => String(value).toLowerCase().includes(normalizedQuery));
+    });
+
+    grid.innerHTML = items.map(buildCatalogCard).join("");
+    if (count) count.textContent = `${items.length} item${items.length === 1 ? "" : "s"}`;
+    if (empty) empty.hidden = items.length !== 0;
+}
+
+function bindCatalogSearch() {
+    document.querySelectorAll("[data-catalog-search]").forEach((input) => {
+        input.addEventListener("input", () => {
+            renderCatalogType(input.dataset.catalogSearch, input.value);
+        });
+    });
+}
+
+async function loadCatalog() {
+    try {
+        const response = await fetch(CATALOG_URL, { cache: "no-store" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const catalog = await response.json();
+        if (catalog.schema !== "core_factory_catalog_v1" || !Array.isArray(catalog.items)) {
+            throw new Error("Unsupported catalog schema");
+        }
+        catalogItems = catalog.items;
+        Object.keys(CATALOG_TYPES).forEach((type) => renderCatalogType(type));
+    } catch (error) {
+        console.error("Catalog load failed:", error);
+        Object.values(CATALOG_TYPES).forEach((config) => {
+            const grid = document.getElementById(config.gridId);
+            if (grid) grid.innerHTML = `<div class="catalog-error">Catalog is temporarily unavailable.</div>`;
+        });
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    bindCatalogSearch();
+    loadCatalog();
+});
+
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -309,12 +417,10 @@ onlineRef.on('value', (snapshot) => {
 
 });
 // ======================================================
-// FIREBASE
+// CLICK TRACKING DATABASE
 // ======================================================
 
-firebase.initializeApp(firebaseConfig);
-
-const fs = firebase.database();
+const fs = db;
 
 // ======================================================
 // TRACK CLICK
