@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_v1",
-  "generated_at": "2026-08-06T07:58:36.622774+00:00",
+  "generated_at": "2026-08-06T08:30:14.652440+00:00",
   "count": 10,
   "items": [
     {
@@ -179,5 +179,10 @@
       "release_url": "",
       "download_url": ""
     }
-  ]
+  ],
+  "signing": {
+    "algorithm": "RSA-PSS-SHA256",
+    "key_id": "rsa-bc157b0ea2f00c66",
+    "payload": "raw-index-json-bytes"
+  }
 }
