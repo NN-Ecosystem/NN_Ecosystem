@@ -880,4 +880,20 @@ body {
         flex-direction: column;
     }
 }
+.card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #ffffff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
