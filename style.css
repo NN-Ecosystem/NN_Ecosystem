@@ -880,20 +880,40 @@ body {
         flex-direction: column;
     }
 }
-.card-image {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background: #ffffff;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Đảm bảo class .section không chặn nó lại */
+#comment-section.section {
+    padding-left: 0 !important; /* Ép section bỏ padding bên trái */
+}
+/* FORCE FULL IMAGE — đặt cuối file CSS */
+.card .card-image {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    padding: 0 !important;
+
+    display: block !important;
+    overflow: visible !important;
+
+    background: #0f1724;
 }
 
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    display: block;
+.card .card-image > img {
+    display: block !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 100% !important;
+    max-height: none !important;
+
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+
+    transform: none !important;
+    clip-path: none !important;
 }
