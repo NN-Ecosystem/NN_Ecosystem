@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_v1",
-  "catalog_version": "1",
+  "catalog_version": "1.1",
   "generated_at": "2026-08-06T12:05:00+07:00",
   "items": [
     {
@@ -15,7 +15,9 @@
       "minimum_core_version": "2.0.0",
       "image": "assets/images/file_tranfer_1.webp",
       "link_store": "https://nhonguyen.gumroad.com/l/pcqgin",
-      "status": "released"
+      "status": "released",
+      "release_url": "",
+      "download_url": ""
     },
     {
       "item_id": "file_organization_engine",
@@ -29,7 +31,9 @@
       "minimum_core_version": "2.0.0",
       "image": "assets/images/file-organization-engine-v2.webp",
       "link_store": "https://nhonguyen.gumroad.com/l/jsgzbt",
-      "status": "released"
+      "status": "released",
+      "release_url": "",
+      "download_url": ""
     },
     {
       "item_id": "audio_recorder_engine",
@@ -43,7 +47,9 @@
       "minimum_core_version": "2.0.0",
       "image": "assets/images/audio_recorder_engine_v2.webp",
       "link_store": "https://nhonguyen.gumroad.com/l/sfuivc",
-      "status": "released"
+      "status": "released",
+      "release_url": "",
+      "download_url": ""
     },
     {
       "item_id": "screen_recorder_engine",
@@ -57,7 +63,9 @@
       "minimum_core_version": "2.0.0",
       "image": "assets/images/screen_recorder_engine_v2.webp",
       "link_store": "https://nhonguyen.gumroad.com/l/jxppwj",
-      "status": "released"
+      "status": "released",
+      "release_url": "",
+      "download_url": ""
     },
     {
       "item_id": "workspace_plugin",
@@ -71,7 +79,9 @@
       "minimum_core_version": "2.0.0",
       "image": "assets/images/workspace_1.webp",
       "link_store": "https://nhonguyen.gumroad.com/l/loqfav",
-      "status": "released"
+      "status": "released",
+      "release_url": "",
+      "download_url": ""
     },
     {
       "item_id": "core_factory_v2",
@@ -85,7 +95,9 @@
       "minimum_core_version": "2.0.0",
       "image": "assets/images/core_v2.1.webp",
       "link_store": "https://nhonguyen.gumroad.com/l/zzrfzk",
-      "status": "released"
+      "status": "released",
+      "release_url": "",
+      "download_url": ""
     }
   ]
 }

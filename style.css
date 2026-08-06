@@ -904,3 +904,68 @@ body {
 .catalog-card:hover .card-image img {
     transform: none;
 }
+
+
+
+/* =========================
+   CATALOG CARD ACTIONS
+========================= */
+.catalog-card[data-primary-url]:not([data-primary-url=""]) {
+    cursor: pointer;
+}
+
+.catalog-card:focus-visible {
+    outline: 2px solid #00d4ff;
+    outline-offset: 4px;
+}
+
+.catalog-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.catalog-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 9px 13px;
+    border-radius: 11px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    text-decoration: none;
+    color: #eaf4ff;
+    background: rgba(255, 255, 255, 0.06);
+    font-size: 0.84rem;
+    transition: 0.25s;
+}
+
+.catalog-action:hover {
+    transform: translateY(-2px);
+    border-color: rgba(0, 212, 255, 0.65);
+    background: rgba(0, 212, 255, 0.12);
+}
+
+.catalog-action-release {
+    background: rgba(10, 132, 255, 0.18);
+}
+
+.catalog-action-download {
+    background: rgba(30, 170, 110, 0.14);
+}
+
+.catalog-action-store {
+    background: rgba(180, 110, 255, 0.12);
+}
+
+@media (max-width: 640px) {
+    .catalog-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-action {
+        width: 100%;
+    }
+}
