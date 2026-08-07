@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_v1",
-  "generated_at": "2026-08-07T07:03:56.156270+00:00",
+  "generated_at": "2026-08-07T10:36:35.378727+00:00",
   "count": 13,
   "items": [
     {
@@ -19,7 +19,7 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-core_factory_v2-v2.0.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-core_factory_v2-v2.0.0/CoreFactory_2.0.0_20260807_signed.zip",
       "link_store": "https://nhonguyen.gumroad.com/l/zzrfzk",
-      "artifact_sha256": "195b5b022dbafbd1a68346c7d1f5f124257964c41c2c23bbca1ce33c9ba882ce"
+      "artifact_sha256": "3897ff6067e16a40e96a4a20a1bfde89f4535881c10f60496119ee1677c872db"
     },
     {
       "item_id": "audio_recorder_engine",
