@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_v1",
-  "generated_at": "2026-08-07T10:36:35.378727+00:00",
+  "generated_at": "2026-08-07T13:26:17.260318+00:00",
   "count": 13,
   "items": [
     {
@@ -69,11 +69,11 @@
       "slug": "file-transfer-engine-v2",
       "summary": "# File Transfer Engine V2\n\nMove and organize large collections of files safely and automatically.\n\nThe **File Transfer Engine** is a high-performance automation engine for **Core Factory V2**, designed to move files from one location to another while intelligently organizing them into structured folders. It is ideal for users who regularly manage media libraries, downloaded assets, project files, or large datasets.\n\nUnlike a basic file mover, this engine can automatically classify files into **Video**, **Image**, and **Other** categories, preserve the original folder hierarchy, filter short videos, resolve filename conflicts, and generate detailed execution reports for use inside automation pipelines.\n\n---\n\n## Key Features\n\n* Move files and folders with high performance\n* Recursive processing of entire directory trees\n* Automatically classify files into:\n\n  * Video\n  * Image\n  * Other\n* Preserve original folder structure\n* Filter videos by duration\n* Process only short videos or exclude them\n* Intelligent filename conflict handling\n\n  * Rename\n  * Overwrite\n  * Skip\n* Detailed execution report and processing log\n* Progress reporting for long-running jobs\n* Supports cancellation during execution\n* Fully compatible with Core Factory V2 Pipelines\n\n---\n\n## Typical Use Cases\n\n* Organize downloaded media collections\n* Prepare datasets for AI training\n* Clean up mixed folders containing images, videos, and documents\n* Archive completed projects\n* Build structured media libraries\n* Batch organize thousands of files before further processing\n* Prepare input folders for downstream Core Factory engines\n\n---\n\n## Engine Settings\n\nThe engine provides configurable options including:\n\n* Recursive folder scanning\n* Preserve folder hierarchy\n* Video duration filtering\n* File conflict policy\n* Continue on error\n* Dry Run mode (simulation)\n* Include and exclude filename patterns\n\nThese settings allow the engine to adapt to both simple and enterprise-scale workflows.\n\n---\n\n## Pipeline Ready\n\nFile Transfer Engine integrates seamlessly with the Core Factory V2 automation system.\n\nIt can be used as the first stage of a processing pipeline before engines such as:\n\n* Media Analysis\n* Media Transcode\n* Split & Merge\n* Watermark\n* AI Processing\n* Upload Automation\n\nEach execution produces structured output and reports that can be consumed directly by downstream pipeline stages.\n\n---\n\n## System Requirements\n\n* Core Factory V2\n* Windows 10 / Windows 11 (64-bit)\n* FFprobe (required only when using video duration filtering)\n\n---\n\n## License\n\nA valid Core Factory V2 license is required to unlock the full version.\n\nTrial mode is supported according to the current Core Factory licensing policy.\n\n---\n\n## Why Choose File Transfer Engine?\n\nManaging thousands of files manually is slow, repetitive, and error-prone.\n\nFile Transfer Engine automates the entire workflow with reliable, repeatable, and pipeline-ready processing—making it an essential utility for content creators, AI developers, media professionals, and anyone working with large collections of files every day.\n",
       "status": "released",
-      "image": "https://nn-ecosystem.github.io/NN_Ecosystem/assets/catalog/file_transfer_engine/file_tranfer_1.webp",
+      "image": "https://nn-ecosystem.github.io/NN_Ecosystem/assets/catalog/file_transfer_engine/File Transfer Engine V2.png",
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-file_transfer_engine-v2.1.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-file_transfer_engine-v2.1.0/file_transfer_engine_v2_1_0_classified_duration_signed.zip",
       "link_store": "https://nhonguyen.gumroad.com/l/pcqgin",
-      "artifact_sha256": "3ba19b2476bab071d8e1f2d2e0f436cc548dd2fbc317d6db17f7560cc7fab017"
+      "artifact_sha256": "a6b42f9275dddc64334513a86e6af425a01afc9748a42059eec863729064573a"
     },
     {
       "item_id": "media_analysis_engine",
