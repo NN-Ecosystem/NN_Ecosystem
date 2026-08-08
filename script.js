@@ -815,19 +815,35 @@ function renderCatalogType(items, type, query = "") {
 
 async function loadMarketplaceCatalog() {
     const types = ["engine", "plugin", "core"];
-    try {
-        const response = await fetch(`${CATALOG_URL}?v=${Date.now()}`, { cache: "no-store" });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const catalog = await response.json();
-        const items = Array.isArray(catalog.items) ? catalog.items : [];
 
+    try {
+        const response = await fetch(
+            `${CATALOG_URL}?v=${Date.now()}`,
+            { cache: "no-store" }
+        );
+
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+
+        const catalog = await response.json();
+        const items = Array.isArray(catalog.items)
+            ? catalog.items
+            : [];
+
+        // Render lần đầu + Search
         types.forEach((type) => {
             renderCatalogType(items, type);
-            const input = document.querySelector(`[data-catalog-search="${type}"]`);
+
+            const input = document.querySelector(
+                `[data-catalog-search="${type}"]`
+            );
+
             if (input) {
                 input.addEventListener("input", () => {
+                    // Search luôn trở về trang 1
                     catalogPageState[type] = 1;
-            
+
                     renderCatalogType(
                         items,
                         type,
@@ -836,30 +852,44 @@ async function loadMarketplaceCatalog() {
                 });
             }
         });
+
+        // Desktop <-> Mobile
+        // Đặt trong TRY, sau khi đã có items.
+        const catalogMedia =
+            window.matchMedia("(max-width: 900px)");
+
+        catalogMedia.addEventListener("change", () => {
+            types.forEach((type) => {
+                const input = document.querySelector(
+                    `[data-catalog-search="${type}"]`
+                );
+
+                renderCatalogType(
+                    items,
+                    type,
+                    input ? input.value : ""
+                );
+            });
+        });
+
     } catch (error) {
-        console.error("Catalog load failed:", error);
+        console.error(
+            "Catalog load failed:",
+            error
+        );
+
         types.forEach((type) => {
-            const grid = document.getElementById(`${type}-grid`);
+            const grid =
+                document.getElementById(`${type}-grid`);
+
             if (grid) {
-                grid.innerHTML = `<div class="catalog-error">Cannot load marketplace catalog.</div>`;
+                grid.innerHTML = `
+                    <div class="catalog-error">
+                        Cannot load marketplace catalog.
+                    </div>
+                `;
             }
         });
-       const catalogMedia =
-          window.matchMedia("(max-width: 900px)");
-      
-      catalogMedia.addEventListener("change", () => {
-          types.forEach((type) => {
-              const input = document.querySelector(
-                  `[data-catalog-search="${type}"]`
-              );
-      
-              renderCatalogType(
-                  items,
-                  type,
-                  input ? input.value : ""
-              );
-          });
-      });
     }
 }
 
