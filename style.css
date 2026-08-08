@@ -969,3 +969,93 @@ body {
         width: 100%;
     }
 }
+/* =========================
+   CATALOG PAGINATION
+========================= */
+
+.catalog-pagination {
+    width: 100%;
+    max-width: 1200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 32px;
+}
+
+.catalog-page-btn {
+    min-width: 42px;
+    height: 42px;
+
+    padding: 0 13px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: #dcecff;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.25s;
+}
+
+.catalog-page-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(0, 212, 255, 0.65);
+
+    background:
+        rgba(0, 212, 255, 0.12);
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 212, 255, 0.12);
+}
+
+.catalog-page-active {
+    background: #0a84ff;
+
+    border-color:
+        rgba(70, 170, 255, 0.9);
+
+    color: white;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 0 18px
+        rgba(10, 132, 255, 0.3);
+}
+
+.catalog-page-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.catalog-page-ellipsis {
+    min-width: 28px;
+
+    color: #7890ad;
+
+    text-align: center;
+}
+
+/* Mobile giữ nguyên cơ chế lướt ngang.
+   Không hiện pagination. */
+@media (max-width: 900px) {
+    .catalog-pagination {
+        display: none !important;
+    }
+}
