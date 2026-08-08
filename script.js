@@ -545,26 +545,272 @@ function renderCatalogCard(item) {
         </article>`;
 }
 
+const CATALOG_PAGE_SIZE = 6;
+
+const catalogPageState = {
+    engine: 1,
+    plugin: 1,
+    core: 1
+};
+
+function isMobileCatalog() {
+    return window.matchMedia("(max-width: 900px)").matches;
+}
+
+function ensureCatalogPagination(type, grid) {
+    let pagination = document.getElementById(`${type}-pagination`);
+
+    if (!pagination) {
+        pagination = document.createElement("div");
+        pagination.id = `${type}-pagination`;
+        pagination.className = "catalog-pagination";
+
+        grid.insertAdjacentElement("afterend", pagination);
+    }
+
+    return pagination;
+}
+
+function buildPageList(currentPage, totalPages) {
+    if (totalPages <= 7) {
+        return Array.from({ length: totalPages }, (_, i) => i + 1);
+    }
+
+    const pages = [1];
+
+    let start = Math.max(2, currentPage - 1);
+    let end = Math.min(totalPages - 1, currentPage + 1);
+
+    if (currentPage <= 3) {
+        end = 4;
+    }
+
+    if (currentPage >= totalPages - 2) {
+        start = totalPages - 3;
+    }
+
+    if (start > 2) {
+        pages.push("...");
+    }
+
+    for (let page = start; page <= end; page++) {
+        pages.push(page);
+    }
+
+    if (end < totalPages - 1) {
+        pages.push("...");
+    }
+
+    pages.push(totalPages);
+
+    return pages;
+}
+
+function renderCatalogPagination(
+    type,
+    pagination,
+    currentPage,
+    totalPages,
+    rerender
+) {
+    if (isMobileCatalog() || totalPages <= 1) {
+        pagination.innerHTML = "";
+        pagination.hidden = true;
+        return;
+    }
+
+    pagination.hidden = false;
+
+    const pages = buildPageList(currentPage, totalPages);
+
+    const pageButtons = pages.map((page) => {
+        if (page === "...") {
+            return `<span class="catalog-page-ellipsis">…</span>`;
+        }
+
+        const active =
+            page === currentPage
+                ? " catalog-page-active"
+                : "";
+
+        return `
+            <button
+                type="button"
+                class="catalog-page-btn${active}"
+                data-page="${page}">
+                ${page}
+            </button>
+        `;
+    }).join("");
+
+    pagination.innerHTML = `
+        <button
+            type="button"
+            class="catalog-page-btn catalog-page-nav"
+            data-page="${currentPage - 1}"
+            ${currentPage <= 1 ? "disabled" : ""}>
+            ←
+        </button>
+
+        ${pageButtons}
+
+        <button
+            type="button"
+            class="catalog-page-btn catalog-page-nav"
+            data-page="${currentPage + 1}"
+            ${currentPage >= totalPages ? "disabled" : ""}>
+            →
+        </button>
+    `;
+
+    pagination.querySelectorAll("[data-page]").forEach((button) => {
+        button.addEventListener("click", () => {
+            const page = Number(button.dataset.page);
+
+            if (
+                !Number.isFinite(page) ||
+                page < 1 ||
+                page > totalPages ||
+                page === currentPage
+            ) {
+                return;
+            }
+
+            catalogPageState[type] = page;
+            rerender();
+
+            // Khi đổi trang, đưa nhẹ về đầu grid,
+            // không cuộn cả website về đầu.
+            const section = document.getElementById(type);
+
+            if (section) {
+                const y =
+                    section.getBoundingClientRect().top +
+                    window.scrollY -
+                    100;
+
+                window.scrollTo({
+                    top: y,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+}
+
 function renderCatalogType(items, type, query = "") {
     const grid = document.getElementById(`${type}-grid`);
     const count = document.getElementById(`${type}-count`);
     const empty = document.getElementById(`${type}-empty`);
+
     if (!grid) return;
 
     const normalized = query.trim().toLowerCase();
+
     const filtered = items.filter((item) => {
-        if (String(item.type || "").toLowerCase() !== type) return false;
-        if (String(item.status || "released").toLowerCase() !== "released") return false;
-        if (!normalized) return true;
+        if (String(item.type || "").toLowerCase() !== type) {
+            return false;
+        }
+
+        if (
+            String(item.status || "released").toLowerCase() !==
+            "released"
+        ) {
+            return false;
+        }
+
+        if (!normalized) {
+            return true;
+        }
+
         return [
-            item.name, item.title, item.item_id, item.summary,
-            item.description, item.version, item.channel
-        ].some((value) => String(value || "").toLowerCase().includes(normalized));
+            item.name,
+            item.title,
+            item.item_id,
+            item.summary,
+            item.description,
+            item.version,
+            item.channel
+        ].some((value) =>
+            String(value || "")
+                .toLowerCase()
+                .includes(normalized)
+        );
     });
 
-    grid.innerHTML = filtered.map(renderCatalogCard).join("");
-    if (count) count.textContent = `${filtered.length} item${filtered.length === 1 ? "" : "s"}`;
-    if (empty) empty.hidden = filtered.length !== 0;
+    const pagination = ensureCatalogPagination(type, grid);
+
+    // MOBILE:
+    // giữ nguyên toàn bộ item để lướt ngang như hiện tại.
+    if (isMobileCatalog()) {
+        grid.innerHTML =
+            filtered.map(renderCatalogCard).join("");
+
+        pagination.innerHTML = "";
+        pagination.hidden = true;
+
+        if (count) {
+            count.textContent =
+                `${filtered.length} item${filtered.length === 1 ? "" : "s"}`;
+        }
+
+        if (empty) {
+            empty.hidden = filtered.length !== 0;
+        }
+
+        return;
+    }
+
+    // DESKTOP:
+    // 6 card / page.
+    const totalPages = Math.max(
+        1,
+        Math.ceil(filtered.length / CATALOG_PAGE_SIZE)
+    );
+
+    let currentPage =
+        Number(catalogPageState[type]) || 1;
+
+    currentPage = Math.min(
+        Math.max(currentPage, 1),
+        totalPages
+    );
+
+    catalogPageState[type] = currentPage;
+
+    const start =
+        (currentPage - 1) * CATALOG_PAGE_SIZE;
+
+    const visibleItems =
+        filtered.slice(
+            start,
+            start + CATALOG_PAGE_SIZE
+        );
+
+    grid.innerHTML =
+        visibleItems.map(renderCatalogCard).join("");
+
+    if (count) {
+        if (filtered.length > CATALOG_PAGE_SIZE) {
+            count.textContent =
+                `${filtered.length} items · Page ${currentPage}/${totalPages}`;
+        } else {
+            count.textContent =
+                `${filtered.length} item${filtered.length === 1 ? "" : "s"}`;
+        }
+    }
+
+    if (empty) {
+        empty.hidden = filtered.length !== 0;
+    }
+
+    renderCatalogPagination(
+        type,
+        pagination,
+        currentPage,
+        totalPages,
+        () => renderCatalogType(items, type, query)
+    );
 }
 
 async function loadMarketplaceCatalog() {
@@ -579,7 +825,15 @@ async function loadMarketplaceCatalog() {
             renderCatalogType(items, type);
             const input = document.querySelector(`[data-catalog-search="${type}"]`);
             if (input) {
-                input.addEventListener("input", () => renderCatalogType(items, type, input.value));
+                input.addEventListener("input", () => {
+                    catalogPageState[type] = 1;
+            
+                    renderCatalogType(
+                        items,
+                        type,
+                        input.value
+                    );
+                });
             }
         });
     } catch (error) {
@@ -590,6 +844,22 @@ async function loadMarketplaceCatalog() {
                 grid.innerHTML = `<div class="catalog-error">Cannot load marketplace catalog.</div>`;
             }
         });
+       const catalogMedia =
+          window.matchMedia("(max-width: 900px)");
+      
+      catalogMedia.addEventListener("change", () => {
+          types.forEach((type) => {
+              const input = document.querySelector(
+                  `[data-catalog-search="${type}"]`
+              );
+      
+              renderCatalogType(
+                  items,
+                  type,
+                  input ? input.value : ""
+              );
+          });
+      });
     }
 }
 
