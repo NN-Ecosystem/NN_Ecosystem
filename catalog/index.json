@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_v1",
-  "generated_at": "2026-08-07T15:38:42.162870+00:00",
+  "generated_at": "2026-08-08T03:02:53.295715+00:00",
   "count": 14,
   "items": [
     {
@@ -17,9 +17,9 @@
       "status": "released",
       "image": "https://nn-ecosystem.github.io/NN_Ecosystem/assets/catalog/core_factory_v2/core_v2.png",
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-core_factory_v2-v2.0.1",
-      "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-core_factory_v2-v2.0.1/CoreFactory_2.0.1_20260807_signed.zip",
-      "link_store": "https://nhonguyen.gumroad.com/l/zzrfzk",
-      "artifact_sha256": "1052e81dc007d3bd999587d077395fe3071280da96bb93ebbb13fe2e645778e7"
+      "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-core_factory_v2-v2.0.1/CoreFactory_2.0.1_20260808_signed.zip",
+      "link_store": "",
+      "artifact_sha256": "1430832d18ece77dd582012e8443f600d776da27437639aa2fc0c081ac68fcfc"
     },
     {
       "item_id": "audio_recorder_engine",
@@ -36,7 +36,7 @@
       "image": "https://nn-ecosystem.github.io/NN_Ecosystem/assets/catalog/audio_recorder_engine/Audio Recorder Engine V2.png",
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-audio_recorder_engine-v1.0.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-audio_recorder_engine-v1.0.0/audio_recorder_engine_signed.zip",
-      "link_store": "https://nhonguyen.gumroad.com/l/sfuivc",
+      "link_store": "",
       "artifact_sha256": "d1f04ee98a29823e729f6b9003bffd231548e8411446b8393e9613f1b0b305ea"
     },
     {
@@ -54,7 +54,7 @@
       "image": "https://nn-ecosystem.github.io/NN_Ecosystem/assets/catalog/file_organization_engine/File Organization Engine V2.png",
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-file_organization_engine-v1.2.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-file_organization_engine-v1.2.0/file_organization_engine_v1_2_1_base_name_signed.zip",
-      "link_store": "https://nhonguyen.gumroad.com/l/jsgzbt",
+      "link_store": "",
       "artifact_sha256": "c3b8d747f1155a3b32ad43e8d54ca96738a25e6698d916a76fa1d34560b9712c"
     },
     {
@@ -72,7 +72,7 @@
       "image": "https://nn-ecosystem.github.io/NN_Ecosystem/assets/catalog/file_transfer_engine/File Transfer Engine V2.png",
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-file_transfer_engine-v2.1.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-file_transfer_engine-v2.1.0/file_transfer_engine_v2_1_0_classified_duration_signed.zip",
-      "link_store": "https://nhonguyen.gumroad.com/l/pcqgin",
+      "link_store": "",
       "artifact_sha256": "a6b42f9275dddc64334513a86e6af425a01afc9748a42059eec863729064573a"
     },
     {
@@ -90,7 +90,7 @@
       "image": "https://nn-ecosystem.github.io/NN_Ecosystem/assets/catalog/media_analysis_engine/Media Analysis Engine V2.png",
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-media_analysis_engine-v1.1.2",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-media_analysis_engine-v1.1.2/media_analysis_engine_v1_1_2_no_defaultdict_signed.zip",
-      "link_store": "https://nhonguyen.gumroad.com/l/xcudct",
+      "link_store": "",
       "artifact_sha256": "c203a1fac20f0d5e276300a4a2c60fc9e4650eeef6b09de448f7253cc62f5629"
     },
     {
@@ -108,7 +108,7 @@
       "image": "https://nn-ecosystem.github.io/NN_Ecosystem/assets/catalog/media_aspect_convert_engine/Media Aspect Convert Engine V2.png",
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-media_aspect_convert_engine-v1.0.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-media_aspect_convert_engine-v1.0.0/media_aspect_convert_engine_v1.0.0_signed.zip",
-      "link_store": "https://nhonguyen.gumroad.com/l/lggpuy",
+      "link_store": "",
       "artifact_sha256": "b8fe005e7f48af7fe4fb7c067d74da9f6d669fea1281503ef01fc69b209c18df"
     },
     {
@@ -144,7 +144,7 @@
       "image": "https://nn-ecosystem.github.io/NN_Ecosystem/assets/catalog/media_split_merge_engine/Media Split & Merge Engine V2.png",
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-media_split_merge_engine-v2.2.2",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-media_split_merge_engine-v2.2.2/media_split_merge_engine_v2_2_2_stream_map_fixed_signed.zip",
-      "link_store": "https://nhonguyen.gumroad.com/l/eiwcx",
+      "link_store": "",
       "artifact_sha256": "7a066cb31e0a7edd702a4bde7a6c5e76d61643237d9a2b79798e0233c3bddf82"
     },
     {
@@ -162,7 +162,7 @@
       "image": "https://nn-ecosystem.github.io/NN_Ecosystem/assets/catalog/media_transcode_engine/Media Transcode Engine V2.png",
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-media_transcode_engine-v2.2.4",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-media_transcode_engine-v2.2.4/media_transcode_engine_v2_2_4_workspace_dir_fix_signed.zip",
-      "link_store": "https://nhonguyen.gumroad.com/l/bfayu",
+      "link_store": "",
       "artifact_sha256": "0049f99434296ee1346d324ea1ff11bf8cb97b1318c18e0c7d7792137213a157"
     },
     {
@@ -198,7 +198,7 @@
       "image": "https://nn-ecosystem.github.io/NN_Ecosystem/assets/catalog/screen_recorder_engine/Screen Recorder Engine V2.png",
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-screen_recorder_engine-v1.0.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-screen_recorder_engine-v1.0.0/screen_recorder_engine_import_fixed_signed.zip",
-      "link_store": "https://nhonguyen.gumroad.com/l/jxppwj",
+      "link_store": "",
       "artifact_sha256": "2157d21bfab32c5347d0d3ca02cbd9aae51b7f0572a92661a4831c8885d3fcc8"
     },
     {
@@ -234,7 +234,7 @@
       "image": "https://nn-ecosystem.github.io/NN_Ecosystem/assets/catalog/watermark_engine/Watermark Media Engine V2.png",
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-watermark_engine-v1.1.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-watermark_engine-v1.1.1/watermark_engine_v1.1.1_v2_fixed_signed.zip",
-      "link_store": "https://nhonguyen.gumroad.com/l/firuik",
+      "link_store": "",
       "artifact_sha256": "99555c4955c6541ac725ec50d09a07b35b5ace523fb0ac726b349f3d01fa0e70"
     },
     {
@@ -252,7 +252,7 @@
       "image": "https://nn-ecosystem.github.io/NN_Ecosystem/assets/catalog/workspace_plugin/workspace_plugin.png",
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/plugin-workspace_plugin-v0.5.3",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/plugin-workspace_plugin-v0.5.3/workspace_plugin_v0.5.3_core_v2_telegram_normalized_signed.zip",
-      "link_store": "https://nhonguyen.gumroad.com/l/loqfav",
+      "link_store": "",
       "artifact_sha256": "897e2c9eb1d85a268c5ec140f19daf8465c063632fa3b506349032fafb800918"
     }
   ],
