@@ -462,6 +462,25 @@ function notifyPlatforms(name, message) {
 
 const CATALOG_URL = "catalog/index.json";
 
+const CATALOG_TYPE_ALIASES = {
+    engine: "engine",
+    plugin: "plugin",
+    core: "core",
+    node_service: "node_service",
+    "node-service": "node_service",
+    nodeservice: "node_service",
+    node: "node_service"
+};
+
+function normalizeCatalogType(value) {
+    const raw = String(value || "")
+        .trim()
+        .toLowerCase()
+        .replaceAll(" ", "_");
+    return CATALOG_TYPE_ALIASES[raw] || raw;
+}
+
+
 function escapeHtml(value) {
     return String(value ?? "")
         .replaceAll("&", "&amp;")
@@ -550,6 +569,7 @@ const CATALOG_PAGE_SIZE = 6;
 const catalogPageState = {
     engine: 1,
     plugin: 1,
+    node_service: 1,
     core: 1
 };
 
@@ -708,7 +728,7 @@ function renderCatalogType(items, type, query = "") {
     const normalized = query.trim().toLowerCase();
 
     const filtered = items.filter((item) => {
-        if (String(item.type || "").toLowerCase() !== type) {
+        if (normalizeCatalogType(item.type) !== type) {
             return false;
         }
 
@@ -814,7 +834,7 @@ function renderCatalogType(items, type, query = "") {
 }
 
 async function loadMarketplaceCatalog() {
-    const types = ["engine", "plugin", "core"];
+    const types = ["engine", "plugin", "node_service", "core"];
 
     try {
         const response = await fetch(
