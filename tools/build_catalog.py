@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-"""Build GitHub Pages catalog from Core Factory Local Shop v1."""
 from __future__ import annotations
 
 import argparse
@@ -13,10 +12,23 @@ from typing import Any
 SCHEMA = "core_factory_catalog_v1"
 ITEM_SCHEMA = "core_factory_local_item_v1"
 
+ITEM_TYPE_ALIASES = {
+    "engine": "engine",
+    "plugin": "plugin",
+    "core": "core",
+    "node_service": "node_service",
+    "node-service": "node_service",
+    "nodeservice": "node_service",
+    "node": "node_service",
+}
+SUPPORTED_ITEM_TYPES = {"engine", "plugin", "node_service", "core"}
+
+def normalize_item_type(value: Any) -> str:
+    raw = str(value or "").strip().lower().replace(" ", "_")
+    return ITEM_TYPE_ALIASES.get(raw, raw)
 
 def read_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8-sig"))
-
 
 def sha256_file(path: Path) -> str:
     digest = hashlib.sha256()
@@ -25,12 +37,10 @@ def sha256_file(path: Path) -> str:
             digest.update(chunk)
     return digest.hexdigest()
 
-
 def first_summary(description: str, limit: int = 260) -> str:
     lines = [line.strip("#* -\t") for line in description.splitlines() if line.strip()]
     text = next((line for line in lines if len(line) > 20), "")
     return text if len(text) <= limit else text[: limit - 1].rstrip() + "…"
-
 
 def export_item(item_dir: Path, pages_root: Path) -> dict[str, Any]:
     item_path = item_dir / "item.json"
@@ -45,10 +55,10 @@ def export_item(item_dir: Path, pages_root: Path) -> dict[str, Any]:
     compatibility = release.get("compatibility") if isinstance(release.get("compatibility"), dict) else {}
 
     item_id = str(release_item.get("id") or item.get("item_id") or "").strip()
-    item_type = str(release_item.get("type") or item.get("type") or "").strip().lower()
+    item_type = normalize_item_type(release_item.get("type") or item.get("type"))
     version = str(release_item.get("version") or item.get("version") or "").strip()
-    if not item_id or item_type not in {"engine", "plugin", "core"}:
-        raise ValueError(f"Invalid identity in {item_path}")
+    if not item_id or item_type not in SUPPORTED_ITEM_TYPES:
+        raise ValueError(f"Invalid identity in {item_path}: id={item_id!r}, type={item_type!r}")
 
     image_url = ""
     images = item.get("images") if isinstance(item.get("images"), list) else []
@@ -76,8 +86,9 @@ def export_item(item_dir: Path, pages_root: Path) -> dict[str, Any]:
         "status": item.get("status", "draft"),
         "artifact_sha256": artifact.get("sha256") or item.get("artifact_sha256") or "",
         "content_sha256": artifact.get("content_sha256") or item.get("content_sha256") or "",
+        "release_url": item.get("release_url") or release.get("release_url") or "",
+        "download_url": item.get("download_url") or artifact.get("download_url") or "",
     }
-
 
 def main() -> int:
     parser = argparse.ArgumentParser()
@@ -110,7 +121,6 @@ def main() -> int:
     for error in errors:
         print(f"WARNING: {error}")
     return 0 if not errors else 2
-
 
 if __name__ == "__main__":
     raise SystemExit(main())
