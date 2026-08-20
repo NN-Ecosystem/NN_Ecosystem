@@ -1,7 +1,7 @@
 {
   "schema": "core_factory_catalog_v1",
-  "generated_at": "2026-08-20T14:29:54.215200+00:00",
-  "count": 57,
+  "generated_at": "2026-08-20T14:42:04.665955+00:00",
+  "count": 56,
   "items": [
     {
       "item_id": "core_factory_v2",
@@ -956,24 +956,6 @@
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-wyckoff_analysis_engine-v1.0.1/wyckoff_analysis_engine_1.0.1_signed.zip",
       "link_store": "",
       "artifact_sha256": "2cbff7f0b6a44f9eae51bc82264ad081806ad72ee7d0a802b4573b5a436fe8fa"
-    },
-    {
-      "item_id": "test16.08",
-      "type": "pipeline_recipe",
-      "name": "pipeline test 1",
-      "title": "pipeline test 1",
-      "description": "pipeline test 1",
-      "version": "1.0.0",
-      "channel": "stable",
-      "minimum_core_version": "3.3.0",
-      "slug": "pipeline-test-1",
-      "summary": "pipeline test 1",
-      "status": "released",
-      "image": "",
-      "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/pipeline_recipe-test16.08-v1.0.0",
-      "download_url": "",
-      "link_store": "",
-      "artifact_sha256": "3eb865df8b62880f0745a3d282f893fcb00302ccb23a05c093750ad99a93324e"
     },
     {
       "item_id": "market_data_plugin",
