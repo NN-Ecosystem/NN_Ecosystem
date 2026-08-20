@@ -1,560 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <!-- Bản nâng cấp: Khóa zoom và ép trình duyệt render đúng kích thước thực của máy -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <title>NN Ecosystem Hub</title>
-
+    <meta name="description" content="NN Ecosystem — Core Factory, reusable Engines, Pipeline Recipes, Plugins, Nodes and ecosystem-created media.">
+    <title>NN Ecosystem · Core Factory</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-     
-    <!-- NAVBAR -->
-
     <nav class="navbar">
-        
-
-        <div class="logo">
-
-            <img src="assets/logo/logo.webp" alt="logo">
-        </div>
-
-
-        <!-- Thư viện Firebase (phải đặt trước script.js) -->
-        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+        <a class="logo" href="#home" aria-label="NN Ecosystem home">
+            <img src="assets/logo/logo.webp" alt="NN Ecosystem">
+        </a>
 
         <ul class="nav-links">
-
             <li><a href="#home">Home</a></li>
-            <li><a href="#engine">Engine</a></li>
-            <li><a href="#plugin">Plugin</a></li>
-            <li><a href="#node_service">Node Service</a></li>
-            <li><a href="#core">Flatform</a></li>
+            <li><a href="#core">Core</a></li>
+            <li><a href="#node_service">Nodes</a></li>
+            <li><a href="#plugin">Plugins</a></li>
+            <li><a href="#pipeline_recipe">Pipelines</a></li>
+            <li><a href="#engine">Engines</a></li>
             <li><a href="#media">Media</a></li>
-            <li><a href="#favourite">Favourite</a></li>
-            <li><a href="#feedback">Feedback</a></li>
-
+            <li><a href="#feedback">Community</a></li>
         </ul>
-
     </nav>
-    <canvas id="bg-canvas"></canvas>  
 
-    <!-- HOME -->
+    <canvas id="bg-canvas"></canvas>
 
-    <section id="home" class="section hero">
-
+    <section id="home" class="section hero release-hero">
         <div class="hero-content">
+            <span class="eyebrow">NN ECOSYSTEM · CORE FACTORY</span>
+            <h1>Build with reusable capabilities.</h1>
+            <p class="hero-lead">
+                Start with Core Factory, discover ecosystem items, and assemble the capabilities you need without rebuilding the stack from scratch.
+            </p>
 
-            <h1>AI Ecosystem Hub</h1>
+            <div class="hero-buttons">
+                <a class="btn primary" href="#core">Get Core</a>
+                <a class="btn secondary" href="#node_service">Explore Items</a>
+            </div>
 
+            <div class="start-path" aria-label="Getting started path">
+                <span>1 · Download Core</span>
+                <span>2 · Activate &amp; open Marketplace</span>
+                <span>3 · Install items</span>
+                <span>4 · Run &amp; compose</span>
+            </div>
+
+            <p class="hero-note">
+                Marketplace is also available inside Core Factory for item discovery and installation.
+            </p>
+
+            <div class="hero-stats" aria-label="Site activity">
+                <span><strong id="view-count">—</strong> visits</span>
+                <span><strong id="online-count">—</strong> online</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="core" class="section catalog-section release-section release-core">
+        <div class="section-intro">
+            <span class="eyebrow">THE PLATFORM</span>
+            <h1>Core Factory</h1>
             <p>
-                Build • Scale • Automate
+                The runtime and assembly platform for NN Ecosystem. Core manages execution, resources, jobs and installed capabilities while ecosystem items stay focused on what they do best.
+            </p>
+            <div class="concept-strip" aria-label="Core ecosystem model">
+                <span>Install</span><span>Run</span><span>Compose</span><span>Manage</span><span>Extend</span>
+            </div>
+        </div>
+
+        <div class="catalog-toolbar">
+            <input type="search" class="catalog-search" data-catalog-search="core" placeholder="Search Core releases...">
+            <span class="catalog-count" id="core-count"></span>
+        </div>
+        <div id="core-grid" class="card-grid catalog-grid" aria-live="polite"></div>
+        <div id="core-empty" class="catalog-empty" hidden>No released Core item yet.</div>
+    </section>
+
+    <section class="section ecosystem-map release-section" aria-labelledby="ecosystem-map-title">
+        <div class="section-intro compact-intro">
+            <span class="eyebrow">ECOSYSTEM LAYERS</span>
+            <h1 id="ecosystem-map-title">From complete systems to focused LEGO.</h1>
+            <p>
+                Start from what you want to use, then move down into the reusable capabilities that power it.
+            </p>
+        </div>
+        <div class="layer-flow">
+            <a href="#node_service"><strong>Nodes</strong><span>Business systems</span></a>
+            <span class="layer-arrow">↓</span>
+            <a href="#plugin"><strong>Plugins</strong><span>Specialized products</span></a>
+            <span class="layer-arrow">↓</span>
+            <a href="#pipeline_recipe"><strong>Pipeline Recipes</strong><span>Reusable workflows</span></a>
+            <span class="layer-arrow">↓</span>
+            <a href="#engine"><strong>Engines</strong><span>Focused capabilities</span></a>
+        </div>
+    </section>
+
+    <section id="node_service" class="section catalog-section release-section item-layer-section">
+        <div class="section-intro">
+            <span class="layer-kicker">01 · BUSINESS COMPOSITION</span>
+            <h1>Nodes</h1>
+            <p>Shared business systems assembled from ecosystem capabilities, workflows and business rules.</p>
+        </div>
+        <div class="catalog-toolbar">
+            <input type="search" class="catalog-search" data-catalog-search="node_service" placeholder="Search Nodes...">
+            <span class="catalog-count" id="node_service-count"></span>
+        </div>
+        <div id="node_service-grid" class="card-grid catalog-grid" aria-live="polite"></div>
+        <div id="node_service-empty" class="catalog-empty" hidden>No released Node item yet.</div>
+    </section>
+
+    <section id="plugin" class="section catalog-section release-section item-layer-section">
+        <div class="section-intro">
+            <span class="layer-kicker">02 · SPECIALIZED PRODUCT</span>
+            <h1>Plugins</h1>
+            <p>Focused applications that combine capabilities, settings, state, workflow and user experience.</p>
+        </div>
+        <div class="catalog-toolbar">
+            <input type="search" class="catalog-search" data-catalog-search="plugin" placeholder="Search Plugins...">
+            <span class="catalog-count" id="plugin-count"></span>
+        </div>
+        <div id="plugin-grid" class="card-grid catalog-grid" aria-live="polite"></div>
+        <div id="plugin-empty" class="catalog-empty" hidden>No released Plugin item yet.</div>
+    </section>
+
+    <section id="pipeline_recipe" class="section release-section pipeline-section">
+        <div class="section-intro">
+            <span class="layer-kicker">03 · REUSABLE RECIPE</span>
+            <h1>Pipeline Recipes</h1>
+            <p>
+                Repeatable compositions of Engine capabilities. This layer is reserved in the release landing architecture now and will connect to Marketplace distribution when Pipeline Recipe publishing is enabled.
+            </p>
+        </div>
+        <div class="pipeline-placeholder">
+            <div>
+                <span class="status-dot"></span>
+                <strong>Marketplace slot reserved</strong>
+            </div>
+            <p>No synthetic catalog data is exposed. The current Core catalog contract remains unchanged.</p>
+        </div>
+    </section>
+
+    <section id="engine" class="section catalog-section release-section item-layer-section">
+        <div class="section-intro">
+            <span class="layer-kicker">04 · TECHNICAL LEGO</span>
+            <h1>Engines</h1>
+            <p>Reusable technical capabilities designed to stay focused, portable and composable across the ecosystem.</p>
+        </div>
+        <div class="catalog-toolbar">
+            <input type="search" class="catalog-search" data-catalog-search="engine" placeholder="Search Engines...">
+            <span class="catalog-count" id="engine-count"></span>
+        </div>
+        <div id="engine-grid" class="card-grid catalog-grid" aria-live="polite"></div>
+        <div id="engine-empty" class="catalog-empty" hidden>No released Engine item yet.</div>
+    </section>
+
+    <section id="media" class="section release-section media-section">
+        <div class="section-intro">
+            <span class="eyebrow">CREATED WITH NN ECOSYSTEM</span>
+            <h1>Media &amp; Creative Output</h1>
+            <p>
+                Real channels and content produced as the ecosystem evolves — a practical showcase of reusable media, automation and production capabilities.
             </p>
         </div>
 
-    <section id="engine" class="section catalog-section">
-
-        <h1>ENGINE</h1>
-
-        <div class="catalog-toolbar">
-            <input type="search" class="catalog-search" data-catalog-search="engine" placeholder="Search Engine...">
-            <span class="catalog-count" id="engine-count"></span>
-        </div>
-
-        <div id="engine-grid" class="card-grid catalog-grid" aria-live="polite"></div>
-
-        <div id="engine-empty" class="catalog-empty" hidden>No released items yet.</div>
-
-    </section>
-    <!-- PLUGIN -->
-
-    <section id="plugin" class="section catalog-section">
-
-        <h1>PLUGIN</h1>
-
-        <div class="catalog-toolbar">
-            <input type="search" class="catalog-search" data-catalog-search="plugin" placeholder="Search Plugin...">
-            <span class="catalog-count" id="plugin-count"></span>
-        </div>
-
-        <div id="plugin-grid" class="card-grid catalog-grid" aria-live="polite"></div>
-
-        <div id="plugin-empty" class="catalog-empty" hidden>No released items yet.</div>
-
-    </section>
-
-
-
-    <!-- NODE SERVICE -->
-
-    <section id="node_service" class="section catalog-section">
-
-        <h1>NODE SERVICE</h1>
-
-        <div class="catalog-toolbar">
-            <input type="search" class="catalog-search" data-catalog-search="node_service" placeholder="Search Node Service...">
-            <span class="catalog-count" id="node_service-count"></span>
-        </div>
-
-        <div id="node_service-grid" class="card-grid catalog-grid" aria-live="polite"></div>
-
-        <div id="node_service-empty" class="catalog-empty" hidden>No released items yet.</div>
-
-    </section>
-
-    <!-- CORE -->
-
-    <section id="core" class="section catalog-section">
-
-        <h1>CORE PLATFORM</h1>
-
-        <div class="catalog-toolbar">
-            <input type="search" class="catalog-search" data-catalog-search="core" placeholder="Search Core Platform...">
-            <span class="catalog-count" id="core-count"></span>
-        </div>
-
-        <div id="core-grid" class="card-grid catalog-grid" aria-live="polite"></div>
-
-        <div id="core-empty" class="catalog-empty" hidden>No released items yet.</div>
-
-    </section>
-
-
-    <!-- MEDIA -->
-
-    <section id="media" class="section">
-
-        <h1>Media Ecosystem</h1>
-
-        <div class="card-grid">
-
-            <!-- BOOK -->
-
-            <div class="card reveal">
+        <div class="card-grid media-grid">
+            <article class="card reveal media-card">
                 <h2>Book</h2>
-                <p>Book channels, reviews, learning and reading ecosystem.</p>
-
+                <p>Book learning, reviews and long/short-form content.</p>
                 <div class="tag-group">
-                <!-- YouTube Global -->
-                <a href="https://www.youtube.com/@Book_inter" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/youtube-global.webp" alt="YouTube Global">
-                </a>
+                    <a href="https://www.youtube.com/@Book_inter" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/youtube-global.webp" alt="Book YouTube Global"></a>
+                    <a href="https://pin.it/75iYE0xZy" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/pinterest.webp" alt="Book Pinterest"></a>
+                    <a href="https://www.youtube.com/@BookNNBook" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/youtube-vn.webp" alt="Book YouTube Vietnam"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61573364340773" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/facebook.webp" alt="Book Facebook"></a>
+                </div>
+            </article>
 
-                <!-- Pinterest -->
-                <a href="https://pin.it/75iYE0xZy" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/pinterest.webp" alt="Pinterest">
-                </a>
-
-                <!-- YouTube VN -->
-                <a href="https://www.youtube.com/@BookNNBook" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/youtube-vn.webp" alt="YouTube VN">
-                </a>
-
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/profile.php?id=61573364340773" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/facebook.webp" alt="Facebook">
-                </a>
-            </div>
-                <!-- Nút Open Hub: Thay vì dẫn đi đâu đó, hãy dùng nó làm nút "Lưu trang" 
-                    hoặc dẫn về danh mục tổng trên Linktree/Passio của anh -->
-                <a href="#" class="card-btn">
-                    Home
-                </a>
-            </div>
-            <!-- TOOL -->
-            <div class="card reveal">
+            <article class="card reveal media-card">
                 <h2>Tool</h2>
-                <p>Tool channels, reviews, learning and automation ecosystem.</p>
-
+                <p>Automation, coding, productivity and ecosystem-building content.</p>
                 <div class="tag-group">
-                <!-- YouTube Global -->
-                <a href="https://www.threads.com/@nhonguyen1033" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/thread.webp" alt="YouTube Global">
-                </a>
+                    <a href="https://www.threads.com/@nhonguyen1033" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/thread.webp" alt="Tool Threads"></a>
+                    <a href="https://pin.it/4Sdj19mEL" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/pinterest.webp" alt="Tool Pinterest"></a>
+                    <a href="https://www.youtube.com/@TOOLNNTOOL" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/youtube-vn.webp" alt="Tool YouTube"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61588721090673" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/facebook.webp" alt="Tool Facebook"></a>
+                </div>
+            </article>
 
-                <!-- Pinterest -->
-                <a href="https://pin.it/4Sdj19mEL" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/pinterest.webp" alt="Pinterest">
-                </a>
-
-                <!-- YouTube VN -->
-                <a href="https://www.youtube.com/@TOOLNNTOOL" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/youtube-vn.webp" alt="YouTube VN">
-                </a>
-
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/profile.php?id=61588721090673" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/facebook.webp" alt="Facebook">
-                </a>
-            </div>
-                <!-- Nút Open Hub: Thay vì dẫn đi đâu đó, hãy dùng nó làm nút "Lưu trang" 
-                    hoặc dẫn về danh mục tổng trên Linktree/Passio của anh -->
-                <a href="#" class="card-btn">
-                    Home
-                </a>
-            </div>
-            <!-- TOURIST -->
-            <div class="card reveal">
+            <article class="card reveal media-card">
                 <h2>Tourist</h2>
-                <p>Tourist channels, reviews, learning and travel ecosystem.</p>
-
+                <p>Travel, local discovery and destination storytelling.</p>
                 <div class="tag-group">
-                <!-- YouTube Global -->
-                <a href="https://www.instagram.com/nhonguyen1033/" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/instagram.webp" alt="instagram">
-                </a>
+                    <a href="https://www.instagram.com/nhonguyen1033/" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/instagram.webp" alt="Tourist Instagram"></a>
+                    <a href="https://www.tiktok.com/@chill_dauchantron" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/tiktok.webp" alt="Tourist TikTok"></a>
+                    <a href="https://www.youtube.com/@Tourist_Chill" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/youtube-vn.webp" alt="Tourist YouTube"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61580730796747" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/facebook.webp" alt="Tourist Facebook"></a>
+                </div>
+            </article>
 
-                <!-- tiktok -->
-                <a href="https://www.tiktok.com/@chill_dauchantron" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/tiktok.webp" alt="TikTok">
-                </a>
-
-                <!-- YouTube VN -->
-                <a href="https://www.youtube.com/@Tourist_Chill" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/youtube-vn.webp" alt="YouTube VN">
-                </a>
-
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/profile.php?id=61580730796747" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/facebook.webp" alt="Facebook">
-                </a>
-            </div>
-                <!-- Nút Open Hub: Thay vì dẫn đi đâu đó, hãy dùng nó làm nút "Lưu trang" 
-                    hoặc dẫn về danh mục tổng trên Linktree/Passio của anh -->
-                <a href="#" class="card-btn">
-                    Home
-                </a>
-            </div>
-            <!-- MOTIVATE -->
-
-            <div class="card reveal">
+            <article class="card reveal media-card">
                 <h2>Motivate</h2>
-                <p>Motivation, self-growth and inspiration media channels.</p>
-
+                <p>Motivation, self-growth and practical mindset content.</p>
                 <div class="tag-group">
-                <!-- YouTube Global -->
-                <a href="https://www.youtube.com/@Motivate_NN_Daily" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/youtube-global.webp" alt="YouTube Global">
-                </a>
+                    <a href="https://www.youtube.com/@Motivate_NN_Daily" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/youtube-global.webp" alt="Motivate YouTube Global"></a>
+                    <a href="https://pin.it/3qv4F5jUu" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/pinterest.webp" alt="Motivate Pinterest"></a>
+                    <a href="https://www.youtube.com/@Motivate_NN" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/youtube-vn.webp" alt="Motivate YouTube Vietnam"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61573371688807" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/facebook.webp" alt="Motivate Facebook"></a>
+                </div>
+            </article>
 
-                <!-- Pinterest -->
-                <a href="https://pin.it/3qv4F5jUu" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/pinterest.webp" alt="Pinterest">
-                </a>
-
-                <!-- YouTube VN -->
-                <a href="https://www.youtube.com/@Motivate_NN" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/youtube-vn.webp" alt="YouTube VN">
-                </a>
-
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/profile.php?id=61573371688807" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/facebook.webp" alt="Facebook">
-                </a>
-            </div>
-                <!-- Nút Open Hub: Thay vì dẫn đi đâu đó, hãy dùng nó làm nút "Lưu trang" 
-                    hoặc dẫn về danh mục tổng trên Linktree/Passio của anh -->
-                <a href="#" class="card-btn">
-                    Home
-                </a>
-            </div>
-            <!-- HEALING -->
-
-            <div class="card reveal">
+            <article class="card reveal media-card">
                 <h2>Healing</h2>
-                <p>Emotional healing, calm music and supportive content.</p>
-
+                <p>Calm, emotional healing and supportive content.</p>
                 <div class="tag-group">
-                <!-- YouTube Global -->
-                <a href="https://www.youtube.com/@Healing_Inter" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/youtube-global.webp" alt="YouTube Global">
-                </a>
-
-                <!-- Pinterest -->
-                <a href="https://pin.it/37dTeUsY7" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/pinterest.webp" alt="Pinterest">
-                </a>
-
-                <!-- YouTube VN -->
-                <a href="https://www.youtube.com/@Healing_VN" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/youtube-vn.webp" alt="YouTube VN">
-                </a>
-
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/profile.php?id=61577439152340" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/facebook.webp" alt="Facebook">
-                </a>
-            </div>
-                <!-- Nút Open Hub: Thay vì dẫn đi đâu đó, hãy dùng nó làm nút "Lưu trang" 
-                    hoặc dẫn về danh mục tổng trên Linktree/Passio của anh -->
-                <a href="#" class="card-btn">
-                    Home
-                </a>
-            </div>
-        
+                    <a href="https://www.youtube.com/@Healing_Inter" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/youtube-global.webp" alt="Healing YouTube Global"></a>
+                    <a href="https://pin.it/37dTeUsY7" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/pinterest.webp" alt="Healing Pinterest"></a>
+                    <a href="https://www.youtube.com/@Healing_VN" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/youtube-vn.webp" alt="Healing YouTube Vietnam"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61577439152340" target="_blank" rel="noopener noreferrer" class="tag-icon-link"><img src="assets/images/facebook.webp" alt="Healing Facebook"></a>
+                </div>
+            </article>
         </div>
-
     </section>
 
-    <!-- FAVOURITE -->
-
-    <section id="favourite" class="section">
-
-        <h1>Favourite</h1>
-
-        <div class="card-grid">
-            
-            <!-- BOOK -->
-
-            <div class="card reveal">
-                <h2>Book</h2>
-                <p>Books that changed my thinking and mindset.</p>
-
-                <div class="tag-group">
-                <!-- book1 -->
-                <a href="https://shorten.asia/UVsVJhar" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/book1.webp" alt="book1">
-                </a>
-
-                <!-- book2 -->
-                <a href="https://shorten.asia/CDUue88r" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/book2.webp" alt="book2">
-                </a>
-
-                <!-- book3 -->
-                <a href="https://shorten.asia/M1hB2w6c" target="_blank" class="tag-icon-link">
-                    <img src="assets/images/book3.webp" alt="book3">
-                </a>
-
-            </div>
-                <!-- Nút Open Hub: Thay vì dẫn đi đâu đó, hãy dùng nó làm nút "Lưu trang" 
-                    hoặc dẫn về danh mục tổng trên Linktree/Passio của anh -->
-                <a href="#" class="card-btn">
-                    Home
-                </a>
-            </div>
-
-            <!-- TOOLS -->
-
-            <div class="card reveal">
-
-                <h2>Favourite Tools</h2>
-
-                <p>
-                    Daily tools for automation, coding and productivity.
-                </p>
-
-                <div class="tag-group">
-
-                    <span>AI</span>
-                    <span>Automation</span>
-                    <span>Productivity</span>
-
-                </div>
-
-                <a href="#" class="card-btn">
-                    Open Collection
-                </a>
-
-            </div>
-
-
-            <!-- MUSIC -->
-
-            <div class="card reveal">
-
-                <h2>Favourite Music</h2>
-
-                <p>
-                    Focus music, healing sound and creative atmosphere.
-                </p>
-
-                <div class="tag-group">
-
-                    <span>Lo-fi</span>
-                    <span>Piano</span>
-                    <span>Ambient</span>
-
-                </div>
-
-                <a href="#" class="card-btn">
-                    Open Playlist
-                </a>
-
-            </div>
-
-
-            <!-- CHANNELS -->
-
-            <div class="card reveal">
-
-                <h2>Favourite Channels</h2>
-
-                <p>
-                    Inspiring creators and educational media channels.
-                </p>
-
-                <div class="tag-group">
-
-                    <span>AI</span>
-                    <span>Trading</span>
-                    <span>Business</span>
-
-                </div>
-
-                <a href="#" class="card-btn">
-                    Open Channels
-                </a>
-
-            </div>
-
-
-            <!-- QUOTES -->
-
-            <div class="card reveal">
-
-                <h2>Favourite Quotes</h2>
-
-                <p>
-                    “Build systems, not motivation.”
-                </p>
-
-                <div class="tag-group">
-
-                    <span>Mindset</span>
-                    <span>Discipline</span>
-                    <span>Growth</span>
-
-                </div>
-
-                <a href="#" class="card-btn">
-                    Read More
-                </a>
-
-            </div>
-
-
-            <!-- SETUP -->
-
-            <div class="card reveal">
-
-                <h2>Favourite Setup</h2>
-
-                <p>
-                    Workstation, creator desk and automation setup.
-                </p>
-
-                <div class="tag-group">
-
-                    <span>Workspace</span>
-                    <span>Creator</span>
-                    <span>Tech</span>
-
-                </div>
-
-                <a href="#" class="card-btn">
-                    Open Setup
-                </a>
-
-            </div>
-
+    <section id="feedback" class="section release-section community-section">
+        <div class="section-intro">
+            <span class="eyebrow">COMMUNITY</span>
+            <h1>Build the Ecosystem Together</h1>
+            <p>
+                Share ideas, feedback, use cases or source-code links. Community-developed items and signed distribution can grow into this same area without changing the current Marketplace contract today.
+            </p>
         </div>
 
-    </section>
-
-    <!-- FEEDBACK -->
-
-    <section id="feedback" class="section">
-
-        <h1>Comment & Feedback</h1>
-
-        <div class="feedback-wrapper">
-
-            <!-- LEFT -->
-
+        <div class="feedback-wrapper community-wrapper">
             <div class="feedback-left reveal">
-
-                <div class="feedback-icon">
-
-                    💬
-
-                </div>
-
-                <h2>Let’s Build Together</h2>
-
+                <div class="feedback-icon">↗</div>
+                <h2>Contribute what should exist next.</h2>
                 <div class="line"></div>
-
                 <p>
-                    Your feedback helps improve tools, content
-                    and the ecosystem experience.
+                    Tell us what is missing, what can be improved, or paste a repository/source link into your message for the team to review.
                 </p>
-
                 <div class="feedback-tags">
-
                     <span>Ideas</span>
                     <span>Feedback</span>
-                    <span>Collab</span>
-
+                    <span>Source Code</span>
+                    <span>Use Cases</span>
+                    <span>Future Signature Items</span>
                 </div>
             </div>
 
-
-            <!-- RIGHT -->
             <div class="feedback-right reveal">
-                <!-- Thêm ID feedback-form -->
                 <form class="feedback-form" id="feedback-form">
                     <div class="input-row">
-                        <input
-                            type="text"
-                            id="fb-name" 
-                            placeholder="Your name"
-                            required
-                        >
-                        <input
-                            type="email"
-                            id="fb-email"
-                            placeholder="Your email"
-                            required
-                        >
+                        <input type="text" id="fb-name" placeholder="Your name" maxlength="80" required>
+                        <input type="email" id="fb-email" placeholder="Your email" maxlength="180" required>
                     </div>
-                    <textarea
-                        id="fb-message"
-                        placeholder="Your message"
-                        required
-                    ></textarea>
-
-                    <button type="submit">
-                        Send Feedback
-                    </button>
+                    <textarea id="fb-message" placeholder="Idea, feedback, use case, or source-code/repository link..." maxlength="4000" required></textarea>
+                    <button type="submit">Send to NN Ecosystem</button>
                 </form>
             </div>
-
         </div>
-        
-    </section>
-    <!-- SECTION HIỂN THỊ COMMENT -->
-    <section id="comment-section" class="section">
-        <div class="container" style="text-align: left;"> <!-- Ép container về trái -->
-            
-            <div class="section-header reveal" style="margin-left: 0;">
-                <h1 style="text-align: left; margin-left: 0;">Recent Feedbacks</h1>
-                <div class="line" style="margin: 10px 0 30px 0;"></div> <!-- Line không căn giữa nữa -->
-            </div>
 
-            <div id="comment-list" class="reveal">
-                <!-- Dữ liệu từ Firebase sẽ đổ vào đây -->
+        <div class="future-community-slot reveal">
+            <div>
+                <span class="eyebrow">FUTURE EXTENSION</span>
+                <h2>Community &amp; Signature Items</h2>
             </div>
-            
+            <p>
+                Reserved for contributor identity, review/signature status and community-developed ecosystem items when that publishing path is ready.
+            </p>
         </div>
     </section>
 
+    <section id="comment-section" class="section recent-feedback-section">
+        <div class="recent-feedback-inner">
+            <span class="eyebrow">RECENT COMMUNITY INPUT</span>
+            <h1>Recent Feedback</h1>
+            <div id="comment-list" class="reveal" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
     <script src="script.js"></script>
-
 </body>
-
 </html>

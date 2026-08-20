@@ -1,3 +1,14 @@
+# Release landing alignment — 2026-08-20
+
+- Reordered landing flow to Welcome → Core → Nodes → Plugins → Pipeline Recipes → Engines → Media → Community.
+- Preserved `core_factory_catalog_v1` and all current catalog item types/fields.
+- Added Pipeline Recipe as a presentation-only reserved section; no catalog/schema/publisher change.
+- Kept Core, Node Service, Plugin and Engine grids bound to the existing catalog index.
+- Reframed Media as “Created with NN Ecosystem”.
+- Expanded Community copy for ideas, feedback, use cases and source-code links while preserving Firebase feedback fields.
+- Removed duplicate feedback listener and escaped user content by rendering with DOM `textContent`.
+- Removed Favourite from the primary release page flow; legacy source remains in `index.release-backup.html`.
+
 # Changelog
 
 ## 1.2.0

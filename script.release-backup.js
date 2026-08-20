@@ -390,12 +390,12 @@ if (fbForm) {
     fbForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const name = document.getElementById('fb-name').value.trim();
-        const email = document.getElementById('fb-email').value.trim();
-        const message = document.getElementById('fb-message').value.trim();
+        // Lấy dữ liệu từ Form Feedback của anh
+        const name = document.getElementById('fb-name').value;
+        const email = document.getElementById('fb-email').value;
+        const message = document.getElementById('fb-message').value;
 
-        if (!name || !email || !message) return;
-
+        // Đẩy lên nhánh 'feedbacks' (anh nên dùng tên này cho chuyên nghiệp)
         const feedbackRef = db.ref('feedbacks').push();
         feedbackRef.set({
             name: name,
@@ -404,49 +404,48 @@ if (fbForm) {
             timestamp: Date.now()
         }).then(() => {
             alert("Thank you! Feedback has been submitted successfully.");
+            // THÊM DÒNG NÀY VÀO ĐÂY:
             notifyPlatforms(name, message);
             fbForm.reset();
         }).catch((error) => {
             console.error("Firebase error:", error);
-            alert("Feedback could not be submitted. Please try again.");
         });
     });
 }
 
-function renderFeedbackItem(data) {
-    const list = document.getElementById('comment-list');
-    if (!list || !data) return;
-
-    const item = document.createElement('article');
-    item.className = 'comment-item';
-
-    const meta = document.createElement('div');
-    meta.className = 'comment-meta';
-
-    const name = document.createElement('strong');
-    name.className = 'comment-name';
-    name.textContent = String(data.name || 'Community member');
-
-    const date = document.createElement('small');
-    date.className = 'comment-date';
-    const timestamp = Number(data.timestamp);
-    date.textContent = Number.isFinite(timestamp)
-        ? new Date(timestamp).toLocaleDateString()
-        : '';
-
-    const message = document.createElement('p');
-    message.className = 'comment-message';
-    message.textContent = String(data.message || '');
-
-    meta.append(name, date);
-    item.append(meta, message);
-    list.prepend(item);
-}
-
-// Single listener: prevents duplicate rendering and uses textContent to avoid
-// injecting user-provided HTML into the public landing page.
+/* --- HIỂN THỊ FEEDBACK MỚI NHẤT LÊN WEB (NẾU MUỐN) --- */
+// Nếu anh muốn show các lời nhắn của mọi người lên một chỗ nào đó
 db.ref('feedbacks').limitToLast(5).on('child_added', (snapshot) => {
-    renderFeedbackItem(snapshot.val());
+    const data = snapshot.val();
+    const list = document.getElementById('comment-list'); // Đảm bảo anh có id này ở đâu đó trong HTML
+    if (list) {
+        const item = `
+            <div class="feedback-item">
+                <strong>${data.name}:</strong> <span>${data.message}</span>
+            </div>
+        `;
+        list.insertAdjacentHTML('afterbegin', item);
+    }
+});
+// Lắng nghe dữ liệu từ nhánh 'feedbacks'
+db.ref('feedbacks').limitToLast(5).on('child_added', (snapshot) => {
+    const data = snapshot.val();
+    const list = document.getElementById('comment-list');
+    
+    if (list) {
+        const itemHTML = `
+            <div class="comment-item">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <strong style="color: #0a84ff; font-size: 0.95rem;">${data.name}</strong>
+                    <small style="color: #555; font-size: 0.75rem;">${new Date(data.timestamp).toLocaleDateString()}</small>
+                </div>
+                <p style="margin: 8px 0 0 0; color: #b9d8ff; line-height: 1.5; font-size: 0.9rem;">
+                    ${data.message}
+                </p>
+            </div>
+        `;
+        list.insertAdjacentHTML('afterbegin', itemHTML);
+    }
 });
 /* Public GitHub Pages must not contain Telegram bot tokens or Discord webhooks.
    Route notifications through a private backend/serverless endpoint instead. */
