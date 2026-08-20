@@ -466,14 +466,14 @@ const CATALOG_URL = "catalog/index.json";
 const CATALOG_TYPE_ALIASES = {
     engine: "engine",
     plugin: "plugin",
+    pipeline_recipe: "pipeline_recipe",
+    "pipeline-recipe": "pipeline_recipe",
+    pipeline: "pipeline_recipe",
     core: "core",
     node_service: "node_service",
     "node-service": "node_service",
     nodeservice: "node_service",
-    node: "node_service",
-    pipeline_recipe: "pipeline_recipe",
-    "pipeline-recipe": "pipeline_recipe",
-    pipeline: "pipeline_recipe"
+    node: "node_service"
 };
 
 function normalizeCatalogType(value) {

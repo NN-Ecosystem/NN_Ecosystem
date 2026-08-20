@@ -15,14 +15,14 @@ ITEM_SCHEMA = "core_factory_local_item_v1"
 ITEM_TYPE_ALIASES = {
     "engine": "engine",
     "plugin": "plugin",
+    "pipeline_recipe": "pipeline_recipe",
+    "pipeline-recipe": "pipeline_recipe",
+    "pipeline": "pipeline_recipe",
     "core": "core",
     "node_service": "node_service",
     "node-service": "node_service",
     "nodeservice": "node_service",
     "node": "node_service",
-    "pipeline_recipe": "pipeline_recipe",
-    "pipeline-recipe": "pipeline_recipe",
-    "pipeline": "pipeline_recipe",
 }
 SUPPORTED_ITEM_TYPES = {"engine", "plugin", "pipeline_recipe", "node_service", "core"}
 

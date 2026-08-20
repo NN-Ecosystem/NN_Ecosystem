@@ -1,5 +1,11 @@
-- Enabled first-class Pipeline Recipe catalog rendering from `core_factory_catalog_v1`.
-- Added Pipeline Recipe search/count/grid and direct signed Recipe download action.
+## Pipeline Recipe Landing UI — clean rebase
+
+- Rebased from the unmodified landing baseline supplied by the owner.
+- Opens the reserved Pipeline Recipes section as a real catalog grid.
+- Adds Pipeline Recipe search, count, pagination, Release and Download actions through the existing catalog renderer.
+- Adds `pipeline_recipe` aliases to the landing JavaScript and local catalog build helper.
+- Does not modify production catalog JSON/signature, GitHub publishing, catalog sync, signing, or any repository write logic.
+
 # Release landing alignment — 2026-08-20
 
 - Reordered landing flow to Welcome → Core → Nodes → Plugins → Pipeline Recipes → Engines → Media → Community.
