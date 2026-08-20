@@ -56,3 +56,7 @@ Date: 2026-08-20
 - New Core auto-download behavior.
 
 These should be added only when the corresponding Core/Publisher contract is formally versioned.
+
+
+## P34.2C Update
+Pipeline Recipe is now a first-class catalog presentation type. No catalog schema change.

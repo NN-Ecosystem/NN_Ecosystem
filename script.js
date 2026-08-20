@@ -470,7 +470,10 @@ const CATALOG_TYPE_ALIASES = {
     node_service: "node_service",
     "node-service": "node_service",
     nodeservice: "node_service",
-    node: "node_service"
+    node: "node_service",
+    pipeline_recipe: "pipeline_recipe",
+    "pipeline-recipe": "pipeline_recipe",
+    pipeline: "pipeline_recipe"
 };
 
 function normalizeCatalogType(value) {
@@ -570,6 +573,7 @@ const CATALOG_PAGE_SIZE = 6;
 const catalogPageState = {
     engine: 1,
     plugin: 1,
+    pipeline_recipe: 1,
     node_service: 1,
     core: 1
 };
@@ -835,7 +839,7 @@ function renderCatalogType(items, type, query = "") {
 }
 
 async function loadMarketplaceCatalog() {
-    const types = ["engine", "plugin", "node_service", "core"];
+    const types = ["engine", "plugin", "pipeline_recipe", "node_service", "core"];
 
     try {
         const response = await fetch(

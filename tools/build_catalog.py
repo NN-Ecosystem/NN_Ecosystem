@@ -20,8 +20,11 @@ ITEM_TYPE_ALIASES = {
     "node-service": "node_service",
     "nodeservice": "node_service",
     "node": "node_service",
+    "pipeline_recipe": "pipeline_recipe",
+    "pipeline-recipe": "pipeline_recipe",
+    "pipeline": "pipeline_recipe",
 }
-SUPPORTED_ITEM_TYPES = {"engine", "plugin", "node_service", "core"}
+SUPPORTED_ITEM_TYPES = {"engine", "plugin", "pipeline_recipe", "node_service", "core"}
 
 def normalize_item_type(value: Any) -> str:
     raw = str(value or "").strip().lower().replace(" ", "_")

@@ -125,21 +125,20 @@
         <div id="plugin-empty" class="catalog-empty" hidden>No released Plugin item yet.</div>
     </section>
 
-    <section id="pipeline_recipe" class="section release-section pipeline-section">
+    <section id="pipeline_recipe" class="section catalog-section release-section pipeline-section item-layer-section">
         <div class="section-intro">
             <span class="layer-kicker">03 · REUSABLE RECIPE</span>
             <h1>Pipeline Recipes</h1>
             <p>
-                Repeatable compositions of Engine capabilities. This layer is reserved in the release landing architecture now and will connect to Marketplace distribution when Pipeline Recipe publishing is enabled.
+                Signed reusable Pipeline recipes that combine Engine LEGO into repeatable workflows. Add a Recipe to Core, review local Inputs, Outputs and Engine settings, then enable it when ready.
             </p>
         </div>
-        <div class="pipeline-placeholder">
-            <div>
-                <span class="status-dot"></span>
-                <strong>Marketplace slot reserved</strong>
-            </div>
-            <p>No synthetic catalog data is exposed. The current Core catalog contract remains unchanged.</p>
+        <div class="catalog-toolbar">
+            <input type="search" class="catalog-search" data-catalog-search="pipeline_recipe" placeholder="Search Pipeline Recipes...">
+            <span class="catalog-count" id="pipeline_recipe-count"></span>
         </div>
+        <div id="pipeline_recipe-grid" class="card-grid catalog-grid" aria-live="polite"></div>
+        <div id="pipeline_recipe-empty" class="catalog-empty" hidden>No released Pipeline Recipe yet.</div>
     </section>
 
     <section id="engine" class="section catalog-section release-section item-layer-section">

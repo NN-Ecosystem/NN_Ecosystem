@@ -1,3 +1,5 @@
+- Enabled first-class Pipeline Recipe catalog rendering from `core_factory_catalog_v1`.
+- Added Pipeline Recipe search/count/grid and direct signed Recipe download action.
 # Release landing alignment — 2026-08-20
 
 - Reordered landing flow to Welcome → Core → Nodes → Plugins → Pipeline Recipes → Engines → Media → Community.

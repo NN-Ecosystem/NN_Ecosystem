@@ -27,3 +27,9 @@ GitHub Release publishing is intentionally separate. The next publisher layer wi
 - `core`
 
 Aliases `node`, `node-service`, and `nodeservice` normalize to `node_service`.
+
+
+## Pipeline Recipe
+- Catalog type: `pipeline_recipe`
+- Uses the same `core_factory_catalog_v1` row contract.
+- `download_url` must be the direct signed Recipe ZIP asset URL.
