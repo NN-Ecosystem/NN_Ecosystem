@@ -438,6 +438,51 @@ async function loadGlobalCommunityFeedback() {
 
 document.addEventListener('DOMContentLoaded', loadGlobalCommunityFeedback);
 
+async function submitLandingFeedback(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const submit = document.getElementById('feedback-submit');
+    const status = document.getElementById('feedback-status');
+    const name = String(document.getElementById('fb-name')?.value || '').trim();
+    const email = String(document.getElementById('fb-email')?.value || '').trim();
+    const comment = String(document.getElementById('fb-message')?.value || '').trim();
+
+    if (!name || !email || !comment) {
+        if (status) status.textContent = 'Please complete all fields.';
+        return;
+    }
+
+    if (submit) submit.disabled = true;
+    if (status) status.textContent = 'Sending...';
+    try {
+        const response = await fetch('https://ecosystem-verify-server.onrender.com/v1/public/store/comments', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({name, email, comment})
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) {
+            const detail = data?.detail;
+            throw new Error(typeof detail === 'string' ? detail : `HTTP ${response.status}`);
+        }
+        form.reset();
+        if (status) status.textContent = 'Thank you! Your feedback has been submitted.';
+        await loadGlobalCommunityFeedback();
+    } catch (error) {
+        console.warn('Feedback submit failed:', error);
+        if (status) status.textContent = 'Could not send feedback. Please try again.';
+    } finally {
+        if (submit) submit.disabled = false;
+    }
+}
+
+function initLandingFeedbackForm() {
+    const form = document.getElementById('feedback-form');
+    if (form) form.addEventListener('submit', submitLandingFeedback);
+}
+
+document.addEventListener('DOMContentLoaded', initLandingFeedbackForm);
+
 /* =====================================================
    MARKETPLACE CATALOG
    Card click -> GitHub Release

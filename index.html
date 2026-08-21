@@ -249,11 +249,16 @@
             </div>
 
             <div class="feedback-right reveal">
-                <div class="feedback-core-cta">
-                    <span class="eyebrow">CORE MARKETPLACE</span>
-                    <h2>Share feedback directly from Core.</h2>
-                    <p>Open Marketplace in Core Factory to post a comment with your verified account. Recent community feedback appears here automatically.</p>
-                </div>
+                <form class="feedback-form" id="feedback-form">
+                    <div class="input-row">
+                        <input type="text" id="fb-name" name="name" placeholder="Your name" maxlength="120" autocomplete="name" required>
+                        <input type="email" id="fb-email" name="email" placeholder="Your email" maxlength="254" autocomplete="email" inputmode="email" required>
+                    </div>
+                    <textarea id="fb-message" name="message" placeholder="Your message" maxlength="2000" required></textarea>
+                    <p class="feedback-privacy">Your email is used for feedback identity and is not shown publicly by default.</p>
+                    <button type="submit" id="feedback-submit">Send Feedback</button>
+                    <p id="feedback-status" class="feedback-status" role="status" aria-live="polite"></p>
+                </form>
             </div>
         </div>
 

@@ -1310,3 +1310,25 @@ body {
     .future-community-slot { grid-template-columns: 1fr; }
     .comment-meta { align-items: flex-start; flex-direction: column; gap: 4px; }
 }
+
+/* Global Landing feedback form (Cloud-backed) */
+.feedback-privacy,
+.feedback-status {
+    margin: -8px 2px 0;
+    color: #8298ad;
+    font-size: .82rem;
+    line-height: 1.45;
+}
+.feedback-status { min-height: 1.3em; color: #a9c8e8; }
+.feedback-form button:disabled { opacity: .6; cursor: wait; transform: none; }
+
+@media (max-width: 900px) {
+    .feedback-right { width: 100%; align-items: stretch; }
+    .feedback-form { width: 100% !important; min-width: 0; }
+    .feedback-form input,
+    .feedback-form textarea,
+    .feedback-form button { max-width: 100%; }
+    .feedback-form textarea { min-height: 150px; resize: vertical; }
+    .feedback-privacy,
+    .feedback-status { text-align: left; }
+}
