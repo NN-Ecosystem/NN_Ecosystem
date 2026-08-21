@@ -382,77 +382,61 @@ function trackClick(linkId, event) {
     }, 200);
 };
 
-/* --- PHẦN XỬ LÝ FEEDBACK & COMMENT --- */
-
-const fbForm = document.getElementById('feedback-form');
-
-if (fbForm) {
-    fbForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const name = document.getElementById('fb-name').value.trim();
-        const email = document.getElementById('fb-email').value.trim();
-        const message = document.getElementById('fb-message').value.trim();
-
-        if (!name || !email || !message) return;
-
-        const feedbackRef = db.ref('feedbacks').push();
-        feedbackRef.set({
-            name: name,
-            email: email,
-            message: message,
-            timestamp: Date.now()
-        }).then(() => {
-            alert("Thank you! Feedback has been submitted successfully.");
-            notifyPlatforms(name, message);
-            fbForm.reset();
-        }).catch((error) => {
-            console.error("Firebase error:", error);
-            alert("Feedback could not be submitted. Please try again.");
-        });
-    });
-}
+/* --- COMMUNITY FEEDBACK ---
+   Cloud is the single authority. Landing is read-only; users submit feedback
+   from Core Marketplace. Firebase remains only for existing site analytics.
+*/
 
 function renderFeedbackItem(data) {
     const list = document.getElementById('comment-list');
     if (!list || !data) return;
-
     const item = document.createElement('article');
     item.className = 'comment-item';
-
     const meta = document.createElement('div');
     meta.className = 'comment-meta';
-
     const name = document.createElement('strong');
     name.className = 'comment-name';
-    name.textContent = String(data.name || 'Community member');
-
+    name.textContent = String(data.display_name || 'Community member');
+    if (data.email) name.textContent += ` · ${String(data.email)}`;
     const date = document.createElement('small');
     date.className = 'comment-date';
-    const timestamp = Number(data.timestamp);
-    date.textContent = Number.isFinite(timestamp)
-        ? new Date(timestamp).toLocaleDateString()
-        : '';
-
+    const timestamp = Number(data.created_at);
+    date.textContent = Number.isFinite(timestamp) ? new Date(timestamp * 1000).toLocaleDateString() : '';
     const message = document.createElement('p');
     message.className = 'comment-message';
-    message.textContent = String(data.message || '');
-
+    message.textContent = String(data.comment || '');
     meta.append(name, date);
     item.append(meta, message);
-    list.prepend(item);
+    list.append(item);
 }
 
-// Single listener: prevents duplicate rendering and uses textContent to avoid
-// injecting user-provided HTML into the public landing page.
-db.ref('feedbacks').limitToLast(5).on('child_added', (snapshot) => {
-    renderFeedbackItem(snapshot.val());
-});
-/* Public GitHub Pages must not contain Telegram bot tokens or Discord webhooks.
-   Route notifications through a private backend/serverless endpoint instead. */
-function notifyPlatforms(name, message) {
-    console.info("Feedback saved. External notifications require a private backend endpoint.");
+async function loadGlobalCommunityFeedback() {
+    const list = document.getElementById('comment-list');
+    if (!list) return;
+    list.textContent = '';
+    try {
+        const response = await fetch('https://ecosystem-verify-server.onrender.com/v1/public/store/comments?limit=8', {cache:'no-store'});
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        const rows = Array.isArray(data.items) ? data.items : [];
+        if (!rows.length) {
+            const empty = document.createElement('p');
+            empty.className = 'community-empty';
+            empty.textContent = 'No community feedback yet.';
+            list.append(empty);
+            return;
+        }
+        rows.forEach(renderFeedbackItem);
+    } catch (error) {
+        console.warn('Community feedback unavailable:', error);
+        const unavailable = document.createElement('p');
+        unavailable.className = 'community-empty';
+        unavailable.textContent = 'Community feedback is temporarily unavailable.';
+        list.append(unavailable);
+    }
 }
+
+document.addEventListener('DOMContentLoaded', loadGlobalCommunityFeedback);
 
 /* =====================================================
    MARKETPLACE CATALOG
@@ -463,7 +447,7 @@ function notifyPlatforms(name, message) {
 
 const CATALOG_URL = "catalog/index.json";
 const PRESENTATION_URL = "catalog/presentation.json";
-const COMMUNITY_API_BASE = "https://ecosystem-verify-server.onrender.com/v1/public/store/items";
+const COMMUNITY_API_URL = "https://ecosystem-verify-server.onrender.com/v1/public/store/comments";
 
 const CATALOG_TYPE_ALIASES = {
     engine: "engine",
@@ -561,7 +545,6 @@ function renderCatalogCard(item) {
                 </div>
                 <h2>${title}</h2>
                 ${summary ? `<p>${summary}</p>` : ""}
-                <div class="catalog-community" data-community-item="${escapeHtml(item.item_id || "")}"><small>Loading community feedback…</small></div>
                 <div class="catalog-actions">
                     ${actionLink(releaseUrl, "View Release", "catalog-action-release")}
                     ${actionLink(downloadUrl, "Download", "catalog-action-download")}
@@ -982,21 +965,3 @@ document.addEventListener("keydown", (event) => {
 });
 
 document.addEventListener("DOMContentLoaded", loadMarketplaceCatalog);
-
-/* Community Feedback V1: Cloud is authority; catalog/presentation remain immutable. */
-async function hydrateCatalogCommunity(root=document) {
-  const nodes=[...root.querySelectorAll('[data-community-item]:not([data-community-loaded])')];
-  await Promise.all(nodes.map(async node=>{
-    node.dataset.communityLoaded='1'; const itemId=node.dataset.communityItem; if(!itemId){node.textContent='';return;}
-    try {
-      const r=await fetch(`${COMMUNITY_API_BASE}/${encodeURIComponent(itemId)}/comments?limit=3`,{cache:'no-store'});
-      if(!r.ok) throw new Error(`HTTP ${r.status}`); const data=await r.json(); const rows=Array.isArray(data.items)?data.items:[];
-      node.textContent=''; if(!rows.length){const s=document.createElement('small');s.textContent='No community feedback yet.';node.append(s);return;}
-      const h=document.createElement('strong');h.textContent='Community';node.append(h);
-      rows.forEach(row=>{const p=document.createElement('p'); const who=document.createElement('b');who.textContent=String(row.display_name||'Community member');p.append(who,document.createTextNode(` — ${String(row.comment||'')}`));node.append(p);});
-    } catch(e) { node.textContent=''; const s=document.createElement('small');s.textContent='Community feedback temporarily unavailable.';node.append(s); }
-  }));
-}
-const communityObserver=new MutationObserver(()=>hydrateCatalogCommunity());
-communityObserver.observe(document.body,{childList:true,subtree:true});
-document.addEventListener('DOMContentLoaded',()=>hydrateCatalogCommunity());
