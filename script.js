@@ -463,6 +463,7 @@ function notifyPlatforms(name, message) {
 
 const CATALOG_URL = "catalog/index.json";
 const PRESENTATION_URL = "catalog/presentation.json";
+const COMMUNITY_API_BASE = "https://ecosystem-verify-server.onrender.com/v1/public/store/items";
 
 const CATALOG_TYPE_ALIASES = {
     engine: "engine",
@@ -560,6 +561,7 @@ function renderCatalogCard(item) {
                 </div>
                 <h2>${title}</h2>
                 ${summary ? `<p>${summary}</p>` : ""}
+                <div class="catalog-community" data-community-item="${escapeHtml(item.item_id || "")}"><small>Loading community feedback…</small></div>
                 <div class="catalog-actions">
                     ${actionLink(releaseUrl, "View Release", "catalog-action-release")}
                     ${actionLink(downloadUrl, "Download", "catalog-action-download")}
@@ -980,3 +982,21 @@ document.addEventListener("keydown", (event) => {
 });
 
 document.addEventListener("DOMContentLoaded", loadMarketplaceCatalog);
+
+/* Community Feedback V1: Cloud is authority; catalog/presentation remain immutable. */
+async function hydrateCatalogCommunity(root=document) {
+  const nodes=[...root.querySelectorAll('[data-community-item]:not([data-community-loaded])')];
+  await Promise.all(nodes.map(async node=>{
+    node.dataset.communityLoaded='1'; const itemId=node.dataset.communityItem; if(!itemId){node.textContent='';return;}
+    try {
+      const r=await fetch(`${COMMUNITY_API_BASE}/${encodeURIComponent(itemId)}/comments?limit=3`,{cache:'no-store'});
+      if(!r.ok) throw new Error(`HTTP ${r.status}`); const data=await r.json(); const rows=Array.isArray(data.items)?data.items:[];
+      node.textContent=''; if(!rows.length){const s=document.createElement('small');s.textContent='No community feedback yet.';node.append(s);return;}
+      const h=document.createElement('strong');h.textContent='Community';node.append(h);
+      rows.forEach(row=>{const p=document.createElement('p'); const who=document.createElement('b');who.textContent=String(row.display_name||'Community member');p.append(who,document.createTextNode(` — ${String(row.comment||'')}`));node.append(p);});
+    } catch(e) { node.textContent=''; const s=document.createElement('small');s.textContent='Community feedback temporarily unavailable.';node.append(s); }
+  }));
+}
+const communityObserver=new MutationObserver(()=>hydrateCatalogCommunity());
+communityObserver.observe(document.body,{childList:true,subtree:true});
+document.addEventListener('DOMContentLoaded',()=>hydrateCatalogCommunity());
