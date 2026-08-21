@@ -32,9 +32,9 @@ This layer is intentionally unsigned because it is not used to authorize install
 - description/summary
 - product image
 - store/commercial link
-- display status
+- optional presentation badges that do not control release/installability
 
-The landing page overlays presentation fields on top of the signed distribution rows. If `presentation.json` is unavailable, the page falls back to the presentation fields already present in the legacy signed catalog.
+The landing page overlays presentation fields on top of the signed distribution rows. Signed `status` always remains authoritative; presentation cannot make an item released/installable. If `presentation.json` is unavailable, the page falls back to the presentation fields already present in the legacy signed catalog.
 
 ## Release behavior
 
@@ -51,3 +51,8 @@ python tools/build_catalog.py <LOCAL_SHOP_ROOT> <GITHUB_PAGES_ROOT>
 ```
 
 The local builder emits both compatibility and presentation files. Production Store publishing should use Product Catalog Plugin synchronization so the signed catalog is only updated when distribution semantics actually change.
+
+
+## Core catalog exception
+
+A `type=core` row may be displayed as released without a Marketplace download URL because Core cannot install/upgrade itself through an already-running Core Marketplace. Its signed status and artifact digest remain distribution metadata; Engine/Plugin/Pipeline/Node package rows must provide concrete release/download URLs when released.

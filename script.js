@@ -894,7 +894,8 @@ async function loadMarketplaceCatalog() {
                 description: presentation.description || presentation.summary || item.description || item.summary,
                 image: presentation.image || item.image,
                 link_store: presentation.link_store || item.link_store,
-                status: presentation.status || item.status
+                // Distribution authority: presentation must never make an item released/installable.
+                status: item.status
             };
         });
 
