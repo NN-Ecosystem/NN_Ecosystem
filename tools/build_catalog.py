@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any
 
 SCHEMA = "core_factory_catalog_v1"
+PRESENTATION_SCHEMA = "core_factory_catalog_presentation_v1"
 ITEM_SCHEMA = "core_factory_local_item_v1"
 
 ITEM_TYPE_ALIASES = {
@@ -97,6 +98,11 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("local_shop", type=Path)
     parser.add_argument("pages_root", type=Path)
+    parser.add_argument(
+        "--write-compatibility-catalog",
+        action="store_true",
+        help="Also write catalog/index.json. Production signed catalog sync should normally be done by Product Catalog Plugin.",
+    )
     args = parser.parse_args()
 
     items: list[dict[str, Any]] = []
@@ -109,17 +115,47 @@ def main() -> int:
         except Exception as exc:
             errors.append(f"{item_path}: {exc}")
 
+    ordered = sorted(items, key=lambda row: (row["type"], row["name"].lower()))
     catalog = {
         "schema": SCHEMA,
         "catalog_version": "1",
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "items": sorted(items, key=lambda row: (row["type"], row["name"].lower())),
+        "items": ordered,
     }
     target = args.pages_root / "catalog" / "index.json"
     target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(json.dumps(catalog, ensure_ascii=False, indent=2), encoding="utf-8")
+    if args.write_compatibility_catalog:
+        target.write_text(json.dumps(catalog, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    print(f"Catalog written: {target}")
+    presentation = {
+        "schema": PRESENTATION_SCHEMA,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "count": len(ordered),
+        "items": [
+            {
+                "item_id": row.get("item_id", ""),
+                "type": row.get("type", ""),
+                "name": row.get("name", ""),
+                "title": row.get("title", ""),
+                "summary": row.get("summary", ""),
+                "image": row.get("image", ""),
+                "link_store": row.get("link_store", ""),
+                "status": row.get("status", "released"),
+            }
+            for row in ordered
+        ],
+    }
+    presentation_target = args.pages_root / "catalog" / "presentation.json"
+    presentation_target.write_text(
+        json.dumps(presentation, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+    if args.write_compatibility_catalog:
+        print(f"Compatibility catalog written: {target}")
+    else:
+        print("Compatibility catalog unchanged (use --write-compatibility-catalog only for an explicit compatibility rebuild).")
+    print(f"Presentation catalog written: {presentation_target}")
     print(f"Released items: {len(items)}")
     for error in errors:
         print(f"WARNING: {error}")

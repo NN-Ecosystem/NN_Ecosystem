@@ -461,6 +461,7 @@ function notifyPlatforms(name, message) {
 ===================================================== */
 
 const CATALOG_URL = "catalog/index.json";
+const PRESENTATION_URL = "catalog/presentation.json";
 
 const CATALOG_TYPE_ALIASES = {
     engine: "engine",

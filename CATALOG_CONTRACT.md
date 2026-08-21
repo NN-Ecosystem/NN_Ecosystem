@@ -1,29 +1,53 @@
-# Core Factory GitHub Pages Catalog v1
+# Core Factory Store Catalog Contract
 
-The landing page reads `catalog/index.json` using schema `core_factory_catalog_v1`.
+The Store is split into two independent layers.
 
-Build from Local Shop:
+## 1. Signed distribution catalog
+
+`catalog/index.json` + `catalog/index.json.sig`
+
+Schema remains `core_factory_catalog_v1` for Core 3.3 compatibility.
+
+This layer is authoritative for install/trust semantics such as:
+
+- item identity and type
+- version and release channel
+- minimum Core version
+- GitHub release/download URL
+- artifact SHA256
+- released status
+- catalog signing metadata
+
+Presentation-only changes must not force this file to be rewritten or re-signed.
+
+## 2. Presentation catalog
+
+`catalog/presentation.json`
+
+Schema: `core_factory_catalog_presentation_v1`
+
+This layer is intentionally unsigned because it is not used to authorize installation or execution. It contains UI/marketing metadata such as:
+
+- name/title
+- description/summary
+- product image
+- store/commercial link
+- display status
+
+The landing page overlays presentation fields on top of the signed distribution rows. If `presentation.json` is unavailable, the page falls back to the presentation fields already present in the legacy signed catalog.
+
+## Release behavior
+
+- Landing HTML/CSS/JS change -> deploy landing only.
+- Description/image/store-link change -> update `presentation.json` and changed image only.
+- New item/version/hash/download/release/core-compatibility change -> update and sign `catalog/index.json`.
+- Existing unchanged item packages are never re-signed.
+- Core 3.3 continues to consume `catalog/index.json` and its detached signature unchanged.
+
+## Local builder
 
 ```bash
 python tools/build_catalog.py <LOCAL_SHOP_ROOT> <GITHUB_PAGES_ROOT>
 ```
 
-The builder reads `engines|plugins|node_services|cores/<slug>/item.json`, resolves technical metadata from the referenced release manifest, copies the first product image to `assets/catalog/<item_id>/`, and writes one lightweight catalog index.
-
-GitHub Release publishing is intentionally separate. The next publisher layer will create/upload release assets and then update `publish.json` receipts.
-
-
-## Link behavior v1.1
-- `release_url`: primary card destination after an item is published.
-- `download_url`: direct signed ZIP asset.
-- `link_store`: optional commercial/store page.
-- Landing falls back to `link_store` only when `release_url` is unavailable.
-
-
-## Item types
-- `engine`
-- `plugin`
-- `node_service`
-- `core`
-
-Aliases `node`, `node-service`, and `nodeservice` normalize to `node_service`.
+The local builder emits both compatibility and presentation files. Production Store publishing should use Product Catalog Plugin synchronization so the signed catalog is only updated when distribution semantics actually change.

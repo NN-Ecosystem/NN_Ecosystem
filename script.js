@@ -462,6 +462,7 @@ function notifyPlatforms(name, message) {
 ===================================================== */
 
 const CATALOG_URL = "catalog/index.json";
+const PRESENTATION_URL = "catalog/presentation.json";
 
 const CATALOG_TYPE_ALIASES = {
     engine: "engine",
@@ -842,19 +843,60 @@ async function loadMarketplaceCatalog() {
     const types = ["engine", "plugin", "pipeline_recipe", "node_service", "core"];
 
     try {
-        const response = await fetch(
-            `${CATALOG_URL}?v=${Date.now()}`,
-            { cache: "no-store" }
-        );
+        const cacheBust = Date.now();
+        const [catalogResponse, presentationResponse] = await Promise.all([
+            fetch(`${CATALOG_URL}?v=${cacheBust}`, { cache: "no-store" }),
+            fetch(`${PRESENTATION_URL}?v=${cacheBust}`, { cache: "no-store" })
+                .catch(() => null)
+        ]);
 
-        if (!response.ok) {
-            throw new Error(`HTTP ${response.status}`);
+        if (!catalogResponse.ok) {
+            throw new Error(`Catalog HTTP ${catalogResponse.status}`);
         }
 
-        const catalog = await response.json();
-        const items = Array.isArray(catalog.items)
+        const catalog = await catalogResponse.json();
+        const distributionItems = Array.isArray(catalog.items)
             ? catalog.items
             : [];
+
+        let presentationItems = [];
+        if (presentationResponse && presentationResponse.ok) {
+            try {
+                const presentation = await presentationResponse.json();
+                if (
+                    presentation &&
+                    presentation.schema === "core_factory_catalog_presentation_v1" &&
+                    Array.isArray(presentation.items)
+                ) {
+                    presentationItems = presentation.items;
+                }
+            } catch (_) {
+                presentationItems = [];
+            }
+        }
+
+        const presentationById = new Map(
+            presentationItems
+                .filter((item) => item && item.item_id)
+                .map((item) => [String(item.item_id), item])
+        );
+
+        // Distribution remains authoritative for version/hash/download/release.
+        // Presentation only overlays UI/marketing fields. Missing presentation
+        // falls back to the signed legacy catalog, keeping old deployments safe.
+        const items = distributionItems.map((item) => {
+            const presentation = presentationById.get(String(item.item_id || "")) || {};
+            return {
+                ...item,
+                name: presentation.name || item.name,
+                title: presentation.title || item.title,
+                summary: presentation.summary || presentation.description || item.summary || item.description,
+                description: presentation.description || presentation.summary || item.description || item.summary,
+                image: presentation.image || item.image,
+                link_store: presentation.link_store || item.link_store,
+                status: presentation.status || item.status
+            };
+        });
 
         // Render lần đầu + Search
         types.forEach((type) => {
