@@ -418,7 +418,22 @@ async function loadGlobalCommunityFeedback() {
         const response = await fetch('https://ecosystem-verify-server.onrender.com/v1/public/store/comments?limit=8', {cache:'no-store'});
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data = await response.json();
-        const rows = Array.isArray(data.items) ? data.items : [];
+        const rows = Array.isArray(data.items) ? [...data.items] : [];
+
+        // Landing owns a defensive presentation invariant: newest feedback first.
+        // Cloud currently returns DESC as well, but sorting here prevents a future
+        // backend/query-order change from silently reversing the public feed.
+        rows.sort((a, b) => {
+            const toEpoch = (value) => {
+                if (typeof value === 'number' && Number.isFinite(value)) return value;
+                const numeric = Number(value);
+                if (Number.isFinite(numeric)) return numeric;
+                const parsed = Date.parse(String(value || ''));
+                return Number.isFinite(parsed) ? parsed / 1000 : 0;
+            };
+            return toEpoch(b?.created_at) - toEpoch(a?.created_at);
+        });
+
         if (!rows.length) {
             const empty = document.createElement('p');
             empty.className = 'community-empty';
