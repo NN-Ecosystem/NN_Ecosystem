@@ -1,0 +1,13 @@
+Landing Paddle checkout patch — changed files only
+
+Files:
+- payment.html
+- payment-config.js
+
+Paddle Sandbox Default payment link:
+https://nn-ecosystem.github.io/NN_Ecosystem/payment.html
+
+Notes:
+- payment.html loads Paddle.js and opens the transaction from the _ptxn query parameter.
+- payment-config.js contains only the public Sandbox client-side token.
+- Never place PADDLE_API_KEY or PADDLE_WEBHOOK_SECRET in landing/frontend files.

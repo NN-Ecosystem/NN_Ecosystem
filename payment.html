@@ -1,4 +1,48 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Secure NN Ecosystem Core Credit checkout."><title>NN Ecosystem · Secure Checkout</title><link rel="stylesheet" href="style.css"><style>body{min-height:100vh}.payment-shell{max-width:900px;margin:0 auto;padding:110px 24px 60px}.payment-card{padding:28px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(9,17,31,.86)}.payment-card h1{margin-top:8px}.payment-note{opacity:.78;line-height:1.7}.policy-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:24px}.policy-links a{color:inherit}.checkout-container{margin-top:24px}</style></head><body>
 <nav class="navbar"><a class="logo" href="index.html" aria-label="NN Ecosystem home"><img src="assets/logo/logo.webp" alt="NN Ecosystem"></a></nav>
 <main class="payment-shell"><section class="payment-card"><span class="eyebrow">NN ECOSYSTEM · CORE CREDITS</span><h1>Secure checkout</h1><p class="payment-note">Core Credits are digital usage credits for eligible NN Ecosystem capabilities. Your existing Core Credit Order remains the authoritative purchase record. Payment is processed by Paddle; Credits are added only after NN Ecosystem receives and verifies the provider's server-side payment confirmation.</p><div id="checkout-container" class="checkout-container"></div><p id="payment-status" class="payment-note">If a checkout does not open automatically, return to Core Factory and choose Add Credits again.</p><div class="policy-links"><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="refund.html">Refund Policy</a><a href="index.html#credits">Credit packages</a></div></section></main>
-<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script><script src="payment-config.js"></script><script>(function(){const c=window.NN_PAYMENT||{},s=document.getElementById('payment-status');if(!c.paddleClientToken){s.textContent='Checkout configuration is not active yet. This page is ready for Paddle domain approval and Sandbox setup.';return;}try{if(c.paddleEnvironment==='sandbox')Paddle.Environment.set('sandbox');Paddle.Initialize({token:c.paddleClientToken,checkout:{settings:{displayMode:'overlay',theme:'dark',locale:'en'}}});s.textContent='Secure checkout is ready.';}catch(e){s.textContent='Checkout could not initialize. Please return to Core Factory and try again.';}})();</script></body></html>
+<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<script src="payment-config.js"></script>
+<script>
+(function(){
+  const config = window.NN_PAYMENT || {};
+  const status = document.getElementById('payment-status');
+  const params = new URLSearchParams(window.location.search);
+  const transactionId = (params.get('_ptxn') || '').trim();
+
+  if (!config.paddleClientToken) {
+    status.textContent = 'Checkout configuration is not active yet. Please return to Core Factory and try again.';
+    return;
+  }
+
+  try {
+    if (config.paddleEnvironment === 'sandbox') {
+      Paddle.Environment.set('sandbox');
+    }
+
+    Paddle.Initialize({
+      token: config.paddleClientToken,
+      checkout: {
+        settings: {
+          displayMode: 'overlay',
+          theme: 'dark',
+          locale: 'en'
+        }
+      }
+    });
+
+    if (transactionId) {
+      status.textContent = 'Opening secure Paddle checkout…';
+      // Paddle.js normally recognizes _ptxn automatically. Opening explicitly keeps
+      // the NN payment page deterministic across browsers and static hosting.
+      Paddle.Checkout.open({ transactionId: transactionId });
+    } else {
+      status.textContent = 'Secure checkout is ready. Start an Add Credits order from Core Factory to continue.';
+    }
+  } catch (error) {
+    console.error('NN Paddle checkout initialization failed', error);
+    status.textContent = 'Checkout could not initialize. Please return to Core Factory and try again.';
+  }
+})();
+</script>
+</body></html>
