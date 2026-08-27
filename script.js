@@ -540,6 +540,16 @@ function escapeHtml(value) {
         .replaceAll("'", "&#039;");
 }
 
+function normalizeLegacyStoreAssetUrl(value) {
+    const raw = String(value || "").trim();
+    if (!raw) return "";
+    const legacyPrefix = "https://nn-ecosystem.github.io/NN_Ecosystem/";
+    if (raw.startsWith(legacyPrefix)) {
+        return `https://nn-ecosystem.github.io/${raw.slice(legacyPrefix.length)}`;
+    }
+    return raw;
+}
+
 function safeExternalUrl(value) {
     const raw = String(value || "").trim();
     if (!raw) return "";
@@ -580,7 +590,7 @@ function renderCatalogCard(item) {
     const storeUrl = safeExternalUrl(item.link_store);
     const downloadUrl = safeExternalUrl(item.download_url);
     const primaryUrl = releaseUrl || storeUrl;
-    const image = escapeHtml(item.image || "");
+    const image = escapeHtml(normalizeLegacyStoreAssetUrl(item.image));
     const title = escapeHtml(item.title || item.name || item.item_id || "Untitled");
     const summary = escapeHtml(catalogSummary(item));
     const version = escapeHtml(item.version || "—");
