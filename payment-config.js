@@ -2,5 +2,5 @@
 // Never put a Paddle API key or webhook secret in this file.
 window.NN_PAYMENT = {
   paddleEnvironment: "live",
-  paddleClientToken: "apikey_01m0sqapxgkj8y2gdjy4ceysxg"
+  paddleClientToken: "live_613fdec89e775a751074333fd80"
 };
