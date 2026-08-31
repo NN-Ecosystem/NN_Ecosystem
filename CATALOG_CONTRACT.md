@@ -56,3 +56,29 @@ The local builder emits both compatibility and presentation files. Production St
 ## Core catalog exception
 
 A `type=core` row may be displayed as released without a Marketplace download URL because Core cannot install/upgrade itself through an already-running Core Marketplace. Its signed status and artifact digest remain distribution metadata; Engine/Plugin/Pipeline/Node package rows must provide concrete release/download URLs when released.
+
+
+## Platform-aware distribution extension (Core 3.5)
+
+`core_factory_catalog_v1` remains the signed compatibility schema. Rows may add a signed `platforms` object. This is distribution authority, not presentation metadata.
+
+Example:
+
+```json
+"platforms": {
+  "windows": {
+    "available": true,
+    "architectures": ["x86_64"],
+    "execution_modes": ["LOCAL_FULL"],
+    "package": {"inherit_legacy": true}
+  },
+  "android": {
+    "available": true,
+    "architectures": ["universal"],
+    "execution_modes": ["REMOTE_CORE"]
+  },
+  "ios": {"available": false}
+}
+```
+
+Compatibility rule: a legacy row without `platforms` is treated by Core 3.5 as a Windows legacy package only. Android/iOS must fail closed until explicitly declared. Landing may display platform badges but must never convert those badges into install authority; Core verifies the signed catalog again before download/install.

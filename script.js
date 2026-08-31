@@ -585,6 +585,17 @@ function actionLink(url, label, className) {
         </a>`;
 }
 
+
+function catalogPlatformBadges(item) {
+    const platforms = item && typeof item.platforms === "object" && item.platforms ? item.platforms : null;
+    if (!platforms) return '<span class="catalog-badge">Windows</span>';
+    const labels = {windows:"Windows", android:"Android", ios:"iOS", macos:"macOS", linux:"Linux"};
+    return Object.entries(platforms)
+        .filter(([_, entry]) => entry === true || (entry && typeof entry === "object" && entry.available !== false))
+        .map(([id]) => `<span class="catalog-badge">${escapeHtml(labels[id] || id)}</span>`)
+        .join("");
+}
+
 function renderCatalogCard(item) {
     const releaseUrl = safeExternalUrl(item.release_url);
     const storeUrl = safeExternalUrl(item.link_store);
@@ -612,6 +623,7 @@ function renderCatalogCard(item) {
                     <span class="catalog-badge">v${version}</span>
                     <span class="catalog-badge catalog-badge-channel">${channel}</span>
                     <span class="catalog-badge">Core ${core}+</span>
+                    ${catalogPlatformBadges(item)}
                 </div>
                 <h2>${title}</h2>
                 ${summary ? `<p>${summary}</p>` : ""}

@@ -17,10 +17,17 @@ for row in rows:
         required=("artifact_sha256",) if item_type=="core" else ("release_url","download_url","artifact_sha256")
         for field in required:
             if not str(row.get(field,"") or "").strip(): errors.append(f"{item_id}: released item missing {field}")
+    platforms=row.get("platforms")
+    if platforms is not None:
+        if not isinstance(platforms,dict): errors.append(f"{item_id}: platforms must be an object")
+        else:
+            for platform_id,entry in platforms.items():
+                if platform_id not in {"windows","android","ios","macos","linux"}: errors.append(f"{item_id}: unsupported platform {platform_id}")
+                if not isinstance(entry,(dict,bool)): errors.append(f"{item_id}: platform {platform_id} must be object/bool")
 if len(ids)!=len(set(ids)): errors.append("duplicate item_id in index")
 prows=pres.get("items",[])
 if pres.get("count") != len(prows): errors.append("presentation count mismatch")
-protected={"version","channel","minimum_core_version","release_url","download_url","artifact_sha256","status"}
+protected={"version","channel","minimum_core_version","release_url","download_url","artifact_sha256","platforms","status"}
 for row in prows:
     overlap=protected.intersection(row)
     if overlap: errors.append(f"{row.get('item_id','<unknown>')}: presentation contains protected fields {sorted(overlap)}")
