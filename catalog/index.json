@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_v1",
-  "generated_at": "2026-08-30T01:11:59.518705+00:00",
+  "generated_at": "2026-08-31T13:31:17.239224+00:00",
   "count": 89,
   "items": [
     {
@@ -19,7 +19,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/engine-core_factory_v2-v3.4.11",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-core_factory_v2-v3.4.11/CoreFactory_3.4.11_20260828_signed.zip",
       "link_store": "",
-      "artifact_sha256": "6b992899121d3c86a4152c75a68116a14ef4105ea73ed24fc72a2a3612a5da96"
+      "artifact_sha256": "6b992899121d3c86a4152c75a68116a14ef4105ea73ed24fc72a2a3612a5da96",
+      "platforms": {}
     },
     {
       "item_id": "audio_mix_engine",
@@ -37,7 +38,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-audio_mix_engine-v1.1.2",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-audio_mix_engine-v1.1.2/audio_mix_engine_1.1.2_signed.zip",
       "link_store": "",
-      "artifact_sha256": "25e987148deff9449c2b0464de60531ec04c29f7d55a347a4d2adb9343f7c07f"
+      "artifact_sha256": "25e987148deff9449c2b0464de60531ec04c29f7d55a347a4d2adb9343f7c07f",
+      "platforms": {}
     },
     {
       "item_id": "audio_recorder_engine",
@@ -55,7 +57,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-audio_recorder_engine-v1.1.2",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-audio_recorder_engine-v1.1.2/audio_recorder_engine_1.1.2_signed.zip",
       "link_store": "",
-      "artifact_sha256": "b24128ffed7f9c24aefe9d5fe0478aadb42d64e146ef671a7295cca8bf119f51"
+      "artifact_sha256": "b24128ffed7f9c24aefe9d5fe0478aadb42d64e146ef671a7295cca8bf119f51",
+      "platforms": {}
     },
     {
       "item_id": "av_mux_engine",
@@ -73,7 +76,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-av_mux_engine-v1.0.2",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-av_mux_engine-v1.0.2/av_mux_engine_1.0.2_signed.zip",
       "link_store": "",
-      "artifact_sha256": "b2bbf2ef61f61173cc563afe910f9d77d34e618667e58055ba323802314896e2"
+      "artifact_sha256": "b2bbf2ef61f61173cc563afe910f9d77d34e618667e58055ba323802314896e2",
+      "platforms": {}
     },
     {
       "item_id": "binance_trade_execution_engine",
@@ -91,7 +95,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/engine-binance_trade_execution_engine-v1.0.4",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-binance_trade_execution_engine-v1.0.4/binance_trade_execution_engine_1.0.4_signed.zip",
       "link_store": "",
-      "artifact_sha256": "784e20cefb71bb8156473157b4218372f2fc52ebd963d1e4d33e0765716b38f5"
+      "artifact_sha256": "784e20cefb71bb8156473157b4218372f2fc52ebd963d1e4d33e0765716b38f5",
+      "platforms": {}
     },
     {
       "item_id": "camera_recorder_engine",
@@ -109,7 +114,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-camera_recorder_engine-v1.0.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-camera_recorder_engine-v1.0.0/camera_recorder_engine_1.0.0_signed.zip",
       "link_store": "",
-      "artifact_sha256": "6ce7f3bd636f56b7dc2877a09398903bcfc7c257ac109d8da21c1e70afc795da"
+      "artifact_sha256": "6ce7f3bd636f56b7dc2877a09398903bcfc7c257ac109d8da21c1e70afc795da",
+      "platforms": {}
     },
     {
       "item_id": "document_conversion_engine",
@@ -127,7 +133,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-document_conversion_engine-v1.0.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-document_conversion_engine-v1.0.1/document_conversion_engine_1.0.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "ea3ef53fee0ddb4449132e535561d44740855324dccd932805547ca4d4c23e53"
+      "artifact_sha256": "ea3ef53fee0ddb4449132e535561d44740855324dccd932805547ca4d4c23e53",
+      "platforms": {}
     },
     {
       "item_id": "document_engine",
@@ -145,7 +152,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-document_engine-v1.0.5",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-document_engine-v1.0.5/document_engine_1.0.5_signed.zip",
       "link_store": "",
-      "artifact_sha256": "f9404961ee1339fc0049fadbed56748fa105c78575a36d27a6444beaaf772a43"
+      "artifact_sha256": "f9404961ee1339fc0049fadbed56748fa105c78575a36d27a6444beaaf772a43",
+      "platforms": {}
     },
     {
       "item_id": "document_extraction_engine",
@@ -163,7 +171,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-document_extraction_engine-v1.0.9",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-document_extraction_engine-v1.0.9/document_extraction_engine_1.0.9_signed.zip",
       "link_store": "",
-      "artifact_sha256": "6a02effbb2fdc711fa1691619ffaf8c94bdd65df32124f0b13fe1207cd539630"
+      "artifact_sha256": "6a02effbb2fdc711fa1691619ffaf8c94bdd65df32124f0b13fe1207cd539630",
+      "platforms": {}
     },
     {
       "item_id": "dow_theory_engine",
@@ -181,7 +190,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-dow_theory_engine-v1.0.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-dow_theory_engine-v1.0.0/dow_theory_engine_1.0.0_signed.zip",
       "link_store": "",
-      "artifact_sha256": "54b2e5982c8d28c72fc6719741942c7da8c483d69ff93fc2b6441d4c7e12faba"
+      "artifact_sha256": "54b2e5982c8d28c72fc6719741942c7da8c483d69ff93fc2b6441d4c7e12faba",
+      "platforms": {}
     },
     {
       "item_id": "feature_engine",
@@ -199,7 +209,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-feature_engine-v1.0.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-feature_engine-v1.0.0/feature_engine_1.0.0_signed.zip",
       "link_store": "",
-      "artifact_sha256": "137350b13a728ad418257da430418bcbd5f3318172538f8e633497c52e448dad"
+      "artifact_sha256": "137350b13a728ad418257da430418bcbd5f3318172538f8e633497c52e448dad",
+      "platforms": {}
     },
     {
       "item_id": "file_organization_engine",
@@ -217,7 +228,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-file_organization_engine-v1.3.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-file_organization_engine-v1.3.1/file_organization_engine_1.3.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "e047b0e2385643fca6c9998b2d30bc9e18cc5afc231ff2f73faa5daa9ef855d1"
+      "artifact_sha256": "e047b0e2385643fca6c9998b2d30bc9e18cc5afc231ff2f73faa5daa9ef855d1",
+      "platforms": {}
     },
     {
       "item_id": "file_transfer_engine",
@@ -235,7 +247,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-file_transfer_engine-v3.0.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-file_transfer_engine-v3.0.1/file_transfer_engine_3.0.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "e1f8bf1a95c956afdae2e8ce6f2e3fb5787851a0b94c1b3cfae9e1c948c5f9bf"
+      "artifact_sha256": "e1f8bf1a95c956afdae2e8ce6f2e3fb5787851a0b94c1b3cfae9e1c948c5f9bf",
+      "platforms": {}
     },
     {
       "item_id": "frame_extract_engine",
@@ -253,7 +266,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-frame_extract_engine-v1.0.2",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-frame_extract_engine-v1.0.2/frame_extract_engine_1.0.2_signed.zip",
       "link_store": "",
-      "artifact_sha256": "2d62bc77d0233d252f5397fb73b54964f4da5ace8fdaae1e309bb9a609b69424"
+      "artifact_sha256": "2d62bc77d0233d252f5397fb73b54964f4da5ace8fdaae1e309bb9a609b69424",
+      "platforms": {}
     },
     {
       "item_id": "global_vector_engine",
@@ -271,7 +285,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-global_vector_engine-v1.0.2",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-global_vector_engine-v1.0.2/global_vector_engine_1.0.2_signed.zip",
       "link_store": "",
-      "artifact_sha256": "e24364a22d2b61708ca061300ec3d1c7d8c158efaac553c9c1bf34de9954b5ea"
+      "artifact_sha256": "e24364a22d2b61708ca061300ec3d1c7d8c158efaac553c9c1bf34de9954b5ea",
+      "platforms": {}
     },
     {
       "item_id": "ict_analysis_engine",
@@ -289,7 +304,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-ict_analysis_engine-v1.0.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-ict_analysis_engine-v1.0.1/ict_analysis_engine_1.0.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "aab7bdd98ef76e6a1b51ce68391ea57b7a9dedb41c017c1da07749f56fbf4f1f"
+      "artifact_sha256": "aab7bdd98ef76e6a1b51ce68391ea57b7a9dedb41c017c1da07749f56fbf4f1f",
+      "platforms": {}
     },
     {
       "item_id": "image_overlay_engine",
@@ -307,7 +323,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-image_overlay_engine-v1.0.2",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-image_overlay_engine-v1.0.2/image_overlay_engine_1.0.2_signed.zip",
       "link_store": "",
-      "artifact_sha256": "8a624250ef11ac29902e77c166dfa18e0056fff41f34ed2a06dda8c9f6bdfed6"
+      "artifact_sha256": "8a624250ef11ac29902e77c166dfa18e0056fff41f34ed2a06dda8c9f6bdfed6",
+      "platforms": {}
     },
     {
       "item_id": "image_resize_engine",
@@ -325,7 +342,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-image_resize_engine-v1.2.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-image_resize_engine-v1.2.1/image_resize_engine_1.2.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "7e9c430a62d37ca5177062a1f18332e2ff77abf3bc0c33cf599ad0d53ad21cd7"
+      "artifact_sha256": "7e9c430a62d37ca5177062a1f18332e2ff77abf3bc0c33cf599ad0d53ad21cd7",
+      "platforms": {}
     },
     {
       "item_id": "information_processing_engine",
@@ -343,7 +361,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/engine-information_processing_engine-v1.1.0",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-information_processing_engine-v1.1.0/information_processing_engine_1.1.0_core_3.4.3_standardized_signed.zip",
       "link_store": "",
-      "artifact_sha256": "7a54da8df1bc7f9a1ab29b9f1c5677caab0c20dfae8033afa89d68cbe83ab671"
+      "artifact_sha256": "7a54da8df1bc7f9a1ab29b9f1c5677caab0c20dfae8033afa89d68cbe83ab671",
+      "platforms": {}
     },
     {
       "item_id": "information_source_fetch_engine",
@@ -361,7 +380,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/engine-information_source_fetch_engine-v1.1.0",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-information_source_fetch_engine-v1.1.0/information_source_fetch_engine_1.1.0_core_3.4.3_hardened_signed.zip",
       "link_store": "",
-      "artifact_sha256": "5ffc790044fce4827b30120fd6d85db0a504aed2b662a7533c71215d06cbb36f"
+      "artifact_sha256": "5ffc790044fce4827b30120fd6d85db0a504aed2b662a7533c71215d06cbb36f",
+      "platforms": {}
     },
     {
       "item_id": "market_binance_fetch_engine",
@@ -379,7 +399,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/engine-market_binance_fetch_engine-v1.2.5",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-market_binance_fetch_engine-v1.2.5/market_binance_fetch_engine_1.2.5_signed.zip",
       "link_store": "",
-      "artifact_sha256": "f407f79cbb8076ae6bc1b75ca0e780273ae60c5f8178e7ab4241d4e97d8c7f38"
+      "artifact_sha256": "f407f79cbb8076ae6bc1b75ca0e780273ae60c5f8178e7ab4241d4e97d8c7f38",
+      "platforms": {}
     },
     {
       "item_id": "market_binance_instruments_engine",
@@ -397,7 +418,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/engine-market_binance_instruments_engine-v1.0.4",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-market_binance_instruments_engine-v1.0.4/market_binance_instruments_engine_1.0.4_signed.zip",
       "link_store": "",
-      "artifact_sha256": "9b2efbb31ba1ee546733ec132c1e708d73a935d3a063baf13db0d81800113990"
+      "artifact_sha256": "9b2efbb31ba1ee546733ec132c1e708d73a935d3a063baf13db0d81800113990",
+      "platforms": {}
     },
     {
       "item_id": "market_binance_price_engine",
@@ -415,7 +437,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/engine-market_binance_price_engine-v1.4.1",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-market_binance_price_engine-v1.4.1/market_binance_price_engine_1.4.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "4a28a17a4efff7bc964c6ccceb4f1061ccec71037e538311c5e9ef3a7c6507e8"
+      "artifact_sha256": "4a28a17a4efff7bc964c6ccceb4f1061ccec71037e538311c5e9ef3a7c6507e8",
+      "platforms": {}
     },
     {
       "item_id": "market_identity_engine",
@@ -433,7 +456,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-market_identity_engine-v1.0.2",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-market_identity_engine-v1.0.2/market_identity_engine_v1.0.2_market_provenance_signed.zip",
       "link_store": "",
-      "artifact_sha256": "c2e9bf1e289c82ca342c61d3392370761ae412f6e5550c2d562b5b74f5b3fcb5"
+      "artifact_sha256": "c2e9bf1e289c82ca342c61d3392370761ae412f6e5550c2d562b5b74f5b3fcb5",
+      "platforms": {}
     },
     {
       "item_id": "market_mt5_fetch_engine",
@@ -451,7 +475,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-market_mt5_fetch_engine-v1.2.4",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-market_mt5_fetch_engine-v1.2.4/market_mt5_fetch_engine_1.2.4_signed.zip",
       "link_store": "",
-      "artifact_sha256": "9b0440d811b733ddf6b0d70c81771af2a9be21eea7ea847b3cfe029b5080bd2d"
+      "artifact_sha256": "9b0440d811b733ddf6b0d70c81771af2a9be21eea7ea847b3cfe029b5080bd2d",
+      "platforms": {}
     },
     {
       "item_id": "market_mt5_instruments_engine",
@@ -469,7 +494,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-market_mt5_instruments_engine-v1.0.4",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-market_mt5_instruments_engine-v1.0.4/market_mt5_instruments_engine_1.0.4_signed.zip",
       "link_store": "",
-      "artifact_sha256": "e390272c79b6e04b5e5d26b8ccbe69db0a0acb351bacfd3f082fe66bda1fb62d"
+      "artifact_sha256": "e390272c79b6e04b5e5d26b8ccbe69db0a0acb351bacfd3f082fe66bda1fb62d",
+      "platforms": {}
     },
     {
       "item_id": "market_mt5_price_engine",
@@ -487,7 +513,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-market_mt5_price_engine-v1.4.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-market_mt5_price_engine-v1.4.0/market_mt5_price_engine_1.4.0_signed.zip",
       "link_store": "",
-      "artifact_sha256": "62a3fbdd9ebe92ec18b2008ed8e994c117161e71d23983882bedd4f44723d739"
+      "artifact_sha256": "62a3fbdd9ebe92ec18b2008ed8e994c117161e71d23983882bedd4f44723d739",
+      "platforms": {}
     },
     {
       "item_id": "market_ohlcv_normalize_engine",
@@ -505,7 +532,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-market_ohlcv_normalize_engine-v1.0.3",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-market_ohlcv_normalize_engine-v1.0.3/market_ohlcv_normalize_engine_1.0.3_signed.zip",
       "link_store": "",
-      "artifact_sha256": "a5de451e08d920189dc7f24bf8205ef4d478e4c345063eb04bd4ad8fedfc7d40"
+      "artifact_sha256": "a5de451e08d920189dc7f24bf8205ef4d478e4c345063eb04bd4ad8fedfc7d40",
+      "platforms": {}
     },
     {
       "item_id": "market_ohlcv_resample_engine",
@@ -523,7 +551,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-market_ohlcv_resample_engine-v1.0.3",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-market_ohlcv_resample_engine-v1.0.3/market_ohlcv_resample_engine_1.0.3_signed.zip",
       "link_store": "",
-      "artifact_sha256": "8d9f81161c44e68ce816744deb49180c9d33dbadf67fa1fa9a6bade7e8dd41ff"
+      "artifact_sha256": "8d9f81161c44e68ce816744deb49180c9d33dbadf67fa1fa9a6bade7e8dd41ff",
+      "platforms": {}
     },
     {
       "item_id": "market_vndirect_fetch_engine",
@@ -541,7 +570,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-market_vndirect_fetch_engine-v1.3.4",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-market_vndirect_fetch_engine-v1.3.4/market_vndirect_fetch_engine_1.3.4_signed.zip",
       "link_store": "",
-      "artifact_sha256": "7dec38dce2456de43333260dd2f54ae9c6ab942f744929dc236f53aa72f8eb84"
+      "artifact_sha256": "7dec38dce2456de43333260dd2f54ae9c6ab942f744929dc236f53aa72f8eb84",
+      "platforms": {}
     },
     {
       "item_id": "market_vndirect_instruments_engine",
@@ -559,7 +589,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-market_vndirect_instruments_engine-v1.0.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-market_vndirect_instruments_engine-v1.0.1/market_vndirect_instruments_engine_v1.0.1_endpoint_hardening_signed.zip",
       "link_store": "",
-      "artifact_sha256": "894ba45db5596958e3538b5c88b31b415516927319d753aa60520dd29ec9e407"
+      "artifact_sha256": "894ba45db5596958e3538b5c88b31b415516927319d753aa60520dd29ec9e407",
+      "platforms": {}
     },
     {
       "item_id": "market_vndirect_price_engine",
@@ -577,7 +608,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-market_vndirect_price_engine-v1.5.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-market_vndirect_price_engine-v1.5.0/market_vndirect_price_engine_1.5.0_signed.zip",
       "link_store": "",
-      "artifact_sha256": "37043fc9a06d6bfb94caa16f6146b8476f62a609b0558920735459211a97e303"
+      "artifact_sha256": "37043fc9a06d6bfb94caa16f6146b8476f62a609b0558920735459211a97e303",
+      "platforms": {}
     },
     {
       "item_id": "media_analysis_engine",
@@ -595,7 +627,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-media_analysis_engine-v2.0.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-media_analysis_engine-v2.0.1/media_analysis_engine_2.0.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "d32780bca97f611eeb01d94559982fbf1ca48fb4cb7c9d41aecf637c15db81d5"
+      "artifact_sha256": "d32780bca97f611eeb01d94559982fbf1ca48fb4cb7c9d41aecf637c15db81d5",
+      "platforms": {}
     },
     {
       "item_id": "media_aspect_convert_engine",
@@ -613,7 +646,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/engine-media_aspect_convert_engine-v1.3.0",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-media_aspect_convert_engine-v1.3.0/media_aspect_convert_engine_1.3.0_signed.zip",
       "link_store": "",
-      "artifact_sha256": "4b9e53b4012bb0e09a03c32569dec8aba2a45f44e828a08fcd4accd8f589b873"
+      "artifact_sha256": "4b9e53b4012bb0e09a03c32569dec8aba2a45f44e828a08fcd4accd8f589b873",
+      "platforms": {}
     },
     {
       "item_id": "media_duration_fit_engine",
@@ -631,7 +665,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-media_duration_fit_engine-v1.0.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-media_duration_fit_engine-v1.0.1/media_duration_fit_engine_1.0.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "31ee84eb74eca53a1240bc880928c23fc52719da1d5fabcd052371fe833cb517"
+      "artifact_sha256": "31ee84eb74eca53a1240bc880928c23fc52719da1d5fabcd052371fe833cb517",
+      "platforms": {}
     },
     {
       "item_id": "media_pan_video_engine",
@@ -649,7 +684,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-media_pan_video_engine-v1.1.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-media_pan_video_engine-v1.1.1/media_pan_video_engine_1.1.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "3189779faacb3be642431eb0394fbabece9f7e28710658ab6feaab80e083264c"
+      "artifact_sha256": "3189779faacb3be642431eb0394fbabece9f7e28710658ab6feaab80e083264c",
+      "platforms": {}
     },
     {
       "item_id": "media_probe_engine",
@@ -667,7 +703,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-media_probe_engine-v1.1.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-media_probe_engine-v1.1.1/media_probe_engine_1.1.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "ed06b8dcc46bd0f9223a9ce35635cd61ce7b2e81ac3cbed4424ffc1e8417e4bf"
+      "artifact_sha256": "ed06b8dcc46bd0f9223a9ce35635cd61ce7b2e81ac3cbed4424ffc1e8417e4bf",
+      "platforms": {}
     },
     {
       "item_id": "media_split_merge_engine",
@@ -685,7 +722,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-media_split_merge_engine-v3.0.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-media_split_merge_engine-v3.0.1/media_split_merge_engine_3.0.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "9a2958df3ba4c24b408bf0d5bc1ab0187eafb20b2b3a51d6191507d102653872"
+      "artifact_sha256": "9a2958df3ba4c24b408bf0d5bc1ab0187eafb20b2b3a51d6191507d102653872",
+      "platforms": {}
     },
     {
       "item_id": "media_transcode_engine",
@@ -703,7 +741,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-media_transcode_engine-v3.1.2",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-media_transcode_engine-v3.1.2/media_transcode_engine_3.1.2_signed.zip",
       "link_store": "",
-      "artifact_sha256": "b8b380f91dc241928c518fe9ce8bef0fc32cbca44dac0bb169d782563e9b6449"
+      "artifact_sha256": "b8b380f91dc241928c518fe9ce8bef0fc32cbca44dac0bb169d782563e9b6449",
+      "platforms": {}
     },
     {
       "item_id": "mt5_trade_execution_engine",
@@ -721,7 +760,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/engine-mt5_trade_execution_engine-v1.0.2",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-mt5_trade_execution_engine-v1.0.2/mt5_trade_execution_engine_1.0.2_signed.zip",
       "link_store": "",
-      "artifact_sha256": "c1fd82c6480f5ee5531b6978d0bd2d7d3adf5a8444eb304f8a9d90118cbb0f30"
+      "artifact_sha256": "c1fd82c6480f5ee5531b6978d0bd2d7d3adf5a8444eb304f8a9d90118cbb0f30",
+      "platforms": {}
     },
     {
       "item_id": "paper_research_admission_engine",
@@ -739,7 +779,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-paper_research_admission_engine-v1.1.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-paper_research_admission_engine-v1.1.0/paper_research_admission_engine_v1.1.0_batch_signed.zip",
       "link_store": "",
-      "artifact_sha256": "55c27e32b865d3b244bca381fdae4f020ce80cb9093394e7384a1b5eadb2c06d"
+      "artifact_sha256": "55c27e32b865d3b244bca381fdae4f020ce80cb9093394e7384a1b5eadb2c06d",
+      "platforms": {}
     },
     {
       "item_id": "paper_trade_execution_engine",
@@ -757,7 +798,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-paper_trade_execution_engine-v1.0.10",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-paper_trade_execution_engine-v1.0.10/paper_trade_execution_engine_v1.0.10_realistic_selection_truth_signed.zip",
       "link_store": "",
-      "artifact_sha256": "b2501cf74507e5c56b28e292aa4a2ed9fba3cc27626d3d5733d154881f8ae2a1"
+      "artifact_sha256": "b2501cf74507e5c56b28e292aa4a2ed9fba3cc27626d3d5733d154881f8ae2a1",
+      "platforms": {}
     },
     {
       "item_id": "paper_trade_filter_engine",
@@ -775,7 +817,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-paper_trade_filter_engine-v1.0.2",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-paper_trade_filter_engine-v1.0.2/paper_trade_filter_engine_v1.0.2_mode_first_knowledge_signed.zip",
       "link_store": "",
-      "artifact_sha256": "c9f5a6262c433b8835b792d15af9cac5c16eef0053830e6b80f53b0ce1f86caa"
+      "artifact_sha256": "c9f5a6262c433b8835b792d15af9cac5c16eef0053830e6b80f53b0ce1f86caa",
+      "platforms": {}
     },
     {
       "item_id": "pexels_media_fetch_engine",
@@ -793,7 +836,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-pexels_media_fetch_engine-v1.2.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-pexels_media_fetch_engine-v1.2.1/pexels_media_fetch_engine_1.2.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "0fd3bd067aa4617268618f84a329a7d884f82b89d3ed794b1db36fa5adfc066d"
+      "artifact_sha256": "0fd3bd067aa4617268618f84a329a7d884f82b89d3ed794b1db36fa5adfc066d",
+      "platforms": {}
     },
     {
       "item_id": "pixabay_media_fetch_engine",
@@ -811,7 +855,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-pixabay_media_fetch_engine-v1.0.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-pixabay_media_fetch_engine-v1.0.1/pixabay_media_fetch_engine_1.0.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "a676257866f595260514f52164e6d3dc4f3493c369ca17a93e968df6858617fb"
+      "artifact_sha256": "a676257866f595260514f52164e6d3dc4f3493c369ca17a93e968df6858617fb",
+      "platforms": {}
     },
     {
       "item_id": "portfolio_risk_engine",
@@ -829,7 +874,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-portfolio_risk_engine-v1.0.7",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-portfolio_risk_engine-v1.0.7/portfolio_risk_engine_v1.0.7_executable_risk_floor_signed.zip",
       "link_store": "",
-      "artifact_sha256": "1febc985dbe7f5e9e0c147f02f3acc944ef81f3d0e6d74c613e07f857975c278"
+      "artifact_sha256": "1febc985dbe7f5e9e0c147f02f3acc944ef81f3d0e6d74c613e07f857975c278",
+      "platforms": {}
     },
     {
       "item_id": "price_action_engine",
@@ -847,7 +893,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-price_action_engine-v1.0.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-price_action_engine-v1.0.0/price_action_engine_1.0.0_signed.zip",
       "link_store": "",
-      "artifact_sha256": "6bf31cdcdd87ffb57278d63f139efd81d68ae16e319551de20243301246ae06e"
+      "artifact_sha256": "6bf31cdcdd87ffb57278d63f139efd81d68ae16e319551de20243301246ae06e",
+      "platforms": {}
     },
     {
       "item_id": "price_structure_engine",
@@ -865,7 +912,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-price_structure_engine-v1.0.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-price_structure_engine-v1.0.0/price_structure_engine_1.0.0_signed.zip",
       "link_store": "",
-      "artifact_sha256": "363bbd9c7b308c7ba723d2592e5018a2ca10a9a95ad8b7fdf4d0671e304fb4d8"
+      "artifact_sha256": "363bbd9c7b308c7ba723d2592e5018a2ca10a9a95ad8b7fdf4d0671e304fb4d8",
+      "platforms": {}
     },
     {
       "item_id": "realtime_analysis_snapshot_engine",
@@ -883,7 +931,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-realtime_analysis_snapshot_engine-v1.0.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-realtime_analysis_snapshot_engine-v1.0.0/realtime_analysis_snapshot_engine_1.0.0_signed.zip",
       "link_store": "",
-      "artifact_sha256": "0641026a0d41d57068f398f759f86881a995498d411a29b1fdb37cdd761f9b7e"
+      "artifact_sha256": "0641026a0d41d57068f398f759f86881a995498d411a29b1fdb37cdd761f9b7e",
+      "platforms": {}
     },
     {
       "item_id": "relationship_engine",
@@ -901,7 +950,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-relationship_engine-v1.0.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-relationship_engine-v1.0.1/relationship_engine_1.0.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "d4448d73d0743ace0229291e419eaf0d90be82fabe1d884ff52067ec5aa2364f"
+      "artifact_sha256": "d4448d73d0743ace0229291e419eaf0d90be82fabe1d884ff52067ec5aa2364f",
+      "platforms": {}
     },
     {
       "item_id": "screen_recorder_engine",
@@ -919,7 +969,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-screen_recorder_engine-v1.1.2",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-screen_recorder_engine-v1.1.2/screen_recorder_engine_1.1.2_signed.zip",
       "link_store": "",
-      "artifact_sha256": "d4f4ca2b9928d28df5771c7f793821ebd00876a67b35b2886b393e174fe499c3"
+      "artifact_sha256": "d4f4ca2b9928d28df5771c7f793821ebd00876a67b35b2886b393e174fe499c3",
+      "platforms": {}
     },
     {
       "item_id": "semantic_analysis_engine",
@@ -937,7 +988,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-semantic_analysis_engine-v1.0.2",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-semantic_analysis_engine-v1.0.2/semantic_analysis_engine_v1.0.2_market_identity_grounding_signed.zip",
       "link_store": "",
-      "artifact_sha256": "ba1d6184bdac94afdad817bc263287ec0bb3a6bf162da191922b5c4c69c6fe45"
+      "artifact_sha256": "ba1d6184bdac94afdad817bc263287ec0bb3a6bf162da191922b5c4c69c6fe45",
+      "platforms": {}
     },
     {
       "item_id": "smc_analysis_engine",
@@ -955,7 +1007,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-smc_analysis_engine-v1.0.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-smc_analysis_engine-v1.0.1/smc_analysis_engine_1.0.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "53119b1c2bced9db0a238732ee01f51bdf11160eb505f71cbfa82af201a4aa54"
+      "artifact_sha256": "53119b1c2bced9db0a238732ee01f51bdf11160eb505f71cbfa82af201a4aa54",
+      "platforms": {}
     },
     {
       "item_id": "speech_to_text_engine",
@@ -973,7 +1026,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/engine-speech_to_text_engine-v1.3.1",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-speech_to_text_engine-v1.3.1/speech_to_text_engine_1.3.1_core_3.4.3_cpu_reliable_signed.zip",
       "link_store": "",
-      "artifact_sha256": "5a342c1611f2e4af0e304b778a80101e5a7c4aa986368bf89c13a44f51d0a27c"
+      "artifact_sha256": "5a342c1611f2e4af0e304b778a80101e5a7c4aa986368bf89c13a44f51d0a27c",
+      "platforms": {}
     },
     {
       "item_id": "spreadsheet_engine",
@@ -991,7 +1045,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-spreadsheet_engine-v1.0.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-spreadsheet_engine-v1.0.0/spreadsheet_engine_1.0.0_signed.zip",
       "link_store": "",
-      "artifact_sha256": "757963b63c1a4a3b0b1848f2c8ad775fc816bfd1c1dfc15ffa35a2e9dfb89000"
+      "artifact_sha256": "757963b63c1a4a3b0b1848f2c8ad775fc816bfd1c1dfc15ffa35a2e9dfb89000",
+      "platforms": {}
     },
     {
       "item_id": "strategy_evaluation_engine",
@@ -1009,7 +1064,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-strategy_evaluation_engine-v1.0.7",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-strategy_evaluation_engine-v1.0.7/strategy_evaluation_engine_v1.0.7_ema_identity_fix_signed.zip",
       "link_store": "",
-      "artifact_sha256": "e06722c00e290b4d8769ee470699d331be084d7aadf21ca71d7cab8ae9973452"
+      "artifact_sha256": "e06722c00e290b4d8769ee470699d331be084d7aadf21ca71d7cab8ae9973452",
+      "platforms": {}
     },
     {
       "item_id": "subtitle_burn_engine",
@@ -1027,7 +1083,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-subtitle_burn_engine-v1.0.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-subtitle_burn_engine-v1.0.1/subtitle_burn_engine_1.0.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "cd6625ce93b42ee965f338fe0c07203affaf8bd40634fd1d7fe499bc2bcb1d8a"
+      "artifact_sha256": "cd6625ce93b42ee965f338fe0c07203affaf8bd40634fd1d7fe499bc2bcb1d8a",
+      "platforms": {}
     },
     {
       "item_id": "subtitle_engine",
@@ -1045,7 +1102,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-subtitle_engine-v1.0.3",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-subtitle_engine-v1.0.3/subtitle_engine_1.0.3_signed.zip",
       "link_store": "",
-      "artifact_sha256": "bbe488f772d70d1f77038752839a853652b0e67482aa0ccd64451c7664cf5aad"
+      "artifact_sha256": "bbe488f772d70d1f77038752839a853652b0e67482aa0ccd64451c7664cf5aad",
+      "platforms": {}
     },
     {
       "item_id": "technical_indicator_engine",
@@ -1063,7 +1121,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-technical_indicator_engine-v1.0.5",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-technical_indicator_engine-v1.0.5/technical_indicator_engine_1.0.5_signed.zip",
       "link_store": "",
-      "artifact_sha256": "63126dd5b90eaa92b08d1c3d0f3b886e6f7ef4ec5b29cf5163bd310791a87c8e"
+      "artifact_sha256": "63126dd5b90eaa92b08d1c3d0f3b886e6f7ef4ec5b29cf5163bd310791a87c8e",
+      "platforms": {}
     },
     {
       "item_id": "telegram_notify_engine",
@@ -1081,7 +1140,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/engine-telegram_notify_engine-v1.1.2",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-telegram_notify_engine-v1.1.2/telegram_notify_engine_1.1.2_core_3.4.3_hardened_signed.zip",
       "link_store": "",
-      "artifact_sha256": "4a18de5c90ab9ed4ac88811509565fad596ba936484138a3cd8ccb33b99d0d77"
+      "artifact_sha256": "4a18de5c90ab9ed4ac88811509565fad596ba936484138a3cd8ccb33b99d0d77",
+      "platforms": {}
     },
     {
       "item_id": "text_normalization_engine",
@@ -1099,7 +1159,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-text_normalization_engine-v1.0.2",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-text_normalization_engine-v1.0.2/text_normalization_engine_1.0.2_signed.zip",
       "link_store": "",
-      "artifact_sha256": "841c7dff7f1c1a5afcdc5082fda1b4df60ffa0b217a874f9387217282f9eb7d2"
+      "artifact_sha256": "841c7dff7f1c1a5afcdc5082fda1b4df60ffa0b217a874f9387217282f9eb7d2",
+      "platforms": {}
     },
     {
       "item_id": "text_render_engine",
@@ -1117,7 +1178,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-text_render_engine-v1.0.2",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-text_render_engine-v1.0.2/text_render_engine_1.0.2_signed.zip",
       "link_store": "",
-      "artifact_sha256": "5f8ec245f982c60b69ed280fdc1fbf82be447faeac9e8e55cc7bf7c3cca1ff5d"
+      "artifact_sha256": "5f8ec245f982c60b69ed280fdc1fbf82be447faeac9e8e55cc7bf7c3cca1ff5d",
+      "platforms": {}
     },
     {
       "item_id": "text_to_speech_engine",
@@ -1135,7 +1197,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-text_to_speech_engine-v1.0.7",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-text_to_speech_engine-v1.0.7/text_to_speech_engine_1.0.7_signed.zip",
       "link_store": "",
-      "artifact_sha256": "9694ffba1ff2c5b41e2df71279439d558fc2274d629d2f1691e2d808db69064e"
+      "artifact_sha256": "9694ffba1ff2c5b41e2df71279439d558fc2274d629d2f1691e2d808db69064e",
+      "platforms": {}
     },
     {
       "item_id": "text_translation_engine",
@@ -1153,7 +1216,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-text_translation_engine-v1.0.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-text_translation_engine-v1.0.0/text_translation_engine_1.0.0_signed.zip",
       "link_store": "",
-      "artifact_sha256": "f94b1e3a4ee0c5431134e9ee5f64e5b677c5f0b35e59be5aaa8f97ed61099037"
+      "artifact_sha256": "f94b1e3a4ee0c5431134e9ee5f64e5b677c5f0b35e59be5aaa8f97ed61099037",
+      "platforms": {}
     },
     {
       "item_id": "tf_state_engine",
@@ -1171,7 +1235,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-tf_state_engine-v1.0.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-tf_state_engine-v1.0.1/tf_state_engine_1.0.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "1439a0ff2f8ce16c8b5e911f0e9c93f13d607d24c6e496d91eb907cc89b47a6e"
+      "artifact_sha256": "1439a0ff2f8ce16c8b5e911f0e9c93f13d607d24c6e496d91eb907cc89b47a6e",
+      "platforms": {}
     },
     {
       "item_id": "timeline_engine",
@@ -1189,7 +1254,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-timeline_engine-v1.0.3",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-timeline_engine-v1.0.3/timeline_engine_1.0.3_signed.zip",
       "link_store": "",
-      "artifact_sha256": "0c9a6ae9f75d37afb5c97b88a87abf723197feb4685db6263d6e66557d841de9"
+      "artifact_sha256": "0c9a6ae9f75d37afb5c97b88a87abf723197feb4685db6263d6e66557d841de9",
+      "platforms": {}
     },
     {
       "item_id": "trade_opportunity_selection_engine",
@@ -1207,7 +1273,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-trade_opportunity_selection_engine-v1.0.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-trade_opportunity_selection_engine-v1.0.0/trade_opportunity_selection_engine_v1.0.0_signed.zip",
       "link_store": "",
-      "artifact_sha256": "f6c288b101842fb94d04998529402cc2423861e69361c4ca6d404bba0dcf5da3"
+      "artifact_sha256": "f6c288b101842fb94d04998529402cc2423861e69361c4ca6d404bba0dcf5da3",
+      "platforms": {}
     },
     {
       "item_id": "trade_performance_engine",
@@ -1225,7 +1292,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-trade_performance_engine-v1.0.4",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-trade_performance_engine-v1.0.4/trade_performance_engine_v1.0.4_execution_truth_reconciliation_signed.zip",
       "link_store": "",
-      "artifact_sha256": "9cfefa80aa4b48afd4c14bd87a1cd45f25af6420d8c3b6ea437c8094a92638cd"
+      "artifact_sha256": "9cfefa80aa4b48afd4c14bd87a1cd45f25af6420d8c3b6ea437c8094a92638cd",
+      "platforms": {}
     },
     {
       "item_id": "trade_subgroup_engine",
@@ -1243,7 +1311,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-trade_subgroup_engine-v1.0.4",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-trade_subgroup_engine-v1.0.4/trade_subgroup_engine_v1.0.4_execution_truth_reconciliation_signed.zip",
       "link_store": "",
-      "artifact_sha256": "c2a1ee50a5d833efddaabe9161b32fba536c5efee642577a4592efee952c0d42"
+      "artifact_sha256": "c2a1ee50a5d833efddaabe9161b32fba536c5efee642577a4592efee952c0d42",
+      "platforms": {}
     },
     {
       "item_id": "trading_knowledge_engine",
@@ -1261,7 +1330,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-trading_knowledge_engine-v1.0.3",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-trading_knowledge_engine-v1.0.3/trading_knowledge_engine_v1.0.3_execution_truth_learning_signed.zip",
       "link_store": "",
-      "artifact_sha256": "f08d5cef0098d90f3aa5990ebbcf5c7ace4c039df6e66f516e14c1d4285aa8b2"
+      "artifact_sha256": "f08d5cef0098d90f3aa5990ebbcf5c7ace4c039df6e66f516e14c1d4285aa8b2",
+      "platforms": {}
     },
     {
       "item_id": "video_overlay_engine",
@@ -1279,7 +1349,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-video_overlay_engine-v2.1.3",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-video_overlay_engine-v2.1.3/video_overlay_engine_2.1.3_signed.zip",
       "link_store": "",
-      "artifact_sha256": "65d47927286d1040397bc912a908cc40b7544b9fefc0d439aeb2b863e43cb9ea"
+      "artifact_sha256": "65d47927286d1040397bc912a908cc40b7544b9fefc0d439aeb2b863e43cb9ea",
+      "platforms": {}
     },
     {
       "item_id": "volume_structure_engine",
@@ -1297,7 +1368,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-volume_structure_engine-v1.0.0",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-volume_structure_engine-v1.0.0/volume_structure_engine_1.0.0_signed.zip",
       "link_store": "",
-      "artifact_sha256": "64892730967540ad2a7353d04b4ddc1dc705fbe25d196110d34790de8f6e2deb"
+      "artifact_sha256": "64892730967540ad2a7353d04b4ddc1dc705fbe25d196110d34790de8f6e2deb",
+      "platforms": {}
     },
     {
       "item_id": "watermark_engine",
@@ -1315,7 +1387,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-watermark_engine-v1.2.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-watermark_engine-v1.2.1/watermark_engine_1.2.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "5c7d6e3053d563c1858880bd38ef56b7761bcb70cd5a1041e2d77d0a35f088f0"
+      "artifact_sha256": "5c7d6e3053d563c1858880bd38ef56b7761bcb70cd5a1041e2d77d0a35f088f0",
+      "platforms": {}
     },
     {
       "item_id": "workdoc_engine",
@@ -1333,7 +1406,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-workdoc_engine-v1.0.3",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-workdoc_engine-v1.0.3/workdoc_engine_1.0.3_signed.zip",
       "link_store": "",
-      "artifact_sha256": "4bfa593891b09200efaf437e3b0306b1ef5e5e185a74dae1b5f708f4daea3068"
+      "artifact_sha256": "4bfa593891b09200efaf437e3b0306b1ef5e5e185a74dae1b5f708f4daea3068",
+      "platforms": {}
     },
     {
       "item_id": "wyckoff_analysis_engine",
@@ -1351,7 +1425,8 @@
       "release_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/tag/engine-wyckoff_analysis_engine-v1.0.1",
       "download_url": "https://github.com/NN-Ecosystem/NN_Ecosystem/releases/download/engine-wyckoff_analysis_engine-v1.0.1/wyckoff_analysis_engine_1.0.1_signed.zip",
       "link_store": "",
-      "artifact_sha256": "2cbff7f0b6a44f9eae51bc82264ad081806ad72ee7d0a802b4573b5a436fe8fa"
+      "artifact_sha256": "2cbff7f0b6a44f9eae51bc82264ad081806ad72ee7d0a802b4573b5a436fe8fa",
+      "platforms": {}
     },
     {
       "item_id": "company_tasks_node",
@@ -1369,7 +1444,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/node_service-company_tasks_node-v1.7.1",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/node_service-company_tasks_node-v1.7.1/company_tasks_node_v1_7_1_credit_contract_normalized_full_unsigned_signed.zip",
       "link_store": "",
-      "artifact_sha256": "706f76bbeaf53d0d5b1ae24fc7a041347a01627a14a39cdc661d2250a237ecea"
+      "artifact_sha256": "706f76bbeaf53d0d5b1ae24fc7a041347a01627a14a39cdc661d2250a237ecea",
+      "platforms": {}
     },
     {
       "item_id": "trading2",
@@ -1387,7 +1463,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/pipeline_recipe-trading2-v1.0.1",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/pipeline_recipe-trading2-v1.0.1/trading_data_built_1.0.1_credit_contract_normalized_full_unsigned_signed.zip",
       "link_store": "",
-      "artifact_sha256": "fffe9f9318c2f5a7dcc547ea1d4b17a8187a85aae3d4c3c6e74cce4f96e401bb"
+      "artifact_sha256": "fffe9f9318c2f5a7dcc547ea1d4b17a8187a85aae3d4c3c6e74cce4f96e401bb",
+      "platforms": {}
     },
     {
       "item_id": "trading1",
@@ -1405,7 +1482,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/pipeline_recipe-trading1-v1.0.1",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/pipeline_recipe-trading1-v1.0.1/trading_market_data_collect_1.0.1_credit_contract_normalized_full_unsigned_signed.zip",
       "link_store": "",
-      "artifact_sha256": "dadac1b5e947d2e29707322539f399be8419476d3743547dbf285f80741c9628"
+      "artifact_sha256": "dadac1b5e947d2e29707322539f399be8419476d3743547dbf285f80741c9628",
+      "platforms": {}
     },
     {
       "item_id": "trading3",
@@ -1423,7 +1501,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/pipeline_recipe-trading3-v1.0.1",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/pipeline_recipe-trading3-v1.0.1/trading_snapshot_built_1.0.1_credit_contract_normalized_full_unsigned_signed.zip",
       "link_store": "",
-      "artifact_sha256": "65ffff28c05efcfd57bef31f46d995dae0b4e26ce17cbd0efe1a5bbd1d78e6a2"
+      "artifact_sha256": "65ffff28c05efcfd57bef31f46d995dae0b4e26ce17cbd0efe1a5bbd1d78e6a2",
+      "platforms": {}
     },
     {
       "item_id": "information_plugin",
@@ -1441,7 +1520,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/plugin-information_plugin-v1.5.0",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-information_plugin-v1.5.0/information_plugin_v1.5.0_local_first_signed.zip",
       "link_store": "",
-      "artifact_sha256": "1557e78db5d694ba913cbe335cba649d3aee85d145829799c0ef86b244f6f5c7"
+      "artifact_sha256": "1557e78db5d694ba913cbe335cba649d3aee85d145829799c0ef86b244f6f5c7",
+      "platforms": {}
     },
     {
       "item_id": "market_data_plugin",
@@ -1459,7 +1539,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/plugin-market_data_plugin-v1.6.30",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-market_data_plugin-v1.6.30/market_data_plugin_1.6.30_full_unsigned_signed.zip",
       "link_store": "",
-      "artifact_sha256": "ea8ebdb1024a81a19e932d656b713e833fd8c896228e89cb4beba454aa633841"
+      "artifact_sha256": "ea8ebdb1024a81a19e932d656b713e833fd8c896228e89cb4beba454aa633841",
+      "platforms": {}
     },
     {
       "item_id": "media_library_builder_plugin",
@@ -1477,7 +1558,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/plugin-media_library_builder_plugin-v1.0.8",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-media_library_builder_plugin-v1.0.8/media_library_builder_plugin_1.0.8_core34_ephemeral_snapshot_signed.zip",
       "link_store": "",
-      "artifact_sha256": "570fe82406c815a877fed6ea35e029552062eb01651e54e1867c37cab61bdb8e"
+      "artifact_sha256": "570fe82406c815a877fed6ea35e029552062eb01651e54e1867c37cab61bdb8e",
+      "platforms": {}
     },
     {
       "item_id": "media_library_plugin",
@@ -1495,7 +1577,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/plugin-media_library_plugin-v1.0.5",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-media_library_plugin-v1.0.5/media_library_plugin_1.0.5_credit_normalized_signed.zip",
       "link_store": "",
-      "artifact_sha256": "9b2d1104db91627a7662eec478d13b86b80435f6c9e81fbcea98406f317315a0"
+      "artifact_sha256": "9b2d1104db91627a7662eec478d13b86b80435f6c9e81fbcea98406f317315a0",
+      "platforms": {}
     },
     {
       "item_id": "media_upload_plugin",
@@ -1513,7 +1596,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/plugin-media_upload_plugin-v2.2.9",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-media_upload_plugin-v2.2.9/media_upload_plugin_2.2.10_credit_contract_normalized_full_unsigned_signed.zip",
       "link_store": "",
-      "artifact_sha256": "16c324911b93f09a19c78987a565e96ea2a23592babb65b84b9692ff9a128b21"
+      "artifact_sha256": "16c324911b93f09a19c78987a565e96ea2a23592babb65b84b9692ff9a128b21",
+      "platforms": {}
     },
     {
       "item_id": "meeting_voice_plugin",
@@ -1531,7 +1615,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/plugin-meeting_voice_plugin-v0.2.1",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-meeting_voice_plugin-v0.2.1/meeting_voice_plugin_0.2.1_credit_contract_normalized_full_unsigned_signed.zip",
       "link_store": "",
-      "artifact_sha256": "62c300fd865f37b9cf2cf7c6f4c045f7b26e7c3591867dbfc483429f41d85ee4"
+      "artifact_sha256": "62c300fd865f37b9cf2cf7c6f4c045f7b26e7c3591867dbfc483429f41d85ee4",
+      "platforms": {}
     },
     {
       "item_id": "personal_assistant_plugin",
@@ -1549,7 +1634,35 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/plugin-personal_assistant_plugin-v0.3.9",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.3.9/personal_assistant_plugin_0.3.10_credit_contract_normalized_full_unsigned_signed.zip",
       "link_store": "",
-      "artifact_sha256": "9615f4bc258ad5b5f706ae2f5e92bcd9e8c48c928522af52fc79a76d37f03c21"
+      "artifact_sha256": "9615f4bc258ad5b5f706ae2f5e92bcd9e8c48c928522af52fc79a76d37f03c21",
+      "platforms": {
+        "windows": {
+          "available": true,
+          "architectures": [
+            "x86_64"
+          ],
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "package": {
+            "inherit_legacy": true
+          }
+        },
+        "android": {
+          "available": true,
+          "architectures": [
+            "universal"
+          ],
+          "execution_modes": []
+        },
+        "ios": {
+          "available": false,
+          "architectures": [
+            "universal"
+          ],
+          "execution_modes": []
+        }
+      }
     },
     {
       "item_id": "realtime_translate_plugin",
@@ -1567,7 +1680,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/plugin-realtime_translate_plugin-v0.2.1",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-realtime_translate_plugin-v0.2.1/realtime_translate_plugin_0.2.1_credit_contract_normalized_full_unsigned_signed.zip",
       "link_store": "",
-      "artifact_sha256": "e5bf739296b16c5650b430a1126507decd159bc324707ce440b425b3f8063466"
+      "artifact_sha256": "e5bf739296b16c5650b430a1126507decd159bc324707ce440b425b3f8063466",
+      "platforms": {}
     },
     {
       "item_id": "trading_analysis_factory_plugin",
@@ -1585,7 +1699,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/plugin-trading_analysis_factory_plugin-v0.1.34",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-trading_analysis_factory_plugin-v0.1.34/trading_analysis_factory_plugin_0.1.34_full_unsigned_signed.zip",
       "link_store": "",
-      "artifact_sha256": "221f34610e6dd242de5c02f212d07be32346d1131270d073bf670011363395d7"
+      "artifact_sha256": "221f34610e6dd242de5c02f212d07be32346d1131270d073bf670011363395d7",
+      "platforms": {}
     },
     {
       "item_id": "trading_knowledge_plugin",
@@ -1603,7 +1718,8 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/plugin-trading_knowledge_plugin-v0.1.76",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-trading_knowledge_plugin-v0.1.76/trading_knowledge_plugin_0.1.76_first_open_nonblocking_status_signed.zip",
       "link_store": "",
-      "artifact_sha256": "7d2570b198464d447ffe28a3d7e88088c2cbc79bfeb75422e3aa9167142c4f49"
+      "artifact_sha256": "7d2570b198464d447ffe28a3d7e88088c2cbc79bfeb75422e3aa9167142c4f49",
+      "platforms": {}
     }
   ],
   "signing": {
