@@ -1,7 +1,7 @@
 {
   "schema": "core_factory_catalog_v1",
-  "generated_at": "2026-09-01T15:58:24.531702+00:00",
-  "count": 93,
+  "generated_at": "2026-09-01T22:41:17.237248+00:00",
+  "count": 92,
   "items": [
     {
       "item_id": "core_factory_v2",
@@ -2550,52 +2550,6 @@
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-smc_analysis_engine-v1.0.1/smc_analysis_engine_1.0.1_signed.zip",
       "link_store": "",
       "artifact_sha256": "52696d74bcf1e50a486cf0a7052a2b94933f68382f8155d2650b8345eccd18ca",
-      "platforms": {
-        "windows": {
-          "available": true,
-          "architectures": [
-            "x86_64"
-          ],
-          "execution_modes": [
-            "LOCAL_FULL"
-          ],
-          "package": {
-            "inherit_legacy": true
-          }
-        },
-        "android": {
-          "available": false,
-          "architectures": [
-            "universal"
-          ],
-          "execution_modes": []
-        },
-        "ios": {
-          "available": false,
-          "architectures": [
-            "universal"
-          ],
-          "execution_modes": []
-        }
-      }
-    },
-    {
-      "item_id": "speaker_diarization_engine",
-      "type": "engine",
-      "name": "Speaker Diarization Engine",
-      "title": "Speaker Diarization Engine",
-      "description": "# Speaker Diarization Engine\n\n**Separate multi-speaker audio into timestamped speaker turns — answering “who spoke when” with anonymous Speaker A, Speaker B, Speaker C labels for meeting, transcription, interview, and voice-processing workflows.**\n\n**Channel:** Stable  \n**Category:** Processing · Audio Intelligence  \n**Type:** Technical Capability Engine  \n**API:** engine_v3  \n**Platform:** Windows  \n**Capabilities:** `speaker.diarize` · `speaker.count`  \n**Requires:** Core Factory 3.4.3+\n\n---\n\n## What It Does\n\nSpeaker Diarization Engine is a reusable Core Factory capability for **analyzing an audio recording and determining when different speakers are talking**.\n\nIt transforms a single audio file into structured speaker segments containing:\n\n- Start time\n- End time\n- Anonymous speaker label\n- Raw model speaker label\n- Detected speaker count\n\nConceptually:\n\n**MULTI-SPEAKER AUDIO**\n\n↓\n\n**SPEAKER DIARIZATION ENGINE**\n\n↓\n\n**WHO SPOKE WHEN?**\n\n↓\n\n**Speaker A — 00:00 → 00:08**\n\n**Speaker B — 00:08 → 00:15**\n\n**Speaker A — 00:15 → 00:24**\n\n↓\n\n**Structured Speaker Timeline**\n\nThe Engine focuses on speaker separation.\n\nIt does not attempt to determine the real identity of each person.\n\n---\n\n# Who Spoke When\n\nSpeaker diarization answers one fundamental question:\n\n**“Which speaker was active during each part of this recording?”**\n\nConceptually:\n\n**AUDIO TIMELINE**\n\n↓\n\n`00:00 ───── 00:08`\n\n**Speaker A**\n\n↓\n\n`00:08 ───── 00:15`\n\n**Speaker B**\n\n↓\n\n`00:15 ───── 00:24`\n\n**Speaker A**\n\nThis creates a speaker-aware timeline that downstream applications can combine with transcription and other intelligence.\n\n---\n\n# Anonymous Speaker Labels\n\nDetected speakers are normalized into simple application-friendly labels:\n\n- Speaker A\n- Speaker B\n- Speaker C\n- Speaker D\n- ...\n\nConceptually:\n\n**MODEL LABEL**\n\n`SPEAKER_02`\n\n↓\n\n**NORMALIZE**\n\n↓\n\n`Speaker A`\n\nThe exact raw labels produced by the underlying diarization model do not need to become part of the user-facing application contract.\n\n---\n\n# Speaker Identity Is Not Recognition\n\nA critical boundary of this Engine is:\n\n**Speaker A does not mean a known person.**\n\nConceptually:\n\n**SPEAKER DIARIZATION**\n\nanswers:\n\n**“This voice is different from that voice.”**\n\nIt does not answer:\n\n**“This person is John.”**\n\nor:\n\n**“This speaker is Alice.”**\n\nReal identity assignment must come from another workflow, user review, or another explicitly designed capability.\n\n---\n\n# Speaker Count\n\nCapability:\n\n`speaker.count`\n\nThe diarization result includes the number of distinct speaker labels detected in the analyzed audio.\n\nConceptually:\n\n**MULTI-SPEAKER AUDIO**\n\n↓\n\n**DIARIZATION**\n\n↓\n\n**Speaker A**\n\n**Speaker B**\n\n**Speaker C**\n\n↓\n\n**Speaker Count = 3**\n\nThis information can be useful for:\n\n- Meeting preparation\n- Interview processing\n- Conversation analysis\n- Transcript review\n- Multi-speaker UI\n\n---\n\n# Timestamped Segments\n\nEach detected speaker turn is represented using precise time boundaries.\n\nExample:\n\n`start: 12.540`\n\n`end: 18.920`\n\n`speaker: Speaker B`\n\nConceptually:\n\n**AUDIO**\n\n↓\n\n**TIME SEGMENTATION**\n\n↓\n\n**START + END + SPEAKER**\n\nThis lets downstream applications align diarization with:\n\n- Transcripts\n- Subtitles\n- Meeting timelines\n- Audio players\n- Video playback\n- Search results\n- Review interfaces\n\n---\n\n# Structured Result\n\nThe Engine returns:\n\n`speaker_diarization_result_v1`\n\nA result can contain:\n\n- Speaker segments\n- Normalized speaker labels\n- Speaker count\n- Model source\n- Exclusive diarization state\n\nConceptually:\n\n**RAW AUDIO**\n\n↓\n\n**ML DIARIZATION**\n\n↓\n\n**STRUCTURED CORE RESULT**\n\n↓\n\n**Plugin · Pipeline · Node**\n\nThe caller does not need to directly interpret the underlying ML model output.\n\n---\n\n# Segment Structure\n\nEach speaker segment can contain:\n\n- `start`\n- `end`\n- `speaker`\n- `speaker_raw`\n\nConceptually:\n\n**MODEL OUTPUT**\n\n↓\n\n**CORE NORMALIZATION**\n\n↓\n\n```text\nStart: 4.215\nEnd: 9.830\nSpeaker: Speaker A\nRaw Label: SPEAKER_00",
-      "version": "1.0.3",
-      "channel": "stable",
-      "minimum_core_version": "3.4.3",
-      "slug": "speaker-diarization-engine",
-      "summary": "# Speaker Diarization Engine\n\n**Separate multi-speaker audio into timestamped speaker turns — answering “who spoke when” with anonymous Speaker A, Speaker B, Speaker C labels for meeting, transcription, interview, and voice-processing workflows.**\n\n**Channel:** Stable  \n**Category:** Processing · Audio Intelligence  \n**Type:** Technical Capability Engine  \n**API:** engine_v3  \n**Platform:** Windows  \n**Capabilities:** `speaker.diarize` · `speaker.count`  \n**Requires:** Core Factory 3.4.3+\n\n---\n\n## What It Does\n\nSpeaker Diarization Engine is a reusable Core Factory capability for **analyzing an audio recording and determining when different speakers are talking**.\n\nIt transforms a single audio file into structured speaker segments containing:\n\n- Start time\n- End time\n- Anonymous speaker label\n- Raw model speaker label\n- Detected speaker count\n\nConceptually:\n\n**MULTI-SPEAKER AUDIO**\n\n↓\n\n**SPEAKER DIARIZATION ENGINE**\n\n↓\n\n**WHO SPOKE WHEN?**\n\n↓\n\n**Speaker A — 00:00 → 00:08**\n\n**Speaker B — 00:08 → 00:15**\n\n**Speaker A — 00:15 → 00:24**\n\n↓\n\n**Structured Speaker Timeline**\n\nThe Engine focuses on speaker separation.\n\nIt does not attempt to determine the real identity of each person.\n\n---\n\n# Who Spoke When\n\nSpeaker diarization answers one fundamental question:\n\n**“Which speaker was active during each part of this recording?”**\n\nConceptually:\n\n**AUDIO TIMELINE**\n\n↓\n\n`00:00 ───── 00:08`\n\n**Speaker A**\n\n↓\n\n`00:08 ───── 00:15`\n\n**Speaker B**\n\n↓\n\n`00:15 ───── 00:24`\n\n**Speaker A**\n\nThis creates a speaker-aware timeline that downstream applications can combine with transcription and other intelligence.\n\n---\n\n# Anonymous Speaker Labels\n\nDetected speakers are normalized into simple application-friendly labels:\n\n- Speaker A\n- Speaker B\n- Speaker C\n- Speaker D\n- ...\n\nConceptually:\n\n**MODEL LABEL**\n\n`SPEAKER_02`\n\n↓\n\n**NORMALIZE**\n\n↓\n\n`Speaker A`\n\nThe exact raw labels produced by the underlying diarization model do not need to become part of the user-facing application contract.\n\n---\n\n# Speaker Identity Is Not Recognition\n\nA critical boundary of this Engine is:\n\n**Speaker A does not mean a known person.**\n\nConceptually:\n\n**SPEAKER DIARIZATION**\n\nanswers:\n\n**“This voice is different from that voice.”**\n\nIt does not answer:\n\n**“This person is John.”**\n\nor:\n\n**“This speaker is Alice.”**\n\nReal identity assignment must come from another workflow, user review, or another explicitly designed capability.\n\n---\n\n# Speaker Count\n\nCapability:\n\n`speaker.count`\n\nThe diarization result includes the number of distinct speaker labels detected in the analyzed audio.\n\nConceptually:\n\n**MULTI-SPEAKER AUDIO**\n\n↓\n\n**DIARIZATION**\n\n↓\n\n**Speaker A**\n\n**Speaker B**\n\n**Speaker C**\n\n↓\n\n**Speaker Count = 3**\n\nThis information can be useful for:\n\n- Meeting preparation\n- Interview processing\n- Conversation analysis\n- Transcript review\n- Multi-speaker UI\n\n---\n\n# Timestamped Segments\n\nEach detected speaker turn is represented using precise time boundaries.\n\nExample:\n\n`start: 12.540`\n\n`end: 18.920`\n\n`speaker: Speaker B`\n\nConceptually:\n\n**AUDIO**\n\n↓\n\n**TIME SEGMENTATION**\n\n↓\n\n**START + END + SPEAKER**\n\nThis lets downstream applications align diarization with:\n\n- Transcripts\n- Subtitles\n- Meeting timelines\n- Audio players\n- Video playback\n- Search results\n- Review interfaces\n\n---\n\n# Structured Result\n\nThe Engine returns:\n\n`speaker_diarization_result_v1`\n\nA result can contain:\n\n- Speaker segments\n- Normalized speaker labels\n- Speaker count\n- Model source\n- Exclusive diarization state\n\nConceptually:\n\n**RAW AUDIO**\n\n↓\n\n**ML DIARIZATION**\n\n↓\n\n**STRUCTURED CORE RESULT**\n\n↓\n\n**Plugin · Pipeline · Node**\n\nThe caller does not need to directly interpret the underlying ML model output.\n\n---\n\n# Segment Structure\n\nEach speaker segment can contain:\n\n- `start`\n- `end`\n- `speaker`\n- `speaker_raw`\n\nConceptually:\n\n**MODEL OUTPUT**\n\n↓\n\n**CORE NORMALIZATION**\n\n↓\n\n```text\nStart: 4.215\nEnd: 9.830\nSpeaker: Speaker A\nRaw Label: SPEAKER_00",
-      "status": "released",
-      "image": "https://nn-ecosystem.github.io/assets/catalog/speaker_diarization_engine/speaker_diarization_engine.png",
-      "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/engine-speaker_diarization_engine-v1.0.3",
-      "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-speaker_diarization_engine-v1.0.3/speaker_diarization_engine_1.0.3_core_managed_dependencies_signed.zip",
-      "link_store": "",
-      "artifact_sha256": "165e5c5aa4a98ebbdddddced0cffad5cfd4da786116bb0e98c6d2088989a368f",
       "platforms": {
         "windows": {
           "available": true,
