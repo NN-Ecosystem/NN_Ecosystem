@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_v1",
-  "generated_at": "2026-09-03T01:55:15.220571+00:00",
+  "generated_at": "2026-09-03T03:53:12.045011+00:00",
   "count": 92,
   "items": [
     {
@@ -47,7 +47,31 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "developer_system",
+      "category_id": "core",
+      "subcategory_id": "runtime",
+      "tags": [],
+      "family_ids": [
+        "core_platform"
+      ],
+      "capabilities": [],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-core_factory_v2-v3.5.1/CoreFactory_3.5.1_20260902_signed.zip",
+          "sha256": "4d384dc2744fbe81624ed90343679568a08431d26f688b461154709786d99434",
+          "version": "3.5.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "audio_mix_engine",
@@ -93,7 +117,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "audio.mix"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-audio_mix_engine-v1.1.2/audio_mix_engine_1.1.2_output_store_hotfix_signed.zip",
+          "sha256": "edf558a10536e478e8aabe0030b1536158a6f7d2495c21bdeedc1ffffb755881",
+          "version": "1.1.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "audio_recorder_engine",
@@ -162,7 +212,55 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "speech_audio",
+      "subcategory_id": "capture_intelligence",
+      "tags": [],
+      "family_ids": [
+        "meeting_assistant",
+        "audio_capture"
+      ],
+      "capabilities": [
+        "audio.record"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-audio_recorder_engine-v1.1.2/audio_recorder_engine_1.1.2_signed.zip",
+          "sha256": "0eead9f4c6afdef947df59533865957a193a233944db6333a93fda94139f0eac",
+          "version": "1.1.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        },
+        {
+          "platform": "android",
+          "architecture": "universal",
+          "artifact_type": "apk",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-audio_recorder_engine-v1.1.2/audio_recorder_engine-1.1.2-unsigned_signed.apk",
+          "sha256": "ef2767a6fced9796ea8719611f7b5f3cb7586d189abd9e09637948cc0f214d67",
+          "version": "1.1.2",
+          "build_revision": 1,
+          "execution_modes": [
+            "LOCAL_EDGE",
+            "REMOTE_CORE"
+          ],
+          "release_metadata_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-audio_recorder_engine-v1.1.2/audio_recorder_engine-1.1.2-unsigned_signed.release.json",
+          "release_signature_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-audio_recorder_engine-v1.1.2/audio_recorder_engine-1.1.2-unsigned_signed.release.sig",
+          "application_id": "com.nnecosystem.items.audiorecorder",
+          "abi_version": 1,
+          "capability_service_version": 1,
+          "capabilities": [
+            "audio.record.v1"
+          ]
+        }
+      ]
     },
     {
       "item_id": "av_capture_engine",
@@ -208,7 +306,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "av.capture"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-av_capture_engine-v1.0.1/av_capture_engine_1.0.1_browser_safe_h264_signed.zip",
+          "sha256": "5e3639a20089b25fe5227772def6053aa94d65975eebd61ba5b3389b4a64577b",
+          "version": "1.0.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "av_mux_engine",
@@ -254,7 +378,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "av.mux"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-av_mux_engine-v1.0.2/av_mux_engine_1.0.2_output_store_hotfix_signed.zip",
+          "sha256": "50736a464c57f363907ba3dc49564f628798b45acfcb274315103e4347cdf998",
+          "version": "1.0.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "binance_spot_trade_execution_engine",
@@ -300,7 +450,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "execution",
+      "subcategory_id": "trade",
+      "tags": [],
+      "family_ids": [
+        "trading_execution"
+      ],
+      "capabilities": [
+        "binance.spot.trade.execution"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-binance_spot_trade_execution_engine-v1.0.1/binance_spot_trade_execution_engine_1.0.1_usdt_signed.zip",
+          "sha256": "59b7a30533deadbc37de3372418f1a0e300e3695937845e7b6dfdcdbb60ea2d5",
+          "version": "1.0.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "binance_trade_execution_engine",
@@ -346,7 +522,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "execution",
+      "subcategory_id": "trade",
+      "tags": [],
+      "family_ids": [
+        "trading_execution"
+      ],
+      "capabilities": [
+        "binance.trade.execution"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-binance_trade_execution_engine-v1.0.4/binance_trade_execution_engine_1.0.4_signed.zip",
+          "sha256": "d15503566c0cf28d9d3fc55fbd814c80f6cc4608fa5ae875cb2e070311339d5f",
+          "version": "1.0.4",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "camera_recorder_engine",
@@ -392,7 +594,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "camera.recorder"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-camera_recorder_engine-v1.0.1/camera_recorder_engine_1.0.1_windows_backend_fallback_signed.zip",
+          "sha256": "51c02a84c1bec51c9ad9fc439362c6996bdec054bfc37d5d96b22c5c94069e87",
+          "version": "1.0.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "document_conversion_engine",
@@ -438,7 +666,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "productivity",
+      "category_id": "document",
+      "subcategory_id": "processing",
+      "tags": [],
+      "family_ids": [
+        "document_assistant"
+      ],
+      "capabilities": [
+        "document.convert"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-document_conversion_engine-v1.0.2/document_conversion_engine_1.0.2_core_3.4.1_FULL_FOR_SIGNING_signed.zip",
+          "sha256": "7c813808644ae80c1dd72d74a43f93c4de2989f2326a61fd75a6868a20866621",
+          "version": "1.0.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "document_engine",
@@ -484,7 +738,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "productivity",
+      "category_id": "document",
+      "subcategory_id": "processing",
+      "tags": [],
+      "family_ids": [
+        "document_assistant"
+      ],
+      "capabilities": [
+        "document"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-document_engine-v1.0.6/document_engine_1.0.6_core_3.4.1_FULL_FOR_SIGNING_signed.zip",
+          "sha256": "36e62007bac650a1f0f0bb5eeac89681db64fe65356e6e305ea99bc900514a70",
+          "version": "1.0.6",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "document_extraction_engine",
@@ -530,7 +810,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "productivity",
+      "category_id": "document",
+      "subcategory_id": "processing",
+      "tags": [],
+      "family_ids": [
+        "document_assistant"
+      ],
+      "capabilities": [
+        "document.extract"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-document_extraction_engine-v1.0.10/document_extraction_engine_1.0.10_core_3.4.1_FULL_FOR_SIGNING_signed.zip",
+          "sha256": "86ae56891c06ed47714c9739685e4e16e1bdddd23cb772d818100fa5718b7f03",
+          "version": "1.0.10",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "dow_theory_engine",
@@ -576,7 +882,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "dow.theory"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-dow_theory_engine-v1.0.0/dow_theory_engine_1.0.0_signed.zip",
+          "sha256": "67f9d0c70caae2bd679556e36063d88d9d0c6607c4255a5e2b8e659a210b3aa1",
+          "version": "1.0.0",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "feature_engine",
@@ -622,7 +954,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "feature"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-feature_engine-v1.0.0/feature_engine_1.0.0_signed.zip",
+          "sha256": "12d9adaff2d8a08f61aa5f0914ed235a9e2e2209b10d32c0a1f3c25f783475af",
+          "version": "1.0.0",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "file_organization_engine",
@@ -668,7 +1026,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "productivity",
+      "category_id": "file",
+      "subcategory_id": "management",
+      "tags": [],
+      "family_ids": [
+        "file_management"
+      ],
+      "capabilities": [
+        "file.organize"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-file_organization_engine-v1.3.1/file_organization_engine_1.3.1_signed.zip",
+          "sha256": "129eeeeb10da3078d383605920567a6942cf76464de373db3d7e40fdb08ccef9",
+          "version": "1.3.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "file_transfer_engine",
@@ -714,7 +1098,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "productivity",
+      "category_id": "file",
+      "subcategory_id": "management",
+      "tags": [],
+      "family_ids": [
+        "file_management"
+      ],
+      "capabilities": [
+        "file.transfer"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-file_transfer_engine-v3.0.1/file_transfer_engine_3.0.1_output_store_hotfix_signed.zip",
+          "sha256": "01c642cc866b2841d070507c507e0a202b4752f3f59976ee9e21740010acadae",
+          "version": "3.0.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "frame_extract_engine",
@@ -760,7 +1170,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "frame.extract"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-frame_extract_engine-v1.0.2/frame_extract_engine_1.0.2_output_store_hotfix_signed.zip",
+          "sha256": "4390e78ec9f31aa58bb7a8ab4b33b256668a22e701ea57addd3bc989f3659061",
+          "version": "1.0.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "global_vector_engine",
@@ -806,7 +1242,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "global.vector"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-global_vector_engine-v1.0.2/global_vector_engine_1.0.2_signed.zip",
+          "sha256": "bb3629b4c6a10fdf13c0a3c51e8943fd24dbaf5cb143efd24fe60e0b9a17c763",
+          "version": "1.0.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "ict_analysis_engine",
@@ -852,7 +1314,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "ict.analysis"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-ict_analysis_engine-v1.0.1/ict_analysis_engine_1.0.1_signed.zip",
+          "sha256": "a744af1cc70f42c3c1e794b190fefe9d2829a28a8f4d13ad5a8ab538b390d7ba",
+          "version": "1.0.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "image_overlay_engine",
@@ -898,7 +1386,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "image.overlay"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-image_overlay_engine-v1.0.2/image_overlay_engine_1.0.2_output_store_hotfix_signed.zip",
+          "sha256": "7404fc487b01b82ec5a88ba3d3bbb6ca0f737caa891f26921f25e593a3823bd4",
+          "version": "1.0.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "image_resize_engine",
@@ -944,7 +1458,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "image.resize"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-image_resize_engine-v1.2.1/image_resize_engine_1.2.1_signed.zip",
+          "sha256": "50b508564f41655c0d9c3edf272b5fe8bd8e6df3fefba051856976aeab12b890",
+          "version": "1.2.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "information_processing_engine",
@@ -990,7 +1530,34 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "knowledge_research",
+      "category_id": "information",
+      "subcategory_id": "processing",
+      "tags": [],
+      "family_ids": [
+        "information_hub",
+        "research_assistant"
+      ],
+      "capabilities": [
+        "information.process"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-information_processing_engine-v1.1.0/information_processing_engine_1.1.0_core_3.4.3_standardized_signed.zip",
+          "sha256": "d9dce47fd3d2b1b91988e7eaa866941704271d136eaa2f0207768c9caeb1b2d8",
+          "version": "1.1.0",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "information_source_fetch_engine",
@@ -1036,7 +1603,34 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "knowledge_research",
+      "category_id": "information",
+      "subcategory_id": "processing",
+      "tags": [],
+      "family_ids": [
+        "information_hub",
+        "research_assistant"
+      ],
+      "capabilities": [
+        "information.fetch"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-information_source_fetch_engine-v1.1.0/information_source_fetch_engine_1.1.0_core_3.4.3_hardened_signed.zip",
+          "sha256": "405c044f4da06f2cc8204cba69d6c80c53cfc52396f0c662c634e67abb3c7dde",
+          "version": "1.1.0",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "market_binance_fetch_engine",
@@ -1082,7 +1676,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "market_data",
+      "subcategory_id": "collection_normalization",
+      "tags": [],
+      "family_ids": [
+        "trading_market_data"
+      ],
+      "capabilities": [
+        "market.binance.fetch"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-market_binance_fetch_engine-v1.2.5/market_binance_fetch_engine_v1.2.5_manifest_fix_signed.zip",
+          "sha256": "d57fed4b732cbcab784700d27cfc3365c9750f7ec43af4429bef15dedf01a821",
+          "version": "1.2.5",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "market_binance_instruments_engine",
@@ -1128,7 +1748,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "market_data",
+      "subcategory_id": "collection_normalization",
+      "tags": [],
+      "family_ids": [
+        "trading_market_data"
+      ],
+      "capabilities": [
+        "market.binance.instruments"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-market_binance_instruments_engine-v1.0.4/market_binance_instruments_engine_v1.0.4_manifest_fix_signed.zip",
+          "sha256": "cc126e28fdd631107e2c476d58629877f684a7fa786cd19d25182626e3bfd011",
+          "version": "1.0.4",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "market_binance_price_engine",
@@ -1174,7 +1820,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "market_data",
+      "subcategory_id": "collection_normalization",
+      "tags": [],
+      "family_ids": [
+        "trading_market_data"
+      ],
+      "capabilities": [
+        "market.binance.price"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-market_binance_price_engine-v1.4.1/market_binance_price_engine_v1.4.1_manifest_fix_signed.zip",
+          "sha256": "f57d6564ce8a2632c0759570fe7bebcf0b64bfd2462c2d06b07038d2eb8e16ba",
+          "version": "1.4.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "market_identity_engine",
@@ -1220,7 +1892,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "market_data",
+      "subcategory_id": "collection_normalization",
+      "tags": [],
+      "family_ids": [
+        "trading_market_data"
+      ],
+      "capabilities": [
+        "market.identity"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-market_identity_engine-v1.0.2/market_identity_engine_v1.0.2_market_provenance_signed.zip",
+          "sha256": "bddddb7c656fdac60da09695eb5ae0846237e489f206c846260b942576edf5c2",
+          "version": "1.0.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "market_mt5_fetch_engine",
@@ -1266,7 +1964,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "market_data",
+      "subcategory_id": "collection_normalization",
+      "tags": [],
+      "family_ids": [
+        "trading_market_data"
+      ],
+      "capabilities": [
+        "market.mt5.fetch"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-market_mt5_fetch_engine-v1.2.4/market_mt5_fetch_engine_1.2.4_signed.zip",
+          "sha256": "a658ef69e0fbc8df653ce9736bb720f2d1696f540bcc39ab47970089ba12c03f",
+          "version": "1.2.4",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "market_mt5_instruments_engine",
@@ -1312,7 +2036,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "market_data",
+      "subcategory_id": "collection_normalization",
+      "tags": [],
+      "family_ids": [
+        "trading_market_data"
+      ],
+      "capabilities": [
+        "market.mt5.instruments"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-market_mt5_instruments_engine-v1.0.4/market_mt5_instruments_engine_1.0.4_signed.zip",
+          "sha256": "7bb84d08b644b89c9b956b2b3b9d6476c7ba2b9ca74faf970f448ad695bd64ad",
+          "version": "1.0.4",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "market_mt5_price_engine",
@@ -1358,7 +2108,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "market_data",
+      "subcategory_id": "collection_normalization",
+      "tags": [],
+      "family_ids": [
+        "trading_market_data"
+      ],
+      "capabilities": [
+        "market.mt5.price"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-market_mt5_price_engine-v1.4.0/market_mt5_price_engine_1.4.0_signed.zip",
+          "sha256": "0e8f14ac28f4090153d3e8b9e8bb7145b3c1abdefa89e593de854e31b4d8fced",
+          "version": "1.4.0",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "market_ohlcv_normalize_engine",
@@ -1404,7 +2180,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "market_data",
+      "subcategory_id": "collection_normalization",
+      "tags": [],
+      "family_ids": [
+        "trading_market_data"
+      ],
+      "capabilities": [
+        "market.ohlcv.normalize"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-market_ohlcv_normalize_engine-v1.0.3/market_ohlcv_normalize_engine_1.0.3_signed.zip",
+          "sha256": "2cf6a7b2c5e7d77d39bedeb15826d15ee0ba1541005ad83125b9e58f1ee14318",
+          "version": "1.0.3",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "market_ohlcv_resample_engine",
@@ -1450,7 +2252,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "market_data",
+      "subcategory_id": "collection_normalization",
+      "tags": [],
+      "family_ids": [
+        "trading_market_data"
+      ],
+      "capabilities": [
+        "market.ohlcv.resample"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-market_ohlcv_resample_engine-v1.0.3/market_ohlcv_resample_engine_1.0.3_signed.zip",
+          "sha256": "870ea9601502686677f19ad53d68545521a80e41228d0dc8c0ce0ca42f3f7453",
+          "version": "1.0.3",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "market_vndirect_fetch_engine",
@@ -1496,7 +2324,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "market_data",
+      "subcategory_id": "collection_normalization",
+      "tags": [],
+      "family_ids": [
+        "trading_market_data"
+      ],
+      "capabilities": [
+        "market.vndirect.fetch"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-market_vndirect_fetch_engine-v1.3.4/market_vndirect_fetch_engine_1.3.4_signed.zip",
+          "sha256": "b3ec4219cf520f867c86d98433256c5afd4bee985d99b0202307734bdc55f5d1",
+          "version": "1.3.4",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "market_vndirect_instruments_engine",
@@ -1542,7 +2396,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "market_data",
+      "subcategory_id": "collection_normalization",
+      "tags": [],
+      "family_ids": [
+        "trading_market_data"
+      ],
+      "capabilities": [
+        "market.vndirect.instruments"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-market_vndirect_instruments_engine-v1.0.1/market_vndirect_instruments_engine_v1.0.1_endpoint_hardening_signed.zip",
+          "sha256": "99017fae49cae111340dc6a284a69ccc74ffff40daa6832989d39e4c2c7b9c6b",
+          "version": "1.0.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "market_vndirect_price_engine",
@@ -1588,7 +2468,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "market_data",
+      "subcategory_id": "collection_normalization",
+      "tags": [],
+      "family_ids": [
+        "trading_market_data"
+      ],
+      "capabilities": [
+        "market.vndirect.price"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-market_vndirect_price_engine-v1.5.0/market_vndirect_price_engine_1.5.0_signed.zip",
+          "sha256": "73ef2cf2d13862264999e0034258de457a7c799dd45b9b1bfe918c47272560e9",
+          "version": "1.5.0",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "media_analysis_engine",
@@ -1634,7 +2540,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "media.analysis"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-media_analysis_engine-v2.0.1/media_analysis_engine_2.0.1_signed.zip",
+          "sha256": "a989dba4fdf5290814efc3a84cd5daec0db167f7738f08e97d77938b58612ac9",
+          "version": "2.0.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "media_aspect_convert_engine",
@@ -1680,7 +2612,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "media.aspect.convert"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-media_aspect_convert_engine-v1.3.2/media_aspect_convert_engine_1.3.2_output_subdir_fix_signed.zip",
+          "sha256": "da27db09b6d01d7c8dd04d4de90dbe75e3a88f9cda93c17d4a51f967604d57aa",
+          "version": "1.3.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "media_duration_fit_engine",
@@ -1726,7 +2684,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "media.duration.fit"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-media_duration_fit_engine-v1.0.1/media_duration_fit_engine_1.0.1_output_store_hotfix_signed.zip",
+          "sha256": "eb21e15ecf8eb7f1d3916c7f42467bfcbf67040a4276904c4a572054145c7401",
+          "version": "1.0.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "media_pan_video_engine",
@@ -1772,7 +2756,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "media.pan.video"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-media_pan_video_engine-v1.1.2/media_pan_video_engine_1.1.2_explicit_output_priority_fix_signed.zip",
+          "sha256": "f740c2ab71f3acc4182aac62ff34e434cc4a72b41c243eb14aa1fa94ed4f142c",
+          "version": "1.1.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "media_probe_engine",
@@ -1818,7 +2828,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "media.probe"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-media_probe_engine-v1.1.1/media_probe_engine_1.1.1_signed.zip",
+          "sha256": "7e89a85d9f547429e8231bdd5772fe066d4398c7ed293e7e006c4bc0582e86fd",
+          "version": "1.1.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "media_split_merge_engine",
@@ -1864,7 +2900,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "media.split.merge"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-media_split_merge_engine-v3.0.2/media_split_merge_engine_3.0.2_explicit_output_priority_fix_signed.zip",
+          "sha256": "e19de6863bfe5d3bc400846de80642d545c7df32d401666bb3cf1c95e286daab",
+          "version": "3.0.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "media_transcode_engine",
@@ -1910,7 +2972,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "media.transcode"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-media_transcode_engine-v3.1.2/media_transcode_engine_3.1.2_output_store_hotfix_signed.zip",
+          "sha256": "920c5311e1cef3f8b3dc1d4f652bc2c96223445128bd244d3b1359ac86adc64c",
+          "version": "3.1.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "meeting_intelligence_engine",
@@ -1956,7 +3044,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "communication",
+      "category_id": "speech_audio",
+      "subcategory_id": "capture_intelligence",
+      "tags": [],
+      "family_ids": [
+        "meeting_assistant"
+      ],
+      "capabilities": [
+        "meeting.analyze"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-meeting_intelligence_engine-v1.0.1/meeting_intelligence_engine_1.0.1_unsigned_signed.zip",
+          "sha256": "6fef8c1fb00ae3aa255c3e3faa6011461ff8ec0c699494790e3598cb1f62488a",
+          "version": "1.0.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "mt5_trade_execution_engine",
@@ -2002,7 +3116,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "execution",
+      "subcategory_id": "trade",
+      "tags": [],
+      "family_ids": [
+        "trading_execution"
+      ],
+      "capabilities": [
+        "mt5.trade.execution"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-mt5_trade_execution_engine-v1.0.2/mt5_trade_execution_engine_1.0.2_signed.zip",
+          "sha256": "3fb81cd7b953657474ef1ac3292a4563f8728dbcc83c29d15eadb7850efd3898",
+          "version": "1.0.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "paper_research_admission_engine",
@@ -2048,7 +3188,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "knowledge_research",
+      "category_id": "research",
+      "subcategory_id": "admission",
+      "tags": [],
+      "family_ids": [
+        "research_assistant"
+      ],
+      "capabilities": [
+        "paper.research.admission"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-paper_research_admission_engine-v1.1.0/paper_research_admission_engine_v1.1.0_batch_signed.zip",
+          "sha256": "92f02f3d4d6d8ea7c57b3d6d56b8645136e2b8652adeca9e6042f49382a8bbf4",
+          "version": "1.1.0",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "paper_trade_execution_engine",
@@ -2094,7 +3260,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "execution",
+      "subcategory_id": "trade",
+      "tags": [],
+      "family_ids": [
+        "trading_execution"
+      ],
+      "capabilities": [
+        "paper.trade.execution"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-paper_trade_execution_engine-v1.0.10/paper_trade_execution_engine_v1.0.10_realistic_selection_truth_signed.zip",
+          "sha256": "88f07f08ce4edef407c5f93f11afa297d381a85baf20b1a6af1a72d156a22364",
+          "version": "1.0.10",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "paper_trade_filter_engine",
@@ -2140,7 +3332,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "paper.trade.filter"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-paper_trade_filter_engine-v1.0.2/paper_trade_filter_engine_v1.0.2_mode_first_knowledge_signed.zip",
+          "sha256": "d0f6b76641312f56936e4e4609e517281752b6ff8215a1303bf4a1ee17edce90",
+          "version": "1.0.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "pexels_media_fetch_engine",
@@ -2186,7 +3404,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "pexels.media.fetch"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-pexels_media_fetch_engine-v1.2.1/pexels_media_fetch_engine_1.2.1_signed.zip",
+          "sha256": "933352b5f7a5445c80efb432ba729911bf7332d244639211038801f6cda0512d",
+          "version": "1.2.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "pixabay_media_fetch_engine",
@@ -2232,7 +3476,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "pixabay.media.fetch"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-pixabay_media_fetch_engine-v1.0.1/pixabay_media_fetch_engine_1.0.1_output_store_hotfix_signed.zip",
+          "sha256": "b48a5130713f9c944dd3a346a27d8e09732ec7e13f37df404cf9b7f69d5a1225",
+          "version": "1.0.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "portfolio_risk_engine",
@@ -2278,7 +3548,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "portfolio.risk"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-portfolio_risk_engine-v1.0.8/portfolio_risk_engine_1.0.8_cash_aware_signed.zip",
+          "sha256": "8d414b6abe811676f04b541e7a83a0c876dec06920ea8ce1591a75853fff59bb",
+          "version": "1.0.8",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "price_action_engine",
@@ -2324,7 +3620,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "price.action"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-price_action_engine-v1.0.0/price_action_engine_1.0.0_signed.zip",
+          "sha256": "53663a652ad2989760b59c53d2930903a3ee42980a3d3398b1cc689edd78c47d",
+          "version": "1.0.0",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "price_structure_engine",
@@ -2370,7 +3692,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "price.structure"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-price_structure_engine-v1.0.0/price_structure_engine_1.0.0_signed.zip",
+          "sha256": "c301c378201fd3d056f55c0abde3437a109dd2df59c021f618ec8a6fff57690e",
+          "version": "1.0.0",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "realtime_analysis_snapshot_engine",
@@ -2416,7 +3764,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "realtime.analysis.snapshot"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-realtime_analysis_snapshot_engine-v1.0.0/realtime_analysis_snapshot_engine_1.0.0_signed.zip",
+          "sha256": "cee1b87a599c98952dfbeb7098d4841168ad020609a313f0a5727b41b6e29a07",
+          "version": "1.0.0",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "relationship_engine",
@@ -2462,7 +3836,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "relationship"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-relationship_engine-v1.0.1/relationship_engine_1.0.1_signed.zip",
+          "sha256": "e984b299c84bb1240b3f412a2552ce40ef28c33b162e699764e7cbc15a3e0691",
+          "version": "1.0.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "screen_recorder_engine",
@@ -2508,7 +3908,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "screen.recorder"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-screen_recorder_engine-v1.1.2/screen_recorder_engine_1.1.2_signed.zip",
+          "sha256": "d9ffd153a7d8eb408704be8912104451d35efc3cfb16e02b1873b67d208002e5",
+          "version": "1.1.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "semantic_analysis_engine",
@@ -2554,7 +3980,34 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "knowledge_research",
+      "category_id": "information",
+      "subcategory_id": "processing",
+      "tags": [],
+      "family_ids": [
+        "information_hub",
+        "research_assistant"
+      ],
+      "capabilities": [
+        "semantic.analysis"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-semantic_analysis_engine-v1.0.2/semantic_analysis_engine_v1.0.2_market_identity_grounding_signed.zip",
+          "sha256": "17c318a1f8f009d7425103b9263688c8fc1e0d9bdead9daa8f72dc7388bb2f2d",
+          "version": "1.0.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "smc_analysis_engine",
@@ -2600,7 +4053,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "smc.analysis"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-smc_analysis_engine-v1.0.1/smc_analysis_engine_1.0.1_signed.zip",
+          "sha256": "52696d74bcf1e50a486cf0a7052a2b94933f68382f8155d2650b8345eccd18ca",
+          "version": "1.0.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "speech_to_text_engine",
@@ -2646,7 +4125,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "communication",
+      "category_id": "speech_audio",
+      "subcategory_id": "capture_intelligence",
+      "tags": [],
+      "family_ids": [
+        "meeting_assistant"
+      ],
+      "capabilities": [
+        "speech.transcribe"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-speech_to_text_engine-v1.4.2/speech_to_text_engine_1.4.2_sentence_files_unsigned_signed.zip",
+          "sha256": "cabba2a59bf4ef2fcc6985f6482c4c02e91982f4519a6307a7575d4e2c7391a3",
+          "version": "1.4.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "spreadsheet_engine",
@@ -2692,7 +4197,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "productivity",
+      "category_id": "document",
+      "subcategory_id": "processing",
+      "tags": [],
+      "family_ids": [
+        "document_assistant"
+      ],
+      "capabilities": [
+        "spreadsheet"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-spreadsheet_engine-v1.0.0/spreadsheet_engine_1.0.0_signed.zip",
+          "sha256": "a02df19ea9b72bdbd03f5b795a56f6ae72881aa505c22078b1bddbbd821488a1",
+          "version": "1.0.0",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "strategy_evaluation_engine",
@@ -2738,7 +4269,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "strategy.evaluation"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-strategy_evaluation_engine-v1.0.7/strategy_evaluation_engine_v1.0.7_ema_identity_fix_signed.zip",
+          "sha256": "4e5b5e043651ac1e31fbec16f5587f541d309839038234b904f89a0bd9ab9af0",
+          "version": "1.0.7",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "subtitle_burn_engine",
@@ -2784,7 +4341,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "subtitle.burn"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-subtitle_burn_engine-v1.0.1/subtitle_burn_engine_1.0.1_output_store_hotfix_signed.zip",
+          "sha256": "5064a178225d66dac93686f754b0a56049383579ae95b6982db8fdbe9a8bbeb8",
+          "version": "1.0.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "subtitle_engine",
@@ -2830,7 +4413,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "subtitle"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-subtitle_engine-v1.0.3/subtitle_engine_1.0.3_output_store_hotfix_signed.zip",
+          "sha256": "b2f1eda6975910e70815a8388e642bf63b1cb252b1d30ebebdf57a47701ccdde",
+          "version": "1.0.3",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "technical_indicator_engine",
@@ -2876,7 +4485,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "technical.indicator"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-technical_indicator_engine-v1.0.5/technical_indicator_engine_1.0.5_signed.zip",
+          "sha256": "d3d9d0fa00fb485f95acd3b2d375c0616af30c35a10650a1e0545c559f7b91e9",
+          "version": "1.0.5",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "telegram_notify_engine",
@@ -2922,7 +4557,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "personal_life",
+      "category_id": "assistant",
+      "subcategory_id": "personal_automation",
+      "tags": [],
+      "family_ids": [
+        "personal_assistant"
+      ],
+      "capabilities": [
+        "notification.telegram"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-telegram_notify_engine-v1.1.2/telegram_notify_engine_1.1.2_core_3.4.3_hardened_signed.zip",
+          "sha256": "3d201a590bd38529e8579642389d73e89d13734235ab78946c04fe0457d626c4",
+          "version": "1.1.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "text_normalization_engine",
@@ -2968,7 +4629,34 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "knowledge_research",
+      "category_id": "information",
+      "subcategory_id": "processing",
+      "tags": [],
+      "family_ids": [
+        "information_hub",
+        "research_assistant"
+      ],
+      "capabilities": [
+        "text.normalization"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-text_normalization_engine-v1.0.2/text_normalization_engine_1.0.2_output_store_hotfix_signed.zip",
+          "sha256": "42775226346b24cbdd7ab5cc56889d363ea64326201b480071650bf24694d3ef",
+          "version": "1.0.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "text_render_engine",
@@ -3014,7 +4702,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "text.render"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-text_render_engine-v1.0.2/text_render_engine_1.0.2_output_store_hotfix_signed.zip",
+          "sha256": "fc07dc62358eb8a3b0ef55bad236674d92332de1988f18af6b5bfa5cb81f9008",
+          "version": "1.0.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "text_to_speech_engine",
@@ -3060,7 +4774,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "speech.synthesize"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-text_to_speech_engine-v1.1.1/text_to_speech_engine_1.1.1_core_3.4.1_FULL_FOR_SIGNING_output_store_hotfix_signed.zip",
+          "sha256": "554a7dc44e2a5643ea25576f6532adb6fcc47dfbbf8837f4dbe6020a0eed5579",
+          "version": "1.1.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "text_translation_engine",
@@ -3106,7 +4846,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "communication",
+      "category_id": "translation",
+      "subcategory_id": "realtime",
+      "tags": [],
+      "family_ids": [
+        "realtime_translate"
+      ],
+      "capabilities": [
+        "text.translate"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-text_translation_engine-v1.1.2/text_translation_engine_1.1.2_chinese_provider_unsigned_output_store_hotfix_signed.zip",
+          "sha256": "32407a01c42fd6ce297953d167aef9419200f1b7b7e56cc14ccae6ac77357686",
+          "version": "1.1.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "tf_state_engine",
@@ -3152,7 +4918,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "tf.state"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-tf_state_engine-v1.0.1/tf_state_engine_1.0.1_signed.zip",
+          "sha256": "3a03e5bcc31e3d7f9a580221f96fe2bad7d88b0d6937978d12ff7bfe63ff7cff",
+          "version": "1.0.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "timeline_engine",
@@ -3198,7 +4990,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "timeline"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-timeline_engine-v1.0.3/timeline_engine_1.0.3_output_store_hotfix_signed.zip",
+          "sha256": "f4997e1e52fa289c113431fd30281bc3201adfef17b29d91209558d8af575275",
+          "version": "1.0.3",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "trade_opportunity_selection_engine",
@@ -3244,7 +5062,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "trade.opportunity.selection"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-trade_opportunity_selection_engine-v1.0.0/trade_opportunity_selection_engine_v1.0.0_signed.zip",
+          "sha256": "d229157841a6269587c246b62403638f0700ce1b6f3cd81ab3a5a72c38b294fb",
+          "version": "1.0.0",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "trade_performance_engine",
@@ -3290,7 +5134,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "trade.performance"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-trade_performance_engine-v1.0.4/trade_performance_engine_v1.0.4_execution_truth_reconciliation_signed.zip",
+          "sha256": "cc11e5607dbb089426ef7c00122865b97ddfa34175fb2078f87857adeade8ae5",
+          "version": "1.0.4",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "trade_subgroup_engine",
@@ -3336,7 +5206,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "trade.subgroup"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-trade_subgroup_engine-v1.0.4/trade_subgroup_engine_v1.0.4_execution_truth_reconciliation_signed.zip",
+          "sha256": "9b8dbf658978ddd441070c9e8afe7ad57e990cc7dd62e79ef0fd5724dcfc9f88",
+          "version": "1.0.4",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "trading_knowledge_engine",
@@ -3382,7 +5278,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "knowledge",
+      "subcategory_id": "trading",
+      "tags": [],
+      "family_ids": [
+        "trading_knowledge"
+      ],
+      "capabilities": [
+        "trading.knowledge"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-trading_knowledge_engine-v1.0.3/trading_knowledge_engine_v1.0.3_execution_truth_learning_signed.zip",
+          "sha256": "f2d149d1b56fe24293332ff3009ac15ac7e9e40e9d05c069518c5f59b86abf57",
+          "version": "1.0.3",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "video_overlay_engine",
@@ -3428,7 +5350,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "video.overlay"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-video_overlay_engine-v2.1.3/video_overlay_engine_2.1.3_output_store_hotfix_signed.zip",
+          "sha256": "754f4c94a3904c2e1ea3090f773fa56ce7191e0bc52568e24d7d151ff6045357",
+          "version": "2.1.3",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "volume_structure_engine",
@@ -3474,7 +5422,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "volume.structure"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-volume_structure_engine-v1.0.0/volume_structure_engine_1.0.0_signed.zip",
+          "sha256": "450a0fc394c138b9197672fc24ac52169d4d933951fc7c37886402dfb97855dc",
+          "version": "1.0.0",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "watermark_engine",
@@ -3520,7 +5494,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "production",
+      "tags": [],
+      "family_ids": [
+        "video_factory"
+      ],
+      "capabilities": [
+        "watermark"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-watermark_engine-v1.2.1/watermark_engine_1.2.1_output_store_hotfix_signed.zip",
+          "sha256": "abd8bdd7beb7955fbaccdb8af9f317d71ed5e64fb1bfb8ffe21c0bbe6f753167",
+          "version": "1.2.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "workdoc_engine",
@@ -3566,7 +5566,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "productivity",
+      "category_id": "document",
+      "subcategory_id": "processing",
+      "tags": [],
+      "family_ids": [
+        "document_assistant"
+      ],
+      "capabilities": [
+        "workdoc"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-workdoc_engine-v1.0.3/workdoc_engine_1.0.3_output_store_hotfix_signed.zip",
+          "sha256": "ba441f3f7eb9130c40e8ef6d0beabced3b2f2b988887f71558a8a61de48df8ee",
+          "version": "1.0.3",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "wyckoff_analysis_engine",
@@ -3612,7 +5638,33 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [
+        "wyckoff.analysis"
+      ],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-wyckoff_analysis_engine-v1.0.1/wyckoff_analysis_engine_1.0.1_signed.zip",
+          "sha256": "ab8e9a411c85a71ff98ece64f2acea8d1f4458605ebe803f80bcaf3b8f8a38c3",
+          "version": "1.0.1",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "company_tasks_node",
@@ -3658,7 +5710,31 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "productivity",
+      "category_id": "operations",
+      "subcategory_id": "company",
+      "tags": [],
+      "family_ids": [
+        "company_operations"
+      ],
+      "capabilities": [],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/node_service-company_tasks_node-v1.7.2/company_tasks_node-1.7.3-ghost-fix_signed.zip",
+          "sha256": "aec506e32956fe799987381806c491e0e04fc592a2e0dac31c50fed7f6458e25",
+          "version": "1.7.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "trading2",
@@ -3677,7 +5753,29 @@
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/pipeline_recipe-trading2-v1.0.1/trading_data_built_1.0.1_credit_contract_normalized_full_unsigned_signed.zip",
       "link_store": "",
       "artifact_sha256": "fffe9f9318c2f5a7dcc547ea1d4b17a8187a85aae3d4c3c6e74cce4f96e401bb",
-      "platforms": {}
+      "platforms": {},
+      "domain_id": "finance_trading",
+      "category_id": "market_data",
+      "subcategory_id": "collection_normalization",
+      "tags": [],
+      "family_ids": [
+        "trading_market_data"
+      ],
+      "capabilities": [],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/pipeline_recipe-trading2-v1.0.1/trading_data_built_1.0.1_credit_contract_normalized_full_unsigned_signed.zip",
+          "sha256": "fffe9f9318c2f5a7dcc547ea1d4b17a8187a85aae3d4c3c6e74cce4f96e401bb",
+          "version": "1.0.1",
+          "execution_modes": [],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "trading1",
@@ -3696,7 +5794,29 @@
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/pipeline_recipe-trading1-v1.0.1/trading_market_data_collect_1.0.1_credit_contract_normalized_full_unsigned_signed.zip",
       "link_store": "",
       "artifact_sha256": "dadac1b5e947d2e29707322539f399be8419476d3743547dbf285f80741c9628",
-      "platforms": {}
+      "platforms": {},
+      "domain_id": "finance_trading",
+      "category_id": "market_data",
+      "subcategory_id": "collection_normalization",
+      "tags": [],
+      "family_ids": [
+        "trading_market_data"
+      ],
+      "capabilities": [],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/pipeline_recipe-trading1-v1.0.1/trading_market_data_collect_1.0.1_credit_contract_normalized_full_unsigned_signed.zip",
+          "sha256": "dadac1b5e947d2e29707322539f399be8419476d3743547dbf285f80741c9628",
+          "version": "1.0.1",
+          "execution_modes": [],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "trading3",
@@ -3715,7 +5835,29 @@
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/pipeline_recipe-trading3-v1.0.1/trading_snapshot_built_1.0.1_credit_contract_normalized_full_unsigned_signed.zip",
       "link_store": "",
       "artifact_sha256": "65ffff28c05efcfd57bef31f46d995dae0b4e26ce17cbd0efe1a5bbd1d78e6a2",
-      "platforms": {}
+      "platforms": {},
+      "domain_id": "finance_trading",
+      "category_id": "market_data",
+      "subcategory_id": "collection_normalization",
+      "tags": [],
+      "family_ids": [
+        "trading_market_data"
+      ],
+      "capabilities": [],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/pipeline_recipe-trading3-v1.0.1/trading_snapshot_built_1.0.1_credit_contract_normalized_full_unsigned_signed.zip",
+          "sha256": "65ffff28c05efcfd57bef31f46d995dae0b4e26ce17cbd0efe1a5bbd1d78e6a2",
+          "version": "1.0.1",
+          "execution_modes": [],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "information_plugin",
@@ -3761,7 +5903,32 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "knowledge_research",
+      "category_id": "information",
+      "subcategory_id": "processing",
+      "tags": [],
+      "family_ids": [
+        "information_hub",
+        "research_assistant"
+      ],
+      "capabilities": [],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-information_plugin-v1.5.2/information_plugin_v1.5.2_source_link_fix_signed.zip",
+          "sha256": "6a00d39fb6af0a6e6b97eaa069bbcd0bbf0f4cce9bfa9feac788778eb0e88a55",
+          "version": "1.5.2",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "market_data_plugin",
@@ -3807,7 +5974,31 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "market_data",
+      "subcategory_id": "collection_normalization",
+      "tags": [],
+      "family_ids": [
+        "trading_market_data"
+      ],
+      "capabilities": [],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-market_data_plugin-v1.6.31/market_data_plugin_1.6.31_credit_contract_normalized_full_unsigned_signed.zip",
+          "sha256": "38ed59523d033742b0046142b8cc6ba80550ef792f824348cae247f5616a0254",
+          "version": "1.6.31",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "media_library_builder_plugin",
@@ -3853,7 +6044,31 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "library",
+      "tags": [],
+      "family_ids": [
+        "media_library"
+      ],
+      "capabilities": [],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-media_library_builder_plugin-v1.0.21/media_library_builder_plugin_1.0.21_runtime_controls_flat_signed.zip",
+          "sha256": "3ed9bc29b833f90f035723e8165aa43b54fc8cb9be40098020f2c56e3ed4fbf8",
+          "version": "1.0.21",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "media_library_plugin",
@@ -3899,7 +6114,31 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "library",
+      "tags": [],
+      "family_ids": [
+        "media_library"
+      ],
+      "capabilities": [],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-media_library_plugin-v1.0.5/media_library_plugin_1.0.5_credit_normalized_signed.zip",
+          "sha256": "d37b41ddb9ba01358f2530d25f4be9af69da6eb6c4b4cabaacccaa67559107b7",
+          "version": "1.0.5",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "media_upload_plugin",
@@ -3945,7 +6184,31 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "creator_media",
+      "category_id": "media",
+      "subcategory_id": "library",
+      "tags": [],
+      "family_ids": [
+        "media_library"
+      ],
+      "capabilities": [],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-media_upload_plugin-v2.2.10/media_upload_plugin_2.2.10_credit_contract_normalized_full_unsigned_signed.zip",
+          "sha256": "d11edeb57c957c0fa9e77291b57f5f3362a59bca643434932d6af367d774d1bf",
+          "version": "2.2.10",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "meeting_voice_plugin",
@@ -3991,7 +6254,31 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "communication",
+      "category_id": "speech_audio",
+      "subcategory_id": "capture_intelligence",
+      "tags": [],
+      "family_ids": [
+        "meeting_assistant"
+      ],
+      "capabilities": [],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-meeting_voice_plugin-v0.6.4/meeting_voice_plugin_0.6.4_chinese_engine_contract_unsigned_signed.zip",
+          "sha256": "ce728dead576c8834383b79f77dcedfea2803755a688b2ead816d6750a459ae2",
+          "version": "0.6.4",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "personal_assistant_plugin",
@@ -4052,7 +6339,43 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "personal_life",
+      "category_id": "assistant",
+      "subcategory_id": "personal_automation",
+      "tags": [],
+      "family_ids": [
+        "personal_assistant"
+      ],
+      "capabilities": [],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin_v0.4.7_local_reminder_dismiss_signed.zip",
+          "sha256": "1ffc6d19366bc23312f128b118eb43752556302a4ce34366c55827928f0e5281",
+          "version": "0.4.7",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        },
+        {
+          "platform": "android",
+          "architecture": "universal",
+          "artifact_type": "apk",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.apk",
+          "sha256": "7d8b304a564d1c3a9b6269ed8f13422f514b274859b6abe207560c072c6c008e",
+          "version": "0.4.0-android.5",
+          "release_metadata_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.release.json",
+          "release_signature_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.release.sig",
+          "application_id": "com.nnecosystem.items.personalassistant",
+          "abi_version": 1
+        }
+      ]
     },
     {
       "item_id": "realtime_translate_plugin",
@@ -4098,7 +6421,31 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "communication",
+      "category_id": "translation",
+      "subcategory_id": "realtime",
+      "tags": [],
+      "family_ids": [
+        "realtime_translate"
+      ],
+      "capabilities": [],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-realtime_translate_plugin-v0.3.3/realtime_translate_plugin_0.3.3_chinese_engine_contract_unsigned_signed.zip",
+          "sha256": "668e656ef5405e952ee71883cb1bc8ecb045dea7ec2a4cad8f5f0502690209d2",
+          "version": "0.3.3",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "trading_analysis_factory_plugin",
@@ -4144,7 +6491,31 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "analysis",
+      "subcategory_id": "strategy",
+      "tags": [],
+      "family_ids": [
+        "trading_analysis"
+      ],
+      "capabilities": [],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-trading_analysis_factory_plugin-v0.1.36/trading_analysis_factory_plugin_0.1.36_store_write_boundary_signed.zip",
+          "sha256": "3950dfdd83126669c28094cb10ccd228d69ff16ec281fd323d6ccfd161c664c6",
+          "version": "0.1.36",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     },
     {
       "item_id": "trading_knowledge_plugin",
@@ -4190,7 +6561,31 @@
           ],
           "execution_modes": []
         }
-      }
+      },
+      "domain_id": "finance_trading",
+      "category_id": "knowledge",
+      "subcategory_id": "trading",
+      "tags": [],
+      "family_ids": [
+        "trading_knowledge"
+      ],
+      "capabilities": [],
+      "dependencies": [],
+      "taxonomy_status": "complete",
+      "artifacts": [
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "artifact_type": "zip",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-trading_knowledge_plugin-v0.2.7/trading_knowledge_plugin_0.2.7_delivery_lane_notify_first_signed.zip",
+          "sha256": "1f9794313203c3a84800ed94239c123f2a4547f3a3f95e46207fe6077bc05e11",
+          "version": "0.2.7",
+          "execution_modes": [
+            "LOCAL_FULL"
+          ],
+          "legacy_inherit": true
+        }
+      ]
     }
   ],
   "signing": {
