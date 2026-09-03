@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_presentation_v1",
-  "generated_at": "2026-09-03T03:53:12.045011+00:00",
+  "generated_at": "2026-09-03T04:07:09.393461+00:00",
   "count": 92,
   "items": [
     {
@@ -1852,7 +1852,7 @@
         "personal_assistant"
       ],
       "capabilities": [],
-      "taxonomy_status": "complete"
+      "taxonomy_status": "incomplete"
     },
     {
       "item_id": "realtime_translate_plugin",
