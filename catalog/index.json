@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_v1",
-  "generated_at": "2026-09-03T05:27:28.003683+00:00",
+  "generated_at": "2026-09-03T05:45:38.228407+00:00",
   "count": 92,
   "items": [
     {
@@ -188,12 +188,12 @@
             "artifact_type": "apk",
             "application_id": "com.nnecosystem.items.audiorecorder",
             "abi_version": 1,
-            "build_revision": 1,
+            "build_revision": 2,
             "capability_service_version": 1,
             "capabilities": [
               "audio.record.v1"
             ],
-            "artifact_sha256": "79bdd8d9c85f36a7924c01141537e0f11f96cfb5c51da69956ed29f74220e2b6",
+            "artifact_sha256": "4f73e37aa4d293ee74daeaae2de49c1956e3e58699f8526199d73f6bb08ff83a",
             "artifact_file": "platform_releases/android/audio_recorder_engine-1.1.2-unsigned_signed.apk",
             "release_manifest_file": "platform_releases/android/audio_recorder_engine-1.1.2-unsigned_signed.release.json",
             "release_signature_file": "platform_releases/android/audio_recorder_engine-1.1.2-unsigned_signed.release.sig",
@@ -240,9 +240,9 @@
           "architecture": "universal",
           "artifact_type": "apk",
           "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-audio_recorder_engine-v1.1.2/audio_recorder_engine-1.1.2-unsigned_signed.apk",
-          "sha256": "79bdd8d9c85f36a7924c01141537e0f11f96cfb5c51da69956ed29f74220e2b6",
+          "sha256": "4f73e37aa4d293ee74daeaae2de49c1956e3e58699f8526199d73f6bb08ff83a",
           "version": "1.1.2",
-          "build_revision": 1,
+          "build_revision": 2,
           "execution_modes": [
             "LOCAL_EDGE"
           ],
