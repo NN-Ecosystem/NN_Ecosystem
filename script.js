@@ -642,6 +642,7 @@ const DOMAIN_LABELS = {
     creator_media:"Creator & Media", personal_life:"Personal Life", finance_trading:"Finance & Trading",
     entertainment:"Entertainment", developer_system:"Developer & System"
 };
+const DISCOVERY_ITEM_LIMIT = 6;
 const labelId = (value) => String(value || "").replaceAll("_", " ").replace(/\b\w/g, (c) => c.toUpperCase());
 const itemFamilies = (item) => Array.isArray(item.family_ids) ? item.family_ids.filter(Boolean) : [];
 
@@ -694,14 +695,17 @@ function renderApplicationDiscovery(items) {
             return {...ordered[0], _familyId: familyId, _memberCount: members.length};
         }).filter((item) => !query || [item.title, item.name, item._familyId, item.domain_id, ...(item.capabilities || [])]
             .some((value) => String(value || "").toLowerCase().includes(query)));
-        grid.innerHTML = applications.map((item) => renderCatalogCard({...item,
+        const visibleApplications = applications.slice(0, DISCOVERY_ITEM_LIMIT);
+        grid.innerHTML = visibleApplications.map((item) => renderCatalogCard({...item,
             summary: `${DOMAIN_LABELS[item.domain_id] || labelId(item.domain_id)} · ${labelId(item._familyId)} · ${item._memberCount} ecosystem item(s). ${catalogSummary(item)}`
         })).join("");
         empty.hidden = applications.length !== 0;
         if (!taxonomyItems.length) {
             status.textContent = "Taxonomy metadata is not published yet. Sync the Canonical Catalog from Product Catalog.";
         } else {
-            status.textContent = `${applications.length} application families · ${taxonomyItems.length} taxonomy-ready items`;
+            status.textContent = applications.length > DISCOVERY_ITEM_LIMIT
+                ? `Showing ${DISCOVERY_ITEM_LIMIT} of ${applications.length} application families · Use Domain, Family or Search to refine`
+                : `${applications.length} application families · ${taxonomyItems.length} taxonomy-ready items`;
         }
     };
     domainSelect.addEventListener("change", rerender);
