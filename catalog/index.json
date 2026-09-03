@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_v1",
-  "generated_at": "2026-09-03T03:53:12.045011+00:00",
+  "generated_at": "2026-09-03T04:07:09.393461+00:00",
   "count": 92,
   "items": [
     {
@@ -6315,12 +6315,18 @@
           "architectures": [
             "universal"
           ],
-          "execution_modes": [],
+          "execution_modes": [
+            "LOCAL_EDGE",
+            "REMOTE_CORE"
+          ],
           "package": {
             "version": "0.4.0-android.5",
             "artifact_type": "apk",
             "application_id": "com.nnecosystem.items.personalassistant",
             "abi_version": 1,
+            "build_revision": null,
+            "capability_service_version": null,
+            "capabilities": [],
             "artifact_sha256": "7d8b304a564d1c3a9b6269ed8f13422f514b274859b6abe207560c072c6c008e",
             "artifact_file": "platform_releases/android/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.apk",
             "release_manifest_file": "platform_releases/android/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.release.json",
@@ -6349,7 +6355,7 @@
       ],
       "capabilities": [],
       "dependencies": [],
-      "taxonomy_status": "complete",
+      "taxonomy_status": "incomplete",
       "artifacts": [
         {
           "platform": "windows",
@@ -6370,6 +6376,10 @@
           "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.apk",
           "sha256": "7d8b304a564d1c3a9b6269ed8f13422f514b274859b6abe207560c072c6c008e",
           "version": "0.4.0-android.5",
+          "execution_modes": [
+            "LOCAL_EDGE",
+            "REMOTE_CORE"
+          ],
           "release_metadata_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.release.json",
           "release_signature_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.release.sig",
           "application_id": "com.nnecosystem.items.personalassistant",
