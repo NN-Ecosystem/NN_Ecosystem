@@ -92,6 +92,7 @@ def export_item(item_dir: Path, pages_root: Path) -> dict[str, Any]:
         "content_sha256": artifact.get("content_sha256") or item.get("content_sha256") or "",
         "release_url": item.get("release_url") or release.get("release_url") or "",
         "download_url": item.get("download_url") or artifact.get("download_url") or "",
+        "platforms": item.get("platforms") if isinstance(item.get("platforms"), dict) else {},
     }
 
 def main() -> int:

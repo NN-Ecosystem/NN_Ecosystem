@@ -31,3 +31,8 @@
 - Added accessible keyboard card navigation.
 - Added catalog renderer and search binding.
 - Removed duplicate Firebase initialization.
+# 2026-09-03 — Multi-platform compatibility export
+
+- Preserve canonical `platforms` metadata when the local catalog compatibility builder is explicitly used.
+- Keep production `catalog/index.json` and its detached signature owned by Product Catalog Publisher sync.
+- Do not rewrite the currently signed catalog during source migration.
