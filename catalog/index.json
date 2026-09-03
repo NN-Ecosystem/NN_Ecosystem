@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_v1",
-  "generated_at": "2026-09-03T10:01:13.226451+00:00",
+  "generated_at": "2026-09-03T11:59:42.166702+00:00",
   "count": 92,
   "items": [
     {
@@ -4119,13 +4119,13 @@
             "artifact_type": "apk",
             "application_id": "com.nnecosystem.items.speechtotext",
             "abi_version": 1,
-            "build_revision": 2,
+            "build_revision": 3,
             "capability_service_version": 1,
             "capabilities": [
               "speech.transcribe.v1",
               "speech.transcribe.multilingual_chunks.v1"
             ],
-            "artifact_sha256": "e72558e77c8a146862f07270e43c4b78778e7e3da582603fbfb474f6937ea37a",
+            "artifact_sha256": "944d95508e37d6231c02149a95e1869cf99b844e8e5030acb7b0b80a37d4b2ee",
             "artifact_file": "platform_releases/android/speech_to_text_engine-1.4.2-unsigned_signed.apk",
             "release_manifest_file": "platform_releases/android/speech_to_text_engine-1.4.2-unsigned_signed.release.json",
             "release_signature_file": "platform_releases/android/speech_to_text_engine-1.4.2-unsigned_signed.release.sig",
@@ -4157,7 +4157,7 @@
         "speech.transcribe"
       ],
       "dependencies": [],
-      "taxonomy_status": "complete",
+      "taxonomy_status": "incomplete",
       "artifacts": [
         {
           "platform": "windows",
@@ -4176,9 +4176,9 @@
           "architecture": "universal",
           "artifact_type": "apk",
           "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-speech_to_text_engine-v1.4.2/speech_to_text_engine-1.4.2-unsigned_signed.apk",
-          "sha256": "e72558e77c8a146862f07270e43c4b78778e7e3da582603fbfb474f6937ea37a",
+          "sha256": "944d95508e37d6231c02149a95e1869cf99b844e8e5030acb7b0b80a37d4b2ee",
           "version": "1.4.2",
-          "build_revision": 2,
+          "build_revision": 3,
           "execution_modes": [
             "LOCAL_EDGE"
           ],
