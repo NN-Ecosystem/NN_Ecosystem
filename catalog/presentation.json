@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_presentation_v1",
-  "generated_at": "2026-09-03T05:45:38.228407+00:00",
+  "generated_at": "2026-09-03T08:42:00.522164+00:00",
   "count": 92,
   "items": [
     {
@@ -1192,6 +1192,8 @@
       "subcategory_id": "capture_intelligence",
       "tags": [],
       "family_ids": [
+        "personal_assistant",
+        "realtime_translate",
         "meeting_assistant"
       ],
       "capabilities": [
