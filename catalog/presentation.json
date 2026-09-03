@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_presentation_v1",
-  "generated_at": "2026-09-03T10:01:13.226451+00:00",
+  "generated_at": "2026-09-03T11:59:42.167702+00:00",
   "count": 92,
   "items": [
     {
@@ -1199,7 +1199,7 @@
       "capabilities": [
         "speech.transcribe"
       ],
-      "taxonomy_status": "complete"
+      "taxonomy_status": "incomplete"
     },
     {
       "item_id": "spreadsheet_engine",
