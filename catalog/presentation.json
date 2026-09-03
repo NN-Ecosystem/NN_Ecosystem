@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_presentation_v1",
-  "generated_at": "2026-09-03T04:07:09.393461+00:00",
+  "generated_at": "2026-09-03T05:27:28.004679+00:00",
   "count": 92,
   "items": [
     {
@@ -56,14 +56,11 @@
       "category_id": "speech_audio",
       "subcategory_id": "capture_intelligence",
       "tags": [],
-      "family_ids": [
-        "meeting_assistant",
-        "audio_capture"
-      ],
+      "family_ids": [],
       "capabilities": [
         "audio.record"
       ],
-      "taxonomy_status": "complete"
+      "taxonomy_status": "incomplete"
     },
     {
       "item_id": "av_capture_engine",
@@ -1852,7 +1849,7 @@
         "personal_assistant"
       ],
       "capabilities": [],
-      "taxonomy_status": "incomplete"
+      "taxonomy_status": "complete"
     },
     {
       "item_id": "realtime_translate_plugin",
