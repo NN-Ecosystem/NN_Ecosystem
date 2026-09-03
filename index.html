@@ -15,6 +15,7 @@
 
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
+            <li><a href="#discover">Discover</a></li>
             <li><a href="#core">Core</a></li>
             <li><a href="#node_service">Nodes</a></li>
             <li><a href="#plugin">Plugins</a></li>
@@ -38,7 +39,7 @@
 
             <div class="hero-buttons">
                 <a class="btn primary" href="#core">Get Core</a>
-                <a class="btn secondary" href="#node_service">Explore Items</a>
+                <a class="btn secondary" href="#discover">Explore Applications</a>
             </div>
 
             <div class="start-path" aria-label="Getting started path">
@@ -53,6 +54,28 @@
             </p>
 
         </div>
+    </section>
+
+    <section id="discover" class="section catalog-section release-section discovery-section">
+        <div class="section-intro">
+            <span class="eyebrow">APPLICATION DISCOVERY</span>
+            <h1>What do you want to do?</h1>
+            <p>Start from your need. Applications and their reusable capabilities come from one signed Canonical Catalog.</p>
+        </div>
+        <div class="discovery-toolbar" aria-label="Catalog discovery filters">
+            <label>Domain
+                <select id="catalog-domain-filter"><option value="all">All needs</option></select>
+            </label>
+            <label>Application / Family
+                <select id="catalog-family-filter"><option value="all">All applications</option></select>
+            </label>
+            <label>Search
+                <input id="catalog-discovery-search" type="search" placeholder="Search applications or capabilities...">
+            </label>
+        </div>
+        <div id="catalog-discovery-status" class="catalog-count" aria-live="polite"></div>
+        <div id="catalog-discovery-grid" class="card-grid catalog-grid" aria-live="polite"></div>
+        <div id="catalog-discovery-empty" class="catalog-empty" hidden>No applications match this selection.</div>
     </section>
 
     <section id="core" class="section catalog-section release-section release-core">

@@ -636,6 +636,80 @@ function renderCatalogCard(item) {
         </article>`;
 }
 
+const DOMAIN_ORDER = ["productivity", "knowledge_research", "communication", "creator_media", "personal_life", "finance_trading", "entertainment", "developer_system"];
+const DOMAIN_LABELS = {
+    productivity:"Productivity", knowledge_research:"Knowledge & Research", communication:"Communication",
+    creator_media:"Creator & Media", personal_life:"Personal Life", finance_trading:"Finance & Trading",
+    entertainment:"Entertainment", developer_system:"Developer & System"
+};
+const labelId = (value) => String(value || "").replaceAll("_", " ").replace(/\b\w/g, (c) => c.toUpperCase());
+const itemFamilies = (item) => Array.isArray(item.family_ids) ? item.family_ids.filter(Boolean) : [];
+
+function renderApplicationDiscovery(items) {
+    const domainSelect = document.getElementById("catalog-domain-filter");
+    const familySelect = document.getElementById("catalog-family-filter");
+    const search = document.getElementById("catalog-discovery-search");
+    const grid = document.getElementById("catalog-discovery-grid");
+    const empty = document.getElementById("catalog-discovery-empty");
+    const status = document.getElementById("catalog-discovery-status");
+    if (!domainSelect || !familySelect || !grid) return;
+
+    const taxonomyItems = items.filter((item) => item.domain_id && itemFamilies(item).length);
+    const domains = [...new Set(taxonomyItems.map((item) => item.domain_id))];
+    domains.sort((a, b) => {
+        const ai = DOMAIN_ORDER.indexOf(a), bi = DOMAIN_ORDER.indexOf(b);
+        return (ai < 0 ? 999 : ai) - (bi < 0 ? 999 : bi) || a.localeCompare(b);
+    });
+    domainSelect.innerHTML = '<option value="all">All needs</option>' + domains.map((id) =>
+        `<option value="${escapeHtml(id)}">${escapeHtml(DOMAIN_LABELS[id] || labelId(id))}</option>`
+    ).join("");
+
+    const rerender = () => {
+        const domain = domainSelect.value;
+        const families = [...new Set(taxonomyItems
+            .filter((item) => domain === "all" || item.domain_id === domain)
+            .flatMap(itemFamilies))].sort();
+        const priorFamily = familySelect.value;
+        familySelect.innerHTML = '<option value="all">All applications</option>' + families.map((id) =>
+            `<option value="${escapeHtml(id)}">${escapeHtml(labelId(id))}</option>`
+        ).join("");
+        familySelect.value = families.includes(priorFamily) ? priorFamily : "all";
+        const family = familySelect.value;
+        const query = String(search?.value || "").trim().toLowerCase();
+        const scoped = taxonomyItems.filter((item) =>
+            (domain === "all" || item.domain_id === domain) &&
+            (family === "all" || itemFamilies(item).includes(family))
+        );
+        const byFamily = new Map();
+        scoped.forEach((item) => itemFamilies(item).forEach((familyId) => {
+            if (family !== "all" && familyId !== family) return;
+            if (!byFamily.has(familyId)) byFamily.set(familyId, []);
+            byFamily.get(familyId).push(item);
+        }));
+        const applications = [...byFamily.entries()].map(([familyId, members]) => {
+            const ordered = [...members].sort((a, b) => {
+                const rank = (x) => normalizeCatalogType(x.type) === "plugin" ? 0 : normalizeCatalogType(x.type) === "node_service" ? 1 : 2;
+                return rank(a) - rank(b) || String(a.title || a.name).localeCompare(String(b.title || b.name));
+            });
+            return {...ordered[0], _familyId: familyId, _memberCount: members.length};
+        }).filter((item) => !query || [item.title, item.name, item._familyId, item.domain_id, ...(item.capabilities || [])]
+            .some((value) => String(value || "").toLowerCase().includes(query)));
+        grid.innerHTML = applications.map((item) => renderCatalogCard({...item,
+            summary: `${DOMAIN_LABELS[item.domain_id] || labelId(item.domain_id)} · ${labelId(item._familyId)} · ${item._memberCount} ecosystem item(s). ${catalogSummary(item)}`
+        })).join("");
+        empty.hidden = applications.length !== 0;
+        if (!taxonomyItems.length) {
+            status.textContent = "Taxonomy metadata is not published yet. Sync the Canonical Catalog from Product Catalog.";
+        } else {
+            status.textContent = `${applications.length} application families · ${taxonomyItems.length} taxonomy-ready items`;
+        }
+    };
+    domainSelect.addEventListener("change", rerender);
+    familySelect.addEventListener("change", rerender);
+    search?.addEventListener("input", rerender);
+    rerender();
+}
+
 const CATALOG_PAGE_SIZE = 6;
 
 const catalogPageState = {
@@ -965,6 +1039,8 @@ async function loadMarketplaceCatalog() {
                 status: item.status
             };
         });
+
+        renderApplicationDiscovery(items);
 
         // Render lần đầu + Search
         types.forEach((type) => {

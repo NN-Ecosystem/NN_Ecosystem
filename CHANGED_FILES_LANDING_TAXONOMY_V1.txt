@@ -1,0 +1,6 @@
+index.html
+script.js
+style.css
+scripts/landing_taxonomy_projection_v1_check.py
+LANDING_TAXONOMY_PROJECTION_V1.md
+CHANGED_FILES_LANDING_TAXONOMY_V1.txt
