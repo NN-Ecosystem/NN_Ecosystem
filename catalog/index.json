@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_v1",
-  "generated_at": "2026-09-03T04:07:09.393461+00:00",
+  "generated_at": "2026-09-03T05:27:28.003683+00:00",
   "count": 92,
   "items": [
     {
@@ -181,8 +181,7 @@
             "universal"
           ],
           "execution_modes": [
-            "LOCAL_EDGE",
-            "REMOTE_CORE"
+            "LOCAL_EDGE"
           ],
           "package": {
             "version": "1.1.2",
@@ -194,7 +193,7 @@
             "capabilities": [
               "audio.record.v1"
             ],
-            "artifact_sha256": "ef2767a6fced9796ea8719611f7b5f3cb7586d189abd9e09637948cc0f214d67",
+            "artifact_sha256": "79bdd8d9c85f36a7924c01141537e0f11f96cfb5c51da69956ed29f74220e2b6",
             "artifact_file": "platform_releases/android/audio_recorder_engine-1.1.2-unsigned_signed.apk",
             "release_manifest_file": "platform_releases/android/audio_recorder_engine-1.1.2-unsigned_signed.release.json",
             "release_signature_file": "platform_releases/android/audio_recorder_engine-1.1.2-unsigned_signed.release.sig",
@@ -217,15 +216,12 @@
       "category_id": "speech_audio",
       "subcategory_id": "capture_intelligence",
       "tags": [],
-      "family_ids": [
-        "meeting_assistant",
-        "audio_capture"
-      ],
+      "family_ids": [],
       "capabilities": [
         "audio.record"
       ],
       "dependencies": [],
-      "taxonomy_status": "complete",
+      "taxonomy_status": "incomplete",
       "artifacts": [
         {
           "platform": "windows",
@@ -244,12 +240,11 @@
           "architecture": "universal",
           "artifact_type": "apk",
           "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-audio_recorder_engine-v1.1.2/audio_recorder_engine-1.1.2-unsigned_signed.apk",
-          "sha256": "ef2767a6fced9796ea8719611f7b5f3cb7586d189abd9e09637948cc0f214d67",
+          "sha256": "79bdd8d9c85f36a7924c01141537e0f11f96cfb5c51da69956ed29f74220e2b6",
           "version": "1.1.2",
           "build_revision": 1,
           "execution_modes": [
-            "LOCAL_EDGE",
-            "REMOTE_CORE"
+            "LOCAL_EDGE"
           ],
           "release_metadata_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-audio_recorder_engine-v1.1.2/audio_recorder_engine-1.1.2-unsigned_signed.release.json",
           "release_signature_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-audio_recorder_engine-v1.1.2/audio_recorder_engine-1.1.2-unsigned_signed.release.sig",
@@ -6355,7 +6350,7 @@
       ],
       "capabilities": [],
       "dependencies": [],
-      "taxonomy_status": "incomplete",
+      "taxonomy_status": "complete",
       "artifacts": [
         {
           "platform": "windows",
