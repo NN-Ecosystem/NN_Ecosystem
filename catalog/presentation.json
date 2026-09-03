@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_presentation_v1",
-  "generated_at": "2026-09-03T12:45:42.108739+00:00",
+  "generated_at": "2026-09-03T22:46:31.163582+00:00",
   "count": 92,
   "items": [
     {
@@ -56,7 +56,11 @@
       "category_id": "speech_audio",
       "subcategory_id": "capture_intelligence",
       "tags": [],
-      "family_ids": [],
+      "family_ids": [
+        "personal_assistant",
+        "realtime_translate",
+        "meeting_assistant"
+      ],
       "capabilities": [
         "audio.record"
       ],
