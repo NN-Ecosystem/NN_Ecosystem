@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_v1",
-  "generated_at": "2026-09-02T15:29:47.582429+00:00",
+  "generated_at": "2026-09-03T01:55:15.220571+00:00",
   "count": 92,
   "items": [
     {
@@ -126,11 +126,14 @@
           }
         },
         "android": {
-          "available": false,
+          "available": true,
           "architectures": [
             "universal"
           ],
-          "execution_modes": [],
+          "execution_modes": [
+            "LOCAL_EDGE",
+            "REMOTE_CORE"
+          ],
           "package": {
             "version": "1.1.2",
             "artifact_type": "apk",
@@ -146,7 +149,10 @@
             "release_manifest_file": "platform_releases/android/audio_recorder_engine-1.1.2-unsigned_signed.release.json",
             "release_signature_file": "platform_releases/android/audio_recorder_engine-1.1.2-unsigned_signed.release.sig",
             "native_signing_verified": true,
-            "signer_certificate_sha256": "c95013b770207b4911ee70d624dbc95f2baaa4e4ec9d15bd6d04161e0cfc8b22"
+            "signer_certificate_sha256": "c95013b770207b4911ee70d624dbc95f2baaa4e4ec9d15bd6d04161e0cfc8b22",
+            "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-audio_recorder_engine-v1.1.2/audio_recorder_engine-1.1.2-unsigned_signed.apk",
+            "release_metadata_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-audio_recorder_engine-v1.1.2/audio_recorder_engine-1.1.2-unsigned_signed.release.json",
+            "release_signature_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-audio_recorder_engine-v1.1.2/audio_recorder_engine-1.1.2-unsigned_signed.release.sig"
           }
         },
         "ios": {
