@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_presentation_v1",
-  "generated_at": "2026-09-04T02:53:21.955548+00:00",
+  "generated_at": "2026-09-04T06:59:35.196196+00:00",
   "count": 92,
   "items": [
     {
@@ -1855,7 +1855,7 @@
         "personal_assistant"
       ],
       "capabilities": [],
-      "taxonomy_status": "complete"
+      "taxonomy_status": "incomplete"
     },
     {
       "item_id": "realtime_translate_plugin",
@@ -1874,7 +1874,7 @@
         "realtime_translate"
       ],
       "capabilities": [],
-      "taxonomy_status": "complete"
+      "taxonomy_status": "incomplete"
     },
     {
       "item_id": "trading_analysis_factory_plugin",
