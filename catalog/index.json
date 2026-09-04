@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_v1",
-  "generated_at": "2026-09-04T02:53:21.954554+00:00",
+  "generated_at": "2026-09-04T06:59:35.195194+00:00",
   "count": 92,
   "items": [
     {
@@ -4789,9 +4789,9 @@
       "status": "released",
       "image": "https://nn-ecosystem.github.io/assets/catalog/text_to_speech_engine/text_to_speech_engine.png",
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/engine-text_to_speech_engine-v1.1.1",
-      "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-text_to_speech_engine-v1.1.1/text_to_speech_engine_1.1.1_core_3.4.1_FULL_FOR_SIGNING_output_store_hotfix_signed.zip",
+      "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-text_to_speech_engine-v1.1.1/text_to_speech_engine_1.1.1_golden6_windows_unsigned_signed.zip",
       "link_store": "",
-      "artifact_sha256": "554a7dc44e2a5643ea25576f6532adb6fcc47dfbbf8837f4dbe6020a0eed5579",
+      "artifact_sha256": "a0b29c18112d465642b1ef3c8a728dff3d65012ab1b650f34ab1e4d4d3c16447",
       "platforms": {
         "windows": {
           "available": true,
@@ -4837,8 +4837,8 @@
           "platform": "windows",
           "architecture": "x86_64",
           "artifact_type": "zip",
-          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-text_to_speech_engine-v1.1.1/text_to_speech_engine_1.1.1_core_3.4.1_FULL_FOR_SIGNING_output_store_hotfix_signed.zip",
-          "sha256": "554a7dc44e2a5643ea25576f6532adb6fcc47dfbbf8837f4dbe6020a0eed5579",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-text_to_speech_engine-v1.1.1/text_to_speech_engine_1.1.1_golden6_windows_unsigned_signed.zip",
+          "sha256": "a0b29c18112d465642b1ef3c8a728dff3d65012ab1b650f34ab1e4d4d3c16447",
           "version": "1.1.1",
           "execution_modes": [
             "LOCAL_FULL"
@@ -4861,9 +4861,9 @@
       "status": "released",
       "image": "https://nn-ecosystem.github.io/assets/catalog/text_translation_engine/text_translation_engine.png",
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/engine-text_translation_engine-v1.1.2",
-      "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-text_translation_engine-v1.1.2/text_translation_engine_1.1.2_chinese_provider_unsigned_output_store_hotfix_signed.zip",
+      "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-text_translation_engine-v1.1.2/text_translation_engine_1.1.2_golden6_windows_unsigned_signed.zip",
       "link_store": "",
-      "artifact_sha256": "32407a01c42fd6ce297953d167aef9419200f1b7b7e56cc14ccae6ac77357686",
+      "artifact_sha256": "0f37e4557b2a62168c94d92bb6d05d4ef016409f4fadb958e490ebe5502cf432",
       "platforms": {
         "windows": {
           "available": true,
@@ -4909,8 +4909,8 @@
           "platform": "windows",
           "architecture": "x86_64",
           "artifact_type": "zip",
-          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-text_translation_engine-v1.1.2/text_translation_engine_1.1.2_chinese_provider_unsigned_output_store_hotfix_signed.zip",
-          "sha256": "32407a01c42fd6ce297953d167aef9419200f1b7b7e56cc14ccae6ac77357686",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-text_translation_engine-v1.1.2/text_translation_engine_1.1.2_golden6_windows_unsigned_signed.zip",
+          "sha256": "0f37e4557b2a62168c94d92bb6d05d4ef016409f4fadb958e490ebe5502cf432",
           "version": "1.1.2",
           "execution_modes": [
             "LOCAL_FULL"
@@ -5918,9 +5918,9 @@
       "status": "released",
       "image": "https://nn-ecosystem.github.io/assets/catalog/information_plugin/information_plugin.png",
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/plugin-information_plugin-v1.5.2",
-      "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-information_plugin-v1.5.2/information_plugin_v1.5.2_source_link_fix_signed.zip",
+      "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-information_plugin-v1.5.2/information_plugin_1.5.2_golden6_windows_unsigned_signed.zip",
       "link_store": "",
-      "artifact_sha256": "6a00d39fb6af0a6e6b97eaa069bbcd0bbf0f4cce9bfa9feac788778eb0e88a55",
+      "artifact_sha256": "de86105d7710a0a53c21de72e4e51742e58bad8743d7ce0df54d1d0cceab37bb",
       "platforms": {
         "windows": {
           "available": true,
@@ -5935,11 +5935,31 @@
           }
         },
         "android": {
-          "available": false,
+          "available": true,
           "architectures": [
             "universal"
           ],
-          "execution_modes": []
+          "execution_modes": [
+            "LOCAL_EDGE"
+          ],
+          "package": {
+            "version": "1.5.2",
+            "artifact_type": "apk",
+            "application_id": "com.nnecosystem.apps.informationhub",
+            "abi_version": 1,
+            "build_revision": 1,
+            "capability_service_version": null,
+            "capabilities": [],
+            "artifact_sha256": "9caf4978b34356cf3f3f483c661f71a7240440361a4c2c190c1e1441558a9741",
+            "artifact_file": "platform_releases/android/information_plugin-1.5.2-unsigned_signed.apk",
+            "release_manifest_file": "platform_releases/android/information_plugin-1.5.2-unsigned_signed.release.json",
+            "release_signature_file": "platform_releases/android/information_plugin-1.5.2-unsigned_signed.release.sig",
+            "native_signing_verified": true,
+            "signer_certificate_sha256": "c95013b770207b4911ee70d624dbc95f2baaa4e4ec9d15bd6d04161e0cfc8b22",
+            "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-information_plugin-v1.5.2/information_plugin-1.5.2-unsigned_signed.apk",
+            "release_metadata_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-information_plugin-v1.5.2/information_plugin-1.5.2-unsigned_signed.release.json",
+            "release_signature_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-information_plugin-v1.5.2/information_plugin-1.5.2-unsigned_signed.release.sig"
+          }
         },
         "ios": {
           "available": false,
@@ -5965,13 +5985,29 @@
           "platform": "windows",
           "architecture": "x86_64",
           "artifact_type": "zip",
-          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-information_plugin-v1.5.2/information_plugin_v1.5.2_source_link_fix_signed.zip",
-          "sha256": "6a00d39fb6af0a6e6b97eaa069bbcd0bbf0f4cce9bfa9feac788778eb0e88a55",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-information_plugin-v1.5.2/information_plugin_1.5.2_golden6_windows_unsigned_signed.zip",
+          "sha256": "de86105d7710a0a53c21de72e4e51742e58bad8743d7ce0df54d1d0cceab37bb",
           "version": "1.5.2",
           "execution_modes": [
             "LOCAL_FULL"
           ],
           "legacy_inherit": true
+        },
+        {
+          "platform": "android",
+          "architecture": "universal",
+          "artifact_type": "apk",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-information_plugin-v1.5.2/information_plugin-1.5.2-unsigned_signed.apk",
+          "sha256": "9caf4978b34356cf3f3f483c661f71a7240440361a4c2c190c1e1441558a9741",
+          "version": "1.5.2",
+          "build_revision": 1,
+          "execution_modes": [
+            "LOCAL_EDGE"
+          ],
+          "release_metadata_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-information_plugin-v1.5.2/information_plugin-1.5.2-unsigned_signed.release.json",
+          "release_signature_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-information_plugin-v1.5.2/information_plugin-1.5.2-unsigned_signed.release.sig",
+          "application_id": "com.nnecosystem.apps.informationhub",
+          "abi_version": 1
         }
       ]
     },
@@ -6146,11 +6182,31 @@
           }
         },
         "android": {
-          "available": false,
+          "available": true,
           "architectures": [
             "universal"
           ],
-          "execution_modes": []
+          "execution_modes": [
+            "LOCAL_EDGE"
+          ],
+          "package": {
+            "version": "1.0.5",
+            "artifact_type": "apk",
+            "application_id": "com.nnecosystem.apps.medialibrary",
+            "abi_version": 1,
+            "build_revision": 1,
+            "capability_service_version": null,
+            "capabilities": [],
+            "artifact_sha256": "b8ae1d940c8b1ec7edbbe02b6d2e19b6a62a445ccd2d88bb5850645deafb4142",
+            "artifact_file": "platform_releases/android/media_library_plugin-1.0.5-unsigned_signed.apk",
+            "release_manifest_file": "platform_releases/android/media_library_plugin-1.0.5-unsigned_signed.release.json",
+            "release_signature_file": "platform_releases/android/media_library_plugin-1.0.5-unsigned_signed.release.sig",
+            "native_signing_verified": true,
+            "signer_certificate_sha256": "c95013b770207b4911ee70d624dbc95f2baaa4e4ec9d15bd6d04161e0cfc8b22",
+            "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-media_library_plugin-v1.0.5/media_library_plugin-1.0.5-unsigned_signed.apk",
+            "release_metadata_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-media_library_plugin-v1.0.5/media_library_plugin-1.0.5-unsigned_signed.release.json",
+            "release_signature_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-media_library_plugin-v1.0.5/media_library_plugin-1.0.5-unsigned_signed.release.sig"
+          }
         },
         "ios": {
           "available": false,
@@ -6182,6 +6238,22 @@
             "LOCAL_FULL"
           ],
           "legacy_inherit": true
+        },
+        {
+          "platform": "android",
+          "architecture": "universal",
+          "artifact_type": "apk",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-media_library_plugin-v1.0.5/media_library_plugin-1.0.5-unsigned_signed.apk",
+          "sha256": "b8ae1d940c8b1ec7edbbe02b6d2e19b6a62a445ccd2d88bb5850645deafb4142",
+          "version": "1.0.5",
+          "build_revision": 1,
+          "execution_modes": [
+            "LOCAL_EDGE"
+          ],
+          "release_metadata_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-media_library_plugin-v1.0.5/media_library_plugin-1.0.5-unsigned_signed.release.json",
+          "release_signature_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-media_library_plugin-v1.0.5/media_library_plugin-1.0.5-unsigned_signed.release.sig",
+          "application_id": "com.nnecosystem.apps.medialibrary",
+          "abi_version": 1
         }
       ]
     },
@@ -6261,17 +6333,17 @@
       "name": "Meeting Voice Plugin",
       "title": "Meeting Voice Plugin",
       "description": "# Meeting Voice Plugin\n\n**Capture spoken meetings, transform conversations into structured transcripts, and optionally translate or synthesize meeting content through reusable Core Factory voice and language Engines.**\n\n**Channel:** Stable  \n**Version:** 0.6.4\n**Requires:** Core Factory 3.3+  \n**Category:** Voice · Meeting  \n**Type:** Plugin\n\n---\n\n## What It Is\n\nMeeting Voice Plugin is a Core Factory application for **capturing and processing spoken meeting sessions**.\n\nIt combines reusable voice and language capabilities into a practical meeting workflow.\n\nConceptually:\n\n**MEETING**\n\n↓\n\n**AUDIO CAPTURE**\n\n↓\n\n**SPEECH TO TEXT**\n\n↓\n\n**MEETING TRANSCRIPT**\n\n↓\n\n┌ **Review**\n\n├ **Translation**\n\n├ **Voice Output**\n\n└ **Export / Downstream Workflow**\n\nThe Plugin provides the meeting experience and session orchestration.\n\nIt does not implement speech recognition, translation, or speech synthesis itself.\n\nThose technical capabilities remain reusable Engine LEGO executed through Core.\n\n---\n\n# Key Capabilities\n\n## Meeting Capture\n\nMeeting Voice provides a focused workspace for recording spoken meeting content.\n\nConceptually:\n\n**START MEETING SESSION**\n\n↓\n\n**Capture Speech**\n\n↓\n\n**Process Audio**\n\n↓\n\n**Build Transcript**\n\n↓\n\n**Review Meeting Content**\n\nInstead of manually running individual Engine jobs, the Plugin coordinates the required capabilities around a persistent meeting workflow.\n\n---\n\n# Speech-to-Text Meeting Workflow\n\nRecorded meeting audio can be processed through:\n\n**Speech To Text Engine**\n\nConceptually:\n\n**MEETING AUDIO**\n\n↓\n\n**SPEECH TO TEXT ENGINE**\n\n↓\n\n**TRANSCRIPT**\n\nThis transforms spoken discussion into reusable textual content.\n\nThe Plugin does not contain a private speech-recognition implementation.\n\n---\n\n# Structured Meeting Transcript\n\nThe transcript becomes the central reusable product of a meeting session.\n\nConceptually:\n\n**Spoken Conversation**\n\n↓\n\n**Structured Text**\n\n↓\n\n**Meeting Record**\n\nThis provides a foundation for:\n\n- Meeting review\n- Notes\n- Translation\n- Documentation\n- Knowledge workflows\n- Follow-up processing\n\nThe spoken conversation is therefore no longer limited to the original audio recording.\n\n---\n\n# Optional Translation\n\nMeeting content can participate in multilingual workflows through:\n\n**Text Translation Engine**\n\nConceptually:\n\n**SOURCE-LANGUAGE TRANSCRIPT**\n\n↓\n\n**TEXT TRANSLATION ENGINE**\n\n↓\n\n**TARGET-LANGUAGE TRANSCRIPT**\n\nTranslation remains optional.\n\nA normal meeting can use transcription only, while a multilingual workflow can add translation when required.\n\n---\n\n# Optional Voice Output\n\nTranslated or textual meeting content can also participate in speech synthesis through:\n\n**Text To Speech Engine**\n\nConceptually:\n\n**MEETING TEXT**\n\n↓\n\n**TEXT TO SPEECH ENGINE**\n\n↓\n\n**GENERATED VOICE**\n\nThis provides a reusable voice-output layer without coupling speech synthesis directly to meeting capture.\n\n---\n\n# Modular Voice Pipeline\n\nMeeting Voice follows the Core Factory LEGO architecture.\n\nConceptually:\n\n**MEETING VOICE PLUGIN**\n\n↓\n\n┌─────────────────────────────┐\n│ Meeting Session             │\n│ User Workflow               │\n│ Transcript Presentation     │\n│ History / Export            │\n└─────────────────────────────┘\n\n↓\n\n**CORE**\n\n↓\n\n┌ **Audio Recording**\n├ **Speech To Text**\n├ **Text Translation**\n└ **Text To Speech**\n\nEach technical capability remains independently reusable.\n\n---\n\n# Meeting Session\n\nThe Plugin organizes processing around a meeting session rather than unrelated Engine jobs.\n\nConceptually:\n\n**SESSION START**\n\n↓\n\n**Meeting Capture**\n\n↓\n\n**Transcript**\n\n↓\n\n**Optional Language Processing**\n\n↓\n\n**Session Result**\n\nThis gives users an application-level context for the technical artifacts produced during a meeting.\n\n---\n\n# Transcript Review\n\nSpeech recognition results can be reviewed directly as meeting content.\n\nThis creates an important distinction between:\n\n**Audio Evidence**\n\nand:\n\n**Readable Meeting Information**\n\nUsers can work with text without repeatedly listening through the entire source recording.\n\n---\n\n# Original Audio + Transcript\n\nThe meeting workflow can retain the relationship between:\n\n**Original Speech**\n\nand:\n\n**Recognized Text**\n\nConceptually:\n\n**MEETING**\n\n↓\n\n┌ **Audio**\n└ **Transcript**\n\nThese represent different reusable products from the same session.\n\nAudio preserves the original recording.\n\nTranscript provides searchable and processable textual content.\n\n---\n\n# Language Processing\n\nLanguage capabilities are layered after speech recognition.\n\nConceptually:\n\n**AUDIO**\n\n↓\n\n**STT**\n\n↓\n\n**SOURCE TEXT**\n\n↓\n\n**TRANSLATION**\n\n↓\n\n**TARGET TEXT**\n\n↓\n\n**OPTIONAL TTS**\n\nThis separation avoids combining four technical responsibilities into one monolithic meeting implementation.\n\n---\n\n# Meeting Voice vs Audio Recorder\n\nAudio Recorder Engine answers:\n\n**“Record this audio source.”**\n\nMeeting Voice Plugin answers:\n\n**“Help me capture and process a meeting.”**\n\nThe Plugin adds:\n\n- Meeting context\n- Session workflow\n- Transcript handling\n- Language-processing workflow\n- User-facing review\n- Export/application state\n\nAudio Recorder remains the technical capture LEGO.\n\n---\n\n# Meeting Voice vs Speech To Text Engine\n\nSpeech To Text Engine performs:\n\n**Audio → Text**\n\nMeeting Voice manages the larger application workflow around that capability.\n\nConceptually:\n\n**Meeting**\n\n↓\n\n**Recording**\n\n↓\n\n**STT**\n\n↓\n\n**Transcript**\n\n↓\n\n**Meeting Session**\n\nThe Engine does not need to know what a meeting is.\n\n---\n\n# Meeting Voice vs Realtime Translate\n\nThese Plugins serve different primary workflows.\n\n## Realtime Translate\n\nFocused on:\n\n**Person A ↔ Person B communication**\n\nThe objective is rapid turn-by-turn language translation.\n\n## Meeting Voice\n\nFocused on:\n\n**Meeting → Captured Session → Transcript**\n\nThe primary objective is preserving and processing spoken meeting content.\n\nTranslation can participate in Meeting Voice, but it is not the only reason the meeting exists.\n\n---\n\n# Meeting Voice vs Text Translation Engine\n\nText Translation Engine answers:\n\n**“Translate this text.”**\n\nMeeting Voice determines:\n\n- Which meeting content should be translated\n- Where that content came from\n- How it relates to the session\n- How users interact with the translated result\n\nTranslation remains an independent technical capability.\n\n---\n\n# Meeting Voice vs Text To Speech Engine\n\nText To Speech Engine produces:\n\n**Text → Audio**\n\nMeeting Voice may use that capability when meeting content needs synthesized voice output.\n\nThe Plugin does not implement its own speech-generation runtime.\n\n---\n\n# How to Use\n\n## 1. Install Meeting Voice\n\nInstall the Plugin from the Core Factory Marketplace.\n\n---\n\n## 2. Ensure Required Capabilities Are Available\n\nThe meeting workflow uses the appropriate Core Factory voice/language Engines for the selected operations.\n\nCore remains responsible for executing those capabilities.\n\n---\n\n## 3. Configure the Meeting\n\nReview the available meeting and voice-processing settings before beginning the session.\n\n---\n\n## 4. Start the Meeting Session\n\nBegin the bounded meeting workflow.\n\nThe Plugin coordinates audio capture according to the selected configuration.\n\n---\n\n## 5. Capture Speech\n\nMeeting speech is recorded through the appropriate Core-managed recording capability.\n\n---\n\n## 6. Generate Transcript\n\nCaptured audio is processed through Speech To Text.\n\nThe resulting text becomes part of the meeting session.\n\n---\n\n## 7. Review\n\nReview the recognized meeting content from the Plugin interface.\n\n---\n\n## 8. Translate When Required\n\nFor multilingual workflows, meeting text can be passed through Text Translation Engine.\n\n---\n\n## 9. Generate Voice When Required\n\nCompatible meeting text can optionally be converted back into speech through Text To Speech Engine.\n\n---\n\n## 10. Export / Continue Workflow\n\nMeeting products can be retained or passed to other compatible Core Factory workflows.\n\n---\n\n# Typical Processing Flow\n\nA basic meeting can use:\n\n**MEETING**\n\n↓\n\n**AUDIO CAPTURE**\n\n↓\n\n**SPEECH TO TEXT**\n\n↓\n\n**TRANSCRIPT**\n\nA multilingual meeting can extend this to:\n\n**MEETING**\n\n↓\n\n**AUDIO CAPTURE**\n\n↓\n\n**SPEECH TO TEXT**\n\n↓\n\n**SOURCE TRANSCRIPT**\n\n↓\n\n**TEXT TRANSLATION**\n\n↓\n\n**TRANSLATED TRANSCRIPT**\n\nAn extended voice workflow can continue:\n\n↓\n\n**TEXT TO SPEECH**\n\n↓\n\n**TRANSLATED VOICE**\n\nThe user only enables the layers required by the current meeting.\n\n---\n\n# Reusable Meeting Data\n\nMeeting Voice turns ephemeral speech into reusable information.\n\nConceptually:\n\n**Conversation**\n\n↓\n\n**Audio Artifact**\n\n↓\n\n**Transcript**\n\n↓\n\n**Structured Meeting Content**\n\n↓\n\n**Other Core Capabilities**\n\nThis enables later workflows to operate on meeting information without requiring another speech-recognition pass.\n\n---\n\n# Document Workflow\n\nMeeting transcripts can participate in the document LEGO stack.\n\nConceptually:\n\n**MEETING**\n\n↓\n\n**TRANSCRIPT**\n\n↓\n\n**WORKDOC ENGINE**\n\n↓\n\n**DOCUMENT ENGINE**\n\n↓\n\n**Meeting Document**\n\nThis can provide the technical foundation for meeting records, reports, or other document-oriented applications.\n\nMeeting Voice itself does not need to become a document-generation Engine.\n\n---\n\n# Knowledge Workflow\n\nMeeting text can also become input for knowledge-oriented applications.\n\nConceptually:\n\n**MEETING**\n\n↓\n\n**TRANSCRIPT**\n\n↓\n\n**STRUCTURED TEXT**\n\n↓\n\n**KNOWLEDGE WORKFLOW**\n\nThis makes spoken meetings reusable beyond the immediate meeting interface.\n\n---\n\n# Multilingual Meeting Workflow\n\nA multilingual workflow can use:\n\n**Speaker**\n\n↓\n\n**Audio**\n\n↓\n\n**Speech To Text**\n\n↓\n\n**Original Transcript**\n\n↓\n\n**Text Translation**\n\n↓\n\n**Translated Transcript**\n\n↓\n\n**Review**\n\nThis provides both original and translated textual representations without changing the underlying meeting architecture.\n\n---\n\n# Meeting Voice Output Workflow\n\nWhere synthesized output is useful:\n\n**Meeting Transcript**\n\n↓\n\n**Translation / Text Processing**\n\n↓\n\n**Text To Speech**\n\n↓\n\n**Voice Artifact**\n\nThe generated voice remains a separate reusable media product.\n\n---\n\n# Engine LEGO\n\nMeeting Voice is built around reusable Core Factory capabilities rather than private technical implementations.\n\nRelevant capabilities include:\n\n## Audio Recording\n\nResponsible for:\n\n**Audio capture**\n\n---\n\n## Speech To Text\n\nResponsible for:\n\n**Speech recognition**\n\n---\n\n## Text Translation\n\nResponsible for:\n\n**Language translation**\n\n---\n\n## Text To Speech\n\nResponsible for:\n\n**Voice synthesis**\n\nThe Plugin combines these capabilities according to the meeting workflow.\n\n---\n\n# Core-Managed Execution\n\nTechnical Engine work is submitted through Core.\n\nConceptually:\n\n**PLUGIN**\n\n↓\n\n**Core Invocation**\n\n↓\n\n**ENGINE**\n\n↓\n\n**Core Job Result**\n\n↓\n\n**PLUGIN**\n\nThis preserves:\n\n- Runtime isolation\n- Resource governance\n- Job lifecycle\n- Dependency management\n- Error reporting\n- Future execution routing\n\nThe Plugin does not bypass Core to run heavy technical capabilities privately.\n\n---\n\n# Resource Awareness\n\nSpeech recognition can range from lightweight to relatively demanding depending on:\n\n- Audio duration\n- Selected STT model\n- Hardware\n- Number of processing operations\n\nCore remains responsible for deciding whether the requested execution can be admitted.\n\nThe Plugin consumes the resulting execution status.\n\n---\n\n# Session-Oriented Workload\n\nMeeting Voice is naturally more session-oriented than a single atomic Engine job.\n\nA user may:\n\n**Open Meeting**\n\n↓\n\n**Capture**\n\n↓\n\n**Transcribe**\n\n↓\n\n**Review**\n\n↓\n\n**Translate**\n\n↓\n\n**Export**\n\nThe Plugin owns this application lifecycle.\n\nIndividual technical operations remain Core-managed Engine executions.\n\n---\n\n# Runtime Lifecycle\n\nPlugin runtime and Engine runtime remain separate concepts.\n\nConceptually:\n\n**PLUGIN SESSION**\n\n≠\n\n**ENGINE JOB**\n\nA Plugin session may remain open while several bounded Engine jobs execute.\n\nThis prevents meeting UI lifecycle from being confused with worker-process lifecycle.\n\n---\n\n# Usage Policy\n\nThe current release policy recommends:\n\n**3 Credits / hour**\n\nfor an active Meeting Voice Plugin runtime session.\n\nWorkload classification:\n\n**Standard**\n\nThe effective rate remains determined by the Core/Cloud Effective Usage Policy.\n\nThe Plugin does not hard-code wallet deductions as application authority.\n\n---\n\n# Why Session-Based Usage?\n\nMeeting Voice represents an active application workflow rather than one isolated technical call.\n\nDuring a session the user may perform several operations:\n\n- Capture\n- STT\n- Translation\n- TTS\n- Review\n\nThe Plugin runtime session therefore provides the commercial/metering boundary for the application.\n\nTechnical Engines remain reusable ecosystem capabilities rather than independently inventing Plugin billing rules.\n\n---\n\n# Credit Boundary\n\nConceptually:\n\n**Verified Account**\n\n↓\n\n**Wallet / Credits**\n\n↓\n\n**Effective Usage Policy**\n\n↓\n\n**Core UsageGate**\n\n↓\n\n**Meeting Voice Session**\n\nThe Plugin receives authorization from Core.\n\nIt does not directly modify the user's wallet.\n\n---\n\n# Insufficient Credit\n\nIf effective policy does not permit the session to continue, the Plugin should surface the Core-provided state.\n\nConceptually:\n\n**PLUGIN**\n\n↓\n\n**Core UsageGate**\n\n↓\n\n`INSUFFICIENT_CREDIT`\n\n↓\n\n**User-Facing Status**\n\nThe Plugin must not maintain a second independent balance system.\n\n---\n\n# Permission Boundary\n\nMeeting Voice also follows Core permissions.\n\nConceptually:\n\n**Account**\n\n↓\n\n**Entitlement**\n\n↓\n\n**Permission**\n\n↓\n\n**Usage Policy**\n\n↓\n\n**Plugin**\n\nA valid package installation alone does not imply unlimited runtime authority.\n\n---\n\n# Execution Location\n\nMeeting Voice is designed around capability requests rather than assuming technical execution must always happen inside the UI process.\n\nConceptually:\n\n**MEETING CLIENT**\n\n↓\n\n**CORE**\n\n↓\n\n**Suitable Worker**\n\n↓\n\n**Speech / Language Capability**\n\nThis provides a foundation for future distributed execution.\n\n---\n\n# Core Factory 3.5 Direction\n\nThe Plugin naturally fits the distributed/mobile architecture.\n\nConceptually:\n\n**PC / Browser / Mobile Client**\n\n↓\n\n**HOST-ENABLED CORE**\n\n↓\n\n**CAPABILITY ROUTING**\n\n↓\n\n┌ **Audio Worker**\n├ **STT Worker**\n├ **Translation Worker**\n└ **TTS Worker**\n\n↓\n\n**Meeting Results**\n\nThe current Plugin does not need to implement its own distributed server to prepare for this future.\n\nCore owns that platform boundary.\n\n---\n\n# Mobile-Ready Direction\n\nA future mobile meeting client may primarily need to provide:\n\n- Meeting controls\n- Audio input\n- Transcript view\n- Translation view\n- Session review\n\nwhile compatible processing executes through Core.\n\nConceptually:\n\n**MOBILE**\n\n↓\n\n**Meeting Audio**\n\n↓\n\n**CORE**\n\n↓\n\n**STT / Translation**\n\n↓\n\n**Transcript**\n\n↓\n\n**MOBILE**\n\nThis allows the meeting experience and processing hardware to evolve independently.\n\n---\n\n# Local-First Operation\n\nWhere the required Engines and resources are available locally, Meeting Voice can operate through the Local Core execution stack.\n\nThis keeps the Plugin useful without requiring the application itself to become a cloud service.\n\nExternal network requirements depend on the individual Engine/provider used by the selected workflow.\n\n---\n\n# Meeting Privacy Boundary\n\nMeeting Voice handles potentially meaningful user-generated audio and transcript content.\n\nThe architecture keeps this content inside the normal Core execution and artifact boundaries.\n\nThe Plugin should not create a hidden parallel upload or storage mechanism outside those contracts.\n\nAny remote execution must follow Core routing and authorization.\n\n---\n\n# Error Handling\n\nThe Plugin can surface standardized Core execution states instead of inventing incompatible error systems.\n\nRelevant conditions can include:\n\n- Engine unavailable\n- Dependency unavailable\n- Capacity not granted\n- Permission denied\n- Usage not allowed\n- Insufficient credit\n- Network/provider failure\n- Audio capture failure\n- Speech recognition failure\n\nThis gives the application consistent behavior with the rest of the Core Factory ecosystem.\n\n---\n\n# Common Use Cases\n\n- Record meetings\n- Convert spoken meetings to text\n- Review meeting transcripts\n- Preserve meeting discussions\n- Translate meeting transcripts\n- Generate translated meeting content\n- Create voice output from meeting text\n- Prepare meeting documents\n- Feed knowledge workflows\n- Capture team discussions\n- Record project conversations\n- Support multilingual meetings\n- Build meeting archives\n- Create structured meeting workflows\n- Prepare meeting content for downstream automation\n\n---\n\n# Example — Basic Meeting\n\n**START MEETING**\n\n↓\n\n**AUDIO CAPTURE**\n\n↓\n\n**SPEECH TO TEXT**\n\n↓\n\n**MEETING TRANSCRIPT**\n\n↓\n\n**REVIEW**\n\nThis is the simplest Meeting Voice workflow.\n\n---\n\n# Example — Multilingual Meeting\n\n**MEETING AUDIO**\n\n↓\n\n**SPEECH TO TEXT**\n\n↓\n\n**VIETNAMESE TRANSCRIPT**\n\n↓\n\n**TEXT TRANSLATION**\n\n↓\n\n**ENGLISH TRANSCRIPT**\n\n↓\n\n**MEETING REVIEW**\n\nTranslation is added without changing the recording or STT capabilities.\n\n---\n\n# Example — Meeting to Document\n\n**MEETING**\n\n↓\n\n**AUDIO**\n\n↓\n\n**TRANSCRIPT**\n\n↓\n\n**WORKDOC**\n\n↓\n\n**DOCUMENT ENGINE**\n\n↓\n\n**MEETING DOCUMENT**\n\nMeeting Voice supplies the meeting/session layer while document Engines remain responsible for document construction.\n\n---\n\n# Example — Meeting to Knowledge\n\n**TEAM DISCUSSION**\n\n↓\n\n**MEETING VOICE**\n\n↓\n\n**TRANSCRIPT**\n\n↓\n\n**KNOWLEDGE WORKFLOW**\n\n↓\n\n**Reusable Organizational Information**\n\nThis allows spoken information to participate in the broader NN Ecosystem.\n\n---\n\n# Example — Distributed Meeting\n\n**MOBILE / REMOTE CLIENT**\n\n↓\n\n**Meeting Session**\n\n↓\n\n**HOST CORE**\n\n↓\n\n**STT-CAPABLE WORKER**\n\n↓\n\n**Transcript**\n\n↓\n\n**Translation Worker**\n\n↓\n\n**Translated Result**\n\n↓\n\n**Client**\n\nThe Plugin does not need to know the physical location of every worker.\n\nCore owns execution routing.\n\n---\n\n# Runtime\n\n**Type:** Core Factory Plugin  \n**Workload:** Standard  \n**Primary Workload:** Meeting Capture + Speech Processing  \n**Engine Execution:** Core-managed  \n**Network:** Depends on selected Engine/provider  \n**GPU:** Depends primarily on STT execution configuration  \n**Usage Policy Hint:** 3 Credits / hour  \n**Metering Scope:** Active Plugin Runtime Session\n\nResource use depends heavily on meeting duration and speech-processing configuration.\n\n---\n\n# Core Factory Boundary\n\n## Meeting Voice Plugin Owns\n\n- Meeting UI\n- Meeting session state\n- Capture workflow\n- Transcript presentation\n- Translation workflow orchestration\n- Voice-output workflow orchestration\n- Meeting history\n- Export/application workflow\n\n## Audio Recording Capability Owns\n\n- Physical audio capture\n\n## Speech To Text Engine Owns\n\n- Speech recognition\n- Transcript generation\n\n## Text Translation Engine Owns\n\n- Language translation\n\n## Text To Speech Engine Owns\n\n- Voice synthesis\n\n## Core Owns\n\n- Engine invocation\n- Worker lifecycle\n- Dependencies\n- Resource admission\n- Jobs\n- Execution routing\n- Permissions\n- UsageGate\n- Effective usage policy\n- Artifacts\n- Security\n\n## Cloud Owns\n\n- Account authority\n- Wallet\n- Credit ledger\n- Entitlements\n- Effective commercial policy\n\nThis keeps Meeting Voice as an application-level LEGO rather than another monolithic technical runtime.\n\n---\n\n# What Meeting Voice Does Not Do\n\nMeeting Voice does not:\n\n- Implement a private STT model\n- Implement its own translation provider\n- Implement its own TTS runtime\n- Replace Audio Recorder Engine\n- Directly mutate wallet balance\n- Own Core account identity\n- Bypass Core permissions\n- Bypass Core resource governance\n- Create its own distributed server\n- Guarantee transcription accuracy\n- Guarantee translation accuracy\n- Replace dedicated document Engines\n- Replace knowledge applications\n- Own Core execution routing\n\nIts responsibility is:\n\n**Turn reusable Core Factory voice and language capabilities into a practical meeting capture, transcription, and optional multilingual processing experience.**\n\n---\n\n# Ecosystem Fit\n\n**MEETING**\n\n↓\n\n**MEETING VOICE PLUGIN**\n\n↓\n\n**AUDIO CAPTURE**\n\n↓\n\n**SPEECH TO TEXT**\n\n↓\n\n**MEETING TRANSCRIPT**\n\n↓\n\n┌ **TEXT TRANSLATION**\n├ **TEXT TO SPEECH**\n├ **WORKDOC / DOCUMENT**\n└ **KNOWLEDGE / AUTOMATION**\n\n↓\n\n**Reusable Meeting Information**\n\nall governed through:\n\n**CORE FACTORY**\n\nMeeting Voice answers:\n\n**“How can spoken meetings become reusable text, multilingual content, and structured information without building a separate meeting-processing stack?”**\n\nIt provides the NN Ecosystem with a reusable **meeting application LEGO**, composing focused audio, speech-recognition, translation, and speech-synthesis capabilities into a session-oriented workflow while keeping execution, resources, account authority, economy, and future distributed routing under Core and Cloud control.",
-      "version": "0.6.4",
+      "version": "0.2.1",
       "channel": "stable",
       "minimum_core_version": "3.4.3",
       "slug": "meeting-voice-plugin",
       "summary": "# Meeting Voice Plugin\n\n**Capture spoken meetings, transform conversations into structured transcripts, and optionally translate or synthesize meeting content through reusable Core Factory voice and language Engines.**\n\n**Channel:** Stable  \n**Version:** 0.6.4\n**Requires:** Core Factory 3.3+  \n**Category:** Voice · Meeting  \n**Type:** Plugin\n\n---\n\n## What It Is\n\nMeeting Voice Plugin is a Core Factory application for **capturing and processing spoken meeting sessions**.\n\nIt combines reusable voice and language capabilities into a practical meeting workflow.\n\nConceptually:\n\n**MEETING**\n\n↓\n\n**AUDIO CAPTURE**\n\n↓\n\n**SPEECH TO TEXT**\n\n↓\n\n**MEETING TRANSCRIPT**\n\n↓\n\n┌ **Review**\n\n├ **Translation**\n\n├ **Voice Output**\n\n└ **Export / Downstream Workflow**\n\nThe Plugin provides the meeting experience and session orchestration.\n\nIt does not implement speech recognition, translation, or speech synthesis itself.\n\nThose technical capabilities remain reusable Engine LEGO executed through Core.\n\n---\n\n# Key Capabilities\n\n## Meeting Capture\n\nMeeting Voice provides a focused workspace for recording spoken meeting content.\n\nConceptually:\n\n**START MEETING SESSION**\n\n↓\n\n**Capture Speech**\n\n↓\n\n**Process Audio**\n\n↓\n\n**Build Transcript**\n\n↓\n\n**Review Meeting Content**\n\nInstead of manually running individual Engine jobs, the Plugin coordinates the required capabilities around a persistent meeting workflow.\n\n---\n\n# Speech-to-Text Meeting Workflow\n\nRecorded meeting audio can be processed through:\n\n**Speech To Text Engine**\n\nConceptually:\n\n**MEETING AUDIO**\n\n↓\n\n**SPEECH TO TEXT ENGINE**\n\n↓\n\n**TRANSCRIPT**\n\nThis transforms spoken discussion into reusable textual content.\n\nThe Plugin does not contain a private speech-recognition implementation.\n\n---\n\n# Structured Meeting Transcript\n\nThe transcript becomes the central reusable product of a meeting session.\n\nConceptually:\n\n**Spoken Conversation**\n\n↓\n\n**Structured Text**\n\n↓\n\n**Meeting Record**\n\nThis provides a foundation for:\n\n- Meeting review\n- Notes\n- Translation\n- Documentation\n- Knowledge workflows\n- Follow-up processing\n\nThe spoken conversation is therefore no longer limited to the original audio recording.\n\n---\n\n# Optional Translation\n\nMeeting content can participate in multilingual workflows through:\n\n**Text Translation Engine**\n\nConceptually:\n\n**SOURCE-LANGUAGE TRANSCRIPT**\n\n↓\n\n**TEXT TRANSLATION ENGINE**\n\n↓\n\n**TARGET-LANGUAGE TRANSCRIPT**\n\nTranslation remains optional.\n\nA normal meeting can use transcription only, while a multilingual workflow can add translation when required.\n\n---\n\n# Optional Voice Output\n\nTranslated or textual meeting content can also participate in speech synthesis through:\n\n**Text To Speech Engine**\n\nConceptually:\n\n**MEETING TEXT**\n\n↓\n\n**TEXT TO SPEECH ENGINE**\n\n↓\n\n**GENERATED VOICE**\n\nThis provides a reusable voice-output layer without coupling speech synthesis directly to meeting capture.\n\n---\n\n# Modular Voice Pipeline\n\nMeeting Voice follows the Core Factory LEGO architecture.\n\nConceptually:\n\n**MEETING VOICE PLUGIN**\n\n↓\n\n┌─────────────────────────────┐\n│ Meeting Session             │\n│ User Workflow               │\n│ Transcript Presentation     │\n│ History / Export            │\n└─────────────────────────────┘\n\n↓\n\n**CORE**\n\n↓\n\n┌ **Audio Recording**\n├ **Speech To Text**\n├ **Text Translation**\n└ **Text To Speech**\n\nEach technical capability remains independently reusable.\n\n---\n\n# Meeting Session\n\nThe Plugin organizes processing around a meeting session rather than unrelated Engine jobs.\n\nConceptually:\n\n**SESSION START**\n\n↓\n\n**Meeting Capture**\n\n↓\n\n**Transcript**\n\n↓\n\n**Optional Language Processing**\n\n↓\n\n**Session Result**\n\nThis gives users an application-level context for the technical artifacts produced during a meeting.\n\n---\n\n# Transcript Review\n\nSpeech recognition results can be reviewed directly as meeting content.\n\nThis creates an important distinction between:\n\n**Audio Evidence**\n\nand:\n\n**Readable Meeting Information**\n\nUsers can work with text without repeatedly listening through the entire source recording.\n\n---\n\n# Original Audio + Transcript\n\nThe meeting workflow can retain the relationship between:\n\n**Original Speech**\n\nand:\n\n**Recognized Text**\n\nConceptually:\n\n**MEETING**\n\n↓\n\n┌ **Audio**\n└ **Transcript**\n\nThese represent different reusable products from the same session.\n\nAudio preserves the original recording.\n\nTranscript provides searchable and processable textual content.\n\n---\n\n# Language Processing\n\nLanguage capabilities are layered after speech recognition.\n\nConceptually:\n\n**AUDIO**\n\n↓\n\n**STT**\n\n↓\n\n**SOURCE TEXT**\n\n↓\n\n**TRANSLATION**\n\n↓\n\n**TARGET TEXT**\n\n↓\n\n**OPTIONAL TTS**\n\nThis separation avoids combining four technical responsibilities into one monolithic meeting implementation.\n\n---\n\n# Meeting Voice vs Audio Recorder\n\nAudio Recorder Engine answers:\n\n**“Record this audio source.”**\n\nMeeting Voice Plugin answers:\n\n**“Help me capture and process a meeting.”**\n\nThe Plugin adds:\n\n- Meeting context\n- Session workflow\n- Transcript handling\n- Language-processing workflow\n- User-facing review\n- Export/application state\n\nAudio Recorder remains the technical capture LEGO.\n\n---\n\n# Meeting Voice vs Speech To Text Engine\n\nSpeech To Text Engine performs:\n\n**Audio → Text**\n\nMeeting Voice manages the larger application workflow around that capability.\n\nConceptually:\n\n**Meeting**\n\n↓\n\n**Recording**\n\n↓\n\n**STT**\n\n↓\n\n**Transcript**\n\n↓\n\n**Meeting Session**\n\nThe Engine does not need to know what a meeting is.\n\n---\n\n# Meeting Voice vs Realtime Translate\n\nThese Plugins serve different primary workflows.\n\n## Realtime Translate\n\nFocused on:\n\n**Person A ↔ Person B communication**\n\nThe objective is rapid turn-by-turn language translation.\n\n## Meeting Voice\n\nFocused on:\n\n**Meeting → Captured Session → Transcript**\n\nThe primary objective is preserving and processing spoken meeting content.\n\nTranslation can participate in Meeting Voice, but it is not the only reason the meeting exists.\n\n---\n\n# Meeting Voice vs Text Translation Engine\n\nText Translation Engine answers:\n\n**“Translate this text.”**\n\nMeeting Voice determines:\n\n- Which meeting content should be translated\n- Where that content came from\n- How it relates to the session\n- How users interact with the translated result\n\nTranslation remains an independent technical capability.\n\n---\n\n# Meeting Voice vs Text To Speech Engine\n\nText To Speech Engine produces:\n\n**Text → Audio**\n\nMeeting Voice may use that capability when meeting content needs synthesized voice output.\n\nThe Plugin does not implement its own speech-generation runtime.\n\n---\n\n# How to Use\n\n## 1. Install Meeting Voice\n\nInstall the Plugin from the Core Factory Marketplace.\n\n---\n\n## 2. Ensure Required Capabilities Are Available\n\nThe meeting workflow uses the appropriate Core Factory voice/language Engines for the selected operations.\n\nCore remains responsible for executing those capabilities.\n\n---\n\n## 3. Configure the Meeting\n\nReview the available meeting and voice-processing settings before beginning the session.\n\n---\n\n## 4. Start the Meeting Session\n\nBegin the bounded meeting workflow.\n\nThe Plugin coordinates audio capture according to the selected configuration.\n\n---\n\n## 5. Capture Speech\n\nMeeting speech is recorded through the appropriate Core-managed recording capability.\n\n---\n\n## 6. Generate Transcript\n\nCaptured audio is processed through Speech To Text.\n\nThe resulting text becomes part of the meeting session.\n\n---\n\n## 7. Review\n\nReview the recognized meeting content from the Plugin interface.\n\n---\n\n## 8. Translate When Required\n\nFor multilingual workflows, meeting text can be passed through Text Translation Engine.\n\n---\n\n## 9. Generate Voice When Required\n\nCompatible meeting text can optionally be converted back into speech through Text To Speech Engine.\n\n---\n\n## 10. Export / Continue Workflow\n\nMeeting products can be retained or passed to other compatible Core Factory workflows.\n\n---\n\n# Typical Processing Flow\n\nA basic meeting can use:\n\n**MEETING**\n\n↓\n\n**AUDIO CAPTURE**\n\n↓\n\n**SPEECH TO TEXT**\n\n↓\n\n**TRANSCRIPT**\n\nA multilingual meeting can extend this to:\n\n**MEETING**\n\n↓\n\n**AUDIO CAPTURE**\n\n↓\n\n**SPEECH TO TEXT**\n\n↓\n\n**SOURCE TRANSCRIPT**\n\n↓\n\n**TEXT TRANSLATION**\n\n↓\n\n**TRANSLATED TRANSCRIPT**\n\nAn extended voice workflow can continue:\n\n↓\n\n**TEXT TO SPEECH**\n\n↓\n\n**TRANSLATED VOICE**\n\nThe user only enables the layers required by the current meeting.\n\n---\n\n# Reusable Meeting Data\n\nMeeting Voice turns ephemeral speech into reusable information.\n\nConceptually:\n\n**Conversation**\n\n↓\n\n**Audio Artifact**\n\n↓\n\n**Transcript**\n\n↓\n\n**Structured Meeting Content**\n\n↓\n\n**Other Core Capabilities**\n\nThis enables later workflows to operate on meeting information without requiring another speech-recognition pass.\n\n---\n\n# Document Workflow\n\nMeeting transcripts can participate in the document LEGO stack.\n\nConceptually:\n\n**MEETING**\n\n↓\n\n**TRANSCRIPT**\n\n↓\n\n**WORKDOC ENGINE**\n\n↓\n\n**DOCUMENT ENGINE**\n\n↓\n\n**Meeting Document**\n\nThis can provide the technical foundation for meeting records, reports, or other document-oriented applications.\n\nMeeting Voice itself does not need to become a document-generation Engine.\n\n---\n\n# Knowledge Workflow\n\nMeeting text can also become input for knowledge-oriented applications.\n\nConceptually:\n\n**MEETING**\n\n↓\n\n**TRANSCRIPT**\n\n↓\n\n**STRUCTURED TEXT**\n\n↓\n\n**KNOWLEDGE WORKFLOW**\n\nThis makes spoken meetings reusable beyond the immediate meeting interface.\n\n---\n\n# Multilingual Meeting Workflow\n\nA multilingual workflow can use:\n\n**Speaker**\n\n↓\n\n**Audio**\n\n↓\n\n**Speech To Text**\n\n↓\n\n**Original Transcript**\n\n↓\n\n**Text Translation**\n\n↓\n\n**Translated Transcript**\n\n↓\n\n**Review**\n\nThis provides both original and translated textual representations without changing the underlying meeting architecture.\n\n---\n\n# Meeting Voice Output Workflow\n\nWhere synthesized output is useful:\n\n**Meeting Transcript**\n\n↓\n\n**Translation / Text Processing**\n\n↓\n\n**Text To Speech**\n\n↓\n\n**Voice Artifact**\n\nThe generated voice remains a separate reusable media product.\n\n---\n\n# Engine LEGO\n\nMeeting Voice is built around reusable Core Factory capabilities rather than private technical implementations.\n\nRelevant capabilities include:\n\n## Audio Recording\n\nResponsible for:\n\n**Audio capture**\n\n---\n\n## Speech To Text\n\nResponsible for:\n\n**Speech recognition**\n\n---\n\n## Text Translation\n\nResponsible for:\n\n**Language translation**\n\n---\n\n## Text To Speech\n\nResponsible for:\n\n**Voice synthesis**\n\nThe Plugin combines these capabilities according to the meeting workflow.\n\n---\n\n# Core-Managed Execution\n\nTechnical Engine work is submitted through Core.\n\nConceptually:\n\n**PLUGIN**\n\n↓\n\n**Core Invocation**\n\n↓\n\n**ENGINE**\n\n↓\n\n**Core Job Result**\n\n↓\n\n**PLUGIN**\n\nThis preserves:\n\n- Runtime isolation\n- Resource governance\n- Job lifecycle\n- Dependency management\n- Error reporting\n- Future execution routing\n\nThe Plugin does not bypass Core to run heavy technical capabilities privately.\n\n---\n\n# Resource Awareness\n\nSpeech recognition can range from lightweight to relatively demanding depending on:\n\n- Audio duration\n- Selected STT model\n- Hardware\n- Number of processing operations\n\nCore remains responsible for deciding whether the requested execution can be admitted.\n\nThe Plugin consumes the resulting execution status.\n\n---\n\n# Session-Oriented Workload\n\nMeeting Voice is naturally more session-oriented than a single atomic Engine job.\n\nA user may:\n\n**Open Meeting**\n\n↓\n\n**Capture**\n\n↓\n\n**Transcribe**\n\n↓\n\n**Review**\n\n↓\n\n**Translate**\n\n↓\n\n**Export**\n\nThe Plugin owns this application lifecycle.\n\nIndividual technical operations remain Core-managed Engine executions.\n\n---\n\n# Runtime Lifecycle\n\nPlugin runtime and Engine runtime remain separate concepts.\n\nConceptually:\n\n**PLUGIN SESSION**\n\n≠\n\n**ENGINE JOB**\n\nA Plugin session may remain open while several bounded Engine jobs execute.\n\nThis prevents meeting UI lifecycle from being confused with worker-process lifecycle.\n\n---\n\n# Usage Policy\n\nThe current release policy recommends:\n\n**3 Credits / hour**\n\nfor an active Meeting Voice Plugin runtime session.\n\nWorkload classification:\n\n**Standard**\n\nThe effective rate remains determined by the Core/Cloud Effective Usage Policy.\n\nThe Plugin does not hard-code wallet deductions as application authority.\n\n---\n\n# Why Session-Based Usage?\n\nMeeting Voice represents an active application workflow rather than one isolated technical call.\n\nDuring a session the user may perform several operations:\n\n- Capture\n- STT\n- Translation\n- TTS\n- Review\n\nThe Plugin runtime session therefore provides the commercial/metering boundary for the application.\n\nTechnical Engines remain reusable ecosystem capabilities rather than independently inventing Plugin billing rules.\n\n---\n\n# Credit Boundary\n\nConceptually:\n\n**Verified Account**\n\n↓\n\n**Wallet / Credits**\n\n↓\n\n**Effective Usage Policy**\n\n↓\n\n**Core UsageGate**\n\n↓\n\n**Meeting Voice Session**\n\nThe Plugin receives authorization from Core.\n\nIt does not directly modify the user's wallet.\n\n---\n\n# Insufficient Credit\n\nIf effective policy does not permit the session to continue, the Plugin should surface the Core-provided state.\n\nConceptually:\n\n**PLUGIN**\n\n↓\n\n**Core UsageGate**\n\n↓\n\n`INSUFFICIENT_CREDIT`\n\n↓\n\n**User-Facing Status**\n\nThe Plugin must not maintain a second independent balance system.\n\n---\n\n# Permission Boundary\n\nMeeting Voice also follows Core permissions.\n\nConceptually:\n\n**Account**\n\n↓\n\n**Entitlement**\n\n↓\n\n**Permission**\n\n↓\n\n**Usage Policy**\n\n↓\n\n**Plugin**\n\nA valid package installation alone does not imply unlimited runtime authority.\n\n---\n\n# Execution Location\n\nMeeting Voice is designed around capability requests rather than assuming technical execution must always happen inside the UI process.\n\nConceptually:\n\n**MEETING CLIENT**\n\n↓\n\n**CORE**\n\n↓\n\n**Suitable Worker**\n\n↓\n\n**Speech / Language Capability**\n\nThis provides a foundation for future distributed execution.\n\n---\n\n# Core Factory 3.5 Direction\n\nThe Plugin naturally fits the distributed/mobile architecture.\n\nConceptually:\n\n**PC / Browser / Mobile Client**\n\n↓\n\n**HOST-ENABLED CORE**\n\n↓\n\n**CAPABILITY ROUTING**\n\n↓\n\n┌ **Audio Worker**\n├ **STT Worker**\n├ **Translation Worker**\n└ **TTS Worker**\n\n↓\n\n**Meeting Results**\n\nThe current Plugin does not need to implement its own distributed server to prepare for this future.\n\nCore owns that platform boundary.\n\n---\n\n# Mobile-Ready Direction\n\nA future mobile meeting client may primarily need to provide:\n\n- Meeting controls\n- Audio input\n- Transcript view\n- Translation view\n- Session review\n\nwhile compatible processing executes through Core.\n\nConceptually:\n\n**MOBILE**\n\n↓\n\n**Meeting Audio**\n\n↓\n\n**CORE**\n\n↓\n\n**STT / Translation**\n\n↓\n\n**Transcript**\n\n↓\n\n**MOBILE**\n\nThis allows the meeting experience and processing hardware to evolve independently.\n\n---\n\n# Local-First Operation\n\nWhere the required Engines and resources are available locally, Meeting Voice can operate through the Local Core execution stack.\n\nThis keeps the Plugin useful without requiring the application itself to become a cloud service.\n\nExternal network requirements depend on the individual Engine/provider used by the selected workflow.\n\n---\n\n# Meeting Privacy Boundary\n\nMeeting Voice handles potentially meaningful user-generated audio and transcript content.\n\nThe architecture keeps this content inside the normal Core execution and artifact boundaries.\n\nThe Plugin should not create a hidden parallel upload or storage mechanism outside those contracts.\n\nAny remote execution must follow Core routing and authorization.\n\n---\n\n# Error Handling\n\nThe Plugin can surface standardized Core execution states instead of inventing incompatible error systems.\n\nRelevant conditions can include:\n\n- Engine unavailable\n- Dependency unavailable\n- Capacity not granted\n- Permission denied\n- Usage not allowed\n- Insufficient credit\n- Network/provider failure\n- Audio capture failure\n- Speech recognition failure\n\nThis gives the application consistent behavior with the rest of the Core Factory ecosystem.\n\n---\n\n# Common Use Cases\n\n- Record meetings\n- Convert spoken meetings to text\n- Review meeting transcripts\n- Preserve meeting discussions\n- Translate meeting transcripts\n- Generate translated meeting content\n- Create voice output from meeting text\n- Prepare meeting documents\n- Feed knowledge workflows\n- Capture team discussions\n- Record project conversations\n- Support multilingual meetings\n- Build meeting archives\n- Create structured meeting workflows\n- Prepare meeting content for downstream automation\n\n---\n\n# Example — Basic Meeting\n\n**START MEETING**\n\n↓\n\n**AUDIO CAPTURE**\n\n↓\n\n**SPEECH TO TEXT**\n\n↓\n\n**MEETING TRANSCRIPT**\n\n↓\n\n**REVIEW**\n\nThis is the simplest Meeting Voice workflow.\n\n---\n\n# Example — Multilingual Meeting\n\n**MEETING AUDIO**\n\n↓\n\n**SPEECH TO TEXT**\n\n↓\n\n**VIETNAMESE TRANSCRIPT**\n\n↓\n\n**TEXT TRANSLATION**\n\n↓\n\n**ENGLISH TRANSCRIPT**\n\n↓\n\n**MEETING REVIEW**\n\nTranslation is added without changing the recording or STT capabilities.\n\n---\n\n# Example — Meeting to Document\n\n**MEETING**\n\n↓\n\n**AUDIO**\n\n↓\n\n**TRANSCRIPT**\n\n↓\n\n**WORKDOC**\n\n↓\n\n**DOCUMENT ENGINE**\n\n↓\n\n**MEETING DOCUMENT**\n\nMeeting Voice supplies the meeting/session layer while document Engines remain responsible for document construction.\n\n---\n\n# Example — Meeting to Knowledge\n\n**TEAM DISCUSSION**\n\n↓\n\n**MEETING VOICE**\n\n↓\n\n**TRANSCRIPT**\n\n↓\n\n**KNOWLEDGE WORKFLOW**\n\n↓\n\n**Reusable Organizational Information**\n\nThis allows spoken information to participate in the broader NN Ecosystem.\n\n---\n\n# Example — Distributed Meeting\n\n**MOBILE / REMOTE CLIENT**\n\n↓\n\n**Meeting Session**\n\n↓\n\n**HOST CORE**\n\n↓\n\n**STT-CAPABLE WORKER**\n\n↓\n\n**Transcript**\n\n↓\n\n**Translation Worker**\n\n↓\n\n**Translated Result**\n\n↓\n\n**Client**\n\nThe Plugin does not need to know the physical location of every worker.\n\nCore owns execution routing.\n\n---\n\n# Runtime\n\n**Type:** Core Factory Plugin  \n**Workload:** Standard  \n**Primary Workload:** Meeting Capture + Speech Processing  \n**Engine Execution:** Core-managed  \n**Network:** Depends on selected Engine/provider  \n**GPU:** Depends primarily on STT execution configuration  \n**Usage Policy Hint:** 3 Credits / hour  \n**Metering Scope:** Active Plugin Runtime Session\n\nResource use depends heavily on meeting duration and speech-processing configuration.\n\n---\n\n# Core Factory Boundary\n\n## Meeting Voice Plugin Owns\n\n- Meeting UI\n- Meeting session state\n- Capture workflow\n- Transcript presentation\n- Translation workflow orchestration\n- Voice-output workflow orchestration\n- Meeting history\n- Export/application workflow\n\n## Audio Recording Capability Owns\n\n- Physical audio capture\n\n## Speech To Text Engine Owns\n\n- Speech recognition\n- Transcript generation\n\n## Text Translation Engine Owns\n\n- Language translation\n\n## Text To Speech Engine Owns\n\n- Voice synthesis\n\n## Core Owns\n\n- Engine invocation\n- Worker lifecycle\n- Dependencies\n- Resource admission\n- Jobs\n- Execution routing\n- Permissions\n- UsageGate\n- Effective usage policy\n- Artifacts\n- Security\n\n## Cloud Owns\n\n- Account authority\n- Wallet\n- Credit ledger\n- Entitlements\n- Effective commercial policy\n\nThis keeps Meeting Voice as an application-level LEGO rather than another monolithic technical runtime.\n\n---\n\n# What Meeting Voice Does Not Do\n\nMeeting Voice does not:\n\n- Implement a private STT model\n- Implement its own translation provider\n- Implement its own TTS runtime\n- Replace Audio Recorder Engine\n- Directly mutate wallet balance\n- Own Core account identity\n- Bypass Core permissions\n- Bypass Core resource governance\n- Create its own distributed server\n- Guarantee transcription accuracy\n- Guarantee translation accuracy\n- Replace dedicated document Engines\n- Replace knowledge applications\n- Own Core execution routing\n\nIts responsibility is:\n\n**Turn reusable Core Factory voice and language capabilities into a practical meeting capture, transcription, and optional multilingual processing experience.**\n\n---\n\n# Ecosystem Fit\n\n**MEETING**\n\n↓\n\n**MEETING VOICE PLUGIN**\n\n↓\n\n**AUDIO CAPTURE**\n\n↓\n\n**SPEECH TO TEXT**\n\n↓\n\n**MEETING TRANSCRIPT**\n\n↓\n\n┌ **TEXT TRANSLATION**\n├ **TEXT TO SPEECH**\n├ **WORKDOC / DOCUMENT**\n└ **KNOWLEDGE / AUTOMATION**\n\n↓\n\n**Reusable Meeting Information**\n\nall governed through:\n\n**CORE FACTORY**\n\nMeeting Voice answers:\n\n**“How can spoken meetings become reusable text, multilingual content, and structured information without building a separate meeting-processing stack?”**\n\nIt provides the NN Ecosystem with a reusable **meeting application LEGO**, composing focused audio, speech-recognition, translation, and speech-synthesis capabilities into a session-oriented workflow while keeping execution, resources, account authority, economy, and future distributed routing under Core and Cloud control.",
       "status": "released",
       "image": "https://nn-ecosystem.github.io/assets/catalog/meeting_voice_plugin/meeting_voice_plugin.png",
-      "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/plugin-meeting_voice_plugin-v0.6.4",
-      "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-meeting_voice_plugin-v0.6.4/meeting_voice_plugin_0.6.4_chinese_engine_contract_unsigned_signed.zip",
+      "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/plugin-meeting_voice_plugin-v0.2.1",
+      "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-meeting_voice_plugin-v0.2.1/meeting_voice_plugin_0.2.1_golden6_windows_unsigned_signed.zip",
       "link_store": "",
-      "artifact_sha256": "ce728dead576c8834383b79f77dcedfea2803755a688b2ead816d6750a459ae2",
+      "artifact_sha256": "c8e16575a5a583beb478cc9c7eb7edeb15361e80a842d7cdfcf57ab41789e13d",
       "platforms": {
         "windows": {
           "available": true,
@@ -6286,11 +6358,31 @@
           }
         },
         "android": {
-          "available": false,
+          "available": true,
           "architectures": [
             "universal"
           ],
-          "execution_modes": []
+          "execution_modes": [
+            "LOCAL_EDGE"
+          ],
+          "package": {
+            "version": "0.2.1",
+            "artifact_type": "apk",
+            "application_id": "com.nnecosystem.apps.meetingvoice",
+            "abi_version": 1,
+            "build_revision": 1,
+            "capability_service_version": null,
+            "capabilities": [],
+            "artifact_sha256": "9767e8ecbd486f5a4e323b327e26353257e9b2dc4fc58b3febb5ec07c7dd454e",
+            "artifact_file": "platform_releases/android/meeting_voice_plugin-0.2.1-unsigned_signed.apk",
+            "release_manifest_file": "platform_releases/android/meeting_voice_plugin-0.2.1-unsigned_signed.release.json",
+            "release_signature_file": "platform_releases/android/meeting_voice_plugin-0.2.1-unsigned_signed.release.sig",
+            "native_signing_verified": true,
+            "signer_certificate_sha256": "c95013b770207b4911ee70d624dbc95f2baaa4e4ec9d15bd6d04161e0cfc8b22",
+            "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-meeting_voice_plugin-v0.2.1/meeting_voice_plugin-0.2.1-unsigned_signed.apk",
+            "release_metadata_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-meeting_voice_plugin-v0.2.1/meeting_voice_plugin-0.2.1-unsigned_signed.release.json",
+            "release_signature_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-meeting_voice_plugin-v0.2.1/meeting_voice_plugin-0.2.1-unsigned_signed.release.sig"
+          }
         },
         "ios": {
           "available": false,
@@ -6315,13 +6407,29 @@
           "platform": "windows",
           "architecture": "x86_64",
           "artifact_type": "zip",
-          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-meeting_voice_plugin-v0.6.4/meeting_voice_plugin_0.6.4_chinese_engine_contract_unsigned_signed.zip",
-          "sha256": "ce728dead576c8834383b79f77dcedfea2803755a688b2ead816d6750a459ae2",
-          "version": "0.6.4",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-meeting_voice_plugin-v0.2.1/meeting_voice_plugin_0.2.1_golden6_windows_unsigned_signed.zip",
+          "sha256": "c8e16575a5a583beb478cc9c7eb7edeb15361e80a842d7cdfcf57ab41789e13d",
+          "version": "0.2.1",
           "execution_modes": [
             "LOCAL_FULL"
           ],
           "legacy_inherit": true
+        },
+        {
+          "platform": "android",
+          "architecture": "universal",
+          "artifact_type": "apk",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-meeting_voice_plugin-v0.2.1/meeting_voice_plugin-0.2.1-unsigned_signed.apk",
+          "sha256": "9767e8ecbd486f5a4e323b327e26353257e9b2dc4fc58b3febb5ec07c7dd454e",
+          "version": "0.2.1",
+          "build_revision": 1,
+          "execution_modes": [
+            "LOCAL_EDGE"
+          ],
+          "release_metadata_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-meeting_voice_plugin-v0.2.1/meeting_voice_plugin-0.2.1-unsigned_signed.release.json",
+          "release_signature_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-meeting_voice_plugin-v0.2.1/meeting_voice_plugin-0.2.1-unsigned_signed.release.sig",
+          "application_id": "com.nnecosystem.apps.meetingvoice",
+          "abi_version": 1
         }
       ]
     },
@@ -6339,9 +6447,9 @@
       "status": "released",
       "image": "https://nn-ecosystem.github.io/assets/catalog/personal_assistant_plugin/personal_assistant_plugin.png",
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/plugin-personal_assistant_plugin-v0.4.7",
-      "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin_v0.4.7_local_reminder_dismiss_signed.zip",
+      "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin_0.4.7_golden6_windows_unsigned_signed.zip",
       "link_store": "",
-      "artifact_sha256": "1ffc6d19366bc23312f128b118eb43752556302a4ce34366c55827928f0e5281",
+      "artifact_sha256": "3030f42bfa05c131418fd301f1defc9b59175cbd663b7347a85edd02fe4fcc9a",
       "platforms": {
         "windows": {
           "available": true,
@@ -6365,22 +6473,22 @@
             "REMOTE_CORE"
           ],
           "package": {
-            "version": "0.4.0-android.5",
+            "version": "0.4.7",
             "artifact_type": "apk",
-            "application_id": "com.nnecosystem.items.personalassistant",
+            "application_id": "com.nnecosystem.apps.personalassistant",
             "abi_version": 1,
-            "build_revision": null,
+            "build_revision": 1,
             "capability_service_version": null,
             "capabilities": [],
-            "artifact_sha256": "7d8b304a564d1c3a9b6269ed8f13422f514b274859b6abe207560c072c6c008e",
-            "artifact_file": "platform_releases/android/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.apk",
-            "release_manifest_file": "platform_releases/android/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.release.json",
-            "release_signature_file": "platform_releases/android/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.release.sig",
+            "artifact_sha256": "b663066db052a830192e2c89557bf1d25816ca52a8923f61c31b1915508570af",
+            "artifact_file": "platform_releases/android/personal_assistant_plugin-0.4.7-unsigned_signed.apk",
+            "release_manifest_file": "platform_releases/android/personal_assistant_plugin-0.4.7-unsigned_signed.release.json",
+            "release_signature_file": "platform_releases/android/personal_assistant_plugin-0.4.7-unsigned_signed.release.sig",
             "native_signing_verified": true,
             "signer_certificate_sha256": "c95013b770207b4911ee70d624dbc95f2baaa4e4ec9d15bd6d04161e0cfc8b22",
-            "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.apk",
-            "release_metadata_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.release.json",
-            "release_signature_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.release.sig"
+            "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.7-unsigned_signed.apk",
+            "release_metadata_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.7-unsigned_signed.release.json",
+            "release_signature_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.7-unsigned_signed.release.sig"
           }
         },
         "ios": {
@@ -6400,14 +6508,14 @@
       ],
       "capabilities": [],
       "dependencies": [],
-      "taxonomy_status": "complete",
+      "taxonomy_status": "incomplete",
       "artifacts": [
         {
           "platform": "windows",
           "architecture": "x86_64",
           "artifact_type": "zip",
-          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin_v0.4.7_local_reminder_dismiss_signed.zip",
-          "sha256": "1ffc6d19366bc23312f128b118eb43752556302a4ce34366c55827928f0e5281",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin_0.4.7_golden6_windows_unsigned_signed.zip",
+          "sha256": "3030f42bfa05c131418fd301f1defc9b59175cbd663b7347a85edd02fe4fcc9a",
           "version": "0.4.7",
           "execution_modes": [
             "LOCAL_FULL"
@@ -6418,16 +6526,17 @@
           "platform": "android",
           "architecture": "universal",
           "artifact_type": "apk",
-          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.apk",
-          "sha256": "7d8b304a564d1c3a9b6269ed8f13422f514b274859b6abe207560c072c6c008e",
-          "version": "0.4.0-android.5",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.7-unsigned_signed.apk",
+          "sha256": "b663066db052a830192e2c89557bf1d25816ca52a8923f61c31b1915508570af",
+          "version": "0.4.7",
+          "build_revision": 1,
           "execution_modes": [
             "LOCAL_EDGE",
             "REMOTE_CORE"
           ],
-          "release_metadata_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.release.json",
-          "release_signature_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.0-android.5-unsigned_signed.release.sig",
-          "application_id": "com.nnecosystem.items.personalassistant",
+          "release_metadata_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.7-unsigned_signed.release.json",
+          "release_signature_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.4.7/personal_assistant_plugin-0.4.7-unsigned_signed.release.sig",
+          "application_id": "com.nnecosystem.apps.personalassistant",
           "abi_version": 1
         }
       ]
@@ -6446,9 +6555,9 @@
       "status": "released",
       "image": "https://nn-ecosystem.github.io/assets/catalog/realtime_translate_plugin/realtime_translate_plugin.png",
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/plugin-realtime_translate_plugin-v0.3.3",
-      "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-realtime_translate_plugin-v0.3.3/realtime_translate_plugin_0.3.3_chinese_engine_contract_unsigned_signed.zip",
+      "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-realtime_translate_plugin-v0.3.3/realtime_translate_plugin_0.3.3_golden6_windows_unsigned_signed.zip",
       "link_store": "",
-      "artifact_sha256": "668e656ef5405e952ee71883cb1bc8ecb045dea7ec2a4cad8f5f0502690209d2",
+      "artifact_sha256": "9f9232e9f106a516192a7e76f559c8ce4e45d45c61b5e969240ed0f160cedcf9",
       "platforms": {
         "windows": {
           "available": true,
@@ -6475,10 +6584,10 @@
             "artifact_type": "apk",
             "application_id": "com.nnecosystem.apps.realtimetranslate",
             "abi_version": 1,
-            "build_revision": 2,
+            "build_revision": 3,
             "capability_service_version": null,
             "capabilities": [],
-            "artifact_sha256": "75bcf2c77ca1239f3aa9ff19893b4867ebf81fc3a1b2d4b46824c28224b104c6",
+            "artifact_sha256": "99fdb8fb194ad3a27c18f78b55b5aad6378fb38669608bd5ce8a02cb1518d5c4",
             "artifact_file": "platform_releases/android/realtime_translate_plugin-0.3.3-unsigned_signed.apk",
             "release_manifest_file": "platform_releases/android/realtime_translate_plugin-0.3.3-unsigned_signed.release.json",
             "release_signature_file": "platform_releases/android/realtime_translate_plugin-0.3.3-unsigned_signed.release.sig",
@@ -6506,14 +6615,14 @@
       ],
       "capabilities": [],
       "dependencies": [],
-      "taxonomy_status": "complete",
+      "taxonomy_status": "incomplete",
       "artifacts": [
         {
           "platform": "windows",
           "architecture": "x86_64",
           "artifact_type": "zip",
-          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-realtime_translate_plugin-v0.3.3/realtime_translate_plugin_0.3.3_chinese_engine_contract_unsigned_signed.zip",
-          "sha256": "668e656ef5405e952ee71883cb1bc8ecb045dea7ec2a4cad8f5f0502690209d2",
+          "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-realtime_translate_plugin-v0.3.3/realtime_translate_plugin_0.3.3_golden6_windows_unsigned_signed.zip",
+          "sha256": "9f9232e9f106a516192a7e76f559c8ce4e45d45c61b5e969240ed0f160cedcf9",
           "version": "0.3.3",
           "execution_modes": [
             "LOCAL_FULL"
@@ -6525,9 +6634,9 @@
           "architecture": "universal",
           "artifact_type": "apk",
           "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-realtime_translate_plugin-v0.3.3/realtime_translate_plugin-0.3.3-unsigned_signed.apk",
-          "sha256": "75bcf2c77ca1239f3aa9ff19893b4867ebf81fc3a1b2d4b46824c28224b104c6",
+          "sha256": "99fdb8fb194ad3a27c18f78b55b5aad6378fb38669608bd5ce8a02cb1518d5c4",
           "version": "0.3.3",
-          "build_revision": 2,
+          "build_revision": 3,
           "execution_modes": [
             "LOCAL_EDGE"
           ],
