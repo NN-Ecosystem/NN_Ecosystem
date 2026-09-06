@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_presentation_v1",
-  "generated_at": "2026-09-06T11:48:25.099454+00:00",
+  "generated_at": "2026-09-06T12:53:02.707668+00:00",
   "count": 93,
   "items": [
     {
@@ -1818,7 +1818,7 @@
         "research_assistant"
       ],
       "capabilities": [],
-      "taxonomy_status": "complete"
+      "taxonomy_status": "incomplete"
     },
     {
       "item_id": "media_library_builder_plugin",
@@ -1856,7 +1856,7 @@
         "media_library"
       ],
       "capabilities": [],
-      "taxonomy_status": "complete"
+      "taxonomy_status": "incomplete"
     },
     {
       "item_id": "media_upload_plugin",
@@ -1913,7 +1913,7 @@
         "personal_assistant"
       ],
       "capabilities": [],
-      "taxonomy_status": "complete"
+      "taxonomy_status": "incomplete"
     },
     {
       "item_id": "realtime_translate_plugin",
@@ -1932,7 +1932,7 @@
         "realtime_translate"
       ],
       "capabilities": [],
-      "taxonomy_status": "complete"
+      "taxonomy_status": "incomplete"
     },
     {
       "item_id": "trading_system_plugin",
