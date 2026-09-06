@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_v1",
-  "generated_at": "2026-09-06T11:48:25.098455+00:00",
+  "generated_at": "2026-09-06T12:53:02.707668+00:00",
   "count": 93,
   "items": [
     {
@@ -6180,7 +6180,7 @@
             "build_revision": 1,
             "capability_service_version": null,
             "capabilities": [],
-            "artifact_sha256": "9caf4978b34356cf3f3f483c661f71a7240440361a4c2c190c1e1441558a9741",
+            "artifact_sha256": "36c52eab528c0c0cf7831ebefb88ba69d73e690cd92a25dd61ed92e01356d645",
             "artifact_file": "platform_releases/android/information_plugin-1.5.2-unsigned_signed.apk",
             "release_manifest_file": "platform_releases/android/information_plugin-1.5.2-unsigned_signed.release.json",
             "release_signature_file": "platform_releases/android/information_plugin-1.5.2-unsigned_signed.release.sig",
@@ -6209,7 +6209,7 @@
       ],
       "capabilities": [],
       "dependencies": [],
-      "taxonomy_status": "complete",
+      "taxonomy_status": "incomplete",
       "artifacts": [
         {
           "platform": "windows",
@@ -6228,7 +6228,7 @@
           "architecture": "universal",
           "artifact_type": "apk",
           "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-information_plugin-v1.5.3/information_plugin-1.5.2-unsigned_signed.apk",
-          "sha256": "9caf4978b34356cf3f3f483c661f71a7240440361a4c2c190c1e1441558a9741",
+          "sha256": "36c52eab528c0c0cf7831ebefb88ba69d73e690cd92a25dd61ed92e01356d645",
           "version": "1.5.2",
           "build_revision": 1,
           "execution_modes": [
@@ -6357,7 +6357,7 @@
             "build_revision": 1,
             "capability_service_version": null,
             "capabilities": [],
-            "artifact_sha256": "b8ae1d940c8b1ec7edbbe02b6d2e19b6a62a445ccd2d88bb5850645deafb4142",
+            "artifact_sha256": "873c907841b1e38e065b4ca689b808b3b563325caed6ff3bf799c389be87cd74",
             "artifact_file": "platform_releases/android/media_library_plugin-1.0.5-unsigned_signed.apk",
             "release_manifest_file": "platform_releases/android/media_library_plugin-1.0.5-unsigned_signed.release.json",
             "release_signature_file": "platform_releases/android/media_library_plugin-1.0.5-unsigned_signed.release.sig",
@@ -6385,7 +6385,7 @@
       ],
       "capabilities": [],
       "dependencies": [],
-      "taxonomy_status": "complete",
+      "taxonomy_status": "incomplete",
       "artifacts": [
         {
           "platform": "windows",
@@ -6404,7 +6404,7 @@
           "architecture": "universal",
           "artifact_type": "apk",
           "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-media_library_plugin-v1.0.5/media_library_plugin-1.0.5-unsigned_signed.apk",
-          "sha256": "b8ae1d940c8b1ec7edbbe02b6d2e19b6a62a445ccd2d88bb5850645deafb4142",
+          "sha256": "873c907841b1e38e065b4ca689b808b3b563325caed6ff3bf799c389be87cd74",
           "version": "1.0.5",
           "build_revision": 1,
           "execution_modes": [
@@ -6533,7 +6533,7 @@
             "build_revision": 1,
             "capability_service_version": null,
             "capabilities": [],
-            "artifact_sha256": "9767e8ecbd486f5a4e323b327e26353257e9b2dc4fc58b3febb5ec07c7dd454e",
+            "artifact_sha256": "2740084974ae952061a50cac562785f429f022e072a102b3a7e513ec77274d29",
             "artifact_file": "platform_releases/android/meeting_voice_plugin-0.2.1-unsigned_signed.apk",
             "release_manifest_file": "platform_releases/android/meeting_voice_plugin-0.2.1-unsigned_signed.release.json",
             "release_signature_file": "platform_releases/android/meeting_voice_plugin-0.2.1-unsigned_signed.release.sig",
@@ -6580,7 +6580,7 @@
           "architecture": "universal",
           "artifact_type": "apk",
           "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-meeting_voice_plugin-v0.2.3/meeting_voice_plugin-0.2.1-unsigned_signed.apk",
-          "sha256": "9767e8ecbd486f5a4e323b327e26353257e9b2dc4fc58b3febb5ec07c7dd454e",
+          "sha256": "2740084974ae952061a50cac562785f429f022e072a102b3a7e513ec77274d29",
           "version": "0.2.1",
           "build_revision": 1,
           "execution_modes": [
@@ -6640,7 +6640,7 @@
             "build_revision": 3,
             "capability_service_version": null,
             "capabilities": [],
-            "artifact_sha256": "4b95bc5b5059592f36650f60b0427f6ba927a3f5791fb0ca8ddc2f92d49511f2",
+            "artifact_sha256": "0681b8fcc5053f1f7ab5f03c35d22d135b4fd3bf8e3e82b2607761b76ec97e1c",
             "artifact_file": "platform_releases/android/personal_assistant_plugin-0.4.7-unsigned_signed.apk",
             "release_manifest_file": "platform_releases/android/personal_assistant_plugin-0.4.7-unsigned_signed.release.json",
             "release_signature_file": "platform_releases/android/personal_assistant_plugin-0.4.7-unsigned_signed.release.sig",
@@ -6668,7 +6668,7 @@
       ],
       "capabilities": [],
       "dependencies": [],
-      "taxonomy_status": "complete",
+      "taxonomy_status": "incomplete",
       "artifacts": [
         {
           "platform": "windows",
@@ -6687,7 +6687,7 @@
           "architecture": "universal",
           "artifact_type": "apk",
           "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-personal_assistant_plugin-v0.8.3/personal_assistant_plugin-0.4.7-unsigned_signed.apk",
-          "sha256": "4b95bc5b5059592f36650f60b0427f6ba927a3f5791fb0ca8ddc2f92d49511f2",
+          "sha256": "0681b8fcc5053f1f7ab5f03c35d22d135b4fd3bf8e3e82b2607761b76ec97e1c",
           "version": "0.4.7",
           "build_revision": 3,
           "execution_modes": [
@@ -6747,7 +6747,7 @@
             "build_revision": 3,
             "capability_service_version": null,
             "capabilities": [],
-            "artifact_sha256": "99fdb8fb194ad3a27c18f78b55b5aad6378fb38669608bd5ce8a02cb1518d5c4",
+            "artifact_sha256": "419af8d565c42d3c71c3910bb8e20130aa1b0469e0e7849a044a993ee9de4349",
             "artifact_file": "platform_releases/android/realtime_translate_plugin-0.3.3-unsigned_signed.apk",
             "release_manifest_file": "platform_releases/android/realtime_translate_plugin-0.3.3-unsigned_signed.release.json",
             "release_signature_file": "platform_releases/android/realtime_translate_plugin-0.3.3-unsigned_signed.release.sig",
@@ -6775,7 +6775,7 @@
       ],
       "capabilities": [],
       "dependencies": [],
-      "taxonomy_status": "complete",
+      "taxonomy_status": "incomplete",
       "artifacts": [
         {
           "platform": "windows",
@@ -6794,7 +6794,7 @@
           "architecture": "universal",
           "artifact_type": "apk",
           "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/plugin-realtime_translate_plugin-v0.3.6/realtime_translate_plugin-0.3.3-unsigned_signed.apk",
-          "sha256": "99fdb8fb194ad3a27c18f78b55b5aad6378fb38669608bd5ce8a02cb1518d5c4",
+          "sha256": "419af8d565c42d3c71c3910bb8e20130aa1b0469e0e7849a044a993ee9de4349",
           "version": "0.3.3",
           "build_revision": 3,
           "execution_modes": [
