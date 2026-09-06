@@ -1,6 +1,6 @@
 {
   "schema": "core_factory_catalog_v1",
-  "generated_at": "2026-09-06T13:53:21.884438+00:00",
+  "generated_at": "2026-09-06T15:08:12.368260+00:00",
   "count": 93,
   "items": [
     {
@@ -19,7 +19,7 @@
       "release_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/tag/engine-core_factory_v2-v3.5.2",
       "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-core_factory_v2-v3.5.2/CoreFactory_3.5.2_20260906_signed.zip",
       "link_store": "",
-      "artifact_sha256": "3f655a255ee9ae883cbd486026ce4f810df8e9dab9b7150fd0ea3264c8bea9e7",
+      "artifact_sha256": "445fe881032f2984e7294df36c8fdb6f31ae1e30bd2051c1b11f292f893521d9",
       "platforms": {
         "windows": {
           "available": true,
@@ -64,7 +64,7 @@
           "architecture": "x86_64",
           "artifact_type": "zip",
           "download_url": "https://github.com/NN-Ecosystem/nn-ecosystem.github.io/releases/download/engine-core_factory_v2-v3.5.2/CoreFactory_3.5.2_20260906_signed.zip",
-          "sha256": "3f655a255ee9ae883cbd486026ce4f810df8e9dab9b7150fd0ea3264c8bea9e7",
+          "sha256": "445fe881032f2984e7294df36c8fdb6f31ae1e30bd2051c1b11f292f893521d9",
           "version": "3.5.2",
           "execution_modes": [
             "LOCAL_FULL"
